@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'KOSTECH Documentation'
-copyright = '2023, cwjun'
-author = 'cwjun'
+copyright = '2023, Korea Simulation Technologies Co. Ltd.'
+author = 'KOSTECH'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
