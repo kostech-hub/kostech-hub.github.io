@@ -103,7 +103,33 @@ Curve fitting으로 생성된 curve가 잘못된 형태를 가질 경우가 있�
 `Strain to`를 0.1, `Num. points`를 25 입력시 0~0.1 strain 범위의 25개 점으로 curve가 생성됩니다.
 :::
 
-### 1.6 Determination of result
+### 1.6 Generation of plastic strain-stress curve with Johnson-Cook rate model
+LAMP 2.0.4101 이후 버전에서는 Johnson-Cook Strain Rate 모델을 고려한 plastic strain-stress curve를 생성할 수 있습니다. [Setup raw data](#14-setup-raw-data)에서 strain rate에 대한 시험 raw data를 추가합니다. 아래 사진은 하나의 예로 5개의 strain rate에 대한 데이터가 추가된 상태를 보여줍니다. 
+
+![](images/MAT7.png)
+
+:::{admonition} Supporting hardening model
+Johnson-Cook Strain Rate 모델을 고려한 plastic strain-stress curve를 생성 기능을 지원하는 hardening 모델은 다음과 같습니다.
+
+- Kim-Tuan Hardenig Model
+- Mixed Swift-Voce Hardening Model
+:::
+
+지원되는 Hardening 모델을 선택하면 Begining Load Curve ID 하단에 다음과 같이 추가 입력란이 나타납니다.
+
+![](images/MAT8.png)
+
+- With Johnson-Cook Model : Johnson-Cook 모델을 고려하려면 해당 항목을 체크합니다.
+- Initial Strain Rate : With Johnson-Cook Model 항목을 체크하면 활성화 되며 0이 아닌 값을 입력합니다. 
+
+  :::{admonition} Initial Strain Rate
+  :class: Tip
+  Initial Strain Rate의 값은 0이 될 수 없습니다. 위 목록에는 Rate를 0으로 이름 지었지만 실제 인장 시험에서 고려한 strain rate 값을 입력합니다.
+  :::
+
+- Bound : Bound 버튼을 클릭하면 curve fitting으로 찾는 파라미터들의 upper boundary 값을 설정 할 수 있습니다. lower boundary는 기본적으로 0으로 설정됩니다.
+
+### 1.7 Determination of result
 Curve fitting이 성공적으로 수행되면 기본적으로 `Working directory`에 `Raw Data File` 입력란에 입력된 이름으로한 키워드 파일이 생성됩니다. 생성된 키워드 파일에는 *MAT_PIECEWISE_LINEAR_PLASTICITY 카드와 *DEFINE_CURVE가 포함되며 사용된 경도 모델의 수식과 fitting으로 결정된 변수들의 값을 확인할 수 있습니다. 만약 결정된 계수값들에 대해서 fitting된 결과가 만족스럽지 못하다면 상하 방향의 화살표 아이콘을 통해서 각 계수를 값을 변경하면서 curve를 직접 수정할 수 있습니다. 또한 생성된 키워드 파일의 저장 경로로의 이동 및 데이터베이스에 저장을 할 수 있으며 해당 내용은 아래 Tip 항목을 확인하시기 바랍니다.
 
 ![](images/MAT3.png){.border-black}
@@ -113,13 +139,17 @@ Curve fitting이 성공적으로 수행되면 기본적으로 `Working directory
 ![](images/MAT1.png) 아이콘으로 저장 경로로 이동 할 수 있습니다.
 :::
 
-:::{admonition} Move the directory
+:::{admonition} Save in database
 :class: tip
 ![](images/MAT4.png) 아이콘으로 생성된 데이터를 데이터베이스에 저장할 수 있습니다. 아이콘을 클릭하면 `Insert User Data` 창이 표시되며, Curve fitting으로 생성된 curve들의 목록이 표시되며 데이터베이스에 저장하고자 하는 curve를 체크합니다. Category를 선택합니다. Category는 ![](images/INSERTDB3.png) 아이콘으로 추가할 수 있습니다. `Material Name`에 이름을 입력하고 `Insert` 버튼으로 데이터베이스에 데이터를 저장합니다.
 
-:::{tip}
+
 데이터베이스에 저장되는 데이터는 모두 `Category`라는 항목 아래에 입력된 `Material Name`으로 저장됩니다. 
-:::
+
 
 ![](images/INSERTDB2.png)
 :::
+
+:::{caution}
+Johnson-Cook Rate Model을 고려하여 curve fitting을 한 경우에는 해당 기능을 사용할 수 없습니다.
+::: 
