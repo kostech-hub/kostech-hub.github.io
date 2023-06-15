@@ -14,6 +14,12 @@ Welcome to KOSTECH documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: LS-Dyna
+
+   encryption
+
+.. toctree::
+   :maxdepth: 2
    :caption: LAMP
 
    start_lamp

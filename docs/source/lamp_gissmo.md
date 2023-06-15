@@ -161,7 +161,7 @@ Step 2에서 최적화 시뮬레이션에서 생성된 결과들에서 사용자
 ### Calculation Triaxiality Value
 LS-OPT Viewer에서 각 시편 모델의 최적 결과를 선택하였다면 각 시편 모델의 Triaxiality를 계산해야 합니다. LAMP GISSMO에서 Triaxiality를 쉽게 계산할 수 있습니다. 하단의 Select Result를 클릭합니다.
 
-![](images/gissmo/gissmo6.png)
+![](images/gissmo/select_optimal_result.gif)
 
 - Project : 현재 사용중인 시편 모델의 이름을 표시합니다.
 - Result : 최적화 시뮬레이션으로 생성된 결과의 넘버링 목록이 표시되며 LS-OPT Viewer에서 선택한 각 시편 모델의 최적 결과 Case 넘버를 선택합니다.
@@ -170,6 +170,11 @@ LS-OPT Viewer에서 각 시편 모델의 최적 결과를 선택하였다면 각
 - Load : 아이콘을 눌러 선택된 Result 항목의 Triaxiality를 계산합니다. 계산이 종료되면 Triaxiality 열에 계산된 값이 자동으로 입력됩니다. 
 
 위 설명에서와 같이 Result 항목에서 최적 결과에 해당하는 넘버를 선택하고 Load 항목의 아이콘을 클릭하여 각 시편 모델의 Triaxiality를 계산합니다. 계산 후 Apply 버튼을 클릭하여 적용합니다. 적용 후에는 Triaxiality Data 파일들이 자동으로 생성됩니다. 
+
+:::{admonition} Calculation of triaxiality
+:class: Tip
+Triaxiality는 평균(Average)과 적분(Integration) 방법으로 계산할 수 있습니다. 평균은 0이 아닌 값들을 평균하여 계산하며 적분 방법은 Effective Plastic Strain - Triaxiality Curve의 면적에 최대 Effective Plastic Strain을 나눈 값으로 계산합니다. 
+:::
 
 ### Triaxility Curve Data
 최적화 시뮬레이션이 완료된 시편 모델들에 대해서 최적 결과를 선택하고 Triaxiality를 계산 한 후에 생성되거나 생성 할 수 있는 Curve 데이터들을 확인하거나 조작할 수 있습니다.
