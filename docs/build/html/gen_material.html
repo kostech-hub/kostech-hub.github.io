@@ -57,6 +57,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#working-directory">1.2 Working directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#material-property">1.3 Material property</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setup-raw-data">1.4 Setup raw data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generation-of-plastic-strain-stress-curve">1.5 Generation of plastic strain-stress curve</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#generation-of-plastic-strain-stress-curve-with-johnson-cook-rate-model">1.6 Generation of plastic strain-stress curve with Johnson-Cook rate model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#determination-of-result">1.7 Determination of result</a></li>
 </ul>
@@ -183,7 +184,10 @@ LAMP에서 지원하는 <a class="reference internal" href="appendix.html#id1"><
 <li><p>필요에 따라 <code class="docutils literal notranslate"><span class="pre">Offset</span></code>을 입력</p></li>
 </ul>
 <p><img alt="" src="_images/pick_yield.gif" /></p>
-<h3 class="rubric" id="generation-of-plastic-strain-stress-curve">1.5 Generation of plastic strain-stress curve</h3>
+</div>
+</section>
+<section id="generation-of-plastic-strain-stress-curve">
+<h3>1.5 Generation of plastic strain-stress curve<a class="headerlink" href="#generation-of-plastic-strain-stress-curve" title="Permalink to this heading"></a></h3>
 <p>1.4에서 항목점을 결정하였다면 제공되는 경도 모델을 이용하여 Curve fitting을 통해 plastic strain-stress curve를 생성할 수 있습니다. LAMP에서 제공되는 경도 모델은 다음과 같습니다.</p>
 <ul class="simple">
 <li><p>Min-Max Average</p></li>
@@ -206,7 +210,6 @@ LAMP에서 지원하는 <a class="reference internal" href="appendix.html#id1"><
 <p class="admonition-title">Tip</p>
 <p>Curve fitting으로 생성된 curve가 잘못된 형태를 가질 경우가 있을 수 있습니다. <br />
 이럴 경우<code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Coefficient</span></code>와 <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Exponential</span></code>을 조절하여 curve fitting을 다시 시도해 볼 수 있습니다.</p>
-</div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>

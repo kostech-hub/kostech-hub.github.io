@@ -76,6 +76,7 @@ Selection of yield point
 - 필요에 따라 `Offset`을 입력
 
 ![](images/pick_yield.gif)
+:::
 
 ### 1.5 Generation of plastic strain-stress curve
 1.4에서 항목점을 결정하였다면 제공되는 경도 모델을 이용하여 Curve fitting을 통해 plastic strain-stress curve를 생성할 수 있습니다. LAMP에서 제공되는 경도 모델은 다음과 같습니다.
