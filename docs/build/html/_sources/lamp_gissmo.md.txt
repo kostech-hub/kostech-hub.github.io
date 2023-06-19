@@ -37,13 +37,17 @@ Step 1에서는 준비된 시편 모델들을 추가하고 설계 파라미터�
 
 ![](images/gissmo/gissmo1.png)
 
-- Specimen : 우측 아이콘 버튼을 클릭하고 시편 모델의 메인 키워드(Keyword) 파일을 선택합니다. 시편 모델을 정상적으로 읽었다면 다음의 과정들이 진행됩니다. 
+- Specimen : 우측 ![](images/gissmo/Icon0.png){w=25px}  아이콘 버튼을 클릭하고 시편 모델의 메인 키워드(Keyword) 파일 및 LAMP GISSMO에서 생성된 *.lsopt 파일을 선택합니다. 시편 모델을 정상적으로 읽었다면 다음의 과정들이 진행됩니다. 
 
     - Keyword 파일에서 *DEFINE_CURVE 카드를 찾고 Curve의 ID를 LCSS ID 항목에 추가합니다.
     - Keyword 파일에서 *DATABASE_HISTORY_NODE_ID 카드를 찾고 입력된 두 개의 노드 정보로 부터 Gauge length를 계산해 G. Length 항목에 입력합니다. 
 
     :::{caution}
     시편 모델에는 해석 과정중에 변위가 계산될 수 있도록 *DATABASE_HISTORY_NODE_ID 카드를 이용해 변위 계산을 위한 두 개의 노드 ID를 설정해야 합니다.
+    :::
+
+    :::{tip}
+    *.lsopt 파일을 이용한 시편 모델 등록은 *.lsopt 파일에 정의된 target curve와 LCSS ID 정보 그리고 4개의 파라미터(DMGEXP, FADEXP, Fracture, Instability) 정보가 추가적으로 입력됩니다.
     :::
 
 - T. Curve : 우측 폴더 모양의 아이콘을 클릭하고 추가한 시편 모델의 Force-Displacement 시험 데이터가 정의된 파일을 선택합니다. 좌측 그래프 모양 아이콘으로 선택한 데이터를 그래프로 확인 할 수 있습니다.

@@ -121,11 +121,11 @@ Johnson-Cook Strain Rate 모델을 고려한 plastic strain-stress curve를 생�
 ![](images/MAT8.png)
 
 - With Johnson-Cook Model : Johnson-Cook 모델을 고려하려면 해당 항목을 체크합니다.
-- Initial Strain Rate : With Johnson-Cook Model 항목을 체크하면 활성화 되며 0이 아닌 값을 입력합니다. 
+- Initial Strain Rate : Use Johnson-Cook Model 항목을 체크하면 활성화 되며 0이 아닌 값을 입력합니다. 
 
   :::{admonition} Initial Strain Rate
   :class: Tip
-  Initial Strain Rate의 값은 0이 될 수 없습니다. 위 목록에는 Rate를 0으로 이름 지었지만 실제 인장 시험에서 고려한 strain rate 값을 입력합니다.
+  Initial Strain Rate의 값은 0이 될 수 없습니다. 실제 인장 시험에서 고려한 Initial Strain Rate 값을 입력합니다.
   :::
 
 - Bound : Bound 버튼을 클릭하면 curve fitting으로 찾는 파라미터들의 upper boundary 값을 설정 할 수 있습니다. lower boundary는 기본적으로 0으로 설정됩니다.
