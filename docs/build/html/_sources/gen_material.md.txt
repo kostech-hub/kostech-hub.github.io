@@ -131,9 +131,13 @@ Johnson-Cook Strain Rate 모델을 고려한 plastic strain-stress curve를 생�
 - Bound : Bound 버튼을 클릭하면 curve fitting으로 찾는 파라미터들의 upper boundary 값을 설정 할 수 있습니다. lower boundary는 기본적으로 0으로 설정됩니다.
 
 ### 1.7 Determination of result
-Curve fitting이 성공적으로 수행되면 기본적으로 `Working directory`에 `Raw Data File` 입력란에 입력된 이름으로한 키워드 파일이 생성됩니다. 생성된 키워드 파일에는 *MAT_PIECEWISE_LINEAR_PLASTICITY 카드와 *DEFINE_CURVE가 포함되며 사용된 경도 모델의 수식과 fitting으로 결정된 변수들의 값을 확인할 수 있습니다. 만약 결정된 계수값들에 대해서 fitting된 결과가 만족스럽지 못하다면 상하 방향의 화살표 아이콘을 통해서 각 계수를 값을 변경하면서 curve를 직접 수정할 수 있습니다. 또한 생성된 키워드 파일의 저장 경로로의 이동 및 데이터베이스에 저장을 할 수 있으며 해당 내용은 아래 Tip 항목을 확인하시기 바랍니다.
+Curve fitting에 의한 결과는 Result Control 항목에서 확인 할 수 있습니다. 기본적으로 `Working directory`에 `Raw Data File` 입력란에 입력된 이름으로 키워드 파일이 생성됩니다. 생성된 키워드 파일에는 *MAT_PIECEWISE_LINEAR_PLASTICITY 카드와 *DEFINE_CURVE가 포함됩니다. Expression에는 사용된 경도 모델의 수식이 표시됩니다. Curve Fitting으로 생성된 결과는 계수값들을 사용자가 임의로 변경하여 Curve의 형상을 변경할 수 있습니다. 
 
-![](images/MAT3.png){.border-black}
+![](images/MAT9.png){.border-black}
+
+Expression 항목 우측에 있는 ![](images/MAT11.png){W=24px}을 클릭하면 아래의 창이 표시됩니다. Curve Fitting으로 결정된 각가의 파라미터들이 나열되며 우측 위, 아래 화살표를 이용하거나 혹은 직접 값을 입력하여 수정합니다. 값 수정으로 인한 Curve는 수정과 동시에 적용되어 그래프 창에서 확인할 수 있습니다.
+
+![](images/MAT10.png){.border-black}
 
 :::{admonition} Move the directory
 :class: tip
