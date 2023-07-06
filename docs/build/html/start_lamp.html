@@ -51,30 +51,36 @@
 <p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">시작하기</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#steel-ls-dyna"><span class="xref myst">1.1 시험데이터를 이용한 Steel 계열 LS-Dyna 물성 카드 생성</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ls-dyna-hyperelastic">1.2 시험데이터를 이용한 LS-Dyna Hyperelastic 물성 카드 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2"><span class="xref myst">1.3 개인 물성 관리를 위한 데이터베이스 제공 및 현대제철 물성 데이터베이스 제공</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gissmo"><span class="xref myst">1.4 GISSMO 물성 생성을 위한 인터페이스 기능</span></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">2. Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">2.1 경로 변경</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.1 경로 변경</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lamp-server">2.2 LAMP Server</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lamp">2.3 LAMP</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#license">3. License 발급</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#stand-alone-license">3.1 Stand-alone license</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">로그 파일 생성</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">라이선스 파일 등록</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">로그 파일 생성</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">라이선스 파일 등록</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#network-license">3.2 Network license</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pc">로그 파일 생성 (서버 PC)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">라이선스 파일 등록 (서버 PC)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id6">라이선스 등록 (클라이언트 PC)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">라이선스 파일 등록 (서버 PC)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">라이선스 등록 (클라이언트 PC)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">4. 데이터베이스 설정</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id8">4. 데이터베이스 설정</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mariadb">4.1 MariaDB 설치</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">4.2 현대제철 물성 추가</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">4.2 현대제철 물성 추가</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lamp-user-interface">5. LAMP 메인 User Interface</a></li>
@@ -121,13 +127,46 @@
 <section id="introduction">
 <h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
 <p>LAMP(LS-Dyna Advanced Material Platform)는 한국시뮬레이션기술에서 개발하고 있는 프로그램으로 LS-Dyna 사용자들이 재료 물성 카드를 생성 및 관리할 수 있도록 다양한 기능들을 제공하여 LS-Dyna 해석 소프트웨어 활용에 편의성을 제공합니다. LAMP는 현재 한국시뮬레이션기술에서 LS-Dyna를 구매하고 유지보수를 유지하고 계시는 고객들에게 제공되고 있습니다.</p>
+<p>현재 LAMP에서 사용할 수 있는 기능은 다음과 같습니다.</p>
+<section id="steel-ls-dyna">
+<h3><a class="reference internal" href="gen_material.html"><span class="std std-doc">1.1 시험데이터를 이용한 Steel 계열 LS-Dyna 물성 카드 생성</span></a><a class="headerlink" href="#steel-ls-dyna" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>시험 raw 데이터의 Curve Fitting</p></li>
+<li><p>Ludwick, Swift, Voce, Kim-Tuan, Mixed Swift-Voce 모델 사용 가능</p></li>
+<li><p>Johnson-Cook 모델의 strain rate를 고려한 Curve Fitting</p></li>
+<li><p>생성된 물성 데이터의 데이터베이스 저장</p></li>
+</ul>
+</section>
+<section id="ls-dyna-hyperelastic">
+<h3>1.2 시험데이터를 이용한 LS-Dyna Hyperelastic 물성 카드 생성<a class="headerlink" href="#ls-dyna-hyperelastic" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>MOONEY-RIVLIN (MAT27), HYPERELASTIC Order 1 ~ 3 (MAT77), OGDEN Order 1 ~ 3 (MAT77) 사용 가능</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3><a class="reference internal" href="database.html"><span class="std std-doc">1.3 개인 물성 관리를 위한 데이터베이스 제공 및 현대제철 물성 데이터베이스 제공</span></a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>MySQL 기반의 MariaDB를 이용한 데이터베이스 제공</p></li>
+<li><p>사용자 개인 물성 저장 및 출력 인터페이스 제공(일부 LS-Dyna 물성 카드만 지원)</p></li>
+<li><p>Steel 계열의 현대 제철 물성 데이터 제공</p></li>
+</ul>
+</section>
+<section id="gissmo">
+<h3><a class="reference internal" href="lamp_gissmo.html"><span class="std std-doc">1.4 GISSMO 물성 생성을 위한 인터페이스 기능</span></a><a class="headerlink" href="#gissmo" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>GISSMO 물성 생성을 위한 LS-OPT 및 LS-DYNA의 시뮬레이션 인터페이스 제공</p></li>
+<li><p>LS-OPT를 이용한 GISSMO 물성 파라미터의 최적화 및 Mesh Regularization 가능</p></li>
+<li><p>Triaxiality 계산 기능 및 Triaxiality Curve 생성을 위한 수치 도구 제공</p></li>
+<li><p>LS-Dyna에서 사용 가능한 GISSMO 물성 카드 생성</p></li>
+</ul>
+</section>
 </section>
 <section id="installation">
 <h2>2. Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <p>LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 해제 합니다. 압축 해제 후 LAMP Installer.exe 파일을 실행하면 아래와 같은 설치 화면이 표시됩니다.</p>
 <p><img alt="LAMP 설치 화면" src="_images/LAMP0.png" /></p>
-<section id="id2">
-<h3>2.1 경로 변경<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<section id="id3">
+<h3>2.1 경로 변경<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <p>설치 경로는 Install directory 우측 아이콘을 <img alt="" src="_images/LAMP1.png" /> 클릭 하여 변경 할 수 있습니다.</p>
 </section>
 <section id="lamp-server">
@@ -145,13 +184,13 @@
 <section id="stand-alone-license">
 <h3>3.1 Stand-alone license<a class="headerlink" href="#stand-alone-license" title="Permalink to this heading"></a></h3>
 <p>개인 local PC 1대에 LAMP를 사용하기 위한 라이선스로 LAMP 설치 시 함께 설치되는 LicenseManager에서 로그 파일을 생성 할 수 있으며, 발급되는 라이선스를 등록할 수 있습니다.</p>
-<section id="id3">
-<h4>로그 파일 생성<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<section id="id4">
+<h4>로그 파일 생성<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
 <p>LicenseManager를 실행하고 상단 Export 메뉴에서 Log file 메뉴를 클릭하면 생성되는 창에서 요구되는 정보를 입력하고 Save log file 버튼으로 log 파일을 저장 후 한국시뮬레이션기술에 로그 파일을 보냅니다.</p>
 <p><img alt="Stand-alone license" src="_images/LAMP2.png" /></p>
 </section>
-<section id="id4">
-<h4>라이선스 파일 등록<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
+<section id="id5">
+<h4>라이선스 파일 등록<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h4>
 <p>제공되는 라이선스 파일은 LicenseManager에서 등록을 해야 합니다. LicenseManager를 실행 하시고 License Type을 Stand-alone으로 선택합니다. License Path의 Browse를 클릭한 후 제공된 라이선스 파일을 선택하고 Apply를 눌러 라이선스를 등록합니다.</p>
 <p><img alt="License Manager" src="_images/LAMP3.png" /></p>
 </section>
@@ -168,16 +207,16 @@
 </ul>
 <p><img alt="Network license" src="_images/LAMP5.png" /></p>
 </section>
-<section id="id5">
-<h4>라이선스 파일 등록 (서버 PC)<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h4>
+<section id="id6">
+<h4>라이선스 파일 등록 (서버 PC)<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h4>
 <p>제공되는 라이선스는 서버 PC에서 LAMP Server를 통해 등록합니다.</p>
 <ul class="simple">
 <li><p>LAMP Server를 실행하고 <img alt="License icon" src="_images/LAMP4.png" /> 아이콘을 클릭</p></li>
 <li><p>Registration 버튼 클릭 후 제공된 라이선스 파일 선택</p></li>
 </ul>
 </section>
-<section id="id6">
-<h4>라이선스 등록 (클라이언트 PC)<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h4>
+<section id="id7">
+<h4>라이선스 등록 (클라이언트 PC)<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h4>
 <p>서버에 등록된 라이선스를 클라이언트 PC에서 사용하기 위해서 LicenseManager를 통해 등록합니다.</p>
 <ul class="simple">
 <li><p>LicenseManager를 실행</p></li>
@@ -186,8 +225,8 @@
 </section>
 </section>
 </section>
-<section id="id7">
-<h2>4. 데이터베이스 설정<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<section id="id8">
+<h2>4. 데이터베이스 설정<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
 <p>LAMP에서 제공하는 데이터베이스는 MariaDB에서 테스트 되었으며, 사용을 위해 서버 PC에 MariaDB를 설치 해야 합니다.</p>
 <section id="mariadb">
 <h3>4.1 MariaDB 설치<a class="headerlink" href="#mariadb" title="Permalink to this heading"></a></h3>
@@ -195,8 +234,8 @@
 <p><a class="reference external" href="https://dlm.mariadb.com/1913768/mariadb/mariadb-10.5.13/winx64-packages/mariadb-10.5.13-winx64.msi">https://dlm.mariadb.com/1913768/mariadb/mariadb-10.5.13/winx64-packages/mariadb-10.5.13-winx64.msi</a></p>
 <p><img alt="" src="_images/LAMP7.png" /></p>
 </section>
-<section id="id8">
-<h3>4.2 현대제철 물성 추가<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<section id="id9">
+<h3>4.2 현대제철 물성 추가<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
 <p>LAMP는 현대제철의 Steel 계열의 물성을 제공합니다. 현대제철 물성을 사용하기 위해서는 제공되는 현대제철 물성을 데이터베이스에 추가하여야 합니다.</p>
 <ul class="simple">
 <li><p>LAMP Server 실행 후 <img alt="" src="_images/LAMP8.jpg" /> 아이콘 클릭</p></li>

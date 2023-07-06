@@ -2,6 +2,29 @@
 
 ## 1. Introduction
 LAMP(LS-Dyna Advanced Material Platform)는 한국시뮬레이션기술에서 개발하고 있는 프로그램으로 LS-Dyna 사용자들이 재료 물성 카드를 생성 및 관리할 수 있도록 다양한 기능들을 제공하여 LS-Dyna 해석 소프트웨어 활용에 편의성을 제공합니다. LAMP는 현재 한국시뮬레이션기술에서 LS-Dyna를 구매하고 유지보수를 유지하고 계시는 고객들에게 제공되고 있습니다.
+
+현재 LAMP에서 사용할 수 있는 기능은 다음과 같습니다.
+
+### [1.1 시험데이터를 이용한 Steel 계열 LS-Dyna 물성 카드 생성](./gen_material.md)
+- 시험 raw 데이터의 Curve Fitting
+- Ludwick, Swift, Voce, Kim-Tuan, Mixed Swift-Voce 모델 사용 가능
+- Johnson-Cook 모델의 strain rate를 고려한 Curve Fitting
+- 생성된 물성 데이터의 데이터베이스 저장
+
+### 1.2 시험데이터를 이용한 LS-Dyna Hyperelastic 물성 카드 생성
+- MOONEY-RIVLIN (MAT27), HYPERELASTIC Order 1 ~ 3 (MAT77), OGDEN Order 1 ~ 3 (MAT77) 사용 가능
+
+### [1.3 개인 물성 관리를 위한 데이터베이스 제공 및 현대제철 물성 데이터베이스 제공](./database.md)
+- MySQL 기반의 MariaDB를 이용한 데이터베이스 제공
+- 사용자 개인 물성 저장 및 출력 인터페이스 제공(일부 LS-Dyna 물성 카드만 지원)
+- Steel 계열의 현대 제철 물성 데이터 제공
+
+### [1.4 GISSMO 물성 생성을 위한 인터페이스 기능](./lamp_gissmo.md)
+- GISSMO 물성 생성을 위한 LS-OPT 및 LS-DYNA의 시뮬레이션 인터페이스 제공
+- LS-OPT를 이용한 GISSMO 물성 파라미터의 최적화 및 Mesh Regularization 가능
+- Triaxiality 계산 기능 및 Triaxiality Curve 생성을 위한 수치 도구 제공
+- LS-Dyna에서 사용 가능한 GISSMO 물성 카드 생성
+
 ## 2. Installation
 LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 해제 합니다. 압축 해제 후 LAMP Installer.exe 파일을 실행하면 아래와 같은 설치 화면이 표시됩니다.
 
