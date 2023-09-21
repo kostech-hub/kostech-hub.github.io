@@ -49,7 +49,8 @@ LicenseManager를 실행하고 상단 Export 메뉴에서 Log file 메뉴를 클
 ![Stand-alone license](images/LAMP2.png)
 
 #### 라이선스 파일 등록
-제공되는 라이선스 파일은 LicenseManager에서 등록을 해야 합니다. LicenseManager를 실행 하시고 License Type을 Stand-alone으로 선택합니다. License Path의 Browse를 클릭한 후 제공된 라이선스 파일을 선택하고 Apply를 눌러 라이선스를 등록합니다.
+제공되는 라이선스 파일은 LicenseManager에서 등록을 해야 합니다. LicenseManager를 실행 하시고 License Type을 Stand-alone으로 선택합니다. \
+License Path의 Browse를 클릭한 후 제공된 라이선스 파일을 선택하고 Apply를 눌러 라이선스를 등록합니다.
 
 ![License Manager](images/LAMP3.png)
 
