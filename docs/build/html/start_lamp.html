@@ -73,14 +73,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#network-license">3.2 Network license</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pc">로그 파일 생성 (서버 PC)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id6">라이선스 파일 등록 (서버 PC)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">라이선스 등록 (클라이언트 PC)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clinet-pc">Clinet PC에서 라이선스 활성화</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">4. 데이터베이스 설정</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id7">4. 데이터베이스 설정</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mariadb">4.1 MariaDB 설치</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">4.2 현대제철 물성 추가</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">4.2 현대제철 물성 추가</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lamp-user-interface">5. LAMP 메인 User Interface</a></li>
@@ -201,9 +201,9 @@
 <h4>로그 파일 생성 (서버 PC)<a class="headerlink" href="#pc" title="Permalink to this heading"></a></h4>
 <p>네트워크 라이선스를 발급받기 위해서는 LAMP Server에서 로그 파일을 생성해야 합니다.</p>
 <ul class="simple">
-<li><p>LAMP Server를 실행하고 <img alt="" src="_images/LAMP4.png" /> 아이콘을 클릭</p></li>
-<li><p>Generate log 버튼 클릭</p></li>
-<li><p>필수 정보 입력 후 Save log file 클릭</p></li>
+<li><p>LAMP Server를 실행하고 LICENSE 탭을 선택합니다.</p></li>
+<li><p>System log 버튼을 클릭합니다.</p></li>
+<li><p>필수 정보(Company name, Email address, Phone number, Contact name) 입력 후 Export 버튼으로 파일 생성</p></li>
 </ul>
 <p><img alt="Network license" src="_images/LAMP5.png" /></p>
 </section>
@@ -211,22 +211,30 @@
 <h4>라이선스 파일 등록 (서버 PC)<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h4>
 <p>제공되는 라이선스는 서버 PC에서 LAMP Server를 통해 등록합니다.</p>
 <ul class="simple">
-<li><p>LAMP Server를 실행하고 <img alt="License icon" src="_images/LAMP4.png" /> 아이콘을 클릭</p></li>
-<li><p>Registration 버튼 클릭 후 제공된 라이선스 파일 선택</p></li>
+<li><p>LAMP Server를 실행하고 LICENSE 탭을 선택합니다.</p></li>
+<li><p>Path of license file 입력란에 제공받으신 라이선스 파일 경로를 입력 및 더블 클릭하여 선택합니다.</p></li>
+<li><p>Start 버튼을 클릭 후 Server Status의 Text가 Running으로 표기되는지 확인합니다.</p></li>
+<li><p>라이선스 서버가 제대로 시작되지 않는다면 lamp_server_log.txt 파일과 함께 KOSTECH에 문의주시기 바랍니다.</p></li>
 </ul>
 </section>
-<section id="id7">
-<h4>라이선스 등록 (클라이언트 PC)<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h4>
+<section id="clinet-pc">
+<h4>Clinet PC에서 라이선스 활성화<a class="headerlink" href="#clinet-pc" title="Permalink to this heading"></a></h4>
 <p>서버에 등록된 라이선스를 클라이언트 PC에서 사용하기 위해서 LicenseManager를 통해 등록합니다.</p>
 <ul class="simple">
-<li><p>LicenseManager를 실행</p></li>
-<li><p>License Type을 Network로 선택하고 서버의 IP Address를 입력 후 Apply 클릭</p></li>
+<li><p>LicenseManager를 실행합니다.</p></li>
+<li><p>License Type을 Network로 선택하고 서버의 IP Address를 입력 후 Apply 클릭합니다.</p></li>
+<li><p>완료되었다는 메세지가 표시될 때까지 기다립니다.</p></li>
 </ul>
+<div class="note admonition">
+<p class="admonition-title">Network port of license server</p>
+<p>LAMP 라이선스 서버는 기본적으로 27015 포트를 사용합니다. Client PC에서 라이선스 활성화가 되지 않는다면 <br />
+방화벽 설정을 확인하시기 바랍니다. 현재 포트 번호를 변경하여 사용하는 것은 지원되지 않습니다.(향후 추가 예정)</p>
+</div>
 </section>
 </section>
 </section>
-<section id="id8">
-<h2>4. 데이터베이스 설정<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<section id="id7">
+<h2>4. 데이터베이스 설정<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
 <p>LAMP에서 제공하는 데이터베이스는 MariaDB에서 테스트 되었으며, 사용을 위해 서버 PC에 MariaDB를 설치 해야 합니다.</p>
 <section id="mariadb">
 <h3>4.1 MariaDB 설치<a class="headerlink" href="#mariadb" title="Permalink to this heading"></a></h3>
@@ -234,17 +242,23 @@
 <p><a class="reference external" href="https://dlm.mariadb.com/1913768/mariadb/mariadb-10.5.13/winx64-packages/mariadb-10.5.13-winx64.msi">https://dlm.mariadb.com/1913768/mariadb/mariadb-10.5.13/winx64-packages/mariadb-10.5.13-winx64.msi</a></p>
 <p><img alt="" src="_images/LAMP7.png" /></p>
 </section>
-<section id="id9">
-<h3>4.2 현대제철 물성 추가<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<section id="id8">
+<h3>4.2 현대제철 물성 추가<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
 <p>LAMP는 현대제철의 Steel 계열의 물성을 제공합니다. 현대제철 물성을 사용하기 위해서는 제공되는 현대제철 물성을 데이터베이스에 추가하여야 합니다.</p>
 <ul class="simple">
-<li><p>LAMP Server 실행 후 <img alt="" src="_images/LAMP8.jpg" /> 아이콘 클릭</p></li>
-<li><p>DB Connect 클릭 후 사용자 계정(root)과 비밀번호를 입력 하고 Connect 클릭</p></li>
-<li><p>연결 성공 시 File Load 버튼 활성화 되며 File Load 버튼 클릭하고 hyundaisteel_db.sql 파일 선택</p></li>
-<li><p>hyundaisteel_db.sql 파일은 LAMP Server 설치 경로의 data 폴더에 있음</p></li>
-<li><p>hyundaisteel_db 데이터 추가 후 Load 열의 버튼을 눌러 Load 진행</p></li>
-<li><p>Status 열이 Loaded로 변경되면 성공</p></li>
+<li><p>LAMP Server 실행 후 DATABASE 탭을 클릭합니다.</p></li>
+<li><p>Connection을 선택하고 표시되는 Database Connection 창에서 정보를 입력하고 Connect 버튼을 클릭합니다.</p></li>
+<li><p>Connection Status에 Connected 텍스트로 표시되는 것을 확인합니다.</p></li>
+<li><p>Import 버튼을 클릭 후 LAMP Server 설치 경로의 data 폴더에 있는 hyundaisteel_db.sql 파일을 선택합니다.</p></li>
+<li><p>hyundaisteel_db 데이터베이스 항목이 추가 되었는지 확인합니다.</p></li>
+<li><p>Menu 열의 … 버튼을 클릭 후 Load 버튼을 클릭합니다.</p></li>
+<li><p>Status 열의 텍스트가 Unloaded에서 Loaded로 변경되었는지 확인합니다.</p></li>
 </ul>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>LAMP Server의 기본 설치 경로는 C:\KOSTECH\LAMPS 입니다. <br />
+LAMP에서 현대제철 물성을 출력하는 방법은 <a class="reference internal" href="database.html#mariadb"><span class="std std-ref">현대제철 물성 출력</span></a>의 내용을 확인하세요.</p>
+</div>
 <p><img alt="" src="_images/LAMP6.png" /></p>
 </section>
 </section>

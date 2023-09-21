@@ -57,23 +57,32 @@ LicenseManager를 실행하고 상단 Export 메뉴에서 Log file 메뉴를 클
 #### 로그 파일 생성 (서버 PC)
 네트워크 라이선스를 발급받기 위해서는 LAMP Server에서 로그 파일을 생성해야 합니다. 
 
-- LAMP Server를 실행하고 ![](images/LAMP4.png) 아이콘을 클릭
-- Generate log 버튼 클릭
-- 필수 정보 입력 후 Save log file 클릭
+- LAMP Server를 실행하고 LICENSE 탭을 선택합니다.
+- System log 버튼을 클릭합니다.
+- 필수 정보(Company name, Email address, Phone number, Contact name) 입력 후 Export 버튼으로 파일 생성
 
 ![Network license](images/LAMP5.png)
 
 #### 라이선스 파일 등록 (서버 PC)
 제공되는 라이선스는 서버 PC에서 LAMP Server를 통해 등록합니다.
 
-- LAMP Server를 실행하고 ![License icon](images/LAMP4.png) 아이콘을 클릭
-- Registration 버튼 클릭 후 제공된 라이선스 파일 선택
+- LAMP Server를 실행하고 LICENSE 탭을 선택합니다.
+- Path of license file 입력란에 제공받으신 라이선스 파일 경로를 입력 및 더블 클릭하여 선택합니다.
+- Start 버튼을 클릭 후 Server Status의 Text가 Running으로 표기되는지 확인합니다.
+- 라이선스 서버가 제대로 시작되지 않는다면 lamp_server_log.txt 파일과 함께 KOSTECH에 문의주시기 바랍니다.
 
-#### 라이선스 등록 (클라이언트 PC)
+#### Clinet PC에서 라이선스 활성화
 서버에 등록된 라이선스를 클라이언트 PC에서 사용하기 위해서 LicenseManager를 통해 등록합니다.
 
-- LicenseManager를 실행
-- License Type을 Network로 선택하고 서버의 IP Address를 입력 후 Apply 클릭
+- LicenseManager를 실행합니다.
+- License Type을 Network로 선택하고 서버의 IP Address를 입력 후 Apply 클릭합니다.
+- 완료되었다는 메세지가 표시될 때까지 기다립니다.
+
+:::{admonition} Network port of license server
+:class: note
+LAMP 라이선스 서버는 기본적으로 27015 포트를 사용합니다. Client PC에서 라이선스 활성화가 되지 않는다면 \
+방화벽 설정을 확인하시기 바랍니다. 현재 포트 번호를 변경하여 사용하는 것은 지원되지 않습니다.(향후 추가 예정)
+:::
 
 ## 4. 데이터베이스 설정
 LAMP에서 제공하는 데이터베이스는 MariaDB에서 테스트 되었으며, 사용을 위해 서버 PC에 MariaDB를 설치 해야 합니다. 
@@ -87,12 +96,19 @@ LAMP에서 제공하는 데이터베이스는 MariaDB에서 테스트 되었으�
 ### 4.2 현대제철 물성 추가
 LAMP는 현대제철의 Steel 계열의 물성을 제공합니다. 현대제철 물성을 사용하기 위해서는 제공되는 현대제철 물성을 데이터베이스에 추가하여야 합니다.
 
-- LAMP Server 실행 후 ![](images/LAMP8.jpg) 아이콘 클릭
-- DB Connect 클릭 후 사용자 계정(root)과 비밀번호를 입력 하고 Connect 클릭
-- 연결 성공 시 File Load 버튼 활성화 되며 File Load 버튼 클릭하고 hyundaisteel_db.sql 파일 선택 
-- hyundaisteel_db.sql 파일은 LAMP Server 설치 경로의 data 폴더에 있음
-- hyundaisteel_db 데이터 추가 후 Load 열의 버튼을 눌러 Load 진행
-- Status 열이 Loaded로 변경되면 성공
+- LAMP Server 실행 후 DATABASE 탭을 클릭합니다.
+- Connection을 선택하고 표시되는 Database Connection 창에서 정보를 입력하고 Connect 버튼을 클릭합니다.
+- Connection Status에 Connected 텍스트로 표시되는 것을 확인합니다.
+- Import 버튼을 클릭 후 LAMP Server 설치 경로의 data 폴더에 있는 hyundaisteel_db.sql 파일을 선택합니다.
+- hyundaisteel_db 데이터베이스 항목이 추가 되었는지 확인합니다.
+- Menu 열의 . . . 버튼을 클릭 후 Load 버튼을 클릭합니다.
+- Status 열의 텍스트가 Unloaded에서 Loaded로 변경되었는지 확인합니다.
+
+:::{admonition} Tip
+:class: Tip
+LAMP Server의 기본 설치 경로는 C:\KOSTECH\LAMPS 입니다. \
+LAMP에서 현대제철 물성을 출력하는 방법은 [현대제철 물성 출력](./database.md#1-mariadb-설치-및-현대제철-물성)의 내용을 확인하세요.
+:::
 
 ![](images/LAMP6.png)
 
