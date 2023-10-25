@@ -110,6 +110,17 @@ Step 2에서의 진행 상태를 표시합니다. 우측의 사각형 마크는 
 - <span style="color:orange">주황</span> : 주황색은 해당 시편 모델의 최적화 시뮬레이션이 수행중인 상태를 의미합니다.
 - <span style="color:green">초록</span> : 초록색은 해당 시편 모델의 최적화 시뮬레이션이 성공적으로 종료되었음을 의미합니다. 
 
+### LSOPT Project Generation
+Step1에서 추가된 시편 모델들의 GISSMO 파라미터들의 최적화 시뮬레이션을 수행하는데 있어 각 시편을 개별적으로 시뮬레이션을 수행 하거나(Individual) 모든 시편을 통합하여 시뮬레이션(Integration) 할 수 있습니다. 통합 해석(Integration)의 경우에는 Base specimen 모델을 선택해야 합니다. Base specimen을 선택함으로써 GISSMO 파라미터인 DMGEXP와 FADEXP는 Base specimen의 입력값으로 변경되어 시뮬레이션이 수행됩니다. 
+
+:::{tip}
+Base specimen의 선택에 제한은 없지만 일반적으로 인장 모델(Uniaxial Tension)을 사용합니다.
+:::
+
+:::{attention}
+통합 해석은 LSOPT 7.0 버전에서 테스트 되었습니다. LSOPT 7.0 이하 버전에서는 동작되지 않을 수 있습니다.
+:::
+
 ### Card type
 LS-Dyna에서 지원되는 GISSMO 재료 카드는 2가지가 있습니다. MAT_ADD_DAMAGE_GISSMO 카드는 LS-Dyan R12 버전을 포함한 상위 버전에서 지원되는 카드입니다. R12 버전 이상의 LS-Dyna solver를 사용하는 경우에는 MAT_ADD_DAMAGE_GISSMO 카드 사용을 권장 드립니다.
 

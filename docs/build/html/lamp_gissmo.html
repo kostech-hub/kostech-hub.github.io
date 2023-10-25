@@ -61,6 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#solver-option">Solver option</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lsopt-option">LSOPT Option</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#status">Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lsopt-project-generation">LSOPT Project Generation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#card-type">Card type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scheduler">Scheduler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run-stop">Run &amp; Stop</a></li>
@@ -220,6 +221,18 @@ Specimen 항목의 우측 휴지통 아이콘을 통해 추가된 시편 모델�
 <li><p><span style="color:orange">주황</span> : 주황색은 해당 시편 모델의 최적화 시뮬레이션이 수행중인 상태를 의미합니다.</p></li>
 <li><p><span style="color:green">초록</span> : 초록색은 해당 시편 모델의 최적화 시뮬레이션이 성공적으로 종료되었음을 의미합니다.</p></li>
 </ul>
+</section>
+<section id="lsopt-project-generation">
+<h3>LSOPT Project Generation<a class="headerlink" href="#lsopt-project-generation" title="Permalink to this heading"></a></h3>
+<p>Step1에서 추가된 시편 모델들의 GISSMO 파라미터들의 최적화 시뮬레이션을 수행하는데 있어 각 시편을 개별적으로 시뮬레이션을 수행 하거나(Individual) 모든 시편을 통합하여 시뮬레이션(Integration) 할 수 있습니다. 통합 해석(Integration)의 경우에는 Base specimen 모델을 선택해야 합니다. Base specimen을 선택함으로써 GISSMO 파라미터인 DMGEXP와 FADEXP는 Base specimen의 입력값으로 변경되어 시뮬레이션이 수행됩니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Base specimen의 선택에 제한은 없지만 일반적으로 인장 모델(Uniaxial Tension)을 사용합니다.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>통합 해석은 LSOPT 7.0 버전에서 테스트 되었습니다. LSOPT 7.0 이하 버전에서는 동작되지 않을 수 있습니다.</p>
+</div>
 </section>
 <section id="card-type">
 <h3>Card type<a class="headerlink" href="#card-type" title="Permalink to this heading"></a></h3>
