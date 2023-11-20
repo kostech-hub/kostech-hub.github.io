@@ -26,7 +26,7 @@ LAMP(LS-Dyna Advanced Material Platform)는 한국시뮬레이션기술에서 �
 - LS-Dyna에서 사용 가능한 GISSMO 물성 카드 생성
 
 ## 2. Installation
-LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 해제 합니다. 압축 해제 후 LAMP Installer.exe 파일을 실행하면 아래와 같은 설치 화면이 표시됩니다.
+LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 해제 합니다. 압축 해제 후 LAMP Installer.exe 파일을 실행하면 아래와 같은 설치 화면이 표시됩니다. 
 
 ![LAMP 설치 화면](images/LAMP0.png "LAMP 설치 화면")
 

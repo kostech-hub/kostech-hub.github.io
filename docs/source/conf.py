@@ -82,12 +82,9 @@ latex_elements = {
 % 영문 폰트 설정
 \setmainfont[Mapping=tex-text]{NanumGothic}
 \setsansfont[Mapping=tex-text]{나눔명조}
-\setmonofont{나눔고딕코딩}
 
 % 한글 폰트 설정
 \setmainhangulfont[Mapping=tex-text]{NanumGothic}
 \setsanshangulfont[Mapping=tex-text]{나눔명조}
-\setmonohangulfont{나눔고딕코딩}
-
 ''',
 }
