@@ -149,7 +149,7 @@ Step 2에서 최적화 시뮬레이션에서 생성된 결과들에서 사용자
 
 :::{admonition} LS-OPT Viewer
 
-![](images/gissmo/gissmo1.gif)
+<!-- ![](images/gissmo/gissmo1.gif) -->
 
 위 영상에서 확인할 수 있는 내용에 대해서 아래와 같이 설명합니다.
 - FORCE_DISPLACEMENT_CURVE : 최적화 시뮬레이션을 통해서 계산된 결과의 Force-Displacement 결과 Curve를 표시합니다.
@@ -176,7 +176,7 @@ Step 2에서 최적화 시뮬레이션에서 생성된 결과들에서 사용자
 ### Calculation Triaxiality Value
 LS-OPT Viewer에서 각 시편 모델의 최적 결과를 선택하였다면 각 시편 모델의 Triaxiality를 계산해야 합니다. LAMP GISSMO에서 Triaxiality를 쉽게 계산할 수 있습니다. 하단의 Select Result를 클릭합니다.
 
-![](images/gissmo/select_optimal_result.gif)
+<!-- ![](images/gissmo/select_optimal_result.gif) -->
 
 - Project : 현재 사용중인 시편 모델의 이름을 표시합니다.
 - Result : 최적화 시뮬레이션으로 생성된 결과의 넘버링 목록이 표시되며 LS-OPT Viewer에서 선택한 각 시편 모델의 최적 결과 Case 넘버를 선택합니다.
@@ -191,7 +191,7 @@ LS-OPT Viewer에서 각 시편 모델의 최적 결과를 선택하였다면 각
 Triaxiality는 평균(Average)과 적분(Integration) 방법으로 계산할 수 있습니다. 평균은 0이 아닌 값들을 평균하여 계산하며 적분 방법은 Effective Plastic Strain - Triaxiality Curve의 면적에 최대 Effective Plastic Strain을 나눈 값으로 계산합니다. 
 :::
 
-### Triaxility Curve Data
+### Triaxiality Curve Data
 최적화 시뮬레이션이 완료된 시편 모델들에 대해서 최적 결과를 선택하고 Triaxiality를 계산 한 후에 생성되거나 생성 할 수 있는 Curve 데이터들을 확인하거나 조작할 수 있습니다.
 
 - Triaxiality vs Plastic Strain Data File : Triaxiality vs Plastic Strain Data가 기록된 csv파일 이름을 표시하고 우측 아이콘을 통해 그래프로 확인 할 수 있습니다.
@@ -209,7 +209,7 @@ H-F Failure 탭에서는 Hosford-Coulomb Failure Model을 이용하여 Triaxiali
 해당 기능은 Curve를 데이터의 점 데이터에 알맞도록 자동으로 생성해주지 않습니다. \
 사용자가 NF, A, B, C 총 4개의 파라미터를 변경하면서 점 데이터를 잘 묘사하는 Curve를 찾아야 합니다.
 
-![](images/gissmo/gissmo0.gif)
+<!-- ![](images/gissmo/gissmo0.gif) -->
 
 :::
 
@@ -313,3 +313,4 @@ ECRIT의 ID는 GISSMO 카드에 마이너스 값으로 변경되어 입력됩니
 생성되는 결과물은 아래와 같습니다.
 
 ![](images/gissmo/gissmo10.png)
+

@@ -21,7 +21,11 @@ extensions = [
 myst_heading_anchors = 3
 # myst_all_links_external = True
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = [
+    'd3view_install*',
+    'd3view_issues*',
+    'dyna-fmi*'
+]
 myst_enable_extensions = [
     "colon_fence", 
     "attrs_inline",
@@ -29,6 +33,8 @@ myst_enable_extensions = [
     "fieldlist",
     "attrs_block",
 ]
+
+supported_image_types = ['image/svg+xml', 'image/png', 'image/gif', 'image/jpeg']
 
 myst_number_code_blocks = ["Bash"]
 

@@ -75,7 +75,7 @@ Selection of yield point
 - 커브에서 항복점을 선택
 - 필요에 따라 `Offset`을 입력
 
-![](images/pick_yield.gif)
+<!-- ![](images/pick_yield.gif) -->
 :::
 
 :::{Tip}

@@ -28,6 +28,7 @@ Welcome to KOSTECH documentation!
    gen_strain_rate_curve
    lamp_gissmo
    comments
+   sample
    appendix
 
 .. toctree::

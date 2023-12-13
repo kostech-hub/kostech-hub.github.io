@@ -51,4 +51,4 @@ LAMP는 기본적으로 Chart UI가 중앙에 위치하고 있습니다. Chart U
 ### Pan, Zoom in, Zoom out
 Chart UI에서 마우스를 이용하여 확대 및 축소 그리고 이동을 할 수 있습니다. 확대, 축소는 간단하게 마우스의 휠을 움직여 할 수 있습니다. 이동은 마우스의 우측 버튼을 클릭한 채 마우스를 움직입니다. 원래 상태로 돌아오기 위해서는 ESC 버튼을 누릅니다.  
 
-![](images/ChartPanZoomInOut.gif)
+<!-- ![](images/ChartPanZoomInOut.gif) -->
