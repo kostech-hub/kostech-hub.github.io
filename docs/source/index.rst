@@ -10,7 +10,7 @@ Welcome to KOSTECH documentation!
    :maxdepth: 2
    :caption: COSIMULATION
 
-   dyna-fmi
+   ./FMI/dyna-fmi
 
 .. toctree::
    :maxdepth: 2
@@ -22,14 +22,14 @@ Welcome to KOSTECH documentation!
    :maxdepth: 2
    :caption: LAMP
 
-   start_lamp
-   gen_material
-   database
-   gen_strain_rate_curve
-   lamp_gissmo
-   comments
-   sample
-   appendix
+   ./LAMP/start_lamp
+   ./LAMP/gen_material
+   ./LAMP/database
+   ./LAMP/gen_strain_rate_curve
+   ./LAMP/lamp_gissmo
+   ./LAMP/comments
+   ./LAMP/sample
+   ./LAMP/appendix
 
 .. toctree::
    :maxdepth: 2
