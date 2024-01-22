@@ -44,7 +44,7 @@ d3view를 설치한 이후에 서버를 실행하여 d3view를 구동합니다.
 - ./d3view_server.sh start 명령어를 입력하여 d3view를 구동합니다.
 - client 컴퓨터 웹 브라우저에서 http://(server_ip_address):3080을 입력하고 아래와 같이 표시되는지 확인합니다.
 
-![](images/d3view/welcome.png)
+![](images/welcome.png)
 
 :::{attention}
 d3view 구성 명령어는 d3view 사용자로 구동합니다.
@@ -53,7 +53,7 @@ d3view 구성 명령어는 d3view 사용자로 구동합니다.
 ### 1.4 라이선스 발급을 위한 host id 확인
 d3view의 라이선스를 발급받기 위해 d3view 서버를 설치한 장비의 host id를 확인하고 본사에 전달해야 합니다.경우에 따라 이후 과정으로 d3view application 설치 파일이 본사로 부터 제공될 수 있습니다. d3view application의 위치는 {D3VIEW_PATH}/app 경로이며 설치가 필요한 경우 제공되는 설치 파일을 {D3VIEW_PATH}/app에 위치 시키고 압축을 해제합니다.
 
-- 따로 본사로 부터 application을 제공 받은 경우 {D3VIEW_PATH}/amp/hpptd/conf/httpd.conf의 ```DocuentRoot```와 바로 아래에 있는 ```Directory```의 경로를 설치한 application의 web 경로로 변경합니다.
+- 따로 본사로 부터 application을 제공 받은 경우 {D3VIEW_PATH}/amp/hpptd/conf/httpd.conf의 ```DocumentRoot```와 바로 아래에 있는 ```Directory```의 경로를 설치한 application의 web 경로로 변경합니다.
 - {D3VIEW_PATH}/amp/php/bin/php.ini 파일에 정의 된 경로가 올바른지 확인하고 zend 설정이 다음과 같은지 확인합니다.
 > zend_extension="{D3VIEW_PATH}/amp/php/lib/php/extensions/no-debug-non-zts-20090626/ZendGuardLoader.so" \
 zend_loader.enable=1 \
@@ -63,7 +63,7 @@ zend_loader.license_path=path/to/license/3VIEW_License_XfinityInc_202122zl.zl
 - 위 과정에서 수정이 된 경우 서버를 d3view를 재구동합니다. (ex. {D3VIEW_PATH}/d3view_server.sh restart)
 - Client 컴퓨터의 웹 브라우져에서 http://{server_ip_address}:3080/hostids.php를 입력하고 표시되는 host id를 확인하고 d3view 공급처에 hostid 정보를 제공합니다.
 
-![](images/d3view/hostid.png)
+![](images/hostid.png)
 
 ### 1.5 라이선스 설치
 공급처로부터 발급받은 라이선스를 d3view 서버에 적용합니다.
@@ -72,7 +72,7 @@ zend_loader.license_path=path/to/license/3VIEW_License_XfinityInc_202122zl.zl
 - d3view 서버를 재구동합니다.
 - Client 컴퓨터의 웹 브라우져에서 http://{server_ip_address}:3080을 입력하고 아래와 같은 페이지가 표시되는지 확인합니다.
 
-![](images/d3view/intro.png)
+![](images/intro.png)
 
 ### 1.6 d3view 설치
 [라이선스 설치](#16-d3view-설치) 과정에서 정상적으로 웹 페이지가 표시되었다면 Install d3VIEW 버튼 클릭 이후에 나타나는 입력란에 다음의 정보를 입력합니다.
