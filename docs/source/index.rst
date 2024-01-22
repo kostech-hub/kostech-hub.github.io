@@ -36,3 +36,9 @@ Welcome to KOSTECH documentation!
    :caption: D3VIEW
 
    d3view_install
+
+.. toctree::
+   :maxdepth: 2
+   :caption: SCALE
+
+   ./SCALE/scale-contents.md
