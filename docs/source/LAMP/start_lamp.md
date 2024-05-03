@@ -74,7 +74,12 @@ License Path의 Browse를 클릭한 후 제공된 라이선스 파일을 선택�
 - LAMP Server를 실행하고 LICENSE 탭을 선택합니다.
 - Path of license file 입력란에 제공받으신 라이선스 파일 경로를 입력 및 더블 클릭하여 선택합니다.
 - Start 버튼을 클릭 후 Server Status의 Text가 Running으로 표기되는지 확인합니다.
-- 라이선스 서버가 제대로 시작되지 않는다면 lamp_server_log.txt 파일과 함께 KOSTECH에 문의주시기 바랍니다.
+- 라이선스 서버가 제대로 시작되지 않는다면 lamp_server_log.txt, lamp_server_app_log.txt 파일과 함께 KOSTECH에 문의주시기 바랍니다.
+
+:::{admonition} path of log file
+:class: note
+lamp_server_log.txt와 lamp_server_app_log.txt 파일은 C:/Users/{현자 사용자 이름}/AppData/Local/LAMPS에 있습니다.
+:::
 
 #### Clinet PC에서 라이선스 활성화
 서버에 등록된 라이선스를 클라이언트 PC에서 사용하기 위해서 LicenseManager를 통해 등록합니다.
