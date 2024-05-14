@@ -20,6 +20,12 @@ Welcome to KOSTECH documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: OASYS
+
+   ./OASYS/js_api
+
+.. toctree::
+   :maxdepth: 2
    :caption: LAMP
 
    ./LAMP/start_lamp
@@ -41,4 +47,6 @@ Welcome to KOSTECH documentation!
    :maxdepth: 2
    :caption: SCALE
 
-   ./SCALE/scale-contents
+   ./SCALE/scale-model
+   ./SCALE/scale-project
+   ./SCALE/scale.sdm

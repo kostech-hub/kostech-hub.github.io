@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCALE.Model &mdash; KOSTECH Documentation  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SCALE.project" href="scale-project.html" />
+    <link rel="prev" title="D3VIEW 시작하기" href="../d3View/d3view_install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            KOSTECH Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">COSIMULATION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../FMI/dyna-fmi.html">Docker와 FMI를 이용한 LS-Dyna Cosimulation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">OASYS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OASYS/js_api.html">JS-API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../LAMP/start_lamp.html">시작하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LAMP/gen_material.html">재료 물성 카드 생성</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LAMP/database.html">데이터베이스</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LAMP/gen_strain_rate_curve.html">Strain Rate 커브 생성</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LAMP/lamp_gissmo.html">LAMP GISSMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LAMP/comments.html">용어 설명</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LAMP/sample.html">Samples of LAMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LAMP/appendix.html">Appendix</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">D3VIEW</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../d3View/d3view_install.html">D3VIEW 시작하기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SCALE</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SCALE.Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-concepts">Basic concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-teamwork-and-synchronization">Workflow, teamwork and synchronization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synchronization">Synchronization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#offline-online">Offline / online</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#version-management">Version management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lock-modify-unlock">Lock - modify - unlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-modify-merge">Copy - modify - merge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#live-mode">Live mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-principles-of-the-modular-approach">Basic principles of the modular approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integration-of-external-cae-tools">Integration of external CAE tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cooperation-with-external-partners">Cooperation with external partners</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authorization-management">Authorization management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#role-concept">Role concept</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview-of-roles-and-permissions">Overview of roles and permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scale-project.html">SCALE.project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scale.sdm.html">SCALE.sdm</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">KOSTECH Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SCALE.Model</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/SCALE/scale-model.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="scale-model">
+<h1>SCALE.Model<a class="headerlink" href="#scale-model" title="Permalink to this heading"></a></h1>
+<section id="basic-concepts">
+<h2>Basic concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this heading"></a></h2>
+<p><img alt="alt text" src="../_images/InternalCAE_Department.png" /></p>
+<section id="workflow-teamwork-and-synchronization">
+<h3>Workflow, teamwork and synchronization<a class="headerlink" href="#workflow-teamwork-and-synchronization" title="Permalink to this heading"></a></h3>
+<section id="synchronization">
+<h4>Synchronization<a class="headerlink" href="#synchronization" title="Permalink to this heading"></a></h4>
+<p>데이터는 SCALE.sdm 서버 중앙에 보관되며, Model 클라이언트는 데이터의 로컬 복사본을 다운로드 합니다. 복사본은 Model 서버와 정기적으로 동기화되며, 이는 클라우드와 같은 인프라에 해당합니다. 로컬 작업 복사본을 기반으로 오프라인에서 작업할 수 있으며, 데이터 전송 및 데이터 저장을 위한 암호화(2단계 인증 및 암호화)를 구성하여 보안을 보장할 수 있습니다.</p>
+</section>
+<section id="offline-online">
+<h4>Offline / online<a class="headerlink" href="#offline-online" title="Permalink to this heading"></a></h4>
+<p>사용자는 서버와 정기적으로 동기화되는 로컬 데이터로 작업합니다. 일시적으로 서버에 연결할 수 없는 경우에도 사용자는 계속 작업할 수 있습니다(오프라인 모드). 서버 연결이 다시 설정되는 즉시 로컬 수정 사항이 서버에 업로드됩니다.</p>
+</section>
+</section>
+<section id="version-management">
+<h3>Version management<a class="headerlink" href="#version-management" title="Permalink to this heading"></a></h3>
+<p>버전 관리는 Model로 관리되는 데이터의 변경 사항을 추적할 수 있습니다. 모든 변경 사항을 기록하여 누가 언제 무엇을 변경했는지 추적할 수 있으며 이전 상태와 새 상태를 비교할 수 있습니다. 또한 필요에 따라 이전 상태를 복원할 수 있습니다.</p>
+<p>Model의 거의 모든 개체들은 다음을 포함하는 버전으로 관리됩니다.</p>
+<ul>
+<li><p>Model data</p>
+<ul class="simple">
+<li><p>Solver files</p></li>
+<li><p>Preprocessor files</p></li>
+<li><p>Geometry</p></li>
+<li><p>Control and configuration files</p></li>
+</ul>
+</li>
+<li><p>Scripts</p></li>
+<li><p>Parameter tables</p></li>
+<li><p>Folders</p>
+<p><img alt="alt text" src="../_images/version_history.png" /></p>
+</li>
+</ul>
+<section id="lock-modify-unlock">
+<h4>Lock - modify - unlock<a class="headerlink" href="#lock-modify-unlock" title="Permalink to this heading"></a></h4>
+<p>일반적으로 PDM 시스템에서 데이터 개체는 사용자가 요청하는 즉시 다른 사용자를 위해 잠깁니다. 이 잠금-수정-잠금 해제 방식을 사용하면 한 번에 한 명의 사용자만 데이터를 수정할 수 있지만 데이터 일관성(버전 기록에서 분기되지 않음)이 보장됩니다.</p>
+<p><img alt="alt text" src="../_images/lock-modify-unlock.png" /></p>
+</section>
+<section id="copy-modify-merge">
+<h4>Copy - modify - merge<a class="headerlink" href="#copy-modify-merge" title="Permalink to this heading"></a></h4>
+<p>모델에서는 기본적으로 복사-수정-병합 접근 방식을 따릅니다. 이 개념을 사용하면 여러 사용자가 해당 객체의 복사본을 만들어 객체를 동시에 변경할 수 있습니다. 따라서 하나의 (부모) 객체에서 여러 개의 (자식) 객체를 만들 수 있습니다. 이러한 (하위) 개체를 하나의 개체로 병합하기 위해 Model은 소위 비교 및 병합 기능을 제공하며, 이를 통해 변경 사항을 병합할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/copy-modify-merge.png" /></p>
+<p>복사-수정-병합 방법은 두 가지 상태를 허용합니다.</p>
+<ul class="simple">
+<li><p>public(공개): 공개 상태의 개체는 더 이상 편집할 수 없습니다. 이러한 개체를 편집하면 자동으로 비공개 상태의 새 개체가 생성됩니다.</p></li>
+<li><p>private(비공개): 비공개 상태의 개체는 소유자만 편집할 수 있습니다. 소유자는 언제든지 비공개 개체를 공개 상태로 변경할 수 있습니다. 공개 및 비공개 개체는 모두 모든 사람에게 표시됩니다. 즉, 모든 사용자가 누가 어떤 개체에 대해 작업하고 있는지 볼 수 있습니다.</p></li>
+</ul>
+</section>
+<section id="live-mode">
+<h4>Live mode<a class="headerlink" href="#live-mode" title="Permalink to this heading"></a></h4>
+<p>모델에서 기존의 복사-수정-병합 방식에서 벗어나 특정 프로젝트 단계에서 새 버전을 만들지 않고 그룹화된 구성 요소(풀 버전)에 대해 동시에 작업할 수 있습니다. 이를 위해 구성 요소는 모델에서 라이브 모드라는 이름을 가진 잠금-수정-잠금해제 모드에서 편집됩니다. 변경한 내용은 새 버전을 만들지 않고도 작업 그룹의 다른 모든 사용자에게 즉시 표시됩니다. 프로젝트의 이 단계가 완료되면 라이브 모드 그룹을 공개로 설정하여 일반 모드(복사-수정-병합)로 원활하게 전환할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/live-mode.png" /></p>
+<div class="note docutils">
+<p>라이브 모드에서는 버전 기록이 일반 모드(복사 수정 병합)와 같은 정도로 문서화되지 않습니다. 라이브 모델은 클라이언트가 서버에 연결할 수 있는 경우에만 사용할 수 있습니다.</p>
+</div>
+</section>
+</section>
+<section id="basic-principles-of-the-modular-approach">
+<h3>Basic principles of the modular approach<a class="headerlink" href="#basic-principles-of-the-modular-approach" title="Permalink to this heading"></a></h3>
+<p>시뮬레이션에서 모듈식 접근 방식의 아이디어는 전체 모델의 개별 부분을 언제든지 교체하거나 여러 부분 모델에서 서로 다른 전체 모델을 조립할 수 있도록 하는 것입니다.</p>
+<p><img alt="alt text" src="../_images/modular-approach.png" /></p>
+</section>
+<section id="integration-of-external-cae-tools">
+<h3>Integration of external CAE tools<a class="headerlink" href="#integration-of-external-cae-tools" title="Permalink to this heading"></a></h3>
+<p>Model은 다양한 CAE 프로세스와 CAE 툴의 통합을 위한 여러 애플리케이션 인터페이스를 제공합니다. Model에서 외부 프로그램으로 파일을 직접 열어 그곳에서 처리할 수 있습니다. 처리가 완료되고 파일이 닫히면 새 버전의 객체가 자동으로 Model로 다시 임포트되고 사용자에게 히스토리 주석과 함께 변경 사항을 문서화하도록 요청합니다.</p>
+<p>Model에서 통합될 수 있는 외부 프로그램은 다음과 같습니다.</p>
+<ul class="simple">
+<li><p>Pre-and post-processors such as ANSA, Hypermesh, Primer, ADAMS</p></li>
+<li><p>Text editors such as NEdit, gvim, Notepad++, UltraEdit</p></li>
+<li><p>Custom user scripts</p></li>
+<li><p>Optimisation tools</p></li>
+</ul>
+</section>
+<section id="cooperation-with-external-partners">
+<h3>Cooperation with external partners<a class="headerlink" href="#cooperation-with-external-partners" title="Permalink to this heading"></a></h3>
+<p><img alt="alt text" src="../_images/external-partners.png" /></p>
+<p>기업들은 종종 회사 내부 네트워크에 직접 통합되지 않은 외부 서비스 제공업체에 개발 활동을 아웃소싱합니다. 외부 파트너는 서비스 포털을 통해 회사 네트워크와 모델 서버에 연결되는 것이 바람직합니다. 이렇게 하면 모든 관련 데이터가 외부 사용자와 자동으로 동기화됩니다. 외부 서비스 제공업체는 내부 직원과 동일한 개발 환경을 사용할 수 있습니다. 대역폭이 낮은 경우에도 외부 사용자는 고성능으로 자신의 데이터에 액세스할 수 있으며 주어진 개발 프로세스에 직접 참여할 수 있습니다.</p>
+<p>외부 직원이 (내부) 중앙 모델 서버에 직접 액세스할 수 없는 경우 작업 상태를 자동으로 동기화할 수 없습니다. 그럼에도 불구하고 일관되고 가장 중요한 협업 작업 절차를 가능하게 하기 위해 Model은 외부 파트너의 IT 시스템 내에서 보조 서버라고 하는 로컬 Model 서버를 실행할 수 있는 기능을 제공합니다.</p>
+<p><img alt="alt text" src="../_images/lpack-archives.png" /></p>
+<p>이러한 시나리오에서는 두 개의 모델 서버를 구분합니다:</p>
+<p>기본 모델 서버는 내부 IT 내에서 작동합니다. 이 서버에만 중앙 구성을 변경하고 (글로벌) 버전 번호를 할당할 수 있는 권한이 있습니다.
+외부 파트너의 IT 내에서 작동하는 보조 모델 서버는 주 서버와 동일한 방식으로 작동하지만 제한적이며 중앙 구성 등을 변경할 수 있는 권한이 없습니다.
+이러한 시나리오에서 작업 상태의 동기화는 오프사이트 사용자 클라이언트에서 메인 서버로(또는 그 반대로) 직접 이루어지지 않고 전송 사용자를 통해 이루어집니다. 전송 사용자는 메인 서버와 보조 서버 모두에 알려져 있으며 내부 및 외부 모델 인프라 간의 인터페이스 역할을 합니다.</p>
+<p>외부 파트너 사이트의 다른 사용자도 보조 서버에 등록할 수 있지만 이러한 사용자는 보조 서버에만 알려져 있습니다. 데이터를 메인 서버에 동기화하는 동안 이러한 순수 로컬 사용자는 모두 전송 사용자에게 매핑됩니다. 즉, 순전히 로컬 사용자가 변경한 내용이 마치 전송 사용자가 변경한 것처럼 메인 서버 측에 표시됩니다. 따라서 외부 파트너의 내부 구조(직원 수, 직원 이름, 근무 시간)에 대한 정보가 공개되지 않습니다.</p>
+<p>메인 서버와 보조 서버 인프라 간의 실제 데이터 교환은 소위 LPACK(모델 패키지) 파일을 사용하여 파일 기반으로 이루어질 수 있습니다. 여기에는 모든 파일뿐만 아니라 작업 상태에 대한 모든 변경 사항이 포함되어 있으며, 강력한 비동기 암호화를 사용하여 각 원격 스테이션(메인 서버&gt;보조 서버 또는 그 반대)에서만 열 수 있으므로 보안되지 않은 채널을 통해 전송할 수도 있습니다.</p>
+<p>또한 보조 서버와 메인 서버 간에 직접 영구 동기화를 설정할 수 있으므로 LPACK 파일을 통한 전송이 필요하지 않습니다.</p>
+<p>보조 서버 섹션에서는 메인 모델 서버에 직접 연결하지 않고 외부 서비스 제공업체를 위한 모델 인프라를 구현하는 방법에 대해 설명합니다.</p>
+</section>
+<section id="authorization-management">
+<h3>Authorization management<a class="headerlink" href="#authorization-management" title="Permalink to this heading"></a></h3>
+<p>Model의 데이터는 풀(프로젝트)에서 함께 그룹화됩니다. 풀 내에는 속성(예: 왼쪽/오른쪽 운전석)을 할당할 수 있는 다양한 컴포넌트 유형(예: 섀시)이 있습니다. 풀에서 개별 속성에 이르기까지 이러한 각 레벨을 사용하여 권한을 할당할 수 있습니다. 소위 권한 그룹은 데이터에 대한 권한을 부여하는 데 사용됩니다. 풀, 구성 요소, 속성 및 사용자 목록에 대한 권한은 권한 그룹으로 그룹화되어 유지 관리를 간소화합니다.</p>
+<p><img alt="alt text" src="../_images/permissions.png" /></p>
+<section id="role-concept">
+<h4>Role concept<a class="headerlink" href="#role-concept" title="Permalink to this heading"></a></h4>
+<p>일반적으로 Model의 권한 관리는 서로 다른 작업을 분리할 수 있는 역할 개념을 기반으로 합니다. 사용자는 자신이 권한이 있는 데이터(개별 데이터 또는 권한 그룹)에 대해서만 권한을 부여할 수 있습니다.</p>
+<p>할당된 권한은 각 역할을 통해 취소할 수도 있습니다. 상위 수준의 역할은 권한 부여 그룹의 권한을 조정하는 등의 방법으로 하위 수준의 모든 역할로부터 권한을 철회할 수도 있습니다. 다음 권한 부여 다이어그램은 개별 역할에 대한 개요를 제공합니다.</p>
+<p><img alt="alt text" src="../_images/role-concept.png" /></p>
+<p>Role concept의 보안은 다음을 통해 보장됩니다.</p>
+<ul class="simple">
+<li><p>관리 활동의 분리 및 데이터 액세스 권한 부여</p></li>
+<li><p>이중 제어 원칙의 보호</p></li>
+<li><p>역할 및 권한의 규칙 기반 자동 만료</p></li>
+</ul>
+<p>일반적으로 Model의 권한 부여 시스템은 유연합니다. 권한은 먼저 매우 광범위하게 정의한 다음 단계적으로 세분화할 수 있습니다. 세분화는 구성 요소 또는 속성 수준에서 수행할 수 있습니다.</p>
+</section>
+<section id="overview-of-roles-and-permissions">
+<h4>Overview of roles and permissions<a class="headerlink" href="#overview-of-roles-and-permissions" title="Permalink to this heading"></a></h4>
+<p>SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내의 역할이므로 애플리케이션의 어느 곳에서도 볼 수 없습니다. 그러나 SysAdmin은 애플리케이션 자체 내의 데이터에 대한 액세스 권한 없이 애플리케이션의 한 사용자에게 초기 ServiceAdmin 역할을 할당합니다.</p>
+<ul class="simple">
+<li><p>KU : Key User</p></li>
+<li><p>S-ADM : Service Administrator</p></li>
+<li><p>PM : Project Manager</p></li>
+<li><p>I-PM : Internal Project Member</p></li>
+<li><p>E-PM : External Project Member</p></li>
+</ul>
+<p><img alt="alt text" src="../_images/access-list.png" /></p>
+<p>권한 그룹에 사용자를 추가할 수 있는 권한은 해당 권한 그룹의 편집자(editor)와 해당 권한 그룹의 생성자(creator)가 보유합니다. 생성자(creator)는 권한 그룹을 처음 만든 사용자입니다. 권한 그룹의 편집자(editor) 또는 만든 사람(creator)이 프로젝트 관리자 또는 키 사용자(key user) 역할을 하는 경우 다른 사용자를 해당 권한 그룹의 편집자(editor)로 만들 수도 있습니다.</p>
+<p>사용자가 편집자의 작업, 즉 그룹에 사용자를 추가하는 작업을 수행하려면 이 사용자는 최소한 내부 프로젝트 멤버(Internal Project Member) 역할이 있어야 합니다. 외부 프로젝트 멤버(External Project Member) 역할로는 충분하지 않습니다.</p>
+</section>
+<section id="id1">
+<h4><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../d3View/d3view_install.html" class="btn btn-neutral float-left" title="D3VIEW 시작하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scale-project.html" class="btn btn-neutral float-right" title="SCALE.project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Korea Simulation Technologies Co. Ltd..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
