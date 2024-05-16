@@ -206,7 +206,7 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 
 ### Sort the column content
 
-데이터 테이블에서 열의 이름이 있는 위치에 <i class="fa-solid fa-caret-up"></i>
+데이터 테이블에서 열의 이름(header) 우측에 오름차순 (<i class="fa-solid fa-caret-up"></i>)과 내림차순(<i class="fa-solid fa-caret-down"></i>)를 이용하여 열의 항목들을 분류(sort) 할 수 있습니다.
 
 ### Sort multiple columns
 ### Apply column filters
