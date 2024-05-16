@@ -210,14 +210,13 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 
 ### Sort multiple columns
 
-:::{list-table}
-:widths: auto
-:align: center
-:header-rows: 0
+여러 열을 기준으로 정렬할 수도 있습니다. 예를 들어, 먼저 대상 시장별로 데이터를 정렬할 수 있습니다. 그런 다음 여러 행이 동일한 시장에 적용되는 경우 알파벳 순서로 정렬할 수 있습니다. 
 
-*   - 여러 열을 기준으로 정렬할 수도 있습니다. 예를 들어, 먼저 대상 시장별로 데이터를 정렬할 수 있습니다. 그런 다음 여러 행이 동일한 시장에 적용되는 경우 알파벳 순서로 정렬할 수 있습니다. 
-    - ![alt text](images/sort-multiple-columns.png){h=300px} 
-:::
+1. 첫번째로 분류할 열의 이름(header)를 클릭하여 정렬합니다.
+2. Shift 키를 누르고 두번째 열의 이름(header)를 클릭하여 첫번째 선택했던 열의 분류 순서에서 동일한 항목에 대한 행의 값들 사이의 알파벳 순으로 두번째 선택한 열의 값들을 정렬합니다.
+3. 필요에 따라 shift 키를 누른 채 또 다른 열의 이름을 클릭하여 정렬을 반복합니다.
+
+![](images/sort-multiple-columns.png)
 
 ### Apply column filters
 ### Group data by column headers
