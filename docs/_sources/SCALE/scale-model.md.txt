@@ -210,14 +210,12 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 
 ### Sort multiple columns
 
-:::{list-table} aa
+:::{list-table}
 :widths: 600 600
 :align: center
 :header-rows: 0
 
-*   - a
-    - 여러 열을 기준으로 정렬할 수도 있습니다. 예를 들어, 먼저 대상 시장별로 데이터를 정렬할 수 있습니다. 그런 다음 여러 행이 동일한 시장에 적용되는 경우 알파벳 순서로 정렬할 수 있습니다. 
-*   - b
+*   - 여러 열을 기준으로 정렬할 수도 있습니다. 예를 들어, 먼저 대상 시장별로 데이터를 정렬할 수 있습니다. 그런 다음 여러 행이 동일한 시장에 적용되는 경우 알파벳 순서로 정렬할 수 있습니다. 
     - ![alt text](images/sort-multiple-columns.png) 
 :::
 
