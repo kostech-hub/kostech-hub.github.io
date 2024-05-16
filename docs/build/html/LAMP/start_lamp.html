@@ -176,10 +176,9 @@
 <section id="installation">
 <h2>2. Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <p>LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 해제 합니다. 압축 해제 후 LAMP Installer.exe 파일을 실행하면 아래와 같은 설치 화면이 표시됩니다.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>데이터베이스를 따로 서버 PC에 구성하지 않고 로컬 환경에서 사용하시려면 로컬(사용자) PC에 LAMP와 LAMP Server를 모두 설치 합니다.</p>
-</div>
+<p>:::{tip}
+데이터베이스를 따로 서버 PC에 구성하지 않고 로컬 환경에서 사용하시려면 로컬(사용자) PC에 LAMP와 LAMP Server를 모두 설치 합니다.
+:::</p>
 <p><img alt="LAMP 설치 화면" src="../_images/LAMP0.png" /></p>
 <section id="id3">
 <h3>2.1 경로 변경<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
@@ -233,10 +232,10 @@ License Path의 Browse를 클릭한 후 제공된 라이선스 파일을 선택�
 <li><p>Start 버튼을 클릭 후 Server Status의 Text가 Running으로 표기되는지 확인합니다.</p></li>
 <li><p>라이선스 서버가 제대로 시작되지 않는다면 lamp_server_log.txt, lamp_server_app_log.txt 파일과 함께 KOSTECH에 문의주시기 바랍니다.</p></li>
 </ul>
-<div class="note admonition">
-<p class="admonition-title">path of log file</p>
-<p>lamp_server_log.txt와 lamp_server_app_log.txt 파일은 C:/Users/{현자 사용자 이름}/AppData/Local/LAMPS에 있습니다.</p>
-</div>
+<p>:::{admonition} path of log file
+:class: note
+lamp_server_log.txt와 lamp_server_app_log.txt 파일은 C:/Users/{현자 사용자 이름}/AppData/Local/LAMPS에 있습니다.
+:::</p>
 </section>
 <section id="clinet-pc">
 <h4>Clinet PC에서 라이선스 활성화<a class="headerlink" href="#clinet-pc" title="Permalink to this heading"></a></h4>
@@ -246,11 +245,11 @@ License Path의 Browse를 클릭한 후 제공된 라이선스 파일을 선택�
 <li><p>License Type을 Network로 선택하고 서버의 IP Address를 입력 후 Apply 클릭합니다.</p></li>
 <li><p>완료되었다는 메세지가 표시될 때까지 기다립니다.</p></li>
 </ul>
-<div class="note admonition">
-<p class="admonition-title">Network port of license server</p>
-<p>LAMP 라이선스 서버는 기본적으로 27015 포트를 사용합니다. Client PC에서 라이선스 활성화가 되지 않는다면 <br />
-방화벽 설정을 확인하시기 바랍니다. 현재 포트 번호를 변경하여 사용하는 것은 지원되지 않습니다.(향후 추가 예정)</p>
-</div>
+<p>:::{admonition} Network port of license server
+:class: note
+LAMP 라이선스 서버는 기본적으로 27015 포트를 사용합니다. Client PC에서 라이선스 활성화가 되지 않는다면 <br />
+방화벽 설정을 확인하시기 바랍니다. 현재 포트 번호를 변경하여 사용하는 것은 지원되지 않습니다.(향후 추가 예정)
+:::</p>
 </section>
 </section>
 </section>
@@ -275,11 +274,11 @@ License Path의 Browse를 클릭한 후 제공된 라이선스 파일을 선택�
 <li><p>Menu 열의 … 버튼을 클릭 후 Load 버튼을 클릭합니다.</p></li>
 <li><p>Status 열의 텍스트가 Unloaded에서 Loaded로 변경되었는지 확인합니다.</p></li>
 </ul>
-<div class="tip admonition">
-<p class="admonition-title">Tip</p>
-<p>LAMP Server의 기본 설치 경로는 C:\KOSTECH\LAMPS 입니다. <br />
-LAMP에서 현대제철 물성을 출력하는 방법은 <a class="reference internal" href="database.html#mariadb"><span class="std std-ref">현대제철 물성 출력</span></a>의 내용을 확인하세요.</p>
-</div>
+<p>:::{admonition} Tip
+:class: Tip
+LAMP Server의 기본 설치 경로는 C:\KOSTECH\LAMPS 입니다. <br />
+LAMP에서 현대제철 물성을 출력하는 방법은 <a class="reference internal" href="database.html#1-mariadb-설치-및-현대제철-물성"><span class="std std-ref">현대제철 물성 출력</span></a>의 내용을 확인하세요.
+:::</p>
 <p><img alt="" src="../_images/LAMP6.png" /></p>
 </section>
 </section>
