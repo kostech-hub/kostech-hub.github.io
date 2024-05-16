@@ -28,8 +28,8 @@ Step 1에서는 시편 모델을 추가하고 필요한 정보를 입력하는 �
 
 ![](images/gissmo/SampleStep1.png)
 
-- Specimen란의 ![](images/gissmo/Icon0.png) 아이콘을 클릭하고 UT 폴더의 UT_999_COONTROL_CARD.DYN 파일을 선택합니다.
-- T. Curve란의 ![](images/gissmo/OpenTargetCurveIcon.png) 아이콘을 클릭하고 UT_target_curve.txt 파일을 선택합니다.
+- Specimen란의 ![](images/gissmo/Icon0.png){class="intxt-image"} 아이콘을 클릭하고 UT 폴더의 UT_999_COONTROL_CARD.DYN 파일을 선택합니다.
+- T. Curve란의 ![](images/gissmo/OpenTargetCurveIcon.png){class="intxt-image"} 아이콘을 클릭하고 UT_target_curve.txt 파일을 선택합니다.
 - Ref. Size 입력란에 시편모델의 mesh size인 0.5를 입력합니다.
 - DMGEXP, FADEXP, Fracture, Instability의 값 범위를 아래 사진의 제일 왼쪽 사진과 같이 입력합니다.
 - NORCH_1, NORCH_5 시편 모델에 대해서도 동일하게 진행하며, 두 시편모델에 대해서는 DMGEXP, FADEXP, Fracture, Instability를 현재 단계에서 따로 수정하지 않습니다.

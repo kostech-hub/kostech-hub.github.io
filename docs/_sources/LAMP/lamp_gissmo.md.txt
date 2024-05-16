@@ -37,7 +37,7 @@ Step 1에서는 준비된 시편 모델들을 추가하고 설계 파라미터�
 
 ![](images/gissmo/gissmo1.png)
 
-- Specimen : 우측 ![](images/gissmo/Icon0.png){w=25px}  아이콘 버튼을 클릭하고 시편 모델의 메인 키워드(Keyword) 파일 및 LAMP GISSMO에서 생성된 *.lsopt 파일을 선택합니다. 시편 모델을 정상적으로 읽었다면 다음의 과정들이 진행됩니다. 
+- Specimen : 우측 ![](images/gissmo/Icon0.png){w=25px class="intxt-image"}  아이콘 버튼을 클릭하고 시편 모델의 메인 키워드(Keyword) 파일 및 LAMP GISSMO에서 생성된 *.lsopt 파일을 선택합니다. 시편 모델을 정상적으로 읽었다면 다음의 과정들이 진행됩니다. 
 
     - Keyword 파일에서 *DEFINE_CURVE 카드를 찾고 Curve의 ID를 LCSS ID 항목에 추가합니다.
     - Keyword 파일에서 *DATABASE_HISTORY_NODE_ID 카드를 찾고 입력된 두 개의 노드 정보로 부터 Gauge length를 계산해 G. Length 항목에 입력합니다. 
@@ -196,8 +196,8 @@ Triaxiality는 평균(Average)과 적분(Integration) 방법으로 계산할 수
 
 - Triaxiality vs Plastic Strain Data File : Triaxiality vs Plastic Strain Data가 기록된 csv파일 이름을 표시하고 우측 아이콘을 통해 그래프로 확인 할 수 있습니다.
 - Triaxiality vs Fracture Data File : Triaxiality vs Fracture Data가 기록된 csv파일 이름을 표시하고 Data를 이용해 interpolation으로 Curve를 생성할 수 있습니다.
-    - ![](images/ShowFailurePoint.png){w=24px} : Triaxility vs Fracture 데이터 포인터를 표시합니다.
-    - ![](images/ShowFailurePanel.png){w=24px} : Triaxility vs Fracture 데이터 포인터를 기반으로 Curve를 생성 할 수 있는 도구를 표시합니다.
+    - ![](images/ShowFailurePoint.png){w=24px class="intxt-image"} : Triaxility vs Fracture 데이터 포인터를 표시합니다.
+    - ![](images/ShowFailurePanel.png){w=24px class="intxt-image"} : Triaxility vs Fracture 데이터 포인터를 기반으로 Curve를 생성 할 수 있는 도구를 표시합니다.
 
 ::::{tab-set}
 
@@ -282,8 +282,8 @@ LS-Dyna GISSMO 물성에 메쉬 사이즈의 Scaling Factor를 적용하기 위�
 
 - Mesh Regularization Factor Data : 최적화 시뮬레이션으로 결정된 각 시편 모델의 Scaling Factor 데이터가 저장된 csv 파일을 표시합니다. 
 
-    - ![](images/gissmo/ShowMRFactorPoint.png){w=24px} : csv 데이터 파일에 저장된 포인트 정보를 그래프로 표시합니다.
-    - ![](images/gissmo/ShowMRFactorCurve.png){w=24px} : Scaling Factor 포인트 정보를 기반으로 Curve Fitting을 할 수 있는 도구를 표시하고 Curve Fitting을 하여 Curve를 결정합니다. 
+    - ![](images/gissmo/ShowMRFactorPoint.png){w=24px class="intxt-image"} : csv 데이터 파일에 저장된 포인트 정보를 그래프로 표시합니다.
+    - ![](images/gissmo/ShowMRFactorCurve.png){w=24px class="intxt-image"} : Scaling Factor 포인트 정보를 기반으로 Curve Fitting을 할 수 있는 도구를 표시하고 Curve Fitting을 하여 Curve를 결정합니다. 
 
         - Data 항목에서 생성할 Curve 가로축의 Min, Max 값과 Step 사이즈를 설정합니다.
         - Curve Fitting은 두 개의 지수함수 모델을 사용할 수 있습니다. 각각의 버튼을 클릭 시 Curve Fitting이 바로 적용되며 A, B 그리고 C 값이 표시됩니다. 사용자는 임의로 A, B, C 값을 변경하여 Curve를 수정할 수 있습니다.

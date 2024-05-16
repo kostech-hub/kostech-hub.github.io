@@ -51,7 +51,7 @@ LS-Dyna 키워드 파일에 정의되어 있는 Material 카드 정보를 데이
 - *MAT_PIECEWISE_LINEAR_PLASTICITY
 
 ### 1.1 입력 패널 UI
-LAMP의 상단 아이콘 메뉴에서 ![](images/INSERTDB0.png){width=30px} 아이콘을 클릭합니다.
+LAMP의 상단 아이콘 메뉴에서 ![](images/INSERTDB0.png){width=30px class="intxt-image"} 아이콘을 클릭합니다.
 
 ![](images/INSERTDB1.png){align=center}
 
@@ -69,7 +69,7 @@ LAMP의 상단 아이콘 메뉴에서 ![](images/INSERTDB0.png){width=30px} 아�
 * 데이터베이스에 추가
     * Insert to DB를 클릭합니다.
     * 아래 그림의 Insert User Data 창이 표시되며 물성 카드에 커브 데이터가 있다면 Curve ID가 표시됩니다.
-    * 재료 데이터는 카테고리 항목 아래에 저장되기에 Category를 선택합니다. ![](images/INSERTDB3.png)로 추가 할 수 있습니다.
+    * 재료 데이터는 카테고리 항목 아래에 저장되기에 Category를 선택합니다. ![](images/INSERTDB3.png){class="intxt-image"}로 추가 할 수 있습니다.
     * 물성 이름(Material Name)을 입력하고 Insert를 눌러 DB에 데이터를 저장합니다.
 
 ![](images/INSERTDB2.png){align=center}

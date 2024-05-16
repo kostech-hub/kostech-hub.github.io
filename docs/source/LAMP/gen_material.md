@@ -4,7 +4,7 @@
 LAMP에서 Steel 물성 카드 생성은 LS-Dyna의 *MAT_PIECEWISE_LINEAR_PLASTICITY(MAT_024) 카드를 생성하는 기능입니다. 해당 기능에서는 MAT_024 카드에 삽입되는 Load curve를 생성하고 LS-Dyna에서 사용가능한 키워드 파일 생성 및 출력을 위한 기능입니다. Load curve는 재료의 시편 인장 시험에서 얻은 raw data를 strain-stress plastic curve를 fitting으로 생성합니다.
 
 ### 1.1 입력 패널 UI
-LAMP의 상단 아이콘 메뉴에서 ![](images/Material24.png){width=25px} 아이콘을 클릭하면 입력 패널 UI가 우측에 표시됩니다.
+LAMP의 상단 아이콘 메뉴에서 ![](images/Material24.png){width=25px class="intxt-image"} 아이콘을 클릭하면 입력 패널 UI가 우측에 표시됩니다.
 
 ![](images/MAT0.png){align=center}
 
@@ -26,7 +26,7 @@ MAT_024 카드에 입력될 재료 물성 값을 입력합니다.
 시편 인장 시험 데이터를 불러오고 항복점을 선택합니다.
 
 Load raw data
-: 시험 데이터를 가져오기 위해서 ![](images/MAT1.png) 아이콘을 클릭하고 시험 데이터가 작성된 파일을 선택합니다. \
+: 시험 데이터를 가져오기 위해서 ![](images/MAT1.png){class="intxt-image"} 아이콘을 클릭하고 시험 데이터가 작성된 파일을 선택합니다. \
   지원되는 파일 형식은 다음과 같습니다.
 
   - *.txt : 데이터의 각 열은 tab으로 구분되어야 합니다.
@@ -139,7 +139,7 @@ Curve fitting에 의한 결과는 Result Control 항목에서 확인 할 수 있
 
 ![](images/MAT9.png){.border-black}
 
-Expression 항목 우측에 있는 ![](images/MAT11.png){W=24px}을 클릭하면 아래의 창이 표시됩니다. Curve Fitting으로 결정된 각가의 파라미터들이 나열되며 우측 위, 아래 화살표를 이용하거나 혹은 직접 값을 입력하여 수정합니다. 값 수정으로 인한 Curve는 수정과 동시에 적용되어 그래프 창에서 확인할 수 있습니다.
+Expression 항목 우측에 있는 ![](images/MAT11.png){W=24px class="intxt-image"}을 클릭하면 아래의 창이 표시됩니다. Curve Fitting으로 결정된 각가의 파라미터들이 나열되며 우측 위, 아래 화살표를 이용하거나 혹은 직접 값을 입력하여 수정합니다. 값 수정으로 인한 Curve는 수정과 동시에 적용되어 그래프 창에서 확인할 수 있습니다.
 
 ![](images/MAT10.png){.border-black}
 
@@ -150,7 +150,7 @@ Expression 항목 우측에 있는 ![](images/MAT11.png){W=24px}을 클릭하면
 
 :::{admonition} Save in database
 :class: tip
-![](images/MAT4.png) 아이콘으로 생성된 데이터를 데이터베이스에 저장할 수 있습니다. 아이콘을 클릭하면 `Insert User Data` 창이 표시되며, Curve fitting으로 생성된 curve들의 목록이 표시되며 데이터베이스에 저장하고자 하는 curve를 체크합니다. Category를 선택합니다. Category는 ![](images/INSERTDB3.png) 아이콘으로 추가할 수 있습니다. `Material Name`에 이름을 입력하고 `Insert` 버튼으로 데이터베이스에 데이터를 저장합니다.
+![](images/MAT4.png){class="intxt-image"} 아이콘으로 생성된 데이터를 데이터베이스에 저장할 수 있습니다. 아이콘을 클릭하면 `Insert User Data` 창이 표시되며, Curve fitting으로 생성된 curve들의 목록이 표시되며 데이터베이스에 저장하고자 하는 curve를 체크합니다. Category를 선택합니다. Category는 ![](images/INSERTDB3.png){class="intxt-image"} 아이콘으로 추가할 수 있습니다. `Material Name`에 이름을 입력하고 `Insert` 버튼으로 데이터베이스에 데이터를 저장합니다.
 
 
 데이터베이스에 저장되는 데이터는 모두 `Category`라는 항목 아래에 입력된 `Material Name`으로 저장됩니다. 

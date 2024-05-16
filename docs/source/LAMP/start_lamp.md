@@ -35,7 +35,7 @@ LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 �
 ![LAMP 설치 화면](images/LAMP0.png "LAMP 설치 화면")
 
 ### 2.1 경로 변경 
-설치 경로는 Install directory 우측 아이콘을 ![](images/LAMP1.png) 클릭 하여 변경 할 수 있습니다.
+설치 경로는 Install directory 우측 아이콘을 ![](images/LAMP1.png){class="intxt-image"} 클릭 하여 변경 할 수 있습니다.
 ### 2.2 LAMP Server
 LAMP에서 제공하고 데이터베이스 및 네트워크 라이선스를 관리 할 수 있는 프로그램입니다. 데이터베이스 기능을 사용하기 위해서 반드시 설치 하여야 합니다.
 ### 2.3 LAMP
