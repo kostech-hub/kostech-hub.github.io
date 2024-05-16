@@ -44,6 +44,8 @@ myst_number_code_blocks = ["Bash"]
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+html_js_files = [('https://kit.fontawesome.com/6a543a3c44.js', {'crossorigin': 'anonymous'})]
+
 ## 추가
 import os
 import sys
