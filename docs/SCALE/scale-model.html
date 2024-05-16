@@ -89,9 +89,27 @@
 <li class="toctree-l3"><a class="reference internal" href="#authorization-management">Authorization management</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#role-concept">Role concept</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#overview-of-roles-and-permissions">Overview of roles and permissions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1"></a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#download-a-pool">Download a pool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#find-your-way-around">Find your way around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#close-and-re-open-windows">Close and re-open windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rearrange-the-windows">Rearrange the windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#customize-the-grid">Customize the grid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#toggle-columns-on-and-off">Toggle columns on and off</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rearrange-the-columns">Rearrange the columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sort-the-column-content">Sort the column content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sort-multiple-columns">Sort multiple columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-column-filters">Apply column filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#group-data-by-column-headers">Group data by column headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pin-columns">Pin columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adjust-the-column-width">Adjust the column width</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-of-options-in-the-column-header-context-menu">List of options in the column header context menu</a></li>
 </ul>
 </li>
 </ul>
@@ -178,7 +196,8 @@
 <h4>Live mode<a class="headerlink" href="#live-mode" title="Permalink to this heading"></a></h4>
 <p>모델에서 기존의 복사-수정-병합 방식에서 벗어나 특정 프로젝트 단계에서 새 버전을 만들지 않고 그룹화된 구성 요소(풀 버전)에 대해 동시에 작업할 수 있습니다. 이를 위해 구성 요소는 모델에서 라이브 모드라는 이름을 가진 잠금-수정-잠금해제 모드에서 편집됩니다. 변경한 내용은 새 버전을 만들지 않고도 작업 그룹의 다른 모든 사용자에게 즉시 표시됩니다. 프로젝트의 이 단계가 완료되면 라이브 모드 그룹을 공개로 설정하여 일반 모드(복사-수정-병합)로 원활하게 전환할 수 있습니다.</p>
 <p><img alt="alt text" src="../_images/live-mode.png" /></p>
-<div class="note docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>라이브 모드에서는 버전 기록이 일반 모드(복사 수정 병합)와 같은 정도로 문서화되지 않습니다. 라이브 모델은 클라이언트가 서버에 연결할 수 있는 경우에만 사용할 수 있습니다.</p>
 </div>
 </section>
@@ -245,9 +264,107 @@
 <p>권한 그룹에 사용자를 추가할 수 있는 권한은 해당 권한 그룹의 편집자(editor)와 해당 권한 그룹의 생성자(creator)가 보유합니다. 생성자(creator)는 권한 그룹을 처음 만든 사용자입니다. 권한 그룹의 편집자(editor) 또는 만든 사람(creator)이 프로젝트 관리자 또는 키 사용자(key user) 역할을 하는 경우 다른 사용자를 해당 권한 그룹의 편집자(editor)로 만들 수도 있습니다.</p>
 <p>사용자가 편집자의 작업, 즉 그룹에 사용자를 추가하는 작업을 수행하려면 이 사용자는 최소한 내부 프로젝트 멤버(Internal Project Member) 역할이 있어야 합니다. 외부 프로젝트 멤버(External Project Member) 역할로는 충분하지 않습니다.</p>
 </section>
-<section id="id1">
-<h4><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 </section>
+</section>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
+<section id="download-a-pool">
+<h3>Download a pool<a class="headerlink" href="#download-a-pool" title="Permalink to this heading"></a></h3>
+<p>초기 설정 후에는 Model 데이터베이스가 비어 있고 프로젝트(pool)가 표시되지 않습니다. 풀(pool)에 대한 권한이 이미 부여된 경우 서버에서 풀(pool)을 다운로드하여 로컬 데이터베이스에 저장할 수 있습니다. 이 프로세스를 “체크아웃(checkout)”이라고 합니다. 이 작업은 초기 설정 중 또는 이후 언제든지 수행할 수 있습니다. 네비게이션 바(navigation bar)에서 등록된 풀의 트리(tree) 그리고 각 트리(tree)의 버전(version)들을 확인 및 선택할 수 있습니다. 작업하려는 풀 버전(pool version)을 선택하면 선택한 풀 버전(pool version)이 서버에서 다운로드 됩니다. 다운로드가 완료되면 자동으로 해당 pool의 정보가 표시됩니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>목록이 상당히 긴 경우 원하는 풀, 트리 또는 버전이 바로 표시되지 않을 수 있습니다. 이 경우 검색 필드에 풀, 트리 또는 버전 이름을 입력하기 시작하면 됩니다. 이렇게 하면 결과 목록이 짧아집니다.</p>
+</div>
+<p><img alt="alt text" src="../_images/download-pool.png" /></p>
+</section>
+<section id="find-your-way-around">
+<h3>Find your way around<a class="headerlink" href="#find-your-way-around" title="Permalink to this heading"></a></h3>
+<p>사용자 인터페이스는 다음과 같이 구성되어져 있습니다.</p>
+<p><img alt="" src="../_images/SCALE01.png" /></p>
+<ul class="simple">
+<li><p><span style="color:red">탭 바(Tab bar)</span></p></li>
+<li><p><span style="color:green">내비게이션 바(Navigation bar)&lt;/span</p></li>
+<li><p><span style="color:lightblue">브라우져(Browser)</span></p></li>
+<li><p><span style="color:orange">데이터 테이블(Data table)</span></p></li>
+<li><p><span style="color:violet">속성 탭(Properties tab)</span></p></li>
+</ul>
+</section>
+<section id="close-and-re-open-windows">
+<h3>Close and re-open windows<a class="headerlink" href="#close-and-re-open-windows" title="Permalink to this heading"></a></h3>
+<p>각 창들(windows)은 필요에 따라 닫거나 다시 열 수 있습니다.</p>
+<ol class="arabic simple">
+<li><p>내비게이션 바에서 마우스 우 클릭을 하고 컨텍스트(context) 메뉴를 표시합니다.</p></li>
+<li><p>표시할 창을 체크하거나 해제 합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/context-menu-of-navigation-bar.png" /></p>
+</section>
+<section id="rearrange-the-windows">
+<h3>Rearrange the windows<a class="headerlink" href="#rearrange-the-windows" title="Permalink to this heading"></a></h3>
+<p>각 창들은 사용자가 원하는 곳에 위치 시킬 수 있습니다.</p>
+<ol class="arabic simple">
+<li><p>창은 드래그 앤 드롭으로 이동할 수 있습니다. 이렇게 하려면 창을 탭으로 잡고 원하는 위치로 드래그해야 합니다. 창을 나머지 프레임워크에서 완전히 분리할 수도 있습니다.</p></li>
+<li><p>여기서 파란색으로 표시된 영역은 가능한 창 위치를 나타냅니다.</p></li>
+<li><p>여러 개의 창이 같은 위치에 있는 경우 탭으로 그룹화됩니다.</p></li>
+</ol>
+</section>
+</section>
+<section id="customize-the-grid">
+<h2>Customize the grid<a class="headerlink" href="#customize-the-grid" title="Permalink to this heading"></a></h2>
+<p>사용자의 요구에 맞게 그리드(grid)의 외관을 변경(customize)할 수 있습니다.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#toggle-columns-on-and-off">Toggle columns on and off</a></p></li>
+<li><p><a class="reference internal" href="#rearrange-the-columns">Rearrange the columns</a></p></li>
+<li><p><a class="reference internal" href="#sort-the-column-content">Sort the column content</a></p></li>
+<li><p><a class="reference internal" href="#sort-multiple-columns">Sort multiple columns</a></p></li>
+<li><p><a class="reference internal" href="#apply-column-filters">Apply column filters</a></p></li>
+<li><p><a class="reference internal" href="#group-data-by-column-headers">Group data by column headers</a></p></li>
+<li><p><a class="reference internal" href="#pin-columns">Pin columns</a></p></li>
+<li><p><a class="reference internal" href="#adjust-the-column-width">Adjust the column width</a></p></li>
+<li><p><a class="reference internal" href="#list-of-options-in-the-column-header-context-menu">List of options in the column header context menu</a></p></li>
+</ul>
+<section id="toggle-columns-on-and-off">
+<h3>Toggle columns on and off<a class="headerlink" href="#toggle-columns-on-and-off" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>데이터 테이블의 각 열에서 <img alt="" src="../_images/column-mark.png" />를 클릭합니다.</p></li>
+<li><p><img alt="" src="../_images/three-bar-mark.png" />를 선택합니다.</p></li>
+<li><p>표시(on) 및 숨김(off) 하고자 하는 열(column)을 체크하거나 해제합니다.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Alternative method</p>
+<ol class="arabic simple">
+<li><p>데이터 테이블 빈 공간 혹은 행(row)에서 마우스 우 클릭 합니다.</p></li>
+<li><p>표시되는 메뉴에서 <strong>Show column configuration</strong> 항목을 체크합니다.</p></li>
+<li><p>표시되는 열 목록에서 표시 혹은 숨김 하고자 하는 항목을 체크 및 해제합니다.</p></li>
+<li><p>작업을 마친 후에는 다시 마우스 우 클릭을 하여 <strong>Show column configuration</strong> 항목을 체크 해제 합니다.</p></li>
+</ol>
+</div>
+</section>
+<section id="rearrange-the-columns">
+<h3>Rearrange the columns<a class="headerlink" href="#rearrange-the-columns" title="Permalink to this heading"></a></h3>
+<p>열이 표시되는 순서를 결정할 수 있습니다. 개별 열을 끌어서 놓기만 하면 필요에 따라 열을 재정렬할 수 있습니다.</p>
+<p><img alt="" src="../_images/rearrange-column.gif" /></p>
+</section>
+<section id="sort-the-column-content">
+<h3>Sort the column content<a class="headerlink" href="#sort-the-column-content" title="Permalink to this heading"></a></h3>
+<p>데이터 테이블에서 열의 이름이 있는 위치에 <i class="fa-solid fa-caret-up"></i></p>
+</section>
+<section id="sort-multiple-columns">
+<h3>Sort multiple columns<a class="headerlink" href="#sort-multiple-columns" title="Permalink to this heading"></a></h3>
+</section>
+<section id="apply-column-filters">
+<h3>Apply column filters<a class="headerlink" href="#apply-column-filters" title="Permalink to this heading"></a></h3>
+</section>
+<section id="group-data-by-column-headers">
+<h3>Group data by column headers<a class="headerlink" href="#group-data-by-column-headers" title="Permalink to this heading"></a></h3>
+</section>
+<section id="pin-columns">
+<h3>Pin columns<a class="headerlink" href="#pin-columns" title="Permalink to this heading"></a></h3>
+</section>
+<section id="adjust-the-column-width">
+<h3>Adjust the column width<a class="headerlink" href="#adjust-the-column-width" title="Permalink to this heading"></a></h3>
+</section>
+<section id="list-of-options-in-the-column-header-context-menu">
+<h3>List of options in the column header context menu<a class="headerlink" href="#list-of-options-in-the-column-header-context-menu" title="Permalink to this heading"></a></h3>
 </section>
 </section>
 </section>

@@ -48,7 +48,7 @@ Model의 거의 모든 개체들은 다음을 포함하는 버전으로 관리�
 
 ![alt text](images/live-mode.png)
 
-:::note
+:::{note}
 라이브 모드에서는 버전 기록이 일반 모드(복사 수정 병합)와 같은 정도로 문서화되지 않습니다. 라이브 모델은 클라이언트가 서버에 연결할 수 있는 경우에만 사용할 수 있습니다.
 :::
 
@@ -130,4 +130,87 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 
 사용자가 편집자의 작업, 즉 그룹에 사용자를 추가하는 작업을 수행하려면 이 사용자는 최소한 내부 프로젝트 멤버(Internal Project Member) 역할이 있어야 합니다. 외부 프로젝트 멤버(External Project Member) 역할로는 충분하지 않습니다.
 
-####
+## Getting started
+
+### Download a pool
+초기 설정 후에는 Model 데이터베이스가 비어 있고 프로젝트(pool)가 표시되지 않습니다. 풀(pool)에 대한 권한이 이미 부여된 경우 서버에서 풀(pool)을 다운로드하여 로컬 데이터베이스에 저장할 수 있습니다. 이 프로세스를 "체크아웃(checkout)"이라고 합니다. 이 작업은 초기 설정 중 또는 이후 언제든지 수행할 수 있습니다. 네비게이션 바(navigation bar)에서 등록된 풀의 트리(tree) 그리고 각 트리(tree)의 버전(version)들을 확인 및 선택할 수 있습니다. 작업하려는 풀 버전(pool version)을 선택하면 선택한 풀 버전(pool version)이 서버에서 다운로드 됩니다. 다운로드가 완료되면 자동으로 해당 pool의 정보가 표시됩니다.
+
+:::{tip}
+목록이 상당히 긴 경우 원하는 풀, 트리 또는 버전이 바로 표시되지 않을 수 있습니다. 이 경우 검색 필드에 풀, 트리 또는 버전 이름을 입력하기 시작하면 됩니다. 이렇게 하면 결과 목록이 짧아집니다.
+:::
+
+![alt text](images/download-pool.png)
+
+### Find your way around
+
+사용자 인터페이스는 다음과 같이 구성되어져 있습니다.
+
+![](images/SCALE01.png)
+
+- <span style="color:red">탭 바(Tab bar)</span>
+- <span style="color:green">내비게이션 바(Navigation bar)</span
+- <span style="color:lightblue">브라우져(Browser)</span>
+- <span style="color:orange">데이터 테이블(Data table)</span>
+- <span style="color:violet">속성 탭(Properties tab)</span>
+
+### Close and re-open windows
+
+각 창들(windows)은 필요에 따라 닫거나 다시 열 수 있습니다.
+
+1. 내비게이션 바에서 마우스 우 클릭을 하고 컨텍스트(context) 메뉴를 표시합니다.
+2. 표시할 창을 체크하거나 해제 합니다.
+
+![alt text](images/context-menu-of-navigation-bar.png)
+
+### Rearrange the windows
+
+각 창들은 사용자가 원하는 곳에 위치 시킬 수 있습니다.
+
+1. 창은 드래그 앤 드롭으로 이동할 수 있습니다. 이렇게 하려면 창을 탭으로 잡고 원하는 위치로 드래그해야 합니다. 창을 나머지 프레임워크에서 완전히 분리할 수도 있습니다.
+2. 여기서 파란색으로 표시된 영역은 가능한 창 위치를 나타냅니다.
+3. 여러 개의 창이 같은 위치에 있는 경우 탭으로 그룹화됩니다.
+
+## Customize the grid
+
+사용자의 요구에 맞게 그리드(grid)의 외관을 변경(customize)할 수 있습니다.
+
+- [Toggle columns on and off](#toggle-columns-on-and-off)
+- [Rearrange the columns](#rearrange-the-columns)
+- [Sort the column content](#sort-the-column-content)
+- [Sort multiple columns](#sort-multiple-columns)
+- [Apply column filters](#apply-column-filters)
+- [Group data by column headers](#group-data-by-column-headers)
+- [Pin columns](#pin-columns)
+- [Adjust the column width](#adjust-the-column-width)
+- [List of options in the column header context menu](#list-of-options-in-the-column-header-context-menu)
+
+### Toggle columns on and off
+
+1. 데이터 테이블의 각 열에서 ![](images/column-mark.png)를 클릭합니다.
+2. ![](images/three-bar-mark.png)를 선택합니다.
+3. 표시(on) 및 숨김(off) 하고자 하는 열(column)을 체크하거나 해제합니다.
+
+:::{admonition} Alternative method
+:class: tip
+1. 데이터 테이블 빈 공간 혹은 행(row)에서 마우스 우 클릭 합니다.
+2. 표시되는 메뉴에서 **Show column configuration** 항목을 체크합니다.
+3. 표시되는 열 목록에서 표시 혹은 숨김 하고자 하는 항목을 체크 및 해제합니다. 
+4. 작업을 마친 후에는 다시 마우스 우 클릭을 하여 **Show column configuration** 항목을 체크 해제 합니다.
+:::
+
+### Rearrange the columns
+
+열이 표시되는 순서를 결정할 수 있습니다. 개별 열을 끌어서 놓기만 하면 필요에 따라 열을 재정렬할 수 있습니다.
+
+![](images/rearrange-column.gif)
+
+### Sort the column content
+
+데이터 테이블에서 열의 이름이 있는 위치에 <i class="fa-solid fa-caret-up"></i>
+
+### Sort multiple columns
+### Apply column filters
+### Group data by column headers
+### Pin columns
+### Adjust the column width
+### List of options in the column header context menu
