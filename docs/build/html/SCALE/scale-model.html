@@ -18,7 +18,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/design-tabs.js"></script>
-        <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a543a3c44.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -196,9 +195,10 @@
 <h4>Live mode<a class="headerlink" href="#live-mode" title="Permalink to this heading"></a></h4>
 <p>모델에서 기존의 복사-수정-병합 방식에서 벗어나 특정 프로젝트 단계에서 새 버전을 만들지 않고 그룹화된 구성 요소(풀 버전)에 대해 동시에 작업할 수 있습니다. 이를 위해 구성 요소는 모델에서 라이브 모드라는 이름을 가진 잠금-수정-잠금해제 모드에서 편집됩니다. 변경한 내용은 새 버전을 만들지 않고도 작업 그룹의 다른 모든 사용자에게 즉시 표시됩니다. 프로젝트의 이 단계가 완료되면 라이브 모드 그룹을 공개로 설정하여 일반 모드(복사-수정-병합)로 원활하게 전환할 수 있습니다.</p>
 <p><img alt="alt text" src="../_images/live-mode.png" /></p>
-<p>:::{note}
-라이브 모드에서는 버전 기록이 일반 모드(복사 수정 병합)와 같은 정도로 문서화되지 않습니다. 라이브 모델은 클라이언트가 서버에 연결할 수 있는 경우에만 사용할 수 있습니다.
-:::</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>라이브 모드에서는 버전 기록이 일반 모드(복사 수정 병합)와 같은 정도로 문서화되지 않습니다. 라이브 모델은 클라이언트가 서버에 연결할 수 있는 경우에만 사용할 수 있습니다.</p>
+</div>
 </section>
 </section>
 <section id="basic-principles-of-the-modular-approach">
@@ -270,9 +270,10 @@
 <section id="download-a-pool">
 <h3>Download a pool<a class="headerlink" href="#download-a-pool" title="Permalink to this heading"></a></h3>
 <p>초기 설정 후에는 Model 데이터베이스가 비어 있고 프로젝트(pool)가 표시되지 않습니다. 풀(pool)에 대한 권한이 이미 부여된 경우 서버에서 풀(pool)을 다운로드하여 로컬 데이터베이스에 저장할 수 있습니다. 이 프로세스를 “체크아웃(checkout)”이라고 합니다. 이 작업은 초기 설정 중 또는 이후 언제든지 수행할 수 있습니다. 네비게이션 바(navigation bar)에서 등록된 풀의 트리(tree) 그리고 각 트리(tree)의 버전(version)들을 확인 및 선택할 수 있습니다. 작업하려는 풀 버전(pool version)을 선택하면 선택한 풀 버전(pool version)이 서버에서 다운로드 됩니다. 다운로드가 완료되면 자동으로 해당 pool의 정보가 표시됩니다.</p>
-<p>:::{tip}
-목록이 상당히 긴 경우 원하는 풀, 트리 또는 버전이 바로 표시되지 않을 수 있습니다. 이 경우 검색 필드에 풀, 트리 또는 버전 이름을 입력하기 시작하면 됩니다. 이렇게 하면 결과 목록이 짧아집니다.
-:::</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>목록이 상당히 긴 경우 원하는 풀, 트리 또는 버전이 바로 표시되지 않을 수 있습니다. 이 경우 검색 필드에 풀, 트리 또는 버전 이름을 입력하기 시작하면 됩니다. 이렇게 하면 결과 목록이 짧아집니다.</p>
+</div>
 <p><img alt="alt text" src="../_images/download-pool.png" /></p>
 </section>
 <section id="find-your-way-around">
@@ -310,15 +311,15 @@
 <h2>Customize the grid<a class="headerlink" href="#customize-the-grid" title="Permalink to this heading"></a></h2>
 <p>사용자의 요구에 맞게 그리드(grid)의 외관을 변경(customize)할 수 있습니다.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#toggle-columns-on-and-off"><span class="xref myst">Toggle columns on and off</span></a></p></li>
-<li><p><a class="reference internal" href="#rearrange-the-columns"><span class="xref myst">Rearrange the columns</span></a></p></li>
-<li><p><a class="reference internal" href="#sort-the-column-content"><span class="xref myst">Sort the column content</span></a></p></li>
-<li><p><a class="reference internal" href="#sort-multiple-columns"><span class="xref myst">Sort multiple columns</span></a></p></li>
-<li><p><a class="reference internal" href="#apply-column-filters"><span class="xref myst">Apply column filters</span></a></p></li>
-<li><p><a class="reference internal" href="#group-data-by-column-headers"><span class="xref myst">Group data by column headers</span></a></p></li>
-<li><p><a class="reference internal" href="#pin-columns"><span class="xref myst">Pin columns</span></a></p></li>
-<li><p><a class="reference internal" href="#adjust-the-column-width"><span class="xref myst">Adjust the column width</span></a></p></li>
-<li><p><a class="reference internal" href="#list-of-options-in-the-column-header-context-menu"><span class="xref myst">List of options in the column header context menu</span></a></p></li>
+<li><p><a class="reference internal" href="#toggle-columns-on-and-off">Toggle columns on and off</a></p></li>
+<li><p><a class="reference internal" href="#rearrange-the-columns">Rearrange the columns</a></p></li>
+<li><p><a class="reference internal" href="#sort-the-column-content">Sort the column content</a></p></li>
+<li><p><a class="reference internal" href="#sort-multiple-columns">Sort multiple columns</a></p></li>
+<li><p><a class="reference internal" href="#apply-column-filters">Apply column filters</a></p></li>
+<li><p><a class="reference internal" href="#group-data-by-column-headers">Group data by column headers</a></p></li>
+<li><p><a class="reference internal" href="#pin-columns">Pin columns</a></p></li>
+<li><p><a class="reference internal" href="#adjust-the-column-width">Adjust the column width</a></p></li>
+<li><p><a class="reference internal" href="#list-of-options-in-the-column-header-context-menu">List of options in the column header context menu</a></p></li>
 </ul>
 <section id="toggle-columns-on-and-off">
 <h3>Toggle columns on and off<a class="headerlink" href="#toggle-columns-on-and-off" title="Permalink to this heading"></a></h3>
@@ -327,15 +328,15 @@
 <li><p><img alt="" src="../_images/three-bar-mark.png" />를 선택합니다.</p></li>
 <li><p>표시(on) 및 숨김(off) 하고자 하는 열(column)을 체크하거나 해제합니다.</p></li>
 </ol>
-<p>:::{admonition} Alternative method
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Alternative method</p>
 <ol class="arabic simple">
 <li><p>데이터 테이블 빈 공간 혹은 행(row)에서 마우스 우 클릭 합니다.</p></li>
 <li><p>표시되는 메뉴에서 <strong>Show column configuration</strong> 항목을 체크합니다.</p></li>
 <li><p>표시되는 열 목록에서 표시 혹은 숨김 하고자 하는 항목을 체크 및 해제합니다.</p></li>
-<li><p>작업을 마친 후에는 다시 마우스 우 클릭을 하여 <strong>Show column configuration</strong> 항목을 체크 해제 합니다.
-:::</p></li>
+<li><p>작업을 마친 후에는 다시 마우스 우 클릭을 하여 <strong>Show column configuration</strong> 항목을 체크 해제 합니다.</p></li>
 </ol>
+</div>
 </section>
 <section id="rearrange-the-columns">
 <h3>Rearrange the columns<a class="headerlink" href="#rearrange-the-columns" title="Permalink to this heading"></a></h3>
@@ -348,20 +349,6 @@
 </section>
 <section id="sort-multiple-columns">
 <h3>Sort multiple columns<a class="headerlink" href="#sort-multiple-columns" title="Permalink to this heading"></a></h3>
-<p>:::{table} aa
-:widths: 600 600
-:align: center</p>
-<ul class="simple">
-<li><ul>
-<li><p>여러 열을 기준으로 정렬할 수도 있습니다. 예를 들어, 먼저 대상 시장별로 데이터를 정렬할 수 있습니다. 그런 다음 여러 행이 동일한 시장에 적용되는 경우 알파벳 순서로 정렬할 수 있습니다.</p></li>
-</ul>
-</li>
-<li><ul>
-<li><p><img alt="alt text" src="../_images/sort-multiple-columns.png" />
-:::</p></li>
-</ul>
-</li>
-</ul>
 </section>
 <section id="apply-column-filters">
 <h3>Apply column filters<a class="headerlink" href="#apply-column-filters" title="Permalink to this heading"></a></h3>
