@@ -186,8 +186,8 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 
 ### Toggle columns on and off
 
-1. 데이터 테이블의 각 열에서 ![](images/column-mark.png)를 클릭합니다.
-2. ![](images/three-bar-mark.png)를 선택합니다.
+1. 데이터 테이블의 각 열에서 ![](images/column-mark.png){class="intxt-image"}를 클릭합니다.
+2. ![](images/three-bar-mark.png){class="intxt-image"}를 선택합니다.
 3. 표시(on) 및 숨김(off) 하고자 하는 열(column)을 체크하거나 해제합니다.
 
 :::{admonition} Alternative method
