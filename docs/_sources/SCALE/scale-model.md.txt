@@ -219,7 +219,45 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 ![](images/sort-multiple-columns.png)
 
 ### Apply column filters
+
+열 머리글 바로 아래의 빈 셀은 필터입니다. 필터가 설정되어 있지 않으면 셀이 비어 있습니다. 이러한 필터를 사용하여 특정 기준을 충족하는 데이터만 표시할 수 있습니다. 예를 들어 특정 이름을 가진 데이터 행만 표시할 수 있습니다.
+
 ### Group data by column headers
+
+1. 그룹으로 묶어 표시하기 위해서 ![](images/column-mark.png){class="intxt-image"}를 클릭합니다.
+2. 나타나는 메뉴에서 Group by [Column name]을 클릭하면 테이블의 데이터들이 그룹으로 묶여 표시됩니다.
+3. 필요에 따라 같은 방법으로 두 개 이상의 항목으로 그룹으로 묶어 표시 할 수 있습니다. 
+4. 그룹을 해제하려면 ![](images/column-mark.png){class="intxt-image"} 클릭 후 Ungroup by [Column name]을 선택합니다.
+
+![alt text](images/group-data-by-column-headers.png)
+
 ### Pin columns
+
+열은 그리드의 왼쪽(A) 또는 오른쪽(B) 가장자리에 고정할 수 있습니다. 고정되지 않은 열은 중앙에 표시됩니다. 이렇게 하면 그리드를 세 개의 영역으로 나눌 수 있으므로 원하는 정보를 더 잘 파악하고 빠르게 액세스할 수 있습니다. 필요한 경우 가로 스크롤 막대를 사용하여 중앙 영역을 좌우로 이동할 수 있습니다.
+
+1. 열의 이름에서 ![](images/column-mark.png){class="intxt-image"}을 클릭합니다.
+2. 나타나는 메뉴에서 Pin column을 선택하면 3개의 항목(Pin left, Pin right, No pin)이 표시됩니다.
+3. 고정하여 배치하고자 하는 방향을 선택하여 선택한 열을 좌 우에 고정합니다.
+
 ### Adjust the column width
+
+1. 열의 이름에서 ![](images/column-mark.png){class="intxt-image"}을 클릭합니다.
+2. 나타나는 메뉴에서 Autosize this column을 클릭하면 열의 너비가 자동으로 조정됩니다.
+3. Autosize all columns를 선택하게 되면 모든 열의 너비가 자동으로 조정됩니다.
+
 ### List of options in the column header context menu
+
+열의 이름에서 ![](images/column-mark.png){class="intxt-image"}를 클릭했을 때 나타나는 메뉴는 다음과 같습니다.
+
+![alt text](images/column-header-context-menu.png)
+
+| Option | Explanation |
+| ------ | ----------- |
+| Pin column | 열(column)을 오른쪽 및 왼쪽으로 고정합니다. |
+| Autosize this column | 선택한 열의 너비를 자동으로 조정합니다. |
+| Autosize all columns | 모든 열의 너비를 자동으로 조정합니다. |
+| Group by | 선택한 열의 같은 데이터끼리 그룹화 되어 표시 됩니다. |
+| Reset columns | 기본 설정 값으로 테이블을 다시 되돌립니다. |
+| Remove all filters | 적용된 모든 필터(filter)들이 제거됩니다. |
+| ![alt text](images/filter-icon.png){class="intxt-image"} | 테이블의 데이터 표시에 적용할 필터를 설정합니다. |
+| ![](images/three-bar-mark.png){class="intxt-image"} | 테이블에 나타낼 열(column)을 선택합니다. |
