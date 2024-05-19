@@ -251,6 +251,8 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 
 ![alt text](images/column-header-context-menu.png)
 
+:::{table}
+:widths: auto
 | Option | Explanation |
 | ------ | ----------- |
 | Pin column | 열(column)을 오른쪽 및 왼쪽으로 고정합니다. |
@@ -261,3 +263,4 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 | Remove all filters | 적용된 모든 필터(filter)들이 제거됩니다. |
 | ![alt text](images/filter-icon.png){class="intxt-image"} | 테이블의 데이터 표시에 적용할 필터를 설정합니다. |
 | ![](images/three-bar-mark.png){class="intxt-image"} | 테이블에 나타낼 열(column)을 선택합니다. |
+:::
