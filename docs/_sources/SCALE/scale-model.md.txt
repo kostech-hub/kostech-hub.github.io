@@ -264,3 +264,147 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 | ![alt text](images/filter-icon.png){class="intxt-image"} | 테이블의 데이터 표시에 적용할 필터를 설정합니다. |
 | ![](images/three-bar-mark.png){class="intxt-image"} | 테이블에 나타낼 열(column)을 선택합니다. |
 :::
+
+## Parameters
+
+### Parameter table
+
+파라미터 테이블(Parameter table)은 파라미터들 뿐만 아니라 파라미터에 해당하는 값 및 관련된 속성들(attributes)에 대한 편리한 개요(overview)를 제공합니다.
+
+#### Add parameter table
+
+![alt text](images/add-parameter-table.png)
+
+1. 파라미터 테이블을 만들고자 하는 구성요소(component) 그룹을 선택합니다.
+2. 마우스 우 클릭으로 표시되는 메뉴에서 Add Parameter Table을 선택합니다.
+
+그 후 기본 지정 파라미터 세트가 있는 비공개 파라미터 목록이 생성됩니다. 비공개 상태는 테이블 지정(A)이 굵은 글씨로 표시되어 있습니다.
+
+마우스 오른쪽 버튼을 클릭하여 열 수 있는 파라미터 테이블의 상황에 맞는 메뉴에서 다음 옵션을 찾을 수 있습니다:
+
+![alt text](images/context-menu-parameter-table.png)
+
+#### Edit parameter table
+
+파라미터 테이블의 상황에 맞는 메뉴를 통해 Edit With... 메뉴 항목에 접근할 수 있습니다. 그러면 외부 애플리케이션에서 매개변수 테이블의 .csv 표현이 열립니다. 여기에서 파일을 편집할 수 있습니다. 외부 애플리케이션을 닫은 후 Model은 .csv 표현이 변경되었는지 확인하고 파라미터 테이블을 .csv 표현의 콘텐츠로 덮어씁니다.
+
+#### Copy, paste, delete, rename
+
+생성된 파라미터 테이블에서 마우스 오른쪽 버튼을 클릭하면 나타나는 메뉴에서 언제든지 표를 복사, 붙여넣기 및 이름을 변경할 수 있습니다.
+
+#### Add attachments, tags, markers
+
+- Add Attachment: Attachment에 파일을 추가합니다.
+- Tags : 미리 구성된 태그(tag) 혹은 새 태그(tag)를 추가합니다.
+- Markers : 마커(marker)를 추가하거나 제거합니다.
+
+#### Derive new, set public, export, import
+
+- Derive New : 기존 파라미터 테이블에서 새 파라미터 테이블을 파생합니다.
+- Set Public : 테이블의 상태를 비공개(private)에서 공개(public)으로 변경합니다.
+- Export as CSV : 파라미터 테이블의 내용을 사용자의 하드 디스크에 .csv 파일로 저장할 수 있습니다. 저장한 .csv 파일은 Model에 연결되지 않고 독립적으로 사용되며, .csv 파일의 내용을 변경하더라도 파라미터 테이블에 영향을 미치지 않습니다.
+- import from CSV : 파라미터 테이블의 컨텍스트 메뉴를 통해 Import From CSV... 메뉴 항목에 접근할 수 있습니다. 이 메뉴 항목을 클릭하면 사용자의 하드 디스크에 있는 .csv 파일을 선택하여 가져올 수 있습니다. 속성 할당 형식은 매개변수 테이블을 내보내서 확인할 수 있습니다.
+
+### Handling of parameters
+
+#### Add, remove and rename new parameters
+
+1. 테이블에 파라미터를 추가하려면 마우스 오른쪽 버튼을 클릭하여 그리드에서 컨텍스트 메뉴(context menu)를 열고 Add parameter를 클릭합니다.
+2. 그런 다음 생성할 새 파라미터의 이름을 지정합니다. 문자, 숫자 그리고 밑줄 기호가 허용됩니다.
+
+![alt text](images/add-parameter.png)
+
+#### Add, duplicate and remove data sets
+
+새로 생성된 파라미터는 별도의 열(column)으로 생성되어 표시됩니다.
+
+![alt text](images/add-data-set.png)
+
+1. 테이블에서 마우스 오른쪽으로 컨텍스트 메뉴를 열고 Add Data Set을 클릭하여 행을 추가할 수 있습니다.
+2. 이제 열의 설명(description) 및 속성 그리고 추가된 행에 값을 입력하여 파라미터를 지정할 수 있습니다.
+
+![alt text](images/specify-parameters.png)
+
+1. Description(설명) : description은 파라미터 이름 아래의 영역을 더블 클릭하여 변경할 수 있습니다.
+2. Value(값) : 값(value)는 파라미터 열에 대응되는 행의 셀(cell)을 더블 클릭하여 변경할 수 있습니다. '=' 기호를 시작으로 하여 공식(formulas)을 입력할 수 있습니다. 테이블에서는 공식(formulas)만 표시되며 계산된 값은 run preview에서만 표시됩니다.
+3. Attribute(속성) : 속성은 열의 이름에 마우스를 가져갔을 때 나타나는 ![](images/column-mark.png){class="intxt-image"}를 클릭하고 나타나는 팝업(popup) 메뉴에서 ![](images/three-bar-mark.png) 탭(tab)에서 선택하여 추가 할 수 있습니다. 
+
+공개(public) 상태로 테이블을 편집한 경우 비공개(private) 버전이 새로 만들어집니다. 행(row)의 컨텍스트 메뉴(context menu)에서 data set을 복제하고 제거할 수 도 있습니다.
+
+![alt text](images/context-menu-of-a-row.png)
+
+#### Toggle table view
+
+파라미터 테이블에는 두 가지 보기 옵션을 사용할 수 있습니다. 표 보기를 전환하려면 마우스 오른쪽 버튼을 클릭하여 그리드에서 컨텍스트 메뉴를 열고 **Toggle table view**을 클릭합니다: 이를 통해 가로(A) 보기와 세로(B) 보기 간에 전환할 수 있습니다.
+
+![alt text](images/table-views.png)
+
+### Calculate and reference parameters
+
+**Model**은 스프레드시트(spreadsheet)와 유사한 파라미터 정의로 작업할 수 있는 가능성을 제공합니다. 이를 위해서는 앞에 '=' 기호를 반드시 사용해야 합니다. 매개변수는 서로를 참조하거나 서로에 대해 오프셋할 수 있습니다(예: =BARRIERE_MOVE_X + BARRIERE_OFFSET_X).
+
+#### Reference parameters
+
+기본적으로 매개변수는 그 이름으로 참조할 수 있습니다(예: DRIVER_TTF=TTF * 2). 실행 시 TTF 매개변수가 존재하지 않으면 충돌이 발생하므로 어셈블리가 불가능합니다. 또는 DRIVER_TTF=get_parameter_value("TTF", default=10) * 2를 통해 TTF를 참조할 수 있습니다. 기본값을 지정할 수 있으며, 이는 실행 중 매개변수 ``TTF``가 존재하지 않는 경우에 사용됩니다.
+
+실행에 매개변수가 있는지 여부는 has_parameter() 함수를 통해 쿼리할 수 있습니다: GURT_TTF=FAHRERGEWICHT / 10 has_parameter("FAHRERGEWICHT") else 0.5. 파이썬의 조건부 연산자 구문을 사용해야 한다는 점에 유의하세요.
+
+값을 계산하는 데 사용할 수 있는 옵션은 다음과 같습니다:
+
+#### Mathematical operators of the basic arithmetic operations
+
+- +, -, /, *
+
+#### Other mathematical operators and functions
+
+- Exponents(지수) : =2**2
+- Square root(제곱근) : =2**0.5 
+- abs(절대값) : =abs(-132)
+- log(자연로그) : =log(0)
+- log10 : =log10(0)
+- sin, cos, tan : =sin(0)
+- asin, acos, atan: =atan(1)
+- round(지정된 자릿수로 반올림): =round(124.64324, 2)
+- math: =math.pi
+
+#### Operators for editing strings
+
+- float: 문자열(string)을 부동소수점(floating point number)으로 변환합니다.
+- int: 문자열(string)을 정수형(integer)로 변환합니다.
+- str: 파라미터(parameter)를 문자열(string)로 변환합니다.
+- len: 문자열(string)의 길이를 가져옵니다.
+
+#### Operators for processing multiple parameter values
+
+- min: 집합(set)에서 가장 작은 수를 가져옵니다. (ex. =min(BARRIERE_MOVE_X, BARRIERE_MOVE_Y, 0))
+- max: 집합(set)에서 가장 큰 수를 가져옵니다. (ex. =max(BARRIERE_MOVE_X, BARRIERE_MOVE_Y, 100))
+- sum: 나열된 수의 합을 가져옵니다. (ex. =sum(BARRIERE_MOVE_X, BARRIERE_OFFSET_X))
+
+파라미터들은 실행 구성(run configuration)에서 실행 종속 값을 대신 할 수도 있습니다.
+
+- =get_attribute_string(attribute, default): 선택한 실행 구성(run configuration)에서 속성(attribute) 값을 문자열로 검색합니다.
+- =get_attribute_float(attribute, default): 선택한 실행 구성(run configuration)에서 속성(attribute) 값을 부동 소수점 값으로 가져옵니다.
+- =get_attribute_value_description(attribute, default): 선택한 실행 구성(run configuration)에서 속성(attribute) 값에 대한 설명(description)을 검색합니다.
+
+기본값(default) 지정은 선택 사항입니다. 속성(attribute)를 찾을 수 없거나 사용하지 않는 경우 기본값(default)이 대신 사용됩니다.
+
+또한 **Model**은 사전 정의된 파라미터를 생성합니다. 이러한 파라미터는 get_context_value() 함수를 통해 접근할 수 있습니다:
+
+=get_context_value("RUN_LABEL")
+
+현재 다음과 같은 사전 정의된 파라미터를 사용할 수 있습니다.
+- POOL_HISTORYCOMMENT_BODY
+- POOL_HISTORYCOMMENT_HEADER
+- POOL_UUID
+- POOL_VERSION
+- PREDECESSOR_POOL_VERSION_VERSIONNUMBER
+- RUN_LABEL
+- RUN_REFERENCE_NAME
+
+### Replace parameters in components
+
+어셈블리(assembly) 단계에서 모델링 파일의 특정 값을 ![](images/model-icon.png){class="intxt-image"}**Model**에 정의한 값으로 대체할 수 있습니다.
+
+### Predefined parameters
+### Parameter conflicts
+### Define parameters depending on user and location

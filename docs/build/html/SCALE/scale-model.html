@@ -112,6 +112,35 @@
 <li class="toctree-l3"><a class="reference internal" href="#list-of-options-in-the-column-header-context-menu">List of options in the column header context menu</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-table">Parameter table</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-parameter-table">Add parameter table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-parameter-table">Edit parameter table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-paste-delete-rename">Copy, paste, delete, rename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-attachments-tags-markers">Add attachments, tags, markers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#derive-new-set-public-export-import">Derive new, set public, export, import</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#handling-of-parameters">Handling of parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-remove-and-rename-new-parameters">Add, remove and rename new parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-duplicate-and-remove-data-sets">Add, duplicate and remove data sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toggle-table-view">Toggle table view</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#calculate-and-reference-parameters">Calculate and reference parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reference-parameters">Reference parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mathematical-operators-of-the-basic-arithmetic-operations">Mathematical operators of the basic arithmetic operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-mathematical-operators-and-functions">Other mathematical operators and functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operators-for-editing-strings">Operators for editing strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operators-for-processing-multiple-parameter-values">Operators for processing multiple parameter values</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#replace-parameters-in-components">Replace parameters in components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#predefined-parameters">Predefined parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-conflicts">Parameter conflicts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#define-parameters-depending-on-user-and-location">Define parameters depending on user and location</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scale-project.html">SCALE.project</a></li>
@@ -426,6 +455,161 @@
 </tr>
 </tbody>
 </table>
+</section>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h2>
+<section id="parameter-table">
+<h3>Parameter table<a class="headerlink" href="#parameter-table" title="Permalink to this heading"></a></h3>
+<p>파라미터 테이블(Parameter table)은 파라미터들 뿐만 아니라 파라미터에 해당하는 값 및 관련된 속성들(attributes)에 대한 편리한 개요(overview)를 제공합니다.</p>
+<section id="add-parameter-table">
+<h4>Add parameter table<a class="headerlink" href="#add-parameter-table" title="Permalink to this heading"></a></h4>
+<p><img alt="alt text" src="../_images/add-parameter-table.png" /></p>
+<ol class="arabic simple">
+<li><p>파라미터 테이블을 만들고자 하는 구성요소(component) 그룹을 선택합니다.</p></li>
+<li><p>마우스 우 클릭으로 표시되는 메뉴에서 Add Parameter Table을 선택합니다.</p></li>
+</ol>
+<p>그 후 기본 지정 파라미터 세트가 있는 비공개 파라미터 목록이 생성됩니다. 비공개 상태는 테이블 지정(A)이 굵은 글씨로 표시되어 있습니다.</p>
+<p>마우스 오른쪽 버튼을 클릭하여 열 수 있는 파라미터 테이블의 상황에 맞는 메뉴에서 다음 옵션을 찾을 수 있습니다:</p>
+<p><img alt="alt text" src="../_images/context-menu-parameter-table.png" /></p>
+</section>
+<section id="edit-parameter-table">
+<h4>Edit parameter table<a class="headerlink" href="#edit-parameter-table" title="Permalink to this heading"></a></h4>
+<p>파라미터 테이블의 상황에 맞는 메뉴를 통해 Edit With… 메뉴 항목에 접근할 수 있습니다. 그러면 외부 애플리케이션에서 매개변수 테이블의 .csv 표현이 열립니다. 여기에서 파일을 편집할 수 있습니다. 외부 애플리케이션을 닫은 후 Model은 .csv 표현이 변경되었는지 확인하고 파라미터 테이블을 .csv 표현의 콘텐츠로 덮어씁니다.</p>
+</section>
+<section id="copy-paste-delete-rename">
+<h4>Copy, paste, delete, rename<a class="headerlink" href="#copy-paste-delete-rename" title="Permalink to this heading"></a></h4>
+<p>생성된 파라미터 테이블에서 마우스 오른쪽 버튼을 클릭하면 나타나는 메뉴에서 언제든지 표를 복사, 붙여넣기 및 이름을 변경할 수 있습니다.</p>
+</section>
+<section id="add-attachments-tags-markers">
+<h4>Add attachments, tags, markers<a class="headerlink" href="#add-attachments-tags-markers" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Add Attachment: Attachment에 파일을 추가합니다.</p></li>
+<li><p>Tags : 미리 구성된 태그(tag) 혹은 새 태그(tag)를 추가합니다.</p></li>
+<li><p>Markers : 마커(marker)를 추가하거나 제거합니다.</p></li>
+</ul>
+</section>
+<section id="derive-new-set-public-export-import">
+<h4>Derive new, set public, export, import<a class="headerlink" href="#derive-new-set-public-export-import" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Derive New : 기존 파라미터 테이블에서 새 파라미터 테이블을 파생합니다.</p></li>
+<li><p>Set Public : 테이블의 상태를 비공개(private)에서 공개(public)으로 변경합니다.</p></li>
+<li><p>Export as CSV : 파라미터 테이블의 내용을 사용자의 하드 디스크에 .csv 파일로 저장할 수 있습니다. 저장한 .csv 파일은 Model에 연결되지 않고 독립적으로 사용되며, .csv 파일의 내용을 변경하더라도 파라미터 테이블에 영향을 미치지 않습니다.</p></li>
+<li><p>import from CSV : 파라미터 테이블의 컨텍스트 메뉴를 통해 Import From CSV… 메뉴 항목에 접근할 수 있습니다. 이 메뉴 항목을 클릭하면 사용자의 하드 디스크에 있는 .csv 파일을 선택하여 가져올 수 있습니다. 속성 할당 형식은 매개변수 테이블을 내보내서 확인할 수 있습니다.</p></li>
+</ul>
+</section>
+</section>
+<section id="handling-of-parameters">
+<h3>Handling of parameters<a class="headerlink" href="#handling-of-parameters" title="Permalink to this heading"></a></h3>
+<section id="add-remove-and-rename-new-parameters">
+<h4>Add, remove and rename new parameters<a class="headerlink" href="#add-remove-and-rename-new-parameters" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>테이블에 파라미터를 추가하려면 마우스 오른쪽 버튼을 클릭하여 그리드에서 컨텍스트 메뉴(context menu)를 열고 Add parameter를 클릭합니다.</p></li>
+<li><p>그런 다음 생성할 새 파라미터의 이름을 지정합니다. 문자, 숫자 그리고 밑줄 기호가 허용됩니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/add-parameter.png" /></p>
+</section>
+<section id="add-duplicate-and-remove-data-sets">
+<h4>Add, duplicate and remove data sets<a class="headerlink" href="#add-duplicate-and-remove-data-sets" title="Permalink to this heading"></a></h4>
+<p>새로 생성된 파라미터는 별도의 열(column)으로 생성되어 표시됩니다.</p>
+<p><img alt="alt text" src="../_images/add-data-set.png" /></p>
+<ol class="arabic simple">
+<li><p>테이블에서 마우스 오른쪽으로 컨텍스트 메뉴를 열고 Add Data Set을 클릭하여 행을 추가할 수 있습니다.</p></li>
+<li><p>이제 열의 설명(description) 및 속성 그리고 추가된 행에 값을 입력하여 파라미터를 지정할 수 있습니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/specify-parameters.png" /></p>
+<ol class="arabic simple">
+<li><p>Description(설명) : description은 파라미터 이름 아래의 영역을 더블 클릭하여 변경할 수 있습니다.</p></li>
+<li><p>Value(값) : 값(value)는 파라미터 열에 대응되는 행의 셀(cell)을 더블 클릭하여 변경할 수 있습니다. ‘=’ 기호를 시작으로 하여 공식(formulas)을 입력할 수 있습니다. 테이블에서는 공식(formulas)만 표시되며 계산된 값은 run preview에서만 표시됩니다.</p></li>
+<li><p>Attribute(속성) : 속성은 열의 이름에 마우스를 가져갔을 때 나타나는 <img alt="" class="intxt-image" src="../_images/column-mark.png" />를 클릭하고 나타나는 팝업(popup) 메뉴에서 <img alt="" src="../_images/three-bar-mark.png" /> 탭(tab)에서 선택하여 추가 할 수 있습니다.</p></li>
+</ol>
+<p>공개(public) 상태로 테이블을 편집한 경우 비공개(private) 버전이 새로 만들어집니다. 행(row)의 컨텍스트 메뉴(context menu)에서 data set을 복제하고 제거할 수 도 있습니다.</p>
+<p><img alt="alt text" src="../_images/context-menu-of-a-row.png" /></p>
+</section>
+<section id="toggle-table-view">
+<h4>Toggle table view<a class="headerlink" href="#toggle-table-view" title="Permalink to this heading"></a></h4>
+<p>파라미터 테이블에는 두 가지 보기 옵션을 사용할 수 있습니다. 표 보기를 전환하려면 마우스 오른쪽 버튼을 클릭하여 그리드에서 컨텍스트 메뉴를 열고 <strong>Toggle table view</strong>을 클릭합니다: 이를 통해 가로(A) 보기와 세로(B) 보기 간에 전환할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/table-views.png" /></p>
+</section>
+</section>
+<section id="calculate-and-reference-parameters">
+<h3>Calculate and reference parameters<a class="headerlink" href="#calculate-and-reference-parameters" title="Permalink to this heading"></a></h3>
+<p><strong>Model</strong>은 스프레드시트(spreadsheet)와 유사한 파라미터 정의로 작업할 수 있는 가능성을 제공합니다. 이를 위해서는 앞에 ‘=’ 기호를 반드시 사용해야 합니다. 매개변수는 서로를 참조하거나 서로에 대해 오프셋할 수 있습니다(예: =BARRIERE_MOVE_X + BARRIERE_OFFSET_X).</p>
+<section id="reference-parameters">
+<h4>Reference parameters<a class="headerlink" href="#reference-parameters" title="Permalink to this heading"></a></h4>
+<p>기본적으로 매개변수는 그 이름으로 참조할 수 있습니다(예: DRIVER_TTF=TTF * 2). 실행 시 TTF 매개변수가 존재하지 않으면 충돌이 발생하므로 어셈블리가 불가능합니다. 또는 DRIVER_TTF=get_parameter_value(“TTF”, default=10) * 2를 통해 TTF를 참조할 수 있습니다. 기본값을 지정할 수 있으며, 이는 실행 중 매개변수 <code class="docutils literal notranslate"><span class="pre">TTF</span></code>가 존재하지 않는 경우에 사용됩니다.</p>
+<p>실행에 매개변수가 있는지 여부는 has_parameter() 함수를 통해 쿼리할 수 있습니다: GURT_TTF=FAHRERGEWICHT / 10 has_parameter(“FAHRERGEWICHT”) else 0.5. 파이썬의 조건부 연산자 구문을 사용해야 한다는 점에 유의하세요.</p>
+<p>값을 계산하는 데 사용할 수 있는 옵션은 다음과 같습니다:</p>
+</section>
+<section id="mathematical-operators-of-the-basic-arithmetic-operations">
+<h4>Mathematical operators of the basic arithmetic operations<a class="headerlink" href="#mathematical-operators-of-the-basic-arithmetic-operations" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>+, -, /, *</p></li>
+</ul>
+</section>
+<section id="other-mathematical-operators-and-functions">
+<h4>Other mathematical operators and functions<a class="headerlink" href="#other-mathematical-operators-and-functions" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Exponents(지수) : =2**2</p></li>
+<li><p>Square root(제곱근) : =2**0.5</p></li>
+<li><p>abs(절대값) : =abs(-132)</p></li>
+<li><p>log(자연로그) : =log(0)</p></li>
+<li><p>log10 : =log10(0)</p></li>
+<li><p>sin, cos, tan : =sin(0)</p></li>
+<li><p>asin, acos, atan: =atan(1)</p></li>
+<li><p>round(지정된 자릿수로 반올림): =round(124.64324, 2)</p></li>
+<li><p>math: =math.pi</p></li>
+</ul>
+</section>
+<section id="operators-for-editing-strings">
+<h4>Operators for editing strings<a class="headerlink" href="#operators-for-editing-strings" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>float: 문자열(string)을 부동소수점(floating point number)으로 변환합니다.</p></li>
+<li><p>int: 문자열(string)을 정수형(integer)로 변환합니다.</p></li>
+<li><p>str: 파라미터(parameter)를 문자열(string)로 변환합니다.</p></li>
+<li><p>len: 문자열(string)의 길이를 가져옵니다.</p></li>
+</ul>
+</section>
+<section id="operators-for-processing-multiple-parameter-values">
+<h4>Operators for processing multiple parameter values<a class="headerlink" href="#operators-for-processing-multiple-parameter-values" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>min: 집합(set)에서 가장 작은 수를 가져옵니다. (ex. =min(BARRIERE_MOVE_X, BARRIERE_MOVE_Y, 0))</p></li>
+<li><p>max: 집합(set)에서 가장 큰 수를 가져옵니다. (ex. =max(BARRIERE_MOVE_X, BARRIERE_MOVE_Y, 100))</p></li>
+<li><p>sum: 나열된 수의 합을 가져옵니다. (ex. =sum(BARRIERE_MOVE_X, BARRIERE_OFFSET_X))</p></li>
+</ul>
+<p>파라미터들은 실행 구성(run configuration)에서 실행 종속 값을 대신 할 수도 있습니다.</p>
+<ul class="simple">
+<li><p>=get_attribute_string(attribute, default): 선택한 실행 구성(run configuration)에서 속성(attribute) 값을 문자열로 검색합니다.</p></li>
+<li><p>=get_attribute_float(attribute, default): 선택한 실행 구성(run configuration)에서 속성(attribute) 값을 부동 소수점 값으로 가져옵니다.</p></li>
+<li><p>=get_attribute_value_description(attribute, default): 선택한 실행 구성(run configuration)에서 속성(attribute) 값에 대한 설명(description)을 검색합니다.</p></li>
+</ul>
+<p>기본값(default) 지정은 선택 사항입니다. 속성(attribute)를 찾을 수 없거나 사용하지 않는 경우 기본값(default)이 대신 사용됩니다.</p>
+<p>또한 <strong>Model</strong>은 사전 정의된 파라미터를 생성합니다. 이러한 파라미터는 get_context_value() 함수를 통해 접근할 수 있습니다:</p>
+<p>=get_context_value(“RUN_LABEL”)</p>
+<p>현재 다음과 같은 사전 정의된 파라미터를 사용할 수 있습니다.</p>
+<ul class="simple">
+<li><p>POOL_HISTORYCOMMENT_BODY</p></li>
+<li><p>POOL_HISTORYCOMMENT_HEADER</p></li>
+<li><p>POOL_UUID</p></li>
+<li><p>POOL_VERSION</p></li>
+<li><p>PREDECESSOR_POOL_VERSION_VERSIONNUMBER</p></li>
+<li><p>RUN_LABEL</p></li>
+<li><p>RUN_REFERENCE_NAME</p></li>
+</ul>
+</section>
+</section>
+<section id="replace-parameters-in-components">
+<h3>Replace parameters in components<a class="headerlink" href="#replace-parameters-in-components" title="Permalink to this heading"></a></h3>
+<p>어셈블리(assembly) 단계에서 모델링 파일의 특정 값을 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>에 정의한 값으로 대체할 수 있습니다.</p>
+</section>
+<section id="predefined-parameters">
+<h3>Predefined parameters<a class="headerlink" href="#predefined-parameters" title="Permalink to this heading"></a></h3>
+</section>
+<section id="parameter-conflicts">
+<h3>Parameter conflicts<a class="headerlink" href="#parameter-conflicts" title="Permalink to this heading"></a></h3>
+</section>
+<section id="define-parameters-depending-on-user-and-location">
+<h3>Define parameters depending on user and location<a class="headerlink" href="#define-parameters-depending-on-user-and-location" title="Permalink to this heading"></a></h3>
 </section>
 </section>
 </section>
