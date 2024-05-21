@@ -180,7 +180,7 @@
 <h3>Workflow, teamwork and synchronization<a class="headerlink" href="#workflow-teamwork-and-synchronization" title="Permalink to this heading"></a></h3>
 <section id="synchronization">
 <h4>Synchronization<a class="headerlink" href="#synchronization" title="Permalink to this heading"></a></h4>
-<p>데이터는 SCALE.sdm 서버 중앙에 보관되며, Model 클라이언트는 데이터의 로컬 복사본을 다운로드 합니다. 복사본은 Model 서버와 정기적으로 동기화되며, 이는 클라우드와 같은 인프라에 해당합니다. 로컬 작업 복사본을 기반으로 오프라인에서 작업할 수 있으며, 데이터 전송 및 데이터 저장을 위한 암호화(2단계 인증 및 암호화)를 구성하여 보안을 보장할 수 있습니다.</p>
+<p>데이터는 SCALE.sdm 서버 중앙에 보관되며, <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong> 클라이언트는 데이터의 로컬 복사본을 다운로드 합니다. 복사본은 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong> 서버와 정기적으로 동기화되며, 이는 클라우드와 같은 인프라에 해당합니다. 로컬 작업 복사본을 기반으로 오프라인에서 작업할 수 있으며, 데이터 전송 및 데이터 저장을 위한 암호화(2단계 인증 및 암호화)를 구성하여 보안을 보장할 수 있습니다.</p>
 </section>
 <section id="offline-online">
 <h4>Offline / online<a class="headerlink" href="#offline-online" title="Permalink to this heading"></a></h4>
@@ -189,10 +189,10 @@
 </section>
 <section id="version-management">
 <h3>Version management<a class="headerlink" href="#version-management" title="Permalink to this heading"></a></h3>
-<p>버전 관리는 Model로 관리되는 데이터의 변경 사항을 추적할 수 있습니다. 모든 변경 사항을 기록하여 누가 언제 무엇을 변경했는지 추적할 수 있으며 이전 상태와 새 상태를 비교할 수 있습니다. 또한 필요에 따라 이전 상태를 복원할 수 있습니다.</p>
-<p>Model의 거의 모든 개체들은 다음을 포함하는 버전으로 관리됩니다.</p>
+<p>버전 관리는 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>로 관리되는 데이터의 변경 사항을 추적할 수 있습니다. 모든 변경 사항을 기록하여 누가 언제 무엇을 변경했는지 추적할 수 있으며 이전 상태와 새 상태를 비교할 수 있습니다. 또한 필요에 따라 이전 상태를 복원할 수 있습니다.</p>
+<p><img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>의 거의 모든 개체들은 다음을 포함하는 버전으로 관리됩니다.</p>
 <ul>
-<li><p>Model data</p>
+<li><p><img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong> data</p>
 <ul class="simple">
 <li><p>Solver files</p></li>
 <li><p>Preprocessor files</p></li>
@@ -213,7 +213,7 @@
 </section>
 <section id="copy-modify-merge">
 <h4>Copy - modify - merge<a class="headerlink" href="#copy-modify-merge" title="Permalink to this heading"></a></h4>
-<p>모델에서는 기본적으로 복사-수정-병합 접근 방식을 따릅니다. 이 개념을 사용하면 여러 사용자가 해당 객체의 복사본을 만들어 객체를 동시에 변경할 수 있습니다. 따라서 하나의 (부모) 객체에서 여러 개의 (자식) 객체를 만들 수 있습니다. 이러한 (하위) 개체를 하나의 개체로 병합하기 위해 Model은 소위 비교 및 병합 기능을 제공하며, 이를 통해 변경 사항을 병합할 수 있습니다.</p>
+<p>모델에서는 기본적으로 복사-수정-병합 접근 방식을 따릅니다. 이 개념을 사용하면 여러 사용자가 해당 객체의 복사본을 만들어 객체를 동시에 변경할 수 있습니다. 따라서 하나의 (부모) 객체에서 여러 개의 (자식) 객체를 만들 수 있습니다. 이러한 (하위) 개체를 하나의 개체로 병합하기 위해 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>은 소위 비교 및 병합 기능을 제공하며, 이를 통해 변경 사항을 병합할 수 있습니다.</p>
 <p><img alt="alt text" src="../_images/copy-modify-merge.png" /></p>
 <p>복사-수정-병합 방법은 두 가지 상태를 허용합니다.</p>
 <ul class="simple">
@@ -238,8 +238,8 @@
 </section>
 <section id="integration-of-external-cae-tools">
 <h3>Integration of external CAE tools<a class="headerlink" href="#integration-of-external-cae-tools" title="Permalink to this heading"></a></h3>
-<p>Model은 다양한 CAE 프로세스와 CAE 툴의 통합을 위한 여러 애플리케이션 인터페이스를 제공합니다. Model에서 외부 프로그램으로 파일을 직접 열어 그곳에서 처리할 수 있습니다. 처리가 완료되고 파일이 닫히면 새 버전의 객체가 자동으로 Model로 다시 임포트되고 사용자에게 히스토리 주석과 함께 변경 사항을 문서화하도록 요청합니다.</p>
-<p>Model에서 통합될 수 있는 외부 프로그램은 다음과 같습니다.</p>
+<p><img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>은 다양한 CAE 프로세스와 CAE 툴의 통합을 위한 여러 애플리케이션 인터페이스를 제공합니다. <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>에서 외부 프로그램으로 파일을 직접 열어 그곳에서 처리할 수 있습니다. 처리가 완료되고 파일이 닫히면 새 버전의 객체가 자동으로 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>로 다시 임포트되고 사용자에게 히스토리 주석과 함께 변경 사항을 문서화하도록 요청합니다.</p>
+<p><img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>에서 통합될 수 있는 외부 프로그램은 다음과 같습니다.</p>
 <ul class="simple">
 <li><p>Pre-and post-processors such as ANSA, Hypermesh, Primer, ADAMS</p></li>
 <li><p>Text editors such as NEdit, gvim, Notepad++, UltraEdit</p></li>
@@ -251,7 +251,7 @@
 <h3>Cooperation with external partners<a class="headerlink" href="#cooperation-with-external-partners" title="Permalink to this heading"></a></h3>
 <p><img alt="alt text" src="../_images/external-partners.png" /></p>
 <p>기업들은 종종 회사 내부 네트워크에 직접 통합되지 않은 외부 서비스 제공업체에 개발 활동을 아웃소싱합니다. 외부 파트너는 서비스 포털을 통해 회사 네트워크와 모델 서버에 연결되는 것이 바람직합니다. 이렇게 하면 모든 관련 데이터가 외부 사용자와 자동으로 동기화됩니다. 외부 서비스 제공업체는 내부 직원과 동일한 개발 환경을 사용할 수 있습니다. 대역폭이 낮은 경우에도 외부 사용자는 고성능으로 자신의 데이터에 액세스할 수 있으며 주어진 개발 프로세스에 직접 참여할 수 있습니다.</p>
-<p>외부 직원이 (내부) 중앙 모델 서버에 직접 액세스할 수 없는 경우 작업 상태를 자동으로 동기화할 수 없습니다. 그럼에도 불구하고 일관되고 가장 중요한 협업 작업 절차를 가능하게 하기 위해 Model은 외부 파트너의 IT 시스템 내에서 보조 서버라고 하는 로컬 Model 서버를 실행할 수 있는 기능을 제공합니다.</p>
+<p>외부 직원이 (내부) 중앙 모델 서버에 직접 액세스할 수 없는 경우 작업 상태를 자동으로 동기화할 수 없습니다. 그럼에도 불구하고 일관되고 가장 중요한 협업 작업 절차를 가능하게 하기 위해 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>은 외부 파트너의 IT 시스템 내에서 보조 서버라고 하는 로컬 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong> 서버를 실행할 수 있는 기능을 제공합니다.</p>
 <p><img alt="alt text" src="../_images/lpack-archives.png" /></p>
 <p>이러한 시나리오에서는 두 개의 모델 서버를 구분합니다:</p>
 <p>기본 모델 서버는 내부 IT 내에서 작동합니다. 이 서버에만 중앙 구성을 변경하고 (글로벌) 버전 번호를 할당할 수 있는 권한이 있습니다.
@@ -264,11 +264,11 @@
 </section>
 <section id="authorization-management">
 <h3>Authorization management<a class="headerlink" href="#authorization-management" title="Permalink to this heading"></a></h3>
-<p>Model의 데이터는 풀(프로젝트)에서 함께 그룹화됩니다. 풀 내에는 속성(예: 왼쪽/오른쪽 운전석)을 할당할 수 있는 다양한 컴포넌트 유형(예: 섀시)이 있습니다. 풀에서 개별 속성에 이르기까지 이러한 각 레벨을 사용하여 권한을 할당할 수 있습니다. 소위 권한 그룹은 데이터에 대한 권한을 부여하는 데 사용됩니다. 풀, 구성 요소, 속성 및 사용자 목록에 대한 권한은 권한 그룹으로 그룹화되어 유지 관리를 간소화합니다.</p>
+<p><img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>의 데이터는 풀(프로젝트)에서 함께 그룹화됩니다. 풀 내에는 속성(예: 왼쪽/오른쪽 운전석)을 할당할 수 있는 다양한 컴포넌트 유형(예: 섀시)이 있습니다. 풀에서 개별 속성에 이르기까지 이러한 각 레벨을 사용하여 권한을 할당할 수 있습니다. 소위 권한 그룹은 데이터에 대한 권한을 부여하는 데 사용됩니다. 풀, 구성 요소, 속성 및 사용자 목록에 대한 권한은 권한 그룹으로 그룹화되어 유지 관리를 간소화합니다.</p>
 <p><img alt="alt text" src="../_images/permissions.png" /></p>
 <section id="role-concept">
 <h4>Role concept<a class="headerlink" href="#role-concept" title="Permalink to this heading"></a></h4>
-<p>일반적으로 Model의 권한 관리는 서로 다른 작업을 분리할 수 있는 역할 개념을 기반으로 합니다. 사용자는 자신이 권한이 있는 데이터(개별 데이터 또는 권한 그룹)에 대해서만 권한을 부여할 수 있습니다.</p>
+<p>일반적으로 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>의 권한 관리는 서로 다른 작업을 분리할 수 있는 역할 개념을 기반으로 합니다. 사용자는 자신이 권한이 있는 데이터(개별 데이터 또는 권한 그룹)에 대해서만 권한을 부여할 수 있습니다.</p>
 <p>할당된 권한은 각 역할을 통해 취소할 수도 있습니다. 상위 수준의 역할은 권한 부여 그룹의 권한을 조정하는 등의 방법으로 하위 수준의 모든 역할로부터 권한을 철회할 수도 있습니다. 다음 권한 부여 다이어그램은 개별 역할에 대한 개요를 제공합니다.</p>
 <p><img alt="alt text" src="../_images/role-concept.png" /></p>
 <p>Role concept의 보안은 다음을 통해 보장됩니다.</p>
@@ -277,7 +277,7 @@
 <li><p>이중 제어 원칙의 보호</p></li>
 <li><p>역할 및 권한의 규칙 기반 자동 만료</p></li>
 </ul>
-<p>일반적으로 Model의 권한 부여 시스템은 유연합니다. 권한은 먼저 매우 광범위하게 정의한 다음 단계적으로 세분화할 수 있습니다. 세분화는 구성 요소 또는 속성 수준에서 수행할 수 있습니다.</p>
+<p>일반적으로 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>의 권한 부여 시스템은 유연합니다. 권한은 먼저 매우 광범위하게 정의한 다음 단계적으로 세분화할 수 있습니다. 세분화는 구성 요소 또는 속성 수준에서 수행할 수 있습니다.</p>
 </section>
 <section id="overview-of-roles-and-permissions">
 <h4>Overview of roles and permissions<a class="headerlink" href="#overview-of-roles-and-permissions" title="Permalink to this heading"></a></h4>
@@ -299,7 +299,7 @@
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
 <section id="download-a-pool">
 <h3>Download a pool<a class="headerlink" href="#download-a-pool" title="Permalink to this heading"></a></h3>
-<p>초기 설정 후에는 Model 데이터베이스가 비어 있고 프로젝트(pool)가 표시되지 않습니다. 풀(pool)에 대한 권한이 이미 부여된 경우 서버에서 풀(pool)을 다운로드하여 로컬 데이터베이스에 저장할 수 있습니다. 이 프로세스를 “체크아웃(checkout)”이라고 합니다. 이 작업은 초기 설정 중 또는 이후 언제든지 수행할 수 있습니다. 네비게이션 바(navigation bar)에서 등록된 풀의 트리(tree) 그리고 각 트리(tree)의 버전(version)들을 확인 및 선택할 수 있습니다. 작업하려는 풀 버전(pool version)을 선택하면 선택한 풀 버전(pool version)이 서버에서 다운로드 됩니다. 다운로드가 완료되면 자동으로 해당 pool의 정보가 표시됩니다.</p>
+<p>초기 설정 후에는 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong> 데이터베이스가 비어 있고 프로젝트(pool)가 표시되지 않습니다. 풀(pool)에 대한 권한이 이미 부여된 경우 서버에서 풀(pool)을 다운로드하여 로컬 데이터베이스에 저장할 수 있습니다. 이 프로세스를 “체크아웃(checkout)”이라고 합니다. 이 작업은 초기 설정 중 또는 이후 언제든지 수행할 수 있습니다. 네비게이션 바(navigation bar)에서 등록된 풀의 트리(tree) 그리고 각 트리(tree)의 버전(version)들을 확인 및 선택할 수 있습니다. 작업하려는 풀 버전(pool version)을 선택하면 선택한 풀 버전(pool version)이 서버에서 다운로드 됩니다. 다운로드가 완료되면 자동으로 해당 pool의 정보가 표시됩니다.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>목록이 상당히 긴 경우 원하는 풀, 트리 또는 버전이 바로 표시되지 않을 수 있습니다. 이 경우 검색 필드에 풀, 트리 또는 버전 이름을 입력하기 시작하면 됩니다. 이렇게 하면 결과 목록이 짧아집니다.</p>
@@ -475,7 +475,7 @@
 </section>
 <section id="edit-parameter-table">
 <h4>Edit parameter table<a class="headerlink" href="#edit-parameter-table" title="Permalink to this heading"></a></h4>
-<p>파라미터 테이블의 상황에 맞는 메뉴를 통해 Edit With… 메뉴 항목에 접근할 수 있습니다. 그러면 외부 애플리케이션에서 매개변수 테이블의 .csv 표현이 열립니다. 여기에서 파일을 편집할 수 있습니다. 외부 애플리케이션을 닫은 후 Model은 .csv 표현이 변경되었는지 확인하고 파라미터 테이블을 .csv 표현의 콘텐츠로 덮어씁니다.</p>
+<p>파라미터 테이블의 상황에 맞는 메뉴를 통해 Edit With… 메뉴 항목에 접근할 수 있습니다. 그러면 외부 애플리케이션에서 매개변수 테이블의 .csv 표현이 열립니다. 여기에서 파일을 편집할 수 있습니다. 외부 애플리케이션을 닫은 후 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>은 .csv 표현이 변경되었는지 확인하고 파라미터 테이블을 .csv 표현의 콘텐츠로 덮어씁니다.</p>
 </section>
 <section id="copy-paste-delete-rename">
 <h4>Copy, paste, delete, rename<a class="headerlink" href="#copy-paste-delete-rename" title="Permalink to this heading"></a></h4>
@@ -494,7 +494,7 @@
 <ul class="simple">
 <li><p>Derive New : 기존 파라미터 테이블에서 새 파라미터 테이블을 파생합니다.</p></li>
 <li><p>Set Public : 테이블의 상태를 비공개(private)에서 공개(public)으로 변경합니다.</p></li>
-<li><p>Export as CSV : 파라미터 테이블의 내용을 사용자의 하드 디스크에 .csv 파일로 저장할 수 있습니다. 저장한 .csv 파일은 Model에 연결되지 않고 독립적으로 사용되며, .csv 파일의 내용을 변경하더라도 파라미터 테이블에 영향을 미치지 않습니다.</p></li>
+<li><p>Export as CSV : 파라미터 테이블의 내용을 사용자의 하드 디스크에 .csv 파일로 저장할 수 있습니다. 저장한 .csv 파일은 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>에 연결되지 않고 독립적으로 사용되며, .csv 파일의 내용을 변경하더라도 파라미터 테이블에 영향을 미치지 않습니다.</p></li>
 <li><p>import from CSV : 파라미터 테이블의 컨텍스트 메뉴를 통해 Import From CSV… 메뉴 항목에 접근할 수 있습니다. 이 메뉴 항목을 클릭하면 사용자의 하드 디스크에 있는 .csv 파일을 선택하여 가져올 수 있습니다. 속성 할당 형식은 매개변수 테이블을 내보내서 확인할 수 있습니다.</p></li>
 </ul>
 </section>
@@ -534,7 +534,7 @@
 </section>
 <section id="calculate-and-reference-parameters">
 <h3>Calculate and reference parameters<a class="headerlink" href="#calculate-and-reference-parameters" title="Permalink to this heading"></a></h3>
-<p><strong>Model</strong>은 스프레드시트(spreadsheet)와 유사한 파라미터 정의로 작업할 수 있는 가능성을 제공합니다. 이를 위해서는 앞에 ‘=’ 기호를 반드시 사용해야 합니다. 매개변수는 서로를 참조하거나 서로에 대해 오프셋할 수 있습니다(예: =BARRIERE_MOVE_X + BARRIERE_OFFSET_X).</p>
+<p><img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>은 스프레드시트(spreadsheet)와 유사한 파라미터 정의로 작업할 수 있는 가능성을 제공합니다. 이를 위해서는 앞에 ‘=’ 기호를 반드시 사용해야 합니다. 매개변수는 서로를 참조하거나 서로에 대해 오프셋할 수 있습니다(예: =BARRIERE_MOVE_X + BARRIERE_OFFSET_X).</p>
 <section id="reference-parameters">
 <h4>Reference parameters<a class="headerlink" href="#reference-parameters" title="Permalink to this heading"></a></h4>
 <p>기본적으로 매개변수는 그 이름으로 참조할 수 있습니다(예: DRIVER_TTF=TTF * 2). 실행 시 TTF 매개변수가 존재하지 않으면 충돌이 발생하므로 어셈블리가 불가능합니다. 또는 DRIVER_TTF=get_parameter_value(“TTF”, default=10) * 2를 통해 TTF를 참조할 수 있습니다. 기본값을 지정할 수 있으며, 이는 실행 중 매개변수 <code class="docutils literal notranslate"><span class="pre">TTF</span></code>가 존재하지 않는 경우에 사용됩니다.</p>
@@ -584,7 +584,7 @@
 <li><p>=get_attribute_value_description(attribute, default): 선택한 실행 구성(run configuration)에서 속성(attribute) 값에 대한 설명(description)을 검색합니다.</p></li>
 </ul>
 <p>기본값(default) 지정은 선택 사항입니다. 속성(attribute)를 찾을 수 없거나 사용하지 않는 경우 기본값(default)이 대신 사용됩니다.</p>
-<p>또한 <strong>Model</strong>은 사전 정의된 파라미터를 생성합니다. 이러한 파라미터는 get_context_value() 함수를 통해 접근할 수 있습니다:</p>
+<p>또한 <img alt="" class="intxt-image" src="../_images/model-icon.png" /><strong>Model</strong>은 사전 정의된 파라미터를 생성합니다. 이러한 파라미터는 get_context_value() 함수를 통해 접근할 수 있습니다:</p>
 <p>=get_context_value(“RUN_LABEL”)</p>
 <p>현재 다음과 같은 사전 정의된 파라미터를 사용할 수 있습니다.</p>
 <ul class="simple">
