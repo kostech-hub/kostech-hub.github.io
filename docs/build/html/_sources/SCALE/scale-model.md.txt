@@ -513,17 +513,10 @@ ___
 
 #### Create run configuration
 
-<div>
-    <div style="float: left">
-        <p>실행 구성을 만드는 것은 실행 구성을 복제하는 것과 유사하므로 이 섹션에서 병렬로 설명합니다.</p>
-    </div>
-    <div>
-        <image src="../_images/create-a-run-configuration.png">
-    </div>
-</div> 
+실행 구성을 만드는 것은 실행 구성을 복제하는 것과 유사하므로 이 섹션에서 병렬로 설명합니다.{style="float: left"}
 
-
-
+![alt text](images/create-a-run-configuration.png)
+    
 #### Duplicate run configuration
 #### Export run configuration
 #### Remove a run configuration
