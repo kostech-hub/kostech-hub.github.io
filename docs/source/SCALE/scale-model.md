@@ -513,7 +513,6 @@ ___
 
 #### Create run configuration
 
----
 myst:
   substitutions:
     key1: "I'm a **substitution**"
@@ -527,7 +526,6 @@ myst:
       :width: 200px
       ```
     key4: example
----
 
 Inline: {{ key1 }}
 
