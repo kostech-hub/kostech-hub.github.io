@@ -513,7 +513,10 @@ ___
 
 #### Create run configuration
 
-실행 구성을 만드는 것은 실행 구성을 복제하는 것과 유사하므로 이 섹션에서 병렬로 설명합니다.{style="float: left"}
+실행 구성을 만드는 것은 실행 구성을 복제하는 것과 유사하므로 이 섹션에서 병렬로 설명합니다.
+
+1. Runs view의 빈공간에서 마우스 오른쪽 클릭으로 컨텍스트 메뉴(context menu)를 표시합니다.
+2. 컨텍스트 메뉴에서 **Create run configuration**을 클릭합니다. 이때 만들어지는 실행 구성은 해당 그룹에 해당하는 속성 값과 상위 그룹의 속성 값을 자동으로 상속합니다.{style="float: left"}
 
 ![alt text](images/create-a-run-configuration.png)
     
