@@ -276,7 +276,7 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 
 ![alt text](images/add-parameter-table.png)
 
-1. 파라미터 테이블을 만들고자 하는 구성요소(component) 그룹을 선택합니다.
+1. 파라미터 테이블을 만들고자 하는 component 그룹을 선택합니다.
 2. 마우스 우 클릭으로 표시되는 메뉴에서 Add Parameter Table을 선택합니다.
 
 그 후 기본 지정 파라미터 세트가 있는 비공개 파라미터 목록이 생성됩니다. 비공개 상태는 테이블 지정(A)이 굵은 글씨로 표시되어 있습니다.
@@ -408,7 +408,7 @@ SysAdmin 역할은 애플리케이션 내의 역할이 아니라 시스템 내�
 
 #### Replace Model parameters
 
-##### Unformatffed replacement
+##### Unformatted replacement
 
 어셈블리(assembly) ![](images/model-icon.png){class="intxt-image"}**Model**을 사용하면 사용된 모든 요소(component)에서 파라미터 자리 표시자(placeholder)들을 검색합니다.
 
@@ -667,7 +667,7 @@ ___
 ### Auxiliary attributes
 보조 속성(auxiliary attributes)은 실행 구성(run configuration)에 추가 구성 요소를 추가하는 방법을 제공하지만, 이러한 구성 요소는 실행 구성의 속성에 따라 선택해서는 안됩니다.
 
-다음 속성이 있는 풀 버전(Pool version)에 더비 3개가 있는 예시를 살펴보겠습니다.
+다음 속성이 있는 풀 버전(Pool version)에 더미 3개가 있는 예시를 살펴보겠습니다.
 
 :::{table}
 :widths: auto
@@ -677,3 +677,179 @@ ___
 | Dummy | HF | 3 |
 | Dummy | H3 | 3 |
 :::
+
+로드 케이스(load case)가 위치(position) 1에 H3 더미(Dummy)와 위치 3에 HF 더미로 빌드되는 경우, 실행 구성(ru n configuration)에서 H3 또는 HF 더미 속성 값은 설정할 수 있으나 위치(Position)의 경우 보조 속성(auxiliary attribute)이 없는 실행 구성에서는 이 작업이 불가능합니다.
+
+보조 속성(auxiliary attribute)은 구성 요소 선택에 추가 속성 집합을 적용하여 중복되지 않는 위치(Position)의 두 번째 더미(Dummy) 유형(Type)을 실행 구성에 추가할 수 있도록 합니다.
+
+보조 속성(auxiliary attribute)은 실행 구성(run configuration)의 namescheme 내에 구성해야 합니다. namescheme 내에 여러 개의 보조 속성 그룹을 정의할 수 있지만 하나만 있으면 실질적인 목적에 부합하지 않으므로 적어도 두 개는 정의해야 합니다. 실행 구성에 대해 보조 속성 그룹이 포함된 명명 체계를 선택하면 속성 보기(Properties view)의 실행 구성의 속성 섹션(attribute section) 아래에 보조 속성 섹션이 나타납니다.
+
+- **A**: 보조 속성들은 실행 구성(run configuration) namescheme OS_FRONT에 대해서 구성됩니다.
+- **B**: DummyBeltSeat[1]이라는 보조 그룹은 필수 속성인 Dummy 및 Position으로 구성됩니다. 사용자는 각 보조 그룹을 수동으로 활성화해야 합니다. 이 기능은 namescheme에 구성된 특정 보조 그룹을 선택적으로 사용하려는 경우에 유용합니다.
+- **C**: 컴포넌트(Components)는 namescheme이나 추가된 속성 대신 보조 속성(auxiliary attribute) 값을 기준으로 선택해야 하는 컴포넌트 유형을 제공합니다. 컴포넌트에서 컴포넌트 유형을 선택하지 않으면 실행 구성의 모든 컴포넌트는 namescheme 및 추가 속성을 기준으로 선택됩니다.
+
+![alt text](images/auxiliary-attributes.png)
+
+## Copying objects
+
+![](images/model-icon.png){class="intxt-image"}**Model**에서는 수많은 개체를 복사하여 다른 곳에 붙여넣을 수 있습니다. 구체적인 복사 및 붙여넣기 동작은 복사되는 개체의 유형과 복사 프로세스의 소스 및 대상에 따라 달라집니다. 복사 및 붙여넣기 옵션은 개체의 컨텍스트 메뉴(context menu)에서 찾을 수 있으며, 마우스 오른쪽 버튼으로 클릭하여 열 수 있습니다.
+
+### Components
+
+개별 component들은 복사하여 붙여 넣을 수 있습니다.
+
+- 풀 버전(Pool version)에서 동일한 그룹끼리
+- 풀 버전(Pool version)에서 다른 그룹끼리
+- 동일한 풀(Pool)에서 다른 풀 버전들(Pool versions)끼리
+- 다른 풀(Pool)들끼리
+
+![alt text](images/copy-component.png)
+
+1. 다중 선택(multi-select)을 통해 하나 혹은 여러개의 component를 선택합니다.
+2. 선택한 상태에서 마우스 오른쪽 버튼으로 컨텍스트 메뉴(context menu)를 표시하고 **Copy**를 클릭하거나 Ctrl + C를 누릅니다. 
+3. 복사가 성공적으로 되었다면, 복사 되었다는 팝업(pop-up) 창이 표시됩니다. 
+4. 붙여넣을 풀 버전(Pool version)의 **Groups** view에서 component 그룹을 선택합니다.
+5. 선택된 component 그룹의 컨텍스트 메뉴(context menu)에서 **Paste** 혹은 Ctrl + V를 누릅니다.
+6. **Paste** 옵션은 붙여넣기 동작의 결과들과 함께 새 **Paste** 탭이 열립니다. 
+
+![alt text](images/copy-component-paste-tab.png)
+
+A. 대상 풀(복사된 component를 붙여넣는 곳)의 구성 방식에 따라 ![](images/model-icon.png){class="intxt-image"}**Model**은 component 유형에 따라 그룹에 component를 자동으로 할당하려고 시도합니다. 결국 사용자는 풀 구성에 따라 대상 풀에서 붙여넣은 component의 위치를 제안받게 됩니다.
+
+B. ![](images/model-icon.png){class="intxt-image"}**Model**이 대상 풀(Pool)에서 적절한 붙여넣기 위치를 예측할 수 없는 복사된 component는 할당되지 않은 풀 항목으로 표시됩니다. 사용자는 해당 component 유형을 지원하는 그룹에서 드래그 앤 드롭으로 해당 항목을 대상 풀의 적합한 그룹으로 수동으로 이동하거나 component 유형을 변경하여 이 component를 대상 풀에 수용할 수 있도록 해야 합니다. 사용자가 특정 component를 복사하지 않으려는 경우 해당 휴지통 버튼을 눌러 할당되지 않은 풀 항목을 복사 및 붙여넣기 작업에서 제거할 수 있습니다.
+
+C. 또한 사용자는 드래그 앤 드롭을 사용하여 component의 제안된 붙여넣기 위치를 변경할 수 있습니다. 이 변경으로 인해 대상 pool이 구성된 방식에 따라  유형이 변경될 수 있습니다.
+
+D. 동일한 pool 버전 및 그룹에 component를 복제(duplicate)하려면 복사 및 붙여넣기 대신 복제(duplicate)를 사용하세요.
+
+#### Copying components to another pool version in the same pool
+
+Pool 내의 component를 하나의 pool 버전에서 다른 pool 버전으로 복사할 때 붙여넣은 component의 ID는 그대로 유지됩니다. 예를 들어 "Body in white" component의 버전 72를 pool 버전 800에서 pool 버전 801로 복사하는 경우, pool 버전 801에 component가 존재하지 않는 경우 component 버전 72가 추가됩니다. 구성 요소가 pool 버전 801에 이미 존재하는 경우 이 component 버전은 버전 72로 대체됩니다.
+
+#### Copying components to a different pool
+
+Component를 pool에서 다른 pool로 복사하면 붙여넣은 component는 새 ID를 갖게 됩니다. 예를 들어 component 'Body in white'의 버전 72가 pool A에서 pool B로 복사되면 pool B에서 버전 1의 새 component가 만들어집니다.
+
+이 동작의 예외(exception)는 이 component의 이전 component가 이미 복사된 후 다른 pool로 component가 복사되는 경우에 발생합니다. 아래 그림은 이러한 워크플로우의 예를 보여줍니다.
+
+![alt text](images/copy-component-another-pool.png)
+
+이 예제에서는 처음에 pool A에 버전 번호 11의 component가 있습니다. 이제 버전 번호 11의 component가 pool A에서 pool B로 복사되고 복사된 component는 pool B에서 새 ID와 그에 따른 버전 번호 1을 받습니다. 이제 버전 12와 13의 후속 component가 pool A에 생성되고 버전 2, 3, 4의 후속 component가 pool B에 생성됩니다. 버전 4의 component가 pool B에서 pool A로 복사될 때 복사된 component는 새 ID를 받지 않습니다. ![](images/model-icon.png){class="intxt-image"}**Model**은 이 component의 이전 버전이 pool A에 존재함을 인식하고 버전 번호 11의 후속으로 component를 복사하고 버전 번호 14를 할당합니다. 이 프로세스는 그림과 같이 계속됩니다.
+
+### Run configuration
+
+개별 run configuration은 복사 및 붙여넣기 할 수 있습니다.
+
+![alt text](images/copy-run-configuration.png)
+
+1. 다중 선택으로 run configuration 혹은 multiple run configuration들을 선택하거나 run configuration들의 그룹을 선택합니다.
+2. 선택한 상태에서 context 메뉴를 열어 **Copy** 메뉴를 누르거나 Ctrl+C를 누릅니다.
+3. 만약 복사가 성공한다면 run configuration이 복사되었다는 팝업 메세지 창이 나타납니다.
+4. 동일한 model 탭에서 붙여넣을 pool 버전을 선택하거나 다른 pool의 다른 model 탭을 선택합니다.
+5. 붙여넣을 pool 버전 혹은 **Runs** view의 context 메뉴를 열어 **Paste**를 선택하거나 Ctrl+V를 누릅니다.
+6. **Paste** 옵션은 붙여넣기 동작의 결과와 함께 새 **Paste** 탭이 열릴 것입니다.
+
+![alt text](images/copy-run-configuration-paste-tab.png)
+
+A. **Paste** 탭에서 **Run configurations라고 일컬어지는 새 그룹이 나타나고 복사된 run configuration들이 목록으로 표시됩니다.
+
+B. 사용자들은 trash bin 버튼을 클릭하여 복사되기를 원하지 않는 항목들을 run configuration들을 제거할 수 있습니다.
+
+C. Run configuration을 동일한 pool 버전에 복제(duplicate) 하고자 한다면 **Copy**와 **Paste** 대신에 **Duplicate run configuration**을 사용하세요
+
+### Parameter table
+
+Parameter table들은 복사 및 붙여넣기를 할 수 있습니다.
+
+![alt text](images/copy-parameter-table.png)
+
+![alt text](images/copy-parameter-table-popup.png)
+
+1. 하나 혹은 두개 이상의 parameter table을 선택합니다.
+2. 선택한 상태의 항목에서 context 메뉴를 열어 **Copy** 혹은 Ctrl + C를 누릅니다.
+3. 복사가 성공하였다면 복사된 parameter table들과 함께 pop-up 창이 표시됩니다.
+4. model 탭에서 붙여넣기를 할 pool 버전 혹은 그룹을 선택합니다.
+5. 붙여넣기 할 pool, 그룹에서 context 메뉴를 열어 **Paste**를 선택하거나 Ctrl + V를 누릅니다.
+6. 붙여넣기 동작의 결과와 함께 새 **Paste** 탭이 나타납니다.
+
+![alt text](images/copy-parameter-table-paste-tab.png)
+
+A. **Paste**탭에서 붙여넣기된 parameter table들은 붙여넣은 그룹 레벨 아래에 표시됩니다.
+
+B. 사용자들은 드래그 앤 드롭으로 다른 그룹으로 이동시킬 수 있습니다.
+
+C. Trash bin 버튼으로 붙여넣기를 원하지 않을 경우 parameter table 항목들을 제거할 수 있습니다.
+
+D. 동일한 pool 버전과 그룹에서 parameter table을 복제(duplicate)할 때에는 **Copy**와 **Paste** 대신에 **Duplicate paramter table**을 사용하세요.
+
+### Pool Version
+
+![](images/model-icon.png){class="intxt-image"}**Model**에서 완전히 pool 버전을 복사하는 것은 pool 버전의 component들과 parameter table들 그리고 run configuration들을 복사하는 것입니다.
+
+Pool 버전들의 복사, 붙여넣기는 위에서 설명한 component, parameter table, runconfiguration의 내용과 같습니다.
+
+## User interface
+
+### Tab bars
+
+#### Operation concept
+
+![](images/model-icon.png){class="intxt-image"}**Model**은 객체 지향적 application입니다. object를 가리키거나 클릭하면 동작이 트리거(trigger)됩니다. object에 대한 기능은 context 메뉴(마우스 오른쪽 클릭)를 통해 사용할 수 있습니다. object에 따라 다른 기능을 사용할 수 있습니다. 여러 object를 선택하는 경우(다중 선택) 선택한 object에 유효한 기능만 제공됩니다.
+
+#### Overview
+
+![](images/model-icon.png){"intxt-image"}**Model**의 사용자 인터페이스(user interface) 다음과 같이 구성됩니다. 
+
+- <span style="color:blue">파랑</span> : tab bar.
+- <span style="color:gray">회색</span> : navigation bar.
+- browser, grid 및 properties와 같은 창들(windows)
+
+![alt text](images/overview-user-interface.png)
+
+#### Close and re-open windows
+
+windows들은 필요에 따라 닫거나 다시 열 수 있습니다.
+
+1. 회색 navigation bar에서 마우스 오른쪽 클릭으로 context 메뉴를 표시합니다.
+2. 표시하고자 하는 windows를 체크 선택합니다.
+
+![alt text](images/context-menu-navigation-bar.png)
+
+#### Rearrange the windows
+
+1. Window들은 드래그 앤 드롭으로 이동할 수 있습니다. 이를 위해 반드시 마우스로 window의 탭(tab)을 잡고 원하는 위치로 드래그 해야 합니다. window들을 프레임워크(framework)의 나머지 부분과 완전히 분리 할 수도 있습니다.
+2. window가 위치할 수 있는 영력들은 파란색으로 표시된 부분입니다.
+3. 두개 이상의 window들이 같은 위치에 있도록 한다면 탭(tab)으로 window들이 그룹지어 집니다.
+
+![alt text](images/position-window-moded-by-drag-drop.png)
+
+### Browser
+
+Browser는 pool 관련 데이터를 표시하고 선택하는 데 사용됩니다. 파일 관리자와 비슷한 기능을 합니다. 항목을 선택하면 해당 항목의 콘텐츠가 그리드(grid)에 표시됩니다. 탐색 모음도 현재 선택 내용을 반영하도록 변경됩니다.
+
+Browser는 세개의 영역으로 구성됩니다.
+
+- **A**: Pool version
+- **B**: Groups
+- **C**: Runs
+
+![alt text](images/browser.png)
+
+#### Pool version
+ 
+**Pool version** 영역에는 선택한 pool에 할당된 pool 버전 목록이 표시됩니다. pool 버전을 클릭하면 Groups 및 Runs 영역도 해당 pool 버전과 연결된 데이터를 표시하도록 변경됩니다.
+
+각 선들은 다음 정보에 대한 pool version을 보여줍니다.
+
+- **A**: Team status icon
+    - ![alt text](images/public-icon.png)Public
+    - ![alt text](images/private-icon.png)Private (foreign), not writable
+    - ![alt text](images/private-own.png)Private (own), writable. Entries with this status are displayed in bold.
+    - ![alt text](images/live-icon.png) Live. Entries with this stauts are displayed in bold
+- **B**: Pool version number
+- **C**: Preview image (optional)
+- **D**: History comment
+
+![alt text](images/pool-version.png)
+
+#####
