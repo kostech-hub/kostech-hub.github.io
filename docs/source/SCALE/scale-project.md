@@ -438,6 +438,9 @@ Views 목록에는 기본값(default)이라는 항목이 있습니다. 아직 �
 7. 드롭다운 목록에서 분야(discipline)를 선택합니다.
 8. ![](images/confirm-icon.png) **Confirm**을 클릭합니다. view가 해당 분야(discipline)의 모든 사용자와 공유됩니다.
 
+## Report the current requirement status
+
+
 ## Master data management (MDM)
 ### MDM attributes
 ### MDM requirements
