@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=source
 set BUILDDIR=build
-
+echo "%PYTHON_HOME%"
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
 	echo.
