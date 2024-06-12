@@ -95,10 +95,36 @@
 <li class="toctree-l3"><a class="reference internal" href="#add-project-attributes">Add project attributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#milestones">Milestones</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#add-project-milestones">Add project milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-milestones-in-the-overview">View milestones in the overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-requirements-and-test-cases-to-the-project">Add requirements and test cases to the project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-project-members">Add project members</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tailor-requirements-to-be-project-specific">Tailor requirements to be project-specific</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Open an existing project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-a-requirement-s-details">View a requirement’s details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-a-test-case-to-be-project-specific">Edit a test case to be project-specific</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-the-requirements-to-be-project-specific">Edit the requirements to be project-specific</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#edit-one-requirement-to-be-project-specific">Edit one requirement to be project-specific</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eidt-multiple-requirements-at-ones">Eidt multiple requirements at ones</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-the-requirements-grid">Configure the requirements grid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-concept">Basic concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toggle-and-rearrange-the-columns">Toggle and rearrange the columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#group-requirements-by-column-headers">Group requirements by column headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-column-filters">Apply column filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-the-sorting-order">Change the sorting order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sort-multiple-columns">Sort multiple columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-your-configuration-as-a-view">Save your configuration as a view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#share-views-with-other-users">Share views with other users</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#report-the-current-requirement-status">Report the current requirement status</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#master-data-management-mdm">Master data management (MDM)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mdm-attributes">MDM attributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mdm-requirements">MDM requirements</a></li>
@@ -305,7 +331,306 @@
 </ol>
 <p><img alt="alt text" src="../_images/add-project-milestones.png" /></p>
 </section>
+<section id="view-milestones-in-the-overview">
+<h4>View milestones in the overview<a class="headerlink" href="#view-milestones-in-the-overview" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>자신의 프로젝트를 엽니다. <strong>Overview</strong>가 왼쪽 사이드바(sidebar)에서 자동으로 선택됩니다.</p></li>
+<li><p><strong>Milesones</strong> 섹션에서 모들 프로젝트 참가자들에 대한 프로젝트 일정의 개요를 확인할 수 있습니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/project-milestones.png" /></p>
+<ul class="simple">
+<li><p><strong>A</strong>: 시간 스케일(time scale)의 그래픽 표현</p></li>
+<li><p><strong>B</strong>: 마일스톤에 마우스를 위치 시켰을 때 마일스톤에 대한 상세 정보가 표시됩니다.</p></li>
+<li><p><strong>C</strong>: 현재 날짜가 표시되며 수식선과 연결됩니다.</p></li>
+<li><p><strong>D</strong>: 네 가지 옵션이 표시됩니다.</p>
+<ul>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/download-plot-icon.png" />: Download plot as a .png</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/zoom-in-icon.png" />: Zoom in</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/zoom-out-icon.png" />: Zoom out</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/reset-axes-icon.png" />: Reset axes</p></li>
+</ul>
+</li>
+<li><p><strong>E</strong>: List of schedules: 시간 척도(time scale)의 그래픽 표현 아래에는 마일스톤 계획별로 정렬된 일정이 표시되며, 이를 펼치거나 접을 수 있습니다. 마일스톤 이름, 설명 및 날짜는 표 형식의 개요로 표시됩니다.</p></li>
+<li><p><strong>F</strong>: 존재하는 마일스톤 계획을 편집하기 위해 <strong>Edit</strong>을 클릭합니다.</p></li>
+<li><p><strong>G</strong>: 새 마일스톤 계획을 추가하기 위해 <img alt="" class="intxt-image" src="../_images/black-plus.png" />를 클릭합니다.이 아이콘의 표시는 사용자의 권한에 맞추어 표시됩니다.</p></li>
+</ul>
 </section>
+<section id="add-requirements-and-test-cases-to-the-project">
+<h4>Add requirements and test cases to the project<a class="headerlink" href="#add-requirements-and-test-cases-to-the-project" title="Permalink to this heading"></a></h4>
+<p>Requirements는 테스트 케이스(test cases)를 통해 프로젝트에 추가됩니다. 즉, 프로젝트에 테스트 케이스를 추가하면 해당 테스트 케이스에 포함된 모든 요구 사항도 자동으로 추가됩니다.</p>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바(sidebar)에서 <strong>Requirements</strong>를 클릭합니다.</p></li>
+<li><p>상단 오른쪽에 <strong>Add</strong>를 클릭합니다. **Add MDM Test Cases to Project 영역이 표시됩니다.</p></li>
+<li><p>적절한 테스트 케이스 (<img alt="alt text" class="intxt-image" src="../_images/check-box-icon.png" />)를 선택합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하면 테스트 케이스(test cases)에 포함된 모든 requirements가 자신의 프로젝트의 추가됩니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/add-mdm-requirements-to-project.png" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Requirements and test cases can be edited to make them project-specific</p>
+<p>특정 프로젝트 내의 requirements 및 테스트 케이스(test cases)를 project requirements 및 project test cases라고 합니다. 이는 MDM requirements 및 MDM test cases에서 파생됩니다. 이 과정에서 모든 속성, 임계값 등이 복사되며 필요한 경우 추가로 변경할 수 있습니다.</p>
+</div>
+</section>
+</section>
+<section id="add-project-members">
+<h3>Add project members<a class="headerlink" href="#add-project-members" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>자신의 프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바(sidebar)에서 **Project members를 클릭합니다. 여기에서 프로젝트 접근 권환이 있는 모든 사용자들을 확인할 수 있습니다.</p></li>
+<li><p>상단 오른쪽의 <strong>+ADD</strong>를 클릭하여 프로젝트에 새 멤버를 추가합니다. 새 창이 표시됩니다.</p></li>
+<li><p>상단에 프로젝트에 추가할 사용자를 선택합니다. 사용자 이름으로 사용자들을 찾을 수 있으며 이름 및 이메일 주소로 표시됩니다.</p></li>
+<li><p>하단에 사용자에 활당된 역할(role)을 선택합니다.</p></li>
+<li><p>향후에 사용자의 role을 변경할 필요가 있을 경우 <strong>Project role</strong> 열의 role을 더블 클릭하여 변경할 수 있습니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/add-new-project-member.png" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Create user accounts and project roles in advance</p>
+<ul class="simple">
+<li><p>사용자를 프로젝트에 추가하려면 먼저 <strong>Configuration &gt; User Management &gt; Users</strong>에서 사용자를 구성해야 합니다. 이 초기 구성은 해당 권한이 있는 사용자(예: admin)가 수행합니다.</p></li>
+<li><p>프로젝트 role은 <strong>Configuration &gt; User Management &gt; Project roles</strong>에서 구성해야 사용자에게 할당할 수 있습니다. 이 초기 구성은 해당 권한이 있는 사용자(예: admin)가 수행합니다.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="tailor-requirements-to-be-project-specific">
+<h2>Tailor requirements to be project-specific<a class="headerlink" href="#tailor-requirements-to-be-project-specific" title="Permalink to this heading"></a></h2>
+<div class="note admonition">
+<p class="admonition-title">Project managers nad/or contributors can tailor requirements</p>
+<p>프로젝트 관리자와 프로젝트 기여자 모두 프로젝트에 맞게 MDM requirements를 조정할 수 있습니다.</p>
+<ul class="simple">
+<li><p><strong>MDM requirements</strong>*: <strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Requirements</strong> 아래의 requirements를 MDM requirements라고 합니다. requirements template 또는 SCALE.sdm 애플리케이션에 대한 global requirements 데이터베이스라고 생각할 수 있습니다.</p></li>
+<li><p><strong>Project requirements</strong>: 특정 프로젝트 내의 requirements를 project requirements이라고 합니다. 프로젝트 requirements은 MDM requirements에서 파생됩니다. 이 과정에서 원래 requirements의 속성, 임계값 등이 프로젝트별 requirements로 복사되며 필요한 경우 추가로 변경할 수 있습니다. 프로젝트에는 동일한 MDM requirements에서 파생된 여러 프로젝트 requirements이 있을 수 있습니다.</p></li>
+</ul>
+</div>
+<p>예를 들어 다음과 같은 순서로 프로젝트를 맞춤 설정 할 수 있습니다.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#view-a-requirement-s-details">View a requirement’s details</a></p></li>
+<li><p><a class="reference internal" href="#edit-a-test-case-to-be-project-specific">Edit a test case to be project-specific</a></p></li>
+<li><p><a class="reference internal" href="#edit-the-requirements-to-be-project-specific">Edit the requirements to be project-specific</a></p></li>
+</ul>
+<section id="id1">
+<h3>Open an existing project<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><img alt="" class="intxt-image" src="../_images/project-icon.png" /><strong>Project</strong>를 열어 프로젝트의 overview를 표시합니다.</p></li>
+<li><p>오른쪽 상단 모서리의 이름으로 필터링 필드에 프로젝트 이름을 입력하거나 다음 예정된 마일스톤을 기준으로 프로젝트를 정렬할 수 있습니다. 이러한 옵션을 사용하면 원하는 프로젝트를 빠르게 찾을 수 있습니다.</p></li>
+<li><p>목록에서 프로젝트 이름을 클릭합니다. 프로젝트가 열리고 왼쪽 사이드바에서 overview가 자동으로 선택됩니다.</p></li>
+</ol>
+</section>
+<section id="view-a-requirement-s-details">
+<h3>View a requirement’s details<a class="headerlink" href="#view-a-requirement-s-details" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바(sidebar)에서 requirements를 클릭합니다. 여기에 프로젝트 requirements의 overview가 표시됩니다. 필요에 따라 이 개요에서 requirements을 필터링하거나 그룹화할 수 있습니다.</p></li>
+<li><p>requirements를 클릭한 다음 requirements에 대한 자세한 정보를 보려면 requirement를 클릭합니다.</p></li>
+</ol>
+</section>
+<section id="edit-a-test-case-to-be-project-specific">
+<h3>Edit a test case to be project-specific<a class="headerlink" href="#edit-a-test-case-to-be-project-specific" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바에서 <strong>Requirements</strong>을 클릭합니다.</p></li>
+<li><p>Overview에서 requirement를 마우스 오른쪽 버튼으로 클릭합니다. 컨텍스트 메뉴가 열립니다.</p></li>
+<li><p>**Edit test case [Name of test case]**을 클릭합니다. 새 창이 열립니다.</p></li>
+<li><p>테스트 케이스가 프로젝트에 맞게 수정합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+<p>테스트 케이스 설정에 대한 자세한 지침은 MDM test cases 페이지에서 확인할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/edit-a-project-test-case.png" /></p>
+</section>
+<section id="edit-the-requirements-to-be-project-specific">
+<h3>Edit the requirements to be project-specific<a class="headerlink" href="#edit-the-requirements-to-be-project-specific" title="Permalink to this heading"></a></h3>
+<p>한번에 하나의 requirement를 편집하거나 여러 requirements를 동시에 편집할 수 있습니다.</p>
+<section id="edit-one-requirement-to-be-project-specific">
+<h4>Edit one requirement to be project-specific<a class="headerlink" href="#edit-one-requirement-to-be-project-specific" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>자신의 프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바에서 <strong>Requirements</strong>을 클릭합니다.</p></li>
+<li><p>Overview에서 requirements를 마우스 오른쪽 버튼으로 클릭합니다. 컨텍스트 메뉴가 열립니다.</p></li>
+<li><p><strong>Edit requirement</strong>을 클릭합니다. 새 창이 열립니다.</p></li>
+<li><p>requirements를 프로젝트별로 수정합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+<p>requirement 설정에 대한 자세한 지침은 MDM requirements 페이지에서 확인할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/edit-a-project-requirement.png" /></p>
+</section>
+<section id="eidt-multiple-requirements-at-ones">
+<h4>Eidt multiple requirements at ones<a class="headerlink" href="#eidt-multiple-requirements-at-ones" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바에서 <strong>Requirements</strong>을 클릭합니다.</p></li>
+<li><p>여러 requirements를 선택한 다음(Ctrl. + 클릭) 마우스 오른쪽 버튼을 클릭합니다. 컨텍스트 메뉴가 열립니다.</p></li>
+<li><p><strong>Edit requirements</strong>을 클릭합니다. 새 창이 열립니다. 여기에서 선택한 모든 requirements의 이름, 설명 및 평가 임계값(thresholds)을 동시에 편집할 수 있습니다.</p></li>
+</ol>
+<section id="edit-the-names">
+<h5>Edit the names<a class="headerlink" href="#edit-the-names" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p>상단 박스를 선택합니다.</p></li>
+<li><p>첫번째 드롭-다운 리스트에서 <strong>Change to apply</strong>에서 옵션을 선택합니다.</p>
+<ul class="simple">
+<li><p><strong>Replace</strong>: requirement 이름 내에서 특정 단어 하나를 변경합니다.</p></li>
+<li><p><strong>Replace all</strong>: 전체 requirement 이름을 변경합니다.</p></li>
+<li><p><strong>Add to beginning</strong>: requirement 이름의 시작 부분에 특정 텍스트를 추가합니다.</p></li>
+<li><p><strong>Add to end</strong>: requirement 이름 끝에 특정 텍스트를 추가합니다.</p></li>
+</ul>
+</li>
+<li><p>텍스트 영역(text filed)에 자신의 텍스트를 입력합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/correct-a-typo-in-both-requirement-names.png" /></p>
+</section>
+<section id="edit-the-descriptions">
+<h5>Edit the descriptions<a class="headerlink" href="#edit-the-descriptions" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p>중간 박스를 선택합니다.</p></li>
+<li><p><strong>Description</strong>에 텍스트를 입력합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="SCALE/update-the-descriptions-of-both-requirements.png" /></p>
+</section>
+<section id="edit-the-assessment-thresholds">
+<h5>Edit the assessment thresholds<a class="headerlink" href="#edit-the-assessment-thresholds" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p><strong>Apply Changes to all Assessments</strong> 영역을 펼칩니다.</p></li>
+<li><p>아래쪽 상자를 선택합니다.</p></li>
+<li><p>필요에 따라 평가 임계값(assessment thresholds)을 수정합니다. 자세한 지침은 MDM requirements 페이지에서 확인할 수 있습니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+</section>
+</section>
+</section>
+</section>
+<section id="configure-the-requirements-grid">
+<h2>Configure the requirements grid<a class="headerlink" href="#configure-the-requirements-grid" title="Permalink to this heading"></a></h2>
+<div class="note admonition">
+<p class="admonition-title">Project managers and/or contributors can configure the grid</p>
+<p>프로젝트 관리자와 프로젝트 기여자 모두 열을 재정렬하고 필터를 적용하는 등 requirements grid를 구성할 수 있습니다.</p>
+</div>
+<p>Requirements grid는 예를 들어 다음과 같은 순서로 구성할 수 있습니다.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#toggle-and-rearrange-the-columns">Toggle and rearrange the columns</a></p></li>
+<li><p><a class="reference internal" href="#group-requirements-by-column-headers">Group requirements by column headers</a></p></li>
+<li><p><a class="reference internal" href="#apply-column-filters">Apply column filters</a></p></li>
+<li><p><a class="reference internal" href="#change-the-sorting-order">Change the sorting order</a></p></li>
+<li><p><a class="reference internal" href="#save-your-configuration-as-a-view">Save the configuration as a view</a></p></li>
+<li><p><a class="reference internal" href="#share-views-with-other-users">Share views with other users</a></p></li>
+</ul>
+<section id="basic-concept">
+<h3>Basic concept<a class="headerlink" href="#basic-concept" title="Permalink to this heading"></a></h3>
+<p>Grid의 각 줄은 하나의 requirement(<strong>B</strong>)을 나타내고, 각 열은 requirement(<strong>A</strong>)에 대한 하나의 정보를 나타냅니다. 때로는 일부 열만 표시하고 다른 열은 숨기는 것이 도움이 될 수 있습니다. 필요에 따라 grid를 사용자 지정할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/requirements-grid-and-columns.png" /></p>
+<p>Grid 구성을 완료한 후에는 구성(configuration)을 ‘View’라는 이름으로 저장하고 이 view를 다른 사용자와 공유할 수도 있습니다. 이렇게 하면 나중에 구성에 다시 액세스할 수 있습니다. 예시: 서로 다른 두 개의 views를 만들 수 있습니다. 각 view에는 특정 작업에 필요한 열만 포함됩니다. 작업을 수행할 때 적절한 view를 선택하기만 하면 됩니다.</p>
+<div class="tip admonition">
+<p class="admonition-title">What does the view define?</p>
+<p>View는 레이아웃(layout)의 다음 측면을 제어합니다.</p>
+<ul class="simple">
+<li><p>표시될 열</p></li>
+<li><p>열이 표시되는 순서</p></li>
+<li><p>열을 그룹화할지에 대한 여부</p></li>
+<li><p>필터 적용 여부</p></li>
+<li><p>열 내용을 오름차준 또는 내림차순으로 표시할지 여부</p></li>
+</ul>
+<p>Note: View는 열의 크기를 제어하지 않습니다.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">What does the view define?</p>
+<p>SCALE.sdm에는 여러가지 grid가 있습니다. 예를 들어, <img alt="" class="intxt-image" src="../_images/project-icon.png" /><strong>Project</strong>에는 requirements grid가 있고 <strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Requirements</strong> 아래에 grid가 있습니다. 각 grid는 개별적으로 구성해야 합니다. View는 모든 grid에 저장되지 않습니다.</p>
+</div>
+</section>
+<section id="toggle-and-rearrange-the-columns">
+<h3>Toggle and rearrange the columns<a class="headerlink" href="#toggle-and-rearrange-the-columns" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p><strong>Requirements</strong>를 클릭합니다.</p></li>
+<li><p>grid의 오른쪽 사이드의 <img alt="alt text" class="intxt-image" src="../_images/grid-icon.png" />를 클릭하면 사이드바가 표시됩니다.</p></li>
+<li><p>표시할 열을 선택하여 체크 표시(<img alt="" class="intxt-image" src="../_images/red-check-box.png" />)가 되도록 합니다.</p></li>
+<li><p>Optional: 마우스 커서를 <img alt="alt text" class="intxt-image" src="../_images/move-icon.png" />에 가져가면 커서가 <img alt="alt text" class="intxt-image" src="../_images/hand-icon.png" />로 바뀌며 드래그 하여 그리드에서 열의 순서를 바꿀 수 있습니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/configure-the-grid.png" /></p>
+</section>
+<section id="group-requirements-by-column-headers">
+<h3>Group requirements by column headers<a class="headerlink" href="#group-requirements-by-column-headers" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p><strong>Requriements</strong>를 클릭합니다.</p></li>
+<li><p>마우스 커서를 열의 헤더(header)에 위치시키면 커서가 <img alt="alt text" class="intxt-image" src="../_images/pointing-hand-icon.png" />로 바뀝니다.</p></li>
+<li><p>열의 헤더를 드래그 하여 그리드 상단의 <strong>Drag hear to set row groups</strong>로 드롭합니다. 데이터들은 해당 열에 의해 그룹화 되어 표시됩니다.</p></li>
+<li><p>필요에 따라 다른 열에 대해서도 같은 방법으로 그룹화 할 수 있습니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/group-requirements-by-column-headers.png" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Alternative to drag &amp; drop</p>
+<p>다음고 같이 열 헤더에 의한 그룹화를 진행 할 수 있습니다.</p>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p><strong>Requirements</strong>를 클릭합니다.</p></li>
+<li><p>마우스 커서를 <img alt="" class="intxt-image" src="../_images/column-mark.png" /> 위로 위치시키고 클릭하여 컨텍스트 메뉴를 표시합니다.</p></li>
+<li><p><strong>Group by [column name]</strong> 옵션을 선택합니다. Grid에서 데이터는 해당 열에 의해 그룹화 됩니다.</p></li>
+<li><p>필요에 따라 다른 열에 대해서도 같은 방법으로 그룹화 할 수 있습니다.</p></li>
+</ol>
+</div>
+</section>
+<section id="apply-column-filters">
+<h3>Apply column filters<a class="headerlink" href="#apply-column-filters" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p><strong>Requirements</strong>를 클릭합니다.</p></li>
+<li><p>열 헤더(header) 바로 아래 줄에 텍스트를 입력합니다.</p></li>
+<li><p>선택 사항으로 추가 필터 옵션에 액세스하려면 <img alt="alt text" class="intxt-image" src="../_images/filter-icon.png" />를 클릭합니다.</p></li>
+<li><p>필요한 경우 같은 방법으로 다른 열에도 필터를 적용합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/apply-column-filters.png" /></p>
+</section>
+<section id="change-the-sorting-order">
+<h3>Change the sorting order<a class="headerlink" href="#change-the-sorting-order" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바에서 <strong>Requirements</strong>을 클릭합니다.</p></li>
+<li><p>오름차순으로 정렬하려면 열 헤더를 클릭합니다.</p></li>
+<li><p>내림차순으로 정렬하려면 두 번 클릭합니다.</p></li>
+<li><p>정렬을 제거하려면 세 번 클릭합니다.</p></li>
+</ol>
+</section>
+<section id="sort-multiple-columns">
+<h3>Sort multiple columns<a class="headerlink" href="#sort-multiple-columns" title="Permalink to this heading"></a></h3>
+<p>여러 열을 기준으로 정렬할 수도 있습니다. 예를 들어, 먼저 대상 시장(target market)별로 requirements를 정렬할 수 있습니다. 그런 다음 여러 requirements가 동일한 시장에 적용되는 경우 알파벳 순서로 정렬할 수 있습니다.</p>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바에서 requirements를 클릭합니다.</p></li>
+<li><p>열 헤더를 클릭하여 데이터를 정렬합니다. 예를 들어, 대상 시장별로 requirements를 정렬합니다.</p></li>
+<li><p>Shift 키를 누른 상태에서 다른 열 머리글을 클릭하여 두 번째 수준별로 정렬합니다. 예를 들어 동일한 시장에 여러 requirements가 적용되는 경우 이름별로 알파벳순으로 정렬할 수 있습니다. 참고: 열 레이블 오른쪽에 표시되는 숫자는 정렬이 적용되는 순서를 나타냅니다. 이를 통해 여러 열에서 정렬 순서를 이해하는 데 도움이 됩니다.</p></li>
+<li><p>필요한 경우 Shift 키를 누른 상태에서 추가 열 헤더을 계속 클릭합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/sort-multiple-columns-in-project.png" /></p>
+</section>
+<section id="save-your-configuration-as-a-view">
+<h3>Save your configuration as a view<a class="headerlink" href="#save-your-configuration-as-a-view" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p><strong>Requirements</strong>를 클릭합니다.</p></li>
+<li><p>Grid 상단 오른족의 <img alt="" class="intxt-image" src="../_images/grid-icon.png" />를 클릭하고 사이드 바를 표시합니다.</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/views-setting-icon.png" /> <strong>Views</strong>를 클릭합니다. 존재하는 모든 뷰(view)가 리스트로 표시됩니다.</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/plus-only-icon.png" /> <strong>New View</strong>를 클릭합니다.</p></li>
+<li><p>뷰(view)에 대한 이름을 입력하고 <strong>Save</strong>를 클릭합니다. 자신의 view가 리시트에 추가됩니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/save-your-configuration-as-a-view.png" /></p>
+</section>
+<section id="share-views-with-other-users">
+<h3>Share views with other users<a class="headerlink" href="#share-views-with-other-users" title="Permalink to this heading"></a></h3>
+<p>다른 사용자와 보기(views)를 공유할 수 있습니다. 예를 들어 관리자는 여러 개의 서로 다른 보기를 만들 수 있습니다. 각 보기에는 특정 작업을 수행하는 데 도움이 되는 열과 필터가 포함되어 있습니다. 그런 다음 관리자는 이러한 보기를 해당 작업을 담당하는 동료들과 공유할 수 있습니다.</p>
+<ol class="arabic simple">
+<li><p>프로젝트를 엽니다.</p></li>
+<li><p>왼쪽 사이드바에서 <strong>Requirements</strong>을 클릭합니다.</p></li>
+<li><p>Grid의 맨 오른쪽의 <img alt="" class="intxt-image" src="../_images/grid-icon.png" /> 클릭합니다. 사이드 바가 표시됩니다.</p></li>
+<li><p><img alt="" src="../_images/views-setting-icon.png" /> <strong>Views</strong>를 클릭합니다. 여기에 모든 기존 뷰(views) 목록이 표시됩니다.</p></li>
+<li><p>보기에 대한 추가 옵션을 보려면 <img alt="alt text" src="../_images/vertical-three-dot.png" />를 클릭합니다.</p></li>
+<li><p><img alt="alt text" src="../_images/share-icon.png" /> <strong>Share</strong>를 클릭합니다. 팝업 창이 열립니다.</p></li>
+<li><p>드롭다운 목록에서 분야(discipline)를 선택합니다.</p></li>
+<li><p><img alt="" src="../_images/confirm-icon.png" /> <strong>Confirm</strong>을 클릭합니다. view가 해당 분야(discipline)의 모든 사용자와 공유됩니다.</p></li>
+</ol>
+</section>
+</section>
+<section id="report-the-current-requirement-status">
+<h2>Report the current requirement status<a class="headerlink" href="#report-the-current-requirement-status" title="Permalink to this heading"></a></h2>
 </section>
 <section id="master-data-management-mdm">
 <h2>Master data management (MDM)<a class="headerlink" href="#master-data-management-mdm" title="Permalink to this heading"></a></h2>
