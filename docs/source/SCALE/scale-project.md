@@ -555,8 +555,127 @@ Requirement의 상태를 확인하는 다음과 같은 방법들이 있습니다
 
 ![alt text](images/monitor-project-status-over-time.png)
 
-## Master data management (MDM)
-### MDM attributes
-### MDM requirements
-### MDM test cases
+## User interface
+
+![](images/project-icon.png){class="intxt-image"}**Project**의 사용자 인터페이스는 다음의 요소들로 구성됩니다.
+
+- **A**: 화면 상단에는 [Toolbar](#tool-bar)가 위치합니다.
+- **B**: 메인 윈도우(main window)입니다. 메인 윈도우는 다음 항목들을 표시합니다.
+    - 모든 프로젝트의 목록 (예 : [project selection](#project-selection))
+    - 특정 프로젝트에 대한 상세 (예 : [project view](#project-view))
+
+![alt text](images/user-interface-project.png)
+
+### Tool bar
+
+사용자 인터페이스(User interface) 상단에는 위치가 고정되어 있고 일반적인 애플리케이션 기능 및 메뉴가 포함된 도구 모음이 있습니다.
+
+- [A: Project](#a-project)
+- [B: Notifications](#b-notifications)
+- [C: Jobs](#c-jobs)
+- [D: Help](#d-help)
+- [E: Burger menu](#e-burger-menu)
+
+![alt text](images/project-toolbar.png)
+
+#### A: Project
+
+프로젝트에서 다음 옵션에 접근할 수 있습니다.
+
+- ![alt text](images/dot-list-icon.png){class="intxt-image"} **All projects**: [open an existing project](#open-an-existing-project) 또는 [create a new project](#create-a-new-project)를 할 수 있습니다. 
+- ![alt text](images/star-icon.png){class="intxt-image"} **Starred project**: 관심 프로젝트로 선택한 프로젝트를 직접 열 수 있습니다.
+- ![alt text](images/result-icon.png){class="intxt-image"} **Result**: ![](images/project-icon.png){class="intxt-image"}에서 ![](images/result-icon.png){class="intxt-image"}로 이동할 수 있습니다.
+
+#### B: Notifications
+
+![alt text](images/bell-icon.png){class="intxt-image"}를 클릭하여 **Notifications**를 을 엽니다. 여기에서 공지 사항 및 작업 알림 목록을 볼 수 있습니다. [알림에 대한 자세한 정보를 확인하세요](#announcements)
+
+#### C: Jobs
+
+![alt text](images/jobs-icon.png){class="intxt-image"}를 클릭하여 **Jobs** 영역을 엽니다. 여기에서 애드온이나 사용자 입력에 의해 트리거되는 등 애플리케이션에서 실행 중인 작업 목록을 볼 수 있습니다. 작업 상태(보류 중, 실행 중, 성공, 실패)가 동적으로 표시됩니다. 여기에서 작업 로그 파일에 액세스하고 작업 아티팩트(artifacts)를 다운로드할 수 있습니다. [작업에 대한 자세한 정보를 확인하세요](#jobs)
+
+#### D: Help
+
+![alt text](images/question-icon.png){class="intxt-image"}를 클릭하면 SCALE.sdm의 매뉴얼을 확인할 수 있습니다.
+
+#### E: Burger menu
+
+![alt text](images/burger-menu-icon.png){class="intxt-image"}를 클릭하면 다음 옵션들에 접근할 수 있습니다.
+
+- ![alt text](images/my-profile-icon.png){class="intxt-image"} **My profile**: 개인 설정을 엽니다. 여기에서 비밀번호를 변경하고 [access token](#access-tokens)을 관리할 수 있습니다.
+- ![alt text](images/configuration-icon.png){class="intxt-image"} **Configuration**: [configuration](#configuration) 영역을 엽니다. 키(key) 사용자 또는 관리자와 같이 해당 권한이 있는 사용자는 여기에서 처음에 SCALE.sdm을 구성할 수 있습니다. 예를 들어, 마스터 데이터를 저장하고, 애드온을 설치하고, 사용자 계정을 관리할 수 있습니다.
+- ![alt text](images/admin-area-icon.png){class="intxt-image"} **Admin area**: 이 항목은 [Staff](#user-management)로 지정된 사용자만 볼 수 있습니다.
+- ![alt text](images/about-icon.png){class="intxt-image"} **About**: 애플리케이션에 대한 정보를 확인합니다. 여기에서 현재 설치된 버전을 확인할 수 있습니다. 애플리케이션과 관련된 오픈 소스 소프트웨어 및 라이선스에 대한 정보도 볼 수 있습니다.
+- ![alt text](images/logout-icon.png){class="intxt-image"} **Logout**: 애플리케이션에서 로그아웃 합니다.
+
+### Project selection
+
+[tool bar](#tool-bar)에서 ![](images/dot-list-icon.png) **All projects**를 클릭하면 모든 프로젝트의 개요에 접근할 수 있습니다.
+
+![alt text](images/projects-overview.png)
+
+- **A**: 모든 프로젝트들의 목록
+- **B**: 사용자가 관심 항목으로 등록한 모든 프로젝트들의 목록 
+- **C**: 프로젝트 정보
+    - 프로젝트 아이콘
+    - 프로젝트 유형 / 프로젝트 이름
+    - 관심 항목 등록 및 해제 아이콘
+    - 현재 사용자의 프로젝트 역할
+    - 우측 정렬된 항목: 다음에 예정된 마일스톤
+- **D**: 새 프로젝트를 만들기 위한 버튼
+- **E**: 목록에 표시될 프로젝트를 필터링 하기 위한 이름을 입력
+- **F**: 프로젝트 목록을 분류하기 위한 메뉴
+    - ***Name*** - 프로젝트 이름의 알파벳 순서대로 정렬됩니다.
+    - ***Next milestone*** - 다음에 예정된 마일스톤을 기준으로 프로젝트를 시간순으로 정렬합니다.
+
+### Project view
+
+프로젝트 뷰(project view)의 왼쪽 사이드 바에는 다음의 다섯가지 메뉴가 있습니다.
+
+- **A**: [Overview](#overview)
+- **B**: [Attributes](#attributes)
+- **C**: [Requirements](#requirements-1)
+- **D**: [Settings](#settings)
+- **E**: [Project members](#project-members)
+
+**Collapse sidebar (F)**를 클릭하면 사이드바를 축소하여 각 보기에 더 많은 공간을 확보할 수 있습니다.
+
+![alt text](images/menu-items-within-the-project-view.png)
+
+#### Overview
+
+프로젝트를 선택하면 개요(overview)가 자동으로 표시됩니다. 프로젝트 개요에는 다음 패널이 표시됩니다.
+
+- **A**: [Description]()
+- **B**: [Documents]()
+- **C**: [Milesontes]()
+
+![alt text](images/project-overview.png)
+
+#### A: Description
+
+![alt text](images/project-description.png)
+
+- **A**: 프로젝트 아이콘, 이름과 유형
+- **B**: 프로젝트 설명을 위한 자유 텍스트 필드(free text field)와 일반적으로 프로젝트 범위를 포함합니다.
+
+#### B: Documents
+#### C: Milestones
+
+#### Attributes
+#### Requirements
+#### Settings
+#### Project members
+
+## Configuration
+### Master data management (MDM)
+#### MDM attributes
+#### MDM requirements
+#### MDM test cases
+
 ### User management
+#### Permissions
+#### Access tokens
+
+### Announcements
+### Jobs

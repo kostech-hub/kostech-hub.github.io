@@ -555,6 +555,17 @@ Requirement의 상태를 확인하는 다음과 같은 방법들이 있습니다
 
 ![alt text](images/monitor-project-status-over-time.png)
 
+## User interface
+
+![](images/project-icon.png){class="intxt-image"}**Project**의 사용자 인터페이스는 다음의 요소들로 구성됩니다.
+
+- **A**: []()화면 상단에는 Tool bar가 위치합니다.
+- **B**: 메인 윈도우(main window)입니다. 메인 윈도우는 다음 항목들을 표시합니다.
+    - 모든 프로젝트의 목록
+    - 특정 프로젝트에 대한 상세
+
+![alt text](images/user-interface-project.png)
+
 ## Master data management (MDM)
 ### MDM attributes
 ### MDM requirements
