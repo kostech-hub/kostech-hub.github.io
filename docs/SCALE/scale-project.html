@@ -441,7 +441,7 @@
 <p class="admonition-title">Project managers nad/or contributors can tailor requirements</p>
 <p>프로젝트 관리자와 프로젝트 기여자 모두 프로젝트에 맞게 MDM requirements를 조정할 수 있습니다.</p>
 <ul class="simple">
-<li><p><strong>MDM requirements</strong>*: <strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Requirements</strong> 아래의 requirements를 MDM requirements라고 합니다. requirements template 또는 SCALE.sdm 애플리케이션에 대한 global requirements 데이터베이스라고 생각할 수 있습니다.</p></li>
+<li><p><strong>MDM requirements</strong>: <strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Requirements</strong> 아래의 requirements를 MDM requirements라고 합니다. requirements template 또는 SCALE.sdm 애플리케이션에 대한 global requirements 데이터베이스라고 생각할 수 있습니다.</p></li>
 <li><p><strong>Project requirements</strong>: 특정 프로젝트 내의 requirements를 project requirements이라고 합니다. 프로젝트 requirements은 MDM requirements에서 파생됩니다. 이 과정에서 원래 requirements의 속성, 임계값 등이 프로젝트별 requirements로 복사되며 필요한 경우 추가로 변경할 수 있습니다. 프로젝트에는 동일한 MDM requirements에서 파생된 여러 프로젝트 requirements이 있을 수 있습니다.</p></li>
 </ul>
 </div>
@@ -874,8 +874,8 @@
 <li><p><strong>E</strong>: 목록에 표시될 프로젝트를 필터링 하기 위한 이름을 입력</p></li>
 <li><p><strong>F</strong>: 프로젝트 목록을 분류하기 위한 메뉴</p>
 <ul>
-<li><p><em><strong>Name</strong></em> - 프로젝트 이름의 알파벳 순서대로 정렬됩니다.</p></li>
-<li><p><em><strong>Next milestone</strong></em> - 다음에 예정된 마일스톤을 기준으로 프로젝트를 시간순으로 정렬합니다.</p></li>
+<li><p><em>Name</em> - 프로젝트 이름의 알파벳 순서대로 정렬됩니다.</p></li>
+<li><p><em>Next milestone</em> - 다음에 예정된 마일스톤을 기준으로 프로젝트를 시간순으로 정렬합니다.</p></li>
 </ul>
 </li>
 </ul>
@@ -967,7 +967,7 @@
 <p><a class="reference internal" href="#add-requirements-and-test-cases-to-the-project"><span class="xref myst">프로젝트에 MDM requirements를 추가</span></a>하기 위해 <strong>Add</strong> 버튼을 클릭합하려면</p>
 </section>
 <section id="d-side-panel">
-<h5>d: Side panel<a class="headerlink" href="#d-side-panel" title="Permalink to this heading"></a></h5>
+<h5>D: Side panel<a class="headerlink" href="#d-side-panel" title="Permalink to this heading"></a></h5>
 <p>requirement를 클릭한 다음 <img alt="alt text" class="intxt-image" src="../_images/left-side-two-arrow.png" />로 측면 패널(side panel)을 확장하여 requirement에 대한 자세한 정보를 확인합니다. 측면 패널을 다시 축소하려면 <img alt="alt text" class="intxt-image" src="../_images/right-side-two-arrow.png" /> 클릭합니다.</p>
 <p><img alt="alt text" src="../_images/side-panel.png" /></p>
 <section id="status">
@@ -980,20 +980,87 @@
 </ul>
 <p><img alt="alt text" src="../_images/status-image.png" /></p>
 </section>
+<section id="details">
+<h6>Details<a class="headerlink" href="#details" title="Permalink to this heading"></a></h6>
+<p>세부 정보 패널에는 이름, 설명 및 테스트 결과의 식별자와 같은 추가 requirement 속성이 표시됩니다. <a class="reference internal" href="#mdm-requirements"><span class="xref myst">Requirements</span></a>에서 확인하세요.</p>
+<p><img alt="alt text" src="../_images/details-image.png" /></p>
+</section>
+<section id="threadholds">
+<h6>Threadholds<a class="headerlink" href="#threadholds" title="Permalink to this heading"></a></h6>
+<p>여기에는 requirements 결정에 대한 제한 또는 기준에 대한 자세한 정보가 나와 있습니다.
+현재 프로젝트 상태의 경우 임계값의 구성에 따라 평가(assessment)가 계산됩니다.</p>
+<p><img alt="alt text" src="../_images/threadholds-image.png" /></p>
+</section>
+<section id="context">
+<h6>Context<a class="headerlink" href="#context" title="Permalink to this heading"></a></h6>
+<p>이 패널에는 requirement 범위(scope) 및 콘텐츠를 설명하는 데 사용되는 속성과 값이 표시됩니다.
+<a class="reference internal" href="#mdm-requirements"><span class="xref myst">MDM requirements</span></a>을 참조하세요.</p>
+<p><img alt="alt text" src="../_images/context-image.png" /></p>
+</section>
+<section id="history">
+<h6>History<a class="headerlink" href="#history" title="Permalink to this heading"></a></h6>
+<p>requirements의 변경 사항은 기록 패널(history panel)에서 추적할 수 있습니다.
+여기에는 다음 정보가 문서화되어 있습니다.</p>
+<ul class="simple">
+<li><p>변경을 수행한 사람의 이름</p></li>
+<li><p>변경 유형 및 변경 날짜</p></li>
+</ul>
+<p><img alt="alt text" src="../_images/history-image.png" /></p>
+</section>
+<section id="attachments">
+<h6>Attachments<a class="headerlink" href="#attachments" title="Permalink to this heading"></a></h6>
+<p>이 패널에는 MDM requirements에 첨부된 문서가 표시되어 requirement에 대한 일반적인 정보를 제공합니다.</p>
+<p><img alt="alt text" src="../_images/attachments-image.png" /></p>
+</section>
+</section>
+<section id="context-menu">
+<h5>Context menu<a class="headerlink" href="#context-menu" title="Permalink to this heading"></a></h5>
+<p>개요(overview)에서 requirement을 마우스 오른쪽 버튼으로 클릭하여 상황에 맞는 메뉴에 접근합니다. 컨텍스트(context) 메뉴에는 다음과 같은 옵션이 포함되어 있습니다.</p>
+<ul class="simple">
+<li><p><img alt="alt text" class="intxt-image" src="../_images/edit-test-case.png" /> <a class="reference internal" href="#edit-a-test-case-to-be-project-specific">Edit test case</a>: 테스트 케이스(test case)를 프로젝트별로 편집할 수 있는 창을 엽니다.</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/duplicate-test-case.png" /> <strong>Duplicate test case</strong>: 테스트 케이스(test case)의 복사본을 생성하고 해당 복사본의 설정을 편집할 수 있는 창을 엽니다.</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/remove-test-case.png" /> <strong>Remove test case</strong>: 프로젝트에서 테스트 케이스(test case)(모든 requirements와 함께)를 제거합니다.</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><img alt="" class="intxt-image" src="../_images/edit-test-case.png" /> <a class="reference internal" href="#edit-one-requirement-to-be-project-specific"><span class="xref myst">Edit requirement</span></a>: Requirement를 프로젝트별로 편집할 수 있는 창이 열립니다.</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/duplicate-test-case.png" /> <strong>Duplicate requirement</strong>: requirement의 복사본을 만들고 해당 복사본의 설정을 편집할 수 있는 창을 엽니다.</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/remove-test-case.png" /> <strong>Remove requirement</strong>: 프로젝트에서 requirement를 제거합니다.</p></li>
+</ul>
+<p><img alt="alt text" src="../_images/context-image.png" /></p>
 </section>
 </section>
 <section id="settings">
 <h4>Settings<a class="headerlink" href="#settings" title="Permalink to this heading"></a></h4>
+<p><strong>Settings</strong> 영역에서 프로젝트 이름, 유형, 설명 및 아이콘을 편집할 수 있습니다. 이 영역은 해당 권한이 있는 사용자만 액세스할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/settings.png" /></p>
 </section>
 <section id="project-members">
 <h4>Project members<a class="headerlink" href="#project-members" title="Permalink to this heading"></a></h4>
+<p>프로젝트 멤버 영역에서는 프로젝트 멤버와 각자의 역할에 대한 개요(overview)를 확인할 수 있습니다. 여기에는 다음 정보가 문서화되어 있습니다.</p>
+<ul class="simple">
+<li><p>프로젝트 멤버의 이름</p></li>
+<li><p>프로젝트 역할</p></li>
+<li><p>이러한 역할을 지정한 사용자의 이름</p></li>
+<li><p>역할이 할당된 날짜</p></li>
+</ul>
+<p>이 영역은 해당 권한이 있는 사용자만 액세스할 수 있습니다. <a class="reference internal" href="#add-project-members">새 프로젝트 멤버 추가에 대한 자세한 정보를 확인하세요.</a></p>
+<p><img alt="alt text" src="../_images/project-members.png" /></p>
 </section>
 </section>
 </section>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
+<p>Configuration 영역은 다음으로 접근할 수 있습니다.</p>
+<ol class="arabic simple">
+<li><p>상단 오른쪽에 있는 <img alt="alt text" class="intxt-image" src="../_images/three-horizontal-icon.png" />를 클릭합니다.</p></li>
+<li><p>이 메뉴에서 <strong>Configuration</strong>을 클릭합니다.</p></li>
+<li><p>그러면 아래와 같이 세로 탐색 모음과 함께 구성 보기가 열립니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/configuration.png" /></p>
 <section id="master-data-management-mdm">
 <h3>Master data management (MDM)<a class="headerlink" href="#master-data-management-mdm" title="Permalink to this heading"></a></h3>
+<p>MDM은 마스터 데이터 관리(Master Data Management)의 약자입니다. 이는 SCALE.sdm 전체에서 사용되는 속성, 요구 사항 및 테스트 사례를 관리하는 중앙 허브입니다. 마스터 데이터 레코드는 일관되고 정확한 데이터의 단일 소스를 제공하므로 마스터 데이터 레코드를 생성하는 것이 유리합니다.</p>
 <section id="mdm-attributes">
 <h4>MDM attributes<a class="headerlink" href="#mdm-attributes" title="Permalink to this heading"></a></h4>
 </section>

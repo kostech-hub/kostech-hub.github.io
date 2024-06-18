@@ -218,7 +218,7 @@ Requirements는 테스트 케이스(test cases)를 통해 프로젝트에 추가
 :class: note
 프로젝트 관리자와 프로젝트 기여자 모두 프로젝트에 맞게 MDM requirements를 조정할 수 있습니다.
 
-- **MDM requirements***: **Configuration** > **MDM** > **Requirements** 아래의 requirements를 MDM requirements라고 합니다. requirements template 또는 SCALE.sdm 애플리케이션에 대한 global requirements 데이터베이스라고 생각할 수 있습니다.
+- **MDM requirements**: **Configuration** > **MDM** > **Requirements** 아래의 requirements를 MDM requirements라고 합니다. requirements template 또는 SCALE.sdm 애플리케이션에 대한 global requirements 데이터베이스라고 생각할 수 있습니다.
 
 - **Project requirements**: 특정 프로젝트 내의 requirements를 project requirements이라고 합니다. 프로젝트 requirements은 MDM requirements에서 파생됩니다. 이 과정에서 원래 requirements의 속성, 임계값 등이 프로젝트별 requirements로 복사되며 필요한 경우 추가로 변경할 수 있습니다. 프로젝트에는 동일한 MDM requirements에서 파생된 여러 프로젝트 requirements이 있을 수 있습니다.
 :::
@@ -625,8 +625,8 @@ Requirement의 상태를 확인하는 다음과 같은 방법들이 있습니다
 - **D**: 새 프로젝트를 만들기 위한 버튼
 - **E**: 목록에 표시될 프로젝트를 필터링 하기 위한 이름을 입력
 - **F**: 프로젝트 목록을 분류하기 위한 메뉴
-    - ***Name*** - 프로젝트 이름의 알파벳 순서대로 정렬됩니다.
-    - ***Next milestone*** - 다음에 예정된 마일스톤을 기준으로 프로젝트를 시간순으로 정렬합니다.
+    - _Name_ - 프로젝트 이름의 알파벳 순서대로 정렬됩니다.
+    - _Next milestone_ - 다음에 예정된 마일스톤을 기준으로 프로젝트를 시간순으로 정렬합니다.
 
 ### Project view
 
@@ -715,7 +715,7 @@ Requirements 그리드는 필요에 맞게 사용자 지정을 할 수 있습니
 
 [프로젝트에 MDM requirements를 추가](#add-requirements-and-test-cases-to-the-project)하기 위해 **Add** 버튼을 클릭합하려면
 
-##### d: Side panel
+##### D: Side panel
 
 requirement를 클릭한 다음 ![alt text](images/left-side-two-arrow.png){class="intxt-image"}로 측면 패널(side panel)을 확장하여 requirement에 대한 자세한 정보를 확인합니다. 측면 패널을 다시 축소하려면 ![alt text](images/right-side-two-arrow.png){class="intxt-image"} 클릭합니다.
 
@@ -731,13 +731,100 @@ requirement를 클릭한 다음 ![alt text](images/left-side-two-arrow.png){clas
 
 ![alt text](images/status-image.png)
 
+###### Details
 
+세부 정보 패널에는 이름, 설명 및 테스트 결과의 식별자와 같은 추가 requirement 속성이 표시됩니다. [Requirements](#mdm-requirements)에서 확인하세요.
+
+![alt text](images/details-image.png)
+
+###### Threadholds
+
+여기에는 requirements 결정에 대한 제한 또는 기준에 대한 자세한 정보가 나와 있습니다.
+현재 프로젝트 상태의 경우 임계값의 구성에 따라 평가(assessment)가 계산됩니다.
+
+![alt text](images/threadholds-image.png)
+
+###### Context
+
+이 패널에는 requirement 범위(scope) 및 콘텐츠를 설명하는 데 사용되는 속성과 값이 표시됩니다.
+[MDM requirements](#mdm-requirements)을 참조하세요.
+
+![alt text](images/context-image.png)
+
+###### History
+
+requirements의 변경 사항은 기록 패널(history panel)에서 추적할 수 있습니다.
+여기에는 다음 정보가 문서화되어 있습니다.
+
+- 변경을 수행한 사람의 이름
+- 변경 유형 및 변경 날짜
+
+![alt text](images/history-image.png)
+
+###### Attachments
+
+이 패널에는 MDM requirements에 첨부된 문서가 표시되어 requirement에 대한 일반적인 정보를 제공합니다.
+
+![alt text](images/attachments-image.png)
+
+##### Context menu
+
+개요(overview)에서 requirement을 마우스 오른쪽 버튼으로 클릭하여 상황에 맞는 메뉴에 접근합니다. 컨텍스트(context) 메뉴에는 다음과 같은 옵션이 포함되어 있습니다.
+
+- ![alt text](images/edit-test-case.png){class="intxt-image"} [Edit test case](#edit-a-test-case-to-be-project-specific): 테스트 케이스(test case)를 프로젝트별로 편집할 수 있는 창을 엽니다.
+- ![alt text](images/duplicate-test-case.png){class="intxt-image"} **Duplicate test case**: 테스트 케이스(test case)의 복사본을 생성하고 해당 복사본의 설정을 편집할 수 있는 창을 엽니다.
+- ![alt text](images/remove-test-case.png){class="intxt-image"} **Remove test case**: 프로젝트에서 테스트 케이스(test case)(모든 requirements와 함께)를 제거합니다.
+---
+
+- ![](images/edit-test-case.png){class="intxt-image"} [Edit requirement](#edit-one-requirement-to-be-project-specific): Requirement를 프로젝트별로 편집할 수 있는 창이 열립니다.
+- ![alt text](images/duplicate-test-case.png){class="intxt-image"} **Duplicate requirement**: requirement의 복사본을 만들고 해당 복사본의 설정을 편집할 수 있는 창을 엽니다.
+- ![alt text](images/remove-test-case.png){class="intxt-image"} **Remove requirement**: 프로젝트에서 requirement를 제거합니다.
+
+![alt text](images/context-image.png)
 
 #### Settings
+
+**Settings** 영역에서 프로젝트 이름, 유형, 설명 및 아이콘을 편집할 수 있습니다. 이 영역은 해당 권한이 있는 사용자만 액세스할 수 있습니다.
+
+![alt text](images/settings.png)
+
 #### Project members
 
+프로젝트 멤버 영역에서는 프로젝트 멤버와 각자의 역할에 대한 개요(overview)를 확인할 수 있습니다. 여기에는 다음 정보가 문서화되어 있습니다.
+
+- 프로젝트 멤버의 이름
+- 프로젝트 역할
+- 이러한 역할을 지정한 사용자의 이름
+- 역할이 할당된 날짜
+
+이 영역은 해당 권한이 있는 사용자만 액세스할 수 있습니다. [새 프로젝트 멤버 추가에 대한 자세한 정보를 확인하세요.](#add-project-members)
+
+![alt text](images/project-members.png)
+
 ## Configuration
+
+Configuration 영역은 다음으로 접근할 수 있습니다.
+
+1. 상단 오른쪽에 있는 ![alt text](images/three-horizontal-icon.png){class="intxt-image"}를 클릭합니다.
+2. 이 메뉴에서 **Configuration**을 클릭합니다.
+3. 그러면 아래와 같이 세로 탐색 모음과 함께 구성 보기가 열립니다.
+
+![alt text](images/configuration.png)
+
 ### Master data management (MDM)
+
+MDM은 마스터 데이터 관리(Master Data Management)의 약자입니다. 이는 SCALE.sdm 전체에서 사용되는 속성, 요구 사항 및 테스트 사례를 관리하는 중앙 허브입니다. 마스터 데이터 레코드는 일관되고 정확한 데이터의 단일 소스를 제공하므로 마스터 데이터 레코드를 생성하는 것이 유리합니다.
+
+:::{line-block}
+**Example: Attributes**
+자동차를 설계하면서 충돌 안전성을 테스트하고 싶다고 가정해 보겠습니다. 특히 자동차가 정면 장애물, 움직이는 측면 장애물 등 다양한 장애물에 충돌할 때 자동차가 어떻게 작동하는지 알고 싶다고 가정해 보겠습니다.
+
+1. 먼저 필요한 모든 속성을 생성합니다. 즉, **Configuration** > **MDM** > **Attributes**으로 이동하여 "Fixed", "MDB", "MPDB", "ODB" 및 "Pole"이라는 값으로 "Barrier"이라는 속성을 생성합니다.
+2. 둘째, 각 시나리오에 적합한 속성을 선택합니다. 즉, 정면 충돌 테스트에서는 "Fixed" (barrier)을 선택합니다. 그리고 측면 충격 테스트에는 "MDB" 방벽(barrier)을 선택합니다.
+
+이 예에서 볼 수 있듯이, 데이터는 처음에 MDM에서 생성된 다음 관련 시나리오에서 선택됩니다. 데이터는 단일 소스에서 비롯되므로 데이터가 사용되는 모든 곳에서 일관되고 정확하게 유지됩니다.
+:::
+
 #### MDM attributes
 #### MDM requirements
 #### MDM test cases
