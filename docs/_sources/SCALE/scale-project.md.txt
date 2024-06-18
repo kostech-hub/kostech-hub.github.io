@@ -418,7 +418,7 @@ SCALE.sdm에는 여러가지 grid가 있습니다. 예를 들어, ![](images/pro
 5. ![alt text](images/plus-only-icon.png){class="intxt-image"} **New View**를 클릭합니다.
 6. 뷰(view)에 대한 이름을 입력하고 **Save**를 클릭합니다. 자신의 view가 리시트에 추가됩니다.
 
-:::{admonition}
+:::{admonition} What is the default view?
 :class: tip
 Views 목록에는 기본값(default)이라는 항목이 있습니다. 아직 사용자 지정 보기(views)를 구성하지 않은 경우 기본 보기(default views)가 사용됩니다. 글로벌 관리자만 기본 보기를 만들거나 수정할 수 있습니다. 일반 사용자는 이 보기를 편집할 수 없습니다.
 :::
