@@ -652,18 +652,87 @@ Requirement의 상태를 확인하는 다음과 같은 방법들이 있습니다
 
 ![alt text](images/project-overview.png)
 
-#### A: Description
+##### A: Description
 
 ![alt text](images/project-description.png)
 
 - **A**: 프로젝트 아이콘, 이름과 유형
 - **B**: 프로젝트 설명을 위한 자유 텍스트 필드(free text field)와 일반적으로 프로젝트 범위를 포함합니다.
 
-#### B: Documents
-#### C: Milestones
+##### B: Documents
+
+프로젝트 관련 문서를 관리할 수 있습니다. 문서의 이름과 파일 유형, 문서를 추가한 사용자의 이름이 표 형식의 개요에 표시됩니다.
+
+##### C: Milestones
+
+모든 프로젝트 참여자의 프로젝트 일정에 대한 개요를 볼 수 있습니다. [프로젝트 마일스톤에 대한 자세한 정보를 확인하세요.](#milestones)
+
+![alt text](images/c-project-milestones.png)
 
 #### Attributes
+
+**Attributes** 영역에서 프로젝트에 속성을 추가할 수 있습니다. 이를 통해 프로젝트를 분류하고 향후 관련 프로젝트 requirements를 파악할 수 있습니다. [프로젝트 속성 추가에 대한 자세한 정보를 확인하세요.](#add-project-attributes)
+
+![alt text](images/project-attributes.png)
+
 #### Requirements
+
+**Requirements** 영역은 다음 요소들을 포함합니다.
+
+- [A: Milestones]()
+- [B: Requirements grid]()
+- [C: Add button]()
+- [D: Side panel]()
+    - [Status]()
+    - [Details]()
+    - [Thresholds]()
+    - [Context]()
+    - [History]()
+    - [Attachmnts]()
+- [Context menu]()
+
+![alt text](images/project-requirements.png)
+
+##### A: Milestones
+
+요소(element)를 클릭하여 확장 및 축소할 수 있습니다. 기본적으로 마스터 플래그가 지정된 시간 스케줄이 표시됩니다. 선택적으로 추가 마일스톤을 표시할 수 있습니다. [requirements가 있는 마일스톤 보기에 대한 자세한 내용을 참조하세요.](#monitor-project-status-over-time)
+
+##### B: Requirements grid
+
+Requirements 그리드는 필요에 맞게 사용자 지정을 할 수 있습니다. 예를 들어 그리드에 표시할 열을 결정할 수 있으며 필터를 사용하여 특정 requirement만 표시할 수 있습니다. [requirement 그리드 사용자 지정에 대한 자세한 내용을 참조하세요.](#configure-the-requirements-grid)
+
+- **B1: Groups**: [group your requirements by column headers](#group-requirements-by-column-headers)로 열(column)을 드래그 앤 드롭 하세요.
+- **B2: Column header**: 열 헤더에는 열 캡션(caption)이 표시됩니다. [그리드에 표시할 열](#toggle-and-rearrange-the-columns)을 설정할 수 있으며 [오름차순 및 내림차순으로 열을 정렬](#change-the-sorting-order)할 수 있습니다.
+- **B3: Quickfilter**: 빠른 필터(quick filter)를 사용하면 검색어를 기준으로 전체 그리드 컨텐츠를 필터링 할 수 있습니다.
+- **B4: Reset grid to preset**: ![](images/result-icon.png){class="intxt-image"}를 프리셋(preset)으로 되돌리기 위해 ![alt text](images/reset-icon.png){class="intxt-image"}를 클릭합니다. ![](images/project-icon.png){class="intxt-image"}**Project**의 requirement 그리드에서는 해당 버튼은 아무 기능도 하지 않습니다.
+- **B5: Clear all filters**: 열의 헤더에서 quick 필터와 모든 필터들을 되돌리기 위해 ![alt text](images/reset-filter-icon.png){class="intxt-image"}를 클릭합니다. 만약 필터가 설정되어 있다면 아이콘은 빨간색입니다. 
+- **B6: Autosize all columns**: 열의 컨텐츠들에 대해서 열의 너비가 조정됩니다.
+- **B7: Columns**: 표시하거나 하지 않은 열을 선택하기 위한 토글(toggle)창을 표시하기 위해 ![alt text](images/columns-icon.png){class="intxt-image"}를 클릭합니다. 여기에서 구성한 보기(view)를 저장할 수 있습니다.
+
+![alt text](images/requirements-grid.png)
+
+##### C: Add button
+
+[프로젝트에 MDM requirements를 추가](#add-requirements-and-test-cases-to-the-project)하기 위해 **Add** 버튼을 클릭합하려면
+
+##### d: Side panel
+
+requirement를 클릭한 다음 ![alt text](images/left-side-two-arrow.png){class="intxt-image"}로 측면 패널(side panel)을 확장하여 requirement에 대한 자세한 정보를 확인합니다. 측면 패널을 다시 축소하려면 ![alt text](images/right-side-two-arrow.png){class="intxt-image"} 클릭합니다.
+
+![alt text](images/side-panel.png)
+
+###### Status
+ 
+선택한 requirement의 현재 상태가 여기에 표시됩니다. 상태는 특정 시점의 실제 값을 나타냅니다. 이 값에는 주석(comment)이나 첨부 파일과 같은 선택적 속성이 함께 표시될 수 있습니다. 이 값은 기존 임계값과 비교되며 결과에 따라 빨간색, 노란색 또는 녹색과 같은 특정 색상으로 표시됩니다. 이 영역에는 다음과 같은 정보가 표시됩니다.
+
+- 현재 값, 주석(comment) 그리고 업로드된 문서들
+- 사용자와 최근 상태에 대한 날짜 - 자동으로 문서화됨
+- [상태를 수동으로 보고(report)]()하기 위한 버튼
+
+![alt text](images/status-image.png)
+
+
+
 #### Settings
 #### Project members
 
