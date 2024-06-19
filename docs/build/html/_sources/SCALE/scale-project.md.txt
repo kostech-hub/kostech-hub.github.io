@@ -879,7 +879,7 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
 | -->
 
 :::{list-table} Frozen Delights!
-:widths: 15 10 30
+:widths: 15 10 
 :header-rows: 1
 
 *   - Setting
