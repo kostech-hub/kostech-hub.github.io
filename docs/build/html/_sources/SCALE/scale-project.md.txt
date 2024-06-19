@@ -878,19 +878,25 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
 | Identifier | SCALE.sdm에 속성을 고유하게 식별하는 이름을 입력합니다. 즉, 다른 속성에 이미 사용되고 있지 않은 이름을 입력합니다. **참고**: 식별자(identifier)가 반드시 특정 명명 패턴을 따를 필요는 없습니다. 그러나 ISO-MME와 같은 명명 패턴은 특히 대규모 데이터베이스로 작업하는 경우 식별자를 추적하는 데 도움이 될 수 있으므로 실무에서 자주 사용됩니다. **참고**: 대문자와 소문자 사용에 유의하세요. "Market", "market", "MARKET"이라는 단어는 모두 고유한 것으로 간주됩니다. |
 | -->
 
-:::{list-table} Frozen Delights!
+:::{list-table}
 :widths: 15 10 
 :header-rows: 1
 
 *   - Setting
     - Explanation    
-*   - Albatross
-    - 2.99
-*   - Crunchy Frog
-    - 1.49    
-*   - Gannet Ripple
-    - 1.99    
+*   - Identifier
+(required)
+    - SCALE.sdm에 속성을 고유하게 식별하는 이름을 입력합니다. 즉, 다른 속성에 이미 사용되고 있지 않은 이름을 입력합니다..
+참고: 식별자가 반드시 특정 명명 패턴을 따를 필요는 없습니다. 그러나 ISO-MME와 같은 명명 패턴은 특히 대규모 데이터베이스로 작업하는 경우 식별자를 추적하는 데 도움이 될 수 있으므로 실무에서 자주 사용됩니다.
+참고: 대문자와 소문자 사용에 유의하세요. "Market", "market", "MARKET" 이라는 단어는 모두 고유한 것으로 간주됩니다.
+*   - Name
+(required)
+    - 사람이 읽을 수 있는 속성 이름을 입력합니다.
+*   - Component
+    - 속성이 속한 컴포넌트를 선택합니다. 사용 사례: 컴포넌트는 특정 카테고리 아래에 속성을 그룹화하는 방법입니다. [컴포넌트에 대한 자세한 정보를 확인하세요.](#attribute-components)
 :::
+
+##### Attribute components
 
 #### MDM requirements
 #### MDM test cases
