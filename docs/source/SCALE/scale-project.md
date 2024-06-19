@@ -879,7 +879,7 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
 | -->
 
 :::{list-table}
-:widths: "auto"
+:widths: 15 100
 :header-rows: 1
 
 *   - Setting
@@ -896,6 +896,8 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
     - 속성이 속한 컴포넌트를 선택합니다. 사용 사례: 컴포넌트는 특정 카테고리 아래에 속성을 그룹화하는 방법입니다. [컴포넌트에 대한 자세한 정보를 확인하세요.](#attribute-components)
 *   - Obsolete
     - 속성이 더 이상 사용되지 않는 경우 이 옵션을 선택합니다![](images/check-box-icon.png){class="intxt-image"}. 사용 사례: 활발하게 사용되지 않는 속성을 삭제하는 대신 사용되지 않는 것으로 표시할 수 있습니다.
+*   - Usable as association attribute
+    - 속성(attribute)을 연결/컨텍스트(association/context) 속성으로 사용해야 하는 경우(예: 요구 사항) 이 옵션을 선택합니다![](images/check-box-icon.png){class="intxt-image"}.
 :::
 
 ##### Attribute components
