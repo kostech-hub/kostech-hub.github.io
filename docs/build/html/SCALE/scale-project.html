@@ -1071,9 +1071,70 @@
 <div class="line">2. 둘째, 각 시나리오에 적합한 속성을 선택합니다. 즉, 정면 충돌 테스트에서는 “Fixed” (barrier)을 선택합니다. 그리고 측면 충격 테스트에는 “MDB” 방벽(barrier)을 선택합니다.</div>
 <div class="line"><br /></div>
 <div class="line">이 예에서 볼 수 있듯이, 데이터는 처음에 MDM에서 생성된 다음 관련 시나리오에서 선택됩니다. 데이터는 단일 소스에서 비롯되므로 데이터가 사용되는 모든 곳에서 일관되고 정확하게 유지됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Who creates master data?</strong></div>
+<div class="line">마스터 데이터는 키(key) 사용자 또는 관리자(admin)와 같이 해당 권한이 있는 사람만 만들 수 있습니다. 또한 마스터 데이터(master data)는 관련 시나리오에서 선택하기 전에 먼저 생성되어야 합니다. 즉, 관리자 또는 키 사용자가 먼저 마스터 데이터를 만들어야 SCALE.sdm으로 적극적으로 작업을 시작할 수 있습니다.</div>
 </div>
 <section id="mdm-attributes">
 <h4>MDM attributes<a class="headerlink" href="#mdm-attributes" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="#"><span class="xref myst">What are attributes?</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">View attributes in the overview</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Add new attributes</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Attribute components</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Add new attribute components</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Apply components to attributes</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Use attributes with components</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Attribute value lists</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Add new attribute value lists</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Apply value lists to attributes</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Use attributes with value lists</span></a></p></li>
+</ul>
+</li>
+</ul>
+<section id="what-are-attributes">
+<h5>What are attributes?<a class="headerlink" href="#what-are-attributes" title="Permalink to this heading"></a></h5>
+<p>Attributes은 <img alt="" class="intxt-image" src="../_images/project-icon.png" /> <strong>프로젝트</strong> 및 <img alt="" class="intxt-image" src="../_images/result-icon.png" /> <strong>Result</strong> 내에서 다양한 용도로 사용됩니다.</p>
+<ul class="simple">
+<li><p><strong>Attributes provide context</strong>. 즉, 프로젝트, 테스트 케이스 또는 requirement을 추가로 설명합니다. 이러한 컨텍스트 속성의 몇 가지 예는 다음과 같습니다.</p>
+<ul>
+<li><p>프로젝트의 대상 시장(예: 북미, 유럽).</p></li>
+<li><p>사용 중인 충돌 테스트 더미의 유형(예: ES-2, HIII-50%(H3), HIII-5%(HF), SID IIs(S2))</p></li>
+<li><p>사용 중인 배리어(barrier) 유형(예: Fixed, MDB, MPDB, ODB, Pole)</p></li>
+</ul>
+</li>
+<li><p><strong>Attributes identify test results</strong>. 즉, requirement를 평가하는 기준을 제공합니다. 이러한 속성의 몇 가지 예는 다음과 같습니다.</p>
+<ul>
+<li><p>Head acceleration(G)</p></li>
+<li><p>Chest deflection(mm)</p></li>
+<li><p>Femur force(kN)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="view-attributes-in-the-overview">
+<h5>View attributes in the overview<a class="headerlink" href="#view-attributes-in-the-overview" title="Permalink to this heading"></a></h5>
+<p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Attributes</strong>으로 이동하여 사용 가능한 attributes에 대한 개요를 확인합니다. 개요의 데이터를 오름차순 또는 내림차순으로 필터링하고 정렬할 수 있습니다. 이렇게 하면 현재 작업과 관련된 데이터만 표시할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/view-attributes-in-the-overview.png" /></p>
+</section>
+<section id="add-new-attributes">
+<h5>Add new attributes<a class="headerlink" href="#add-new-attributes" title="Permalink to this heading"></a></h5>
+<ul class="simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Attributes</strong>으로 이동합니다.</p></li>
+<li><p>오른쪽 상단 모서리에서 <strong>New</strong>를 클릭합니다. 새 창이 열립니다.</p></li>
+<li><p>필요에 따라 설정을 구성합니다. 각 설정에 대한 설명은 아래 표에 나와 있습니다.</p></li>
+<li><p><img alt="alt text" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다. 속성이 개요에 나타납니다.</p></li>
+</ul>
+<p><img alt="alt text" src="../_images/add-new-attributes.png" /></p>
+<!-- | Setting | Explanation |
+| ---- | ---- |
+| Identifier | SCALE.sdm에 속성을 고유하게 식별하는 이름을 입력합니다. 즉, 다른 속성에 이미 사용되고 있지 않은 이름을 입력합니다. **참고**: 식별자(identifier)가 반드시 특정 명명 패턴을 따를 필요는 없습니다. 그러나 ISO-MME와 같은 명명 패턴은 특히 대규모 데이터베이스로 작업하는 경우 식별자를 추적하는 데 도움이 될 수 있으므로 실무에서 자주 사용됩니다. **참고**: 대문자와 소문자 사용에 유의하세요. "Market", "market", "MARKET"이라는 단어는 모두 고유한 것으로 간주됩니다. |
+| -->
+</section>
 </section>
 <section id="mdm-requirements">
 <h4>MDM requirements<a class="headerlink" href="#mdm-requirements" title="Permalink to this heading"></a></h4>

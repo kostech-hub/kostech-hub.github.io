@@ -823,9 +823,75 @@ MDM은 마스터 데이터 관리(Master Data Management)의 약자입니다. �
 2. 둘째, 각 시나리오에 적합한 속성을 선택합니다. 즉, 정면 충돌 테스트에서는 "Fixed" (barrier)을 선택합니다. 그리고 측면 충격 테스트에는 "MDB" 방벽(barrier)을 선택합니다.
 
 이 예에서 볼 수 있듯이, 데이터는 처음에 MDM에서 생성된 다음 관련 시나리오에서 선택됩니다. 데이터는 단일 소스에서 비롯되므로 데이터가 사용되는 모든 곳에서 일관되고 정확하게 유지됩니다.
+
+**Who creates master data?**
+마스터 데이터는 키(key) 사용자 또는 관리자(admin)와 같이 해당 권한이 있는 사람만 만들 수 있습니다. 또한 마스터 데이터(master data)는 관련 시나리오에서 선택하기 전에 먼저 생성되어야 합니다. 즉, 관리자 또는 키 사용자가 먼저 마스터 데이터를 만들어야 SCALE.sdm으로 적극적으로 작업을 시작할 수 있습니다.
 :::
 
 #### MDM attributes
+
+- [What are attributes?]()
+- [View attributes in the overview]()
+- [Add new attributes]()
+- [Attribute components]()
+    - [Add new attribute components]()
+    - [Apply components to attributes]()
+    - [Use attributes with components]()
+- [Attribute value lists]()
+    - [Add new attribute value lists]()
+    - [Apply value lists to attributes]()
+    - [Use attributes with value lists]()
+
+##### What are attributes?
+
+Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트** 및 ![](images/result-icon.png){class="intxt-image"} **Result** 내에서 다양한 용도로 사용됩니다. 
+
+- **Attributes provide context**. 즉, 프로젝트, 테스트 케이스 또는 requirement을 추가로 설명합니다. 이러한 컨텍스트 속성의 몇 가지 예는 다음과 같습니다.
+
+    - 프로젝트의 대상 시장(예: 북미, 유럽).
+    - 사용 중인 충돌 테스트 더미의 유형(예: ES-2, HIII-50%(H3), HIII-5%(HF), SID IIs(S2))
+    - 사용 중인 배리어(barrier) 유형(예: Fixed, MDB, MPDB, ODB, Pole)
+
+- **Attributes identify test results**. 즉, requirement를 평가하는 기준을 제공합니다. 이러한 속성의 몇 가지 예는 다음과 같습니다.
+
+    - Head acceleration(G)
+    - Chest deflection(mm)
+    - Femur force(kN)
+
+##### View attributes in the overview
+
+**Configuration** > **MDM** > **Attributes**으로 이동하여 사용 가능한 attributes에 대한 개요를 확인합니다. 개요의 데이터를 오름차순 또는 내림차순으로 필터링하고 정렬할 수 있습니다. 이렇게 하면 현재 작업과 관련된 데이터만 표시할 수 있습니다.
+
+![alt text](images/view-attributes-in-the-overview.png)
+
+##### Add new attributes
+
+- **Configuration** > **MDM** > **Attributes**으로 이동합니다.
+- 오른쪽 상단 모서리에서 **New**를 클릭합니다. 새 창이 열립니다.
+- 필요에 따라 설정을 구성합니다. 각 설정에 대한 설명은 아래 표에 나와 있습니다.
+- ![alt text](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다. 속성이 개요에 나타납니다.
+
+![alt text](images/add-new-attributes.png)
+
+<!-- | Setting | Explanation |
+| ---- | ---- |
+| Identifier | SCALE.sdm에 속성을 고유하게 식별하는 이름을 입력합니다. 즉, 다른 속성에 이미 사용되고 있지 않은 이름을 입력합니다. **참고**: 식별자(identifier)가 반드시 특정 명명 패턴을 따를 필요는 없습니다. 그러나 ISO-MME와 같은 명명 패턴은 특히 대규모 데이터베이스로 작업하는 경우 식별자를 추적하는 데 도움이 될 수 있으므로 실무에서 자주 사용됩니다. **참고**: 대문자와 소문자 사용에 유의하세요. "Market", "market", "MARKET"이라는 단어는 모두 고유한 것으로 간주됩니다. |
+| -->
+
+:::{list-table} Frozen Delights!
+:widths: 15 10 30
+:header-rows: 1
+
+*   - Setting
+    - Explanation    
+*   - Albatross
+    - 2.99
+*   - Crunchy Frog
+    - 1.49    
+*   - Gannet Ripple
+    - 1.99    
+:::
+
 #### MDM requirements
 #### MDM test cases
 
