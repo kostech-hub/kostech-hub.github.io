@@ -1148,8 +1148,7 @@
 <tr class="row-even"><td><p>Identifier
 (required)</p></td>
 <td><p>SCALE.sdm에 속성을 고유하게 식별하는 이름을 입력합니다. 즉, 다른 속성에 이미 사용되고 있지 않은 이름을 입력합니다.
-참고: 식별자가 반드시 특정 명명 패턴을 따를 필요는 없습니다.
-그러나 ISO-MME와 같은 명명 패턴은 특히 대규모 데이터베이스로 작업하는 경우 식별자를 추적하는 데 도움이 될 수 있으므로 실무에서 자주 사용됩니다.
+참고: 식별자가 반드시 특정 명명 패턴을 따를 필요는 없습니다. 그러나 ISO-MME와 같은 명명 패턴은 특히 대규모 데이터베이스로 작업하는 경우 식별자를 추적하는 데 도움이 될 수 있으므로 실무에서 자주 사용됩니다.
 참고: 대문자와 소문자 사용에 유의하세요. “Market”, “market”, “MARKET” 이라는 단어는 모두 고유한 것으로 간주됩니다.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Name
@@ -1171,11 +1170,25 @@
 <tr class="row-even"><td><p>Comment</p></td>
 <td><p>설명에 필요하지 않은 속성에 대한 설명을 입력합니다.</p></td>
 </tr>
+<tr class="row-odd"><td><p>Attribute type</p></td>
+<td><p>속성(attribute)을 결과 또는 설명으로 사용할지 여부에 대한 옵션입니다.</p></td>
+</tr>
+<tr class="row-even"><td><p>Data type
+(required)</p></td>
+<td><p>속성(attribute)이 나타내는 데이터 유형은 무엇인가요? 드롭다운 목록에서 적절한 유형을 선택합니다.
+<strong>Boolean</strong> = 속성 값이 true인지 false인지 나타냅니다.
+<strong>Datetime</strong> = 속성 값이 날짜(date)와 시간(time) 입니다. 예를 들어 테스트가 수행되었던 때의 날짜와 시간입니다.
+<strong>Number</strong> = 속성 값이 숫자입니다. 예로 차량 스피드가 있습니다. <strong>Display units</strong>에서 단위를 선택합니다.
+<strong>Text</strong> = 속성 값은 미리 정의된 여러 옵션 중 하나입니다. 예를 들어 “CNCAP”, “Euro NCAP”, “FMVSS” 또는 “USNCAP” 지시어가 있습니다. <strong>Value list</strong>에서 미리 정의된 옵션 집합을 선택합니다. <a class="reference internal" href="#attribute-value-lists"><span class="xref myst">속성 값 목록에 대한 자세한 내용을 참조하세요.</span></a></p></td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="attribute-components">
 <h5>Attribute components<a class="headerlink" href="#attribute-components" title="Permalink to this heading"></a></h5>
+</section>
+<section id="attribute-value-lists">
+<h5>Attribute value lists<a class="headerlink" href="#attribute-value-lists" title="Permalink to this heading"></a></h5>
 </section>
 </section>
 <section id="mdm-requirements">

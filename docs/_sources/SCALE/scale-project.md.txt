@@ -887,8 +887,7 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
 *   - Identifier
 (required)
     - SCALE.sdm에 속성을 고유하게 식별하는 이름을 입력합니다. 즉, 다른 속성에 이미 사용되고 있지 않은 이름을 입력합니다. 
-    참고: 식별자가 반드시 특정 명명 패턴을 따를 필요는 없습니다.
-    그러나 ISO-MME와 같은 명명 패턴은 특히 대규모 데이터베이스로 작업하는 경우 식별자를 추적하는 데 도움이 될 수 있으므로 실무에서 자주 사용됩니다.
+    참고: 식별자가 반드시 특정 명명 패턴을 따를 필요는 없습니다. 그러나 ISO-MME와 같은 명명 패턴은 특히 대규모 데이터베이스로 작업하는 경우 식별자를 추적하는 데 도움이 될 수 있으므로 실무에서 자주 사용됩니다.
     참고: 대문자와 소문자 사용에 유의하세요. "Market", "market", "MARKET" 이라는 단어는 모두 고유한 것으로 간주됩니다.
 *   - Name
 (required)
@@ -903,9 +902,19 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
     - 다른 사용자가 볼 수 있도록 속성(attribute)에 대한 설명을 입력합니다.
 *   - Comment
     - 설명에 필요하지 않은 속성에 대한 설명을 입력합니다.
+*   - Attribute type
+    - 속성(attribute)을 결과 또는 설명으로 사용할지 여부에 대한 옵션입니다.
+*   - Data type
+(required)
+    - 속성(attribute)이 나타내는 데이터 유형은 무엇인가요? 드롭다운 목록에서 적절한 유형을 선택합니다.
+    **Boolean** = 속성 값이 true인지 false인지 나타냅니다.
+    **Datetime** = 속성 값이 날짜(date)와 시간(time) 입니다. 예를 들어 테스트가 수행되었던 때의 날짜와 시간입니다.
+    **Number** = 속성 값이 숫자입니다. 예로 차량 스피드가 있습니다. **Display units**에서 단위를 선택합니다.
+    **Text** = 속성 값은 미리 정의된 여러 옵션 중 하나입니다. 예를 들어 "CNCAP", "Euro NCAP", "FMVSS" 또는 "USNCAP" 지시어가 있습니다. **Value list**에서 미리 정의된 옵션 집합을 선택합니다. [속성 값 목록에 대한 자세한 내용을 참조하세요.](#attribute-value-lists)
 :::
 
 ##### Attribute components
+##### Attribute value lists
 
 #### MDM requirements
 #### MDM test cases
