@@ -1186,13 +1186,153 @@
 </section>
 <section id="attribute-components">
 <h5>Attribute components<a class="headerlink" href="#attribute-components" title="Permalink to this heading"></a></h5>
+<p>컴포넌트(Components)는 특정 카테고리로 속성(attributes)을 그룹화하는 방법입니다. 예를 들어</p>
+<ul class="simple">
+<li><p>‘battery’ 또는 ‘fuel pump’와 같은 특정 자동차 부품에 대한 그룹을 만들 수 있습니다. 그런 다음 값을 측정할 때 이러한 값은 해당 구성 요소에 따라 함께 그룹화됩니다.</p></li>
+<li><p>함께 평가해야 하는 속성을 그룹화할 수도 있습니다. 예를 들어 ‘doors unlocked during crash’이라는 컴포넌트를 만들 수 있습니다. 그런 다음 값이 측정될 때 이 값은 문이 잠겼는지 또는 잠금이 해제되었는지 여부를 지정합니다.</p></li>
+</ul>
+<section id="add-new-attribute-components">
+<h6>Add new attribute components<a class="headerlink" href="#add-new-attribute-components" title="Permalink to this heading"></a></h6>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Attribute components</strong>로 이동합니다.</p></li>
+<li><p>상단 오른쪽 모서리에서 <strong>New</strong>를 클릭합니다.</p></li>
+<li><p>구성 요소(component)의 이름을 입력합니다. 원하는 경우 설명을 입력하거나 구성 요소를 더 이상 사용되지 않는 것으로 표시합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" /> 버튼을 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/add-new-attribute-components.png" /></p>
+</section>
+<section id="apply-components-to-attributes">
+<h6>Apply components to attributes<a class="headerlink" href="#apply-components-to-attributes" title="Permalink to this heading"></a></h6>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Attributes</strong>로 이동합니다.</p></li>
+<li><p>설정을 열기 위해서 존재하는 속성(attribute)을 클릭하든지 <strong>New</strong>를 클릭하여 새 속성을 만듭니다.</p></li>
+<li><p>구성 요소(compoenent)에서 속성이 속한 구성 요소(compoenent)를 선택합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+</section>
+<section id="use-attributes-with-components">
+<h6>Use attributes with components<a class="headerlink" href="#use-attributes-with-components" title="Permalink to this heading"></a></h6>
+<p>이제 속성(attributes)이 표시되면 해당 구성 요소 이름 아래에 속성이 함께 그룹화됩니다. 예를 들어 <img alt="" class="intxt-image" src="../_images/result-icon.png" /><strong>Result</strong>에서는 테스트 세부 정보 페이지에서 속성이 구성 요소별로 그룹화됩니다.</p>
+<p><img alt="alt text" src="../_images/example-for-grouping-attributes-by-component.png" /></p>
+</section>
 </section>
 <section id="attribute-value-lists">
 <h5>Attribute value lists<a class="headerlink" href="#attribute-value-lists" title="Permalink to this heading"></a></h5>
+<p>미리 정의된 여러 옵션의 목록을 만들 수 있습니다. 예를 들어 “CNCAP”, “Euro NCAP”, “FMVSS” 또는 “USNCAP” 옵션이 포함된 “Directive”라는 목록을 만들 수 있습니다. 이는 속성(attribute) 값 목록을 생성하여 수행됩니다.</p>
+<section id="add-new-attribute-value-lists">
+<h6>Add new attribute value lists<a class="headerlink" href="#add-new-attribute-value-lists" title="Permalink to this heading"></a></h6>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Attribute value lists</strong> 값 목록으로 이동합니다.</p></li>
+<li><p>오른쪽 하단을 <img alt="" class="intxt-image" src="../_images/black-plus.png" /> 클릭합니다. 새 창이 열립니다.</p></li>
+<li><p>목록의 이름을 입력합니다. 예: “Directive”.</p></li>
+<li><p>오른쪽 아래 모서리에 있는 <strong>New value</strong>을 클릭합니다. 팝업 창이 열립니다.</p></li>
+<li><p>값의 이름과 레이블을 입력합니다. 예: “CNCAP”. 레이블은 값 목록 내에서 적용하여 속성(attribute) 값으로 볼 수 있는 값입니다.</p></li>
+<li><p><strong>Save</strong>을 클릭합니다. 값이 목록에 추가됩니다. 같은 방법으로 다른 값을 추가합니다. 예를 들어 “Euro NCAP”, “FMVSS” 및 “USNCAP” 값을 추가합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 모든 값과 함께 목록을 저장합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/add-new-attribute-value-lists.png" /></p>
+</section>
+<section id="apply-value-lists-to-attributes">
+<h6>Apply value lists to attributes<a class="headerlink" href="#apply-value-lists-to-attributes" title="Permalink to this heading"></a></h6>
+<p>속성(Attribute) 값 목록은 데이터 유형이 텍스트인 속성에만 적용할 수 있습니다.</p>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Attributes</strong>으로 이동합니다.</p></li>
+<li><p><strong>New</strong>를 클릭하여 새 속성(attribute)을 만들거나 기존 속성을 클릭하여 해당 설정을 엽니다.</p></li>
+<li><p><strong>Data type</strong>을 <strong>Text</strong>로 옵션을 설정합니다.</p></li>
+<li><p><strong>Value list</strong>에서 속성(attribute) 값 목록을 선택합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+</section>
+<section id="use-attributes-with-value-lists">
+<h6>Use attributes with value lists<a class="headerlink" href="#use-attributes-with-value-lists" title="Permalink to this heading"></a></h6>
+<p>이제 속성(attribute)과 해당 값을 사용할 준비가 되었습니다. 값은 목록에 표시됩니다. 예를 들어 프로젝트에서 속성(attribute)과 해당 값을 사용하여 프로젝트에 대한 추가 컨텍스트(context)를 제공할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/example-for-using-attributes-with-value-lists.png" /></p>
+</section>
 </section>
 </section>
 <section id="mdm-requirements">
 <h4>MDM requirements<a class="headerlink" href="#mdm-requirements" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="#"><span class="xref myst">Overview</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">View details about a requirement</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Details</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Thresholds</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Context</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Attachments</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">History</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Add new requirements</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Assessment</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Context</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Attachments</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Options in the context menu</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Edit multiple requirements at once</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Edit the names</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Edit the descriptions</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Edit the test result identifiers</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Edit the assessment thresholds</span></a></p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p>Requirements은 기술 프로젝트 목표와 관련하여 테스트 결과를 평가하기 위해 사용자가 정의합니다. 따라서 각 requirement은 단일 스칼라(scalar) 테스트 결과의 평가와 동일하지만, 평가(evaluation)는 사용자가 색상 등급 간격을 기준으로 점진적으로 정의할 수 있습니다.</p>
+<div class="tip admonition">
+<p class="admonition-title">MDM requirements vs. project requirements</p>
+<ul class="simple">
+<li><p><strong>MDM requirements</strong>: <strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Requirements</strong> 아래의 requirements을 MDM requirements이라고 합니다. requirement 템플릿 또는 SCALE.sdm 애플리케이션에 대한 전역 requirement 데이터베이스라고 생각할 수 있습니다.</p></li>
+<li><p><strong>Project requirements</strong>: 특정 프로젝트 내의 requirements을 project requirements이라고 합니다. project requirements는 MDM requirements에서 파생됩니다. 이 과정에서 원래 requirement의 속성, 임계값 등이 프로젝트별 requirement으로 복사되며 필요한 경우 추가로 변경할 수 있습니다. 프로젝트에는 동일한 MDM requirements에서 파생된 여러 project requirements이 있을 수 있습니다.</p></li>
+</ul>
+</div>
+<section id="id4">
+<h5>Overview<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h5>
+<p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Requirements</strong>으로 이동하여 사용 가능한 requirements의 개요(overview)를 확인합니다. 개요의 데이터는 오름차순 또는 내림차순으로 필터링, 그룹화 및 정렬할 수 있습니다. 열(column)은 켜고 끌 수 있습니다. 이를 통해 현재 작업과 관련된 데이터만 표시할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/overview-of-mdm-requirements.png" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Internal vs. external requirements</p>
+<ul class="simple">
+<li><p><strong>Internal</strong>: Internal requirements는 수동으로 개요(overview)에 추가합니다.</p></li>
+<li><p><strong>External</strong>: External test case들은 개요(overview)로 가져옵니다.</p></li>
+</ul>
+<p>두 가지 유형의 requirements 모두 추가로 편집하거나 삭제할 수 있습니다.</p>
+</div>
+</section>
+<section id="view-details-about-a-requirement">
+<h5>View details about a requirement<a class="headerlink" href="#view-details-about-a-requirement" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Requirements</strong>로 이동합니다.</p></li>
+<li><p>Overview에서 requirement를 클릭합니다.</p></li>
+<li><p>상단 오른쪽 모서리의 <img alt="" src="../_images/left-side-two-arrow.png" />를 클릭합니다. 추가로 사이드 패널이 표시되며 다음 항목들이 포함됩니다.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#details-1"><span class="xref myst">Detail</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Thresholds</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Context</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Attachments</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">History</span></a></p></li>
+</ul>
+</li>
+</ol>
+<p><img alt="alt text" src="../_images/overview-with-expanded-side-panel.png" /></p>
+<section id="id5">
+<h6>Details<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h6>
+<p>여기에서 requirement을 정의하는 일반 속성(properties)을 볼 수 있습니다.</p>
+<ul class="simple">
+<li><p><strong>Name</strong> - 필수 - 서로 다른 requirements을 구분하기 위한 필수 중요 이름 매개변수입니다.</p></li>
+<li><p><strong>Description</strong> - 선택 사항 - requirement에 대한 추가 텍스트 설명입니다.</p></li>
+<li><p><strong>Test result identifier</strong> - 필수 - requirement이 평가되는 기준이 되는 속성(attribute)입니다.</p></li>
+</ul>
+</section>
+<section id="thresholds">
+<h6>Thresholds<a class="headerlink" href="#thresholds" title="Permalink to this heading"></a></h6>
+<p>requirement 임계값(thresholds)(주어진 한도 또는 기준)은 가중치 간격에 따라 점진적으로 정의됩니다. 각 평가 수준은 색상으로 표시되어 사용자에게 동의 여부를 강조합니다.</p>
+<p>requirement에 대한 테스트 속성 값의 동의 여부는 <span style="color:green">녹색</span>, <span style="color:yellow">노란색</span>, <span style="color:orange">주황색</span>, <span style="color:brown">갈색</span> 및 <span style="color:red">빨강색</span>으로 강조 표시된 범위로 가중치를 부여할 수 있습니다. 가중치가 없는 <span style="color:gray">회색</span> 평가도 있습니다.</p>
+</section>
+</section>
 </section>
 <section id="mdm-test-cases">
 <h4>MDM test cases<a class="headerlink" href="#mdm-test-cases" title="Permalink to this heading"></a></h4>

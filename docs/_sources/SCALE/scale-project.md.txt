@@ -914,9 +914,141 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
 :::
 
 ##### Attribute components
+
+컴포넌트(Components)는 특정 카테고리로 속성(attributes)을 그룹화하는 방법입니다. 예를 들어
+
+- 'battery' 또는 'fuel pump'와 같은 특정 자동차 부품에 대한 그룹을 만들 수 있습니다. 그런 다음 값을 측정할 때 이러한 값은 해당 구성 요소에 따라 함께 그룹화됩니다.
+- 함께 평가해야 하는 속성을 그룹화할 수도 있습니다. 예를 들어 'doors unlocked during crash'이라는 컴포넌트를 만들 수 있습니다. 그런 다음 값이 측정될 때 이 값은 문이 잠겼는지 또는 잠금이 해제되었는지 여부를 지정합니다.
+
+###### Add new attribute components
+
+1. **Configuration** > **MDM** > **Attribute components**로 이동합니다.
+2. 상단 오른쪽 모서리에서 **New**를 클릭합니다.
+3. 구성 요소(component)의 이름을 입력합니다. 원하는 경우 설명을 입력하거나 구성 요소를 더 이상 사용되지 않는 것으로 표시합니다.
+4. ![](images/save-icon.png){class="intxt-image"} 버튼을 클릭하여 설정을 저장합니다. 
+
+![alt text](images/add-new-attribute-components.png)
+
+###### Apply components to attributes
+
+1. **Configuration** > **MDM** > **Attributes**로 이동합니다.
+2. 설정을 열기 위해서 존재하는 속성(attribute)을 클릭하든지 **New**를 클릭하여 새 속성을 만듭니다.
+3. 구성 요소(compoenent)에서 속성이 속한 구성 요소(compoenent)를 선택합니다.
+4. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다.
+
+###### Use attributes with components
+
+이제 속성(attributes)이 표시되면 해당 구성 요소 이름 아래에 속성이 함께 그룹화됩니다. 예를 들어 ![](images/result-icon.png){class="intxt-image"}**Result**에서는 테스트 세부 정보 페이지에서 속성이 구성 요소별로 그룹화됩니다.
+
+![alt text](images/example-for-grouping-attributes-by-component.png)
+
 ##### Attribute value lists
 
+미리 정의된 여러 옵션의 목록을 만들 수 있습니다. 예를 들어 "CNCAP", "Euro NCAP", "FMVSS" 또는 "USNCAP" 옵션이 포함된 "Directive"라는 목록을 만들 수 있습니다. 이는 속성(attribute) 값 목록을 생성하여 수행됩니다.
+
+###### Add new attribute value lists
+
+1. **Configuration** > **MDM** > **Attribute value lists** 값 목록으로 이동합니다.
+2. 오른쪽 하단을 ![](images/black-plus.png){class="intxt-image"} 클릭합니다. 새 창이 열립니다.
+3. 목록의 이름을 입력합니다. 예: "Directive".
+4. 오른쪽 아래 모서리에 있는 **New value**을 클릭합니다. 팝업 창이 열립니다.
+5. 값의 이름과 레이블을 입력합니다. 예: "CNCAP". 레이블은 값 목록 내에서 적용하여 속성(attribute) 값으로 볼 수 있는 값입니다.
+6. **Save**을 클릭합니다. 값이 목록에 추가됩니다. 같은 방법으로 다른 값을 추가합니다. 예를 들어 "Euro NCAP", "FMVSS" 및 "USNCAP" 값을 추가합니다.
+7. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 모든 값과 함께 목록을 저장합니다.
+
+![alt text](images/add-new-attribute-value-lists.png)
+
+###### Apply value lists to attributes
+
+속성(Attribute) 값 목록은 데이터 유형이 텍스트인 속성에만 적용할 수 있습니다.
+
+1. **Configuration** > **MDM** > **Attributes**으로 이동합니다.
+2. **New**를 클릭하여 새 속성(attribute)을 만들거나 기존 속성을 클릭하여 해당 설정을 엽니다.
+3. **Data type**을 **Text**로 옵션을 설정합니다.
+4. **Value list**에서 속성(attribute) 값 목록을 선택합니다.
+5. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다.
+
+###### Use attributes with value lists
+
+이제 속성(attribute)과 해당 값을 사용할 준비가 되었습니다. 값은 목록에 표시됩니다. 예를 들어 프로젝트에서 속성(attribute)과 해당 값을 사용하여 프로젝트에 대한 추가 컨텍스트(context)를 제공할 수 있습니다.
+
+![alt text](images/example-for-using-attributes-with-value-lists.png)
+
 #### MDM requirements
+
+- [Overview]()
+- [View details about a requirement]()
+    - [Details]()
+    - [Thresholds]()
+    - [Context]()
+    - [Attachments]()
+    - [History]()
+- [Add new requirements]()
+    - [Assessment]()
+    - [Context]()
+    - [Attachments]()
+- [Options in the context menu]()
+- [Edit multiple requirements at once]()
+    - [Edit the names]()
+    - [Edit the descriptions]()
+    - [Edit the test result identifiers]()
+    - [Edit the assessment thresholds]()
+
+---
+
+Requirements은 기술 프로젝트 목표와 관련하여 테스트 결과를 평가하기 위해 사용자가 정의합니다. 따라서 각 requirement은 단일 스칼라(scalar) 테스트 결과의 평가와 동일하지만, 평가(evaluation)는 사용자가 색상 등급 간격을 기준으로 점진적으로 정의할 수 있습니다.
+
+:::{admonition} MDM requirements vs. project requirements
+:class: tip
+- **MDM requirements**: **Configuration** > **MDM** > **Requirements** 아래의 requirements을 MDM requirements이라고 합니다. requirement 템플릿 또는 SCALE.sdm 애플리케이션에 대한 전역 requirement 데이터베이스라고 생각할 수 있습니다.
+
+- **Project requirements**: 특정 프로젝트 내의 requirements을 project requirements이라고 합니다. project requirements는 MDM requirements에서 파생됩니다. 이 과정에서 원래 requirement의 속성, 임계값 등이 프로젝트별 requirement으로 복사되며 필요한 경우 추가로 변경할 수 있습니다. 프로젝트에는 동일한 MDM requirements에서 파생된 여러 project requirements이 있을 수 있습니다.
+:::
+
+##### Overview
+
+**Configuration** > **MDM** > **Requirements**으로 이동하여 사용 가능한 requirements의 개요(overview)를 확인합니다. 개요의 데이터는 오름차순 또는 내림차순으로 필터링, 그룹화 및 정렬할 수 있습니다. 열(column)은 켜고 끌 수 있습니다. 이를 통해 현재 작업과 관련된 데이터만 표시할 수 있습니다.
+
+![alt text](images/overview-of-mdm-requirements.png)
+
+:::{admonition} Internal vs. external requirements
+:class: tip
+- **Internal**: Internal requirements는 수동으로 개요(overview)에 추가합니다.
+- **External**: External test case들은 개요(overview)로 가져옵니다.
+
+두 가지 유형의 requirements 모두 추가로 편집하거나 삭제할 수 있습니다.
+:::
+
+##### View details about a requirement
+
+1. **Configuration** > **MDM** > **Requirements**로 이동합니다.
+2. Overview에서 requirement를 클릭합니다.
+3. 상단 오른쪽 모서리의 ![](images/left-side-two-arrow.png)를 클릭합니다. 추가로 사이드 패널이 표시되며 다음 항목들이 포함됩니다.
+
+    - [Detail](#details-1)
+    - [Thresholds]()
+    - [Context]()
+    - [Attachments]()
+    - [History]()
+
+![alt text](images/overview-with-expanded-side-panel.png)
+
+###### Details
+
+여기에서 requirement을 정의하는 일반 속성(properties)을 볼 수 있습니다.
+
+- **Name** - 필수 - 서로 다른 requirements을 구분하기 위한 필수 중요 이름 매개변수입니다.
+- **Description** - 선택 사항 - requirement에 대한 추가 텍스트 설명입니다.
+- **Test result identifier** - 필수 - requirement이 평가되는 기준이 되는 속성(attribute)입니다.
+
+###### Thresholds
+
+requirement 임계값(thresholds)(주어진 한도 또는 기준)은 가중치 간격에 따라 점진적으로 정의됩니다. 각 평가 수준은 색상으로 표시되어 사용자에게 동의 여부를 강조합니다.
+
+requirement에 대한 테스트 속성 값의 동의 여부는 <span style="color:green">녹색</span>, <span style="color:yellow">노란색</span>, <span style="color:orange">주황색</span>, <span style="color:brown">갈색</span> 및 <span style="color:red">빨강색</span>으로 강조 표시된 범위로 가중치를 부여할 수 있습니다. 가중치가 없는 <span style="color:gray">회색</span> 평가도 있습니다.
+
+
+
 #### MDM test cases
 
 ### User management
