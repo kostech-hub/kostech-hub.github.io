@@ -22,7 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SCALE.sdm" href="scale.sdm.html" />
+    <link rel="next" title="Result" href="scale-result.html" />
     <link rel="prev" title="SCALE.Model" href="scale-model.html" /> 
 </head>
 
@@ -164,7 +164,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#mdm-test-cases">MDM test cases</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#add-ons">Add-ons</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-ons-overview">Add-ons overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-new-add-on">Adding a new add-on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-add-ons">Editing add-ons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#periodic-add-ons">Periodic add-ons</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#user-management">User management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#users">Users</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#access-tokens">Access tokens</a></li>
 </ul>
@@ -175,6 +183,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="scale-result.html">Result</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scale.sdm.html">SCALE.sdm</a></li>
 </ul>
 
@@ -838,7 +847,7 @@
 </section>
 <section id="c-jobs">
 <h4>C: Jobs<a class="headerlink" href="#c-jobs" title="Permalink to this heading"></a></h4>
-<p><img alt="alt text" class="intxt-image" src="../_images/jobs-icon.png" />를 클릭하여 <strong>Jobs</strong> 영역을 엽니다. 여기에서 애드온이나 사용자 입력에 의해 트리거되는 등 애플리케이션에서 실행 중인 작업 목록을 볼 수 있습니다. 작업 상태(보류 중, 실행 중, 성공, 실패)가 동적으로 표시됩니다. 여기에서 작업 로그 파일에 액세스하고 작업 아티팩트(artifacts)를 다운로드할 수 있습니다. <a class="reference internal" href="#jobs">작업에 대한 자세한 정보를 확인하세요</a></p>
+<p><img alt="alt text" class="intxt-image" src="../_images/jobs-icon.png" />를 클릭하여 <strong>Jobs</strong> 영역을 엽니다. 여기에서 add-on이나 사용자 입력에 의해 트리거되는 등 애플리케이션에서 실행 중인 작업 목록을 볼 수 있습니다. 작업 상태(보류 중, 실행 중, 성공, 실패)가 동적으로 표시됩니다. 여기에서 작업 로그 파일에 액세스하고 작업 아티팩트(artifacts)를 다운로드할 수 있습니다. <a class="reference internal" href="#jobs">작업에 대한 자세한 정보를 확인하세요</a></p>
 </section>
 <section id="d-help">
 <h4>D: Help<a class="headerlink" href="#d-help" title="Permalink to this heading"></a></h4>
@@ -987,8 +996,8 @@
 <p>세부 정보 패널에는 이름, 설명 및 테스트 결과의 식별자와 같은 추가 requirement 속성이 표시됩니다. <a class="reference internal" href="#mdm-requirements"><span class="xref myst">Requirements</span></a>에서 확인하세요.</p>
 <p><img alt="alt text" src="../_images/details-image.png" /></p>
 </section>
-<section id="threadholds">
-<h6>Threadholds<a class="headerlink" href="#threadholds" title="Permalink to this heading"></a></h6>
+<section id="thresholds">
+<h6>Thresholds<a class="headerlink" href="#thresholds" title="Permalink to this heading"></a></h6>
 <p>여기에는 requirements 결정에 대한 제한 또는 기준에 대한 자세한 정보가 나와 있습니다.
 현재 프로젝트 상태의 경우 임계값의 구성에 따라 평가(assessment)가 계산됩니다.</p>
 <p><img alt="alt text" src="../_images/threadholds-image.png" /></p>
@@ -1253,14 +1262,14 @@
 <section id="mdm-requirements">
 <h4>MDM requirements<a class="headerlink" href="#mdm-requirements" title="Permalink to this heading"></a></h4>
 <ul class="simple">
-<li><p><a class="reference internal" href="#"><span class="xref myst">Overview</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">View details about a requirement</span></a></p>
+<li><p><a class="reference internal" href="#overview-1"><span class="xref myst">Overview</span></a></p></li>
+<li><p><a class="reference internal" href="#view-details-about-a-requirement"><span class="xref myst">View details about a requirement</span></a></p>
 <ul>
-<li><p><a class="reference internal" href="#"><span class="xref myst">Details</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">Thresholds</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">Context</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">Attachments</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">History</span></a></p></li>
+<li><p><a class="reference internal" href="#details-1"><span class="xref myst">Details</span></a></p></li>
+<li><p><a class="reference internal" href="#thresholds-1"><span class="xref myst">Thresholds</span></a></p></li>
+<li><p><a class="reference internal" href="#context-1"><span class="xref myst">Context</span></a></p></li>
+<li><p><a class="reference internal" href="#attachments-1"><span class="xref myst">Attachments</span></a></p></li>
+<li><p><a class="reference internal" href="#history-1"><span class="xref myst">History</span></a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#"><span class="xref myst">Add new requirements</span></a></p>
@@ -1310,10 +1319,10 @@
 <li><p>상단 오른쪽 모서리의 <img alt="" src="../_images/left-side-two-arrow.png" />를 클릭합니다. 추가로 사이드 패널이 표시되며 다음 항목들이 포함됩니다.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#details-1"><span class="xref myst">Detail</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">Thresholds</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">Context</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">Attachments</span></a></p></li>
-<li><p><a class="reference internal" href="#"><span class="xref myst">History</span></a></p></li>
+<li><p><a class="reference internal" href="#thresholds-1"><span class="xref myst">Thresholds</span></a></p></li>
+<li><p><a class="reference internal" href="#context-1"><span class="xref myst">Context</span></a></p></li>
+<li><p><a class="reference internal" href="#attachments-1"><span class="xref myst">Attachments</span></a></p></li>
+<li><p><a class="reference internal" href="#history-1"><span class="xref myst">History</span></a></p></li>
 </ul>
 </li>
 </ol>
@@ -1327,19 +1336,385 @@
 <li><p><strong>Test result identifier</strong> - 필수 - requirement이 평가되는 기준이 되는 속성(attribute)입니다.</p></li>
 </ul>
 </section>
-<section id="thresholds">
-<h6>Thresholds<a class="headerlink" href="#thresholds" title="Permalink to this heading"></a></h6>
+<section id="id6">
+<h6>Thresholds<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h6>
 <p>requirement 임계값(thresholds)(주어진 한도 또는 기준)은 가중치 간격에 따라 점진적으로 정의됩니다. 각 평가 수준은 색상으로 표시되어 사용자에게 동의 여부를 강조합니다.</p>
 <p>requirement에 대한 테스트 속성 값의 동의 여부는 <span style="color:green">녹색</span>, <span style="color:yellow">노란색</span>, <span style="color:orange">주황색</span>, <span style="color:brown">갈색</span> 및 <span style="color:red">빨강색</span>으로 강조 표시된 범위로 가중치를 부여할 수 있습니다. 가중치가 없는 <span style="color:gray">회색</span> 평가도 있습니다.</p>
+<div class="tip admonition">
+<p class="admonition-title">Threshold ranks can be customized</p>
+<p>고급 권한(advanced permmision)이 있는 사용자는 MDM 임계값(thresholds) 등급을 사용자 지정할 수 있습니다. 즉, 고급 권한이 있는 사용자는 다음을 결정할 수 있다는 것을 의미합니다.</p>
+<ul class="simple">
+<li><p>임계값에 어떤 색상과 이름을 사용할지</p></li>
+<li><p>얼마나 많은 임계값이 필요한지</p></li>
+<li><p>임계값의 순위를 매길 순서(가장 높은 것부터 가장 낮은 것까지)</p></li>
+<li><p>사용자는 <strong>MDM</strong> &gt; <strong>MDM threshold rank</strong> 권한이 있고 사용자 계정이 <strong>Staff</strong>으로 표시된 경우에만 임계값(thresholds) 순위를 사용자 지정할 수 있습니다. 이러한 권한이 설정되어 있으면 사용자는 <strong>Admin area</strong>에서 임계값 순위를 사용자 지정할 수 있습니다. <a class="reference internal" href="scale-result.html#permissions"><span class="std std-ref">권한에 대한 자세한 내용을 참조하세요.</span></a></p></li>
+</ul>
+</div>
+</section>
+<section id="id7">
+<h6>Context<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h6>
+<p><strong>Context Attributes</strong>을 사용하여 사용자는 특정 지시어(directive), 충돌 실험 구성 또는 더미(dummy) 유형과 관련된 요구 사항의 기술적 적용 컨텍스트를 지정할 수 있습니다. 사용자는 MDM Attribute 값 목록 목록으로 컨텍스트를 정의할 수 있으며, 각 속성 키에 대해 여러 목록 값을 할당할 수 있습니다. 컨텍스트 그룹을 사용하여 <strong>Context Groups</strong>을 그룹화할 수 있습니다.</p>
+<p><strong>Context Attributes</strong> 목록을 기반으로 테스트와 관련 테스트 결과를 자동으로 매칭하여 project requirements에 대한 테스트 결과를 안내에 따라 보고할 수 있습니다.</p>
+</section>
+<section id="id8">
+<h6>Attachments<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h6>
+<p>각 requirement은 실험 지침(experimental guidelines), 기술 스케치(technical sketches) 또는 일반 문서 등 증빙 파일을 첨부하여 지정할 수 있습니다.</p>
+</section>
+<section id="id9">
+<h6>History<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h6>
+<p>Requirement 변경은 기록 패널에서 사용자를 추적되고 추적할 수 있습니다. 누가 몇 시에 무엇을 변경했는지에 대한 요약이 시간순으로 정렬된 목록으로 사용자에게 표시됩니다.</p>
+</section>
+</section>
+<section id="add-new-requirements">
+<h5>Add new requirements<a class="headerlink" href="#add-new-requirements" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Requirements</strong>로 이동합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/plus-only-icon.png" /> <strong>New</strong>를 클릭합니다.</p></li>
+<li><p>필요에 따라 설정을 구성합니다. 기본 설정과 <strong>Assessment</strong>, <strong>Context</strong> 및 <strong>Attachments</strong> 섹션에 대한 설명은 아래에 자세히 나와 있습니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하고 설정을 저장합니다. requirement는 개요에 표시됩니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/adding-a-new-requirement.png" /></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name (required)</p></td>
+<td><p>requirement의 이름을 입력합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Description</p></td>
+<td><p>requirement의 설명을 입력합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p>MDM attribute (required)</p></td>
+<td><p>테스트 결과 식별자(예: MDM 속성)를 입력합니다. 이 필드에는 자동 완성 기능이 있어 입력을 시작할 때 나머지 단어를 예측합니다. 참고: 검사 결과 식별자가 단위가 있는 숫자인 경우(예: chest deflection(mm)), 여기에도 단위가 표시됩니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Attribute key</p></td>
+<td><p>MDM 속성에 와일드카드(예: 자리 표시자(placeholder) ?)가 포함되어 있는 경우 이 필드를 사용하여 requirement가 적용되는 정확한 MDM 속성을 지정할 수 있습니다. 예: 더미(dummy)에 대한 속성을 만들고 와일드카드를 사용하여 해당 속성이 더미(dummy) 1~6에 적용되도록 했다고 가정해 보겠습니다. 이제 requirement가 더미(dummy) 2에만 적용되도록 하려면 속성 키(attribute key)를 사용하여 이를 지정하면 됩니다.</p></td>
+</tr>
+<tr class="row-even"><td><p>Display unit</p></td>
+<td><p>이 필드는 검사 결과 식별자가 단위가 있는 숫자인 경우에만 표시됩니다(예: chest deflection(mm)).</p></td>
+</tr>
+</tbody>
+</table>
+<section id="accessment">
+<h6>Accessment<a class="headerlink" href="#accessment" title="Permalink to this heading"></a></h6>
+<p>임계값을 추가하려면 <img alt="" class="intxt-image" src="../_images/black-plus.png" />를 클릭합니다. 왼쪽에서 임계값(thresholds)의 색상을 선택합니다. 오른쪽에서 임계값(thresholds)의 상한과 하한을 정의합니다. 평가 임계값(assessment thresholds) 간에는 종속성이 없습니다. 범위 열에 +-inf 및 –inf를 입력하여 무한대를 상한 및 하한으로 설정할 수 있습니다. ‘보다 작음’(<strong>&lt;</strong>) 및 ‘보다 같음’(<img alt="alt text" src="../_images/less-than-or-equal.png" />) 기호를 클릭하여 이 두 모드 사이를 전환할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/assessment.png" /></p>
+</section>
+<section id="id10">
+<h6>Context<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h6>
+<p>먼저 <strong>Add Context group</strong>을 클릭합니다. 컨텍스트 그룹(context group)은 유사한 컨텍스트 속성(context attributes)의 지정되지 않은 집합으로 생각할 수 있습니다. 이제 왼쪽에 속성(attribute)을 입력하고 오른쪽에 하나 또는 여러 개의 속성 값(attribute values)을 추가할 수 있습니다. 참고: 속성 목록에는 연결 속성만 포함되어 있습니다. 컨텍스트 그룹에 추가 속성을 추가하려면 <img alt="" class="intxt-image" src="../_images/black-plus.png" />를 클릭합니다.</p>
+<p><img alt="alt text" src="../_images/context.png" /></p>
+</section>
+<section id="id11">
+<h6>Attachments<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h6>
+<p><img alt="" class="intxt-image" src="../_images/black-plus.png" />를 클릭하고 <a class="reference internal" href="#attachments-1"><code class="xref myst docutils literal notranslate"><span class="pre">attachments-1</span></code></a>를 선택합니다.</p>
+<p><img alt="alt text" src="../_images/attachments.png" /></p>
+</section>
+</section>
+<section id="options-in-the-context-menu">
+<h5>Options in the context menu<a class="headerlink" href="#options-in-the-context-menu" title="Permalink to this heading"></a></h5>
+<p>개요(overview)에서 requirement를 마우스 오른쪽 버튼으로 클릭하여 상황에 맞는 메뉴에 액세스합니다. 상황에 맞는 메뉴에는 다음과 같은 옵션이 포함되어 있습니다.</p>
+<ul class="simple">
+<li><p><strong>Edit</strong>: 편집 화면을 엽니다. 이 화면에는 새 requirement를 추가할 때 사용할 수 있는 것과 동일한 옵션이 포함되어 있습니다.</p></li>
+<li><p><strong>Copy</strong>: 복사한 requirement를 복제하고 이름에 (Copy)가 추가된 편집 모드에서 엽니다.</p></li>
+<li><p><strong>Toggle active</strong>: 상태를 활성에서 비활성으로 또는 그 반대로 전환합니다.</p></li>
+<li><p><strong>Delete</strong>: requirement를 삭제합니다.</p></li>
+</ul>
+<p><img alt="alt text" src="../_images/Using-the-context-menu.png" /></p>
+</section>
+<section id="edit-multiple-requriements-at-ones">
+<h5>Edit multiple requriements at ones<a class="headerlink" href="#edit-multiple-requriements-at-ones" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>requirements</strong>으로 이동합니다.</p></li>
+<li><p>개요(overview)에서 여러 requirements를 선택한 다음(Ctrl. + 클릭) 마우스 오른쪽 버튼을 클릭합니다. 컨텍스트 메뉴가 열립니다. 컨텍스트 메뉴의 옵션은 선택한 모든 requirements와 관련이 있습니다.</p></li>
+<li><p><strong>Edit</strong>를 클릭합니다. 새 창이 열립니다. 여기에서 선택한 모든 requirements의 이름, 설명, 테스트 결과 식별자 및 평가 임계값(assessment thresholds)을 동시에 편집할 수 있습니다.</p></li>
+</ol>
+<section id="id12">
+<h6>Edit the names<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h6>
+<ol class="arabic simple">
+<li><p>체크 박스 <img alt="" class="intxt-image" src="../_images/check-box-icon.png" />를 클릭합니다.</p></li>
+<li><p><strong>Change to apply</strong> 드롭다운 목록에서 옵션을 선택합니다.</p>
+<ul class="simple">
+<li><p><strong>Replace</strong>: requirement 이름 내에서 특정 단어 하나를 변경합니다.</p></li>
+<li><p><strong>Replace all</strong>: 전체 requirement 이름을 변경합니다.</p></li>
+<li><p><strong>Add to beginning</strong>: requirement 이름의 시작 부분에 특정 텍스트를 추가합니다.</p></li>
+<li><p><strong>Add to end</strong>: requirement 이름 끝에 특정 텍스트를 추가합니다.</p></li>
+</ul>
+</li>
+<li><p>텍스트 필드에 텍스트를 입력합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/example-correct-a-typo-in-both-requirement-names.png" /></p>
+</section>
+<section id="id13">
+<h6>Edit the descriptions<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h6>
+<ol class="arabic simple">
+<li><p><strong>Description</strong> 필드 옆의 <img alt="" class="intxt-image" src="../_images/check-box-icon.png" />를 체크합니다.</p></li>
+<li><p><strong>Description</strong> 필드에 텍스트를 입력합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/example-update-the-descriptions-of-both-requirements.png" /></p>
+</section>
+<section id="edit-the-test-result-identifiers">
+<h6>Edit the test result identifiers<a class="headerlink" href="#edit-the-test-result-identifiers" title="Permalink to this heading"></a></h6>
+<ol class="arabic simple">
+<li><p><strong>Test result identifier</strong> 필드 옆의 체크박스 <img alt="" class="intxt-image" src="../_images/check-box-icon.png" />를 선택합니다.</p></li>
+<li><p>테스트 결과 식별자(test result identifier)를 입력합니다. 이 필드에는 자동 완성 기능이 있어 입력을 시작할 때 나머지 단어를 예측합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다. 테스트 결과 식별자(test result identifier)가 변경됩니다.</p></li>
+</ol>
+</section>
+<section id="id14">
+<h6>Edit the assessment thresholds<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h6>
+<ol class="arabic simple">
+<li><p><strong>Apply Changes to all Assessments</strong> 영역을 펼칩니다.</p></li>
+<li><p>체크박스 <img alt="" class="intxt-image" src="../_images/check-box-icon.png" />을 선택합니다.</p></li>
+<li><p>필요에 따라 평가 임계값(assessment thresholds)을 수정합니다. 절차는 새 requirement에 대한 평가 임계값을 저장할 때와 동일합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />을 클릭하여 설정을 저장합니다.</p></li>
+</ol>
 </section>
 </section>
 </section>
 <section id="mdm-test-cases">
 <h4>MDM test cases<a class="headerlink" href="#mdm-test-cases" title="Permalink to this heading"></a></h4>
+<p>Requirement을 테스트 케이스로 그룹화할 수 있습니다. 테스트 케이스에는 하나 이상의 requirements가 있으며 단일 requirement의 컨텍스트와 유사한 컨텍스트를 정의합니다. 테스트 케이스 컨텍스트는 테스트 케이스가 특정 테스트에 적용 가능한지 여부를 지정합니다.</p>
+<section id="id15">
+<h5>Overview<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h5>
+<p><strong>Requirements</strong> &gt; <strong>MDM</strong> &gt; <strong>Test cases</strong>로 이동하여 테스트 케이스들(Test cases)의 개요(overview)를 확인하세요. 개요의 데이터는 오름차순 또는 내림차순으로 필터링, 그룹화 및 정렬할 수 있습니다. 열(column)은 켜고 끌 수 있습니다. 이를 통해 현재 작업과 관련된 데이터만 표시할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/overview-of-mdm-test-cases.png" /></p>
+</section>
+<section id="add-new-test-cases">
+<h5>Add new test cases<a class="headerlink" href="#add-new-test-cases" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>MDM</strong> &gt; <strong>Test cases</strong>로 이동합니다.</p></li>
+<li><p>오른쪽 상단 모서리에서 <strong>New</strong>를 클릭합니다. 새 창이 열립니다.</p></li>
+<li><p>테스트 케이스(test case)의 이름을 입력합니다.</p></li>
+<li><p>Optional: 설명 및 코멘트(comment)을 입력하고 테스트 케이스(test case)에 대한 분야를 하나 이상 선택합니다.</p></li>
+<li><p>테스트 케이스가 활성 상태인지 비활성 상태인지 지정합니다.</p></li>
+<li><p><strong>Requirements</strong>: 테스트 케이스에 포함되어야 하는 모든 requirements를 확인합니다. 이 그리드의 requirements를 필터링, 그룹화 및 정렬하여 현재 작업과 관련된 데이터를 찾는 데 도움이 되도록 할 수 있습니다.</p></li>
+<li><p><strong>Context</strong>: 먼저 컨텍스트(context) 그룹 추가를 클릭합니다. 컨텍스트(context) 그룹은 주제적으로 유사한 컨텍스트(context) 속성의 지정되지 않은 집합으로 생각할 수 있습니다. 이제 왼쪽에 속성을 입력하고 오른쪽에 하나 또는 여러 개의 속성 값을 추가할 수 있습니다. 참고: 속성 목록에는 연결 속성만 포함되어 있습니다. <img alt="" class="intxt-image" src="../_images/black-plus.png" />를 클릭하여 컨텍스트(context) 그룹에 추가 속성을 추가합니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다. 테스트 케이스가 개요에 나타납니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/adding-a-new-test-case.png" /></p>
+</section>
+<section id="id16">
+<h5>Options in the context menu<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h5>
+<p>개요(overview)에서 테스트 케이스(test case)를 마우스 오른쪽 버튼으로 클릭하여 컨텍스트 메뉴에 액세스합니다. 컨텍스트 메뉴에는 다음과 같은 옵션이 있습니다.</p>
+<ul class="simple">
+<li><p><strong>Copy</strong>: 복사한 테스트 케이스를 복제하고 테스트 이름에 (<em>copy</em>)를 추가하여 편집 모드에서 엽니다. 이 옵션은 외부(external) 및 내부(internal) 테스트 케이스 모두에 사용할 수 있습니다. 참고: 외부 테스트 케이스를 복사하는 경우 복제본은 내부 테스트 케이스가 됩니다.</p></li>
+<li><p><strong>Edit</strong>: 편집 화면을 엽니다. 이 옵션은 내부 테스트 케이스에만 사용할 수 있습니다.</p></li>
+<li><p><strong>Remove</strong>: 테스트 케이스를 삭제합니다. 이 옵션은 내부 테스트 케이스에만 사용할 수 있으며 프로젝트에서 사용되지 않는 테스트 케이스에 대해서만 사용할 수 있습니다.</p></li>
+<li><p><strong>Toggle active</strong>: 상태를 활성에서 비활성으로 또는 그 반대로 전환합니다. 이 옵션은 내부 테스트 케이스에만 사용할 수 있습니다.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Internal vs. external test cases</p>
+<ul class="simple">
+<li><p><strong>Internal</strong>: 내부 테스트 케이스들은 수동으로 개요에 추가됩니다. 추가로 편집하거나 삭제 할 수 있습니다.</p></li>
+<li><p><strong>External</strong>: 외부 테스트 케이스들은 개요에서 가져올 수 있습니다. 읽기 전용이므로 편집하거나 삭제할 수 없습니다.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+<section id="add-ons">
+<h3>Add-ons<a class="headerlink" href="#add-ons" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#add-ons-overview"><span class="xref myst">Add-ons overview</span></a></p></li>
+<li><p><a class="reference internal" href="#adding-a-new-add-on"><span class="xref myst">Adding a new add-on</span></a></p></li>
+<li><p><a class="reference internal" href="#editing-add-ons"><span class="xref myst">Editing add-ons</span></a></p></li>
+<li><p><a class="reference internal" href="#periodic-add-ons"><span class="xref myst">Periodic add-ons</span></a></p></li>
+</ul>
+<hr class="docutils" />
+<p>Add-ons은 기존 애플리케이션에 특정 기능 세트를 추가하기 위해 설치할 수 있는 소프트웨어 구성 요소입니다. 대표적인 예로는 웹 보고서, 타사 시스템에 대한 데이터 참조 또는 데이터 분석 애드온(Add-on)이 있습니다. 애드온은 타사에서 개발하여 애플리케이션 회사에서 독립적으로 제공할 수도 있습니다.</p>
+<p>SCALE에서 개발한 애드온에 대한 개요는 애드온(Add-ons)에서 확인할 수 있습니다.</p>
+<section id="add-ons-overview">
+<h4>Add-ons overview<a class="headerlink" href="#add-ons-overview" title="Permalink to this heading"></a></h4>
+<p>Add-on을 선택하기 위해 다음과 같이 진행합니다.</p>
+<ol class="arabic simple">
+<li><p>상단 오른쪽 모서리의 <img alt="" class="intxt-image" src="../_images/three-horizontal-icon.png" />를 클릭합니다.</p></li>
+<li><p>나타나는 메뉴에서 <strong>Configuration</strong>을 클릭합니다.</p></li>
+<li><p>configuration영역의 왼쪽 사이드 바에서 <strong>Add-ons</strong>를 클릭합니다. 사용 가능한 애드온들이 표시됩니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/add-ons-overview.png" /></p>
+<p>한 줄을 클릭하면 추가 기능에 대한 자세한 상세 보기가 열리며, 기본 속성과 추가 정보를 확인할 수 있습니다.</p>
+<div class="tip admonition">
+<p class="admonition-title">Add-on properties</p>
+<ul class="simple">
+<li><p><strong>Schedule</strong>: linear (&gt;) 및 periodically ( <img alt="alt text" class="intxt-images" src="../_images/periodically.png" /> ) 실행되는 추가 기능의 아이콘을 표시합니다.</p></li>
+<li><p><strong>Name</strong>: Add-on의 이름입니다.</p></li>
+<li><p><strong>Version</strong>: 현재 시스템에 설치된 add-on의 버전 번호입니다.</p></li>
+<li><p><strong>Modified</strong>: 마지막 수정 또는 업데이트 날짜</p></li>
+<li><p><strong>Type</strong>: Add-on을 실행할 수 있는 컨텍스트에 대한 정보(다음 옵션을 포함)입니다:</p>
+<ul>
+<li><p><strong>Browser Add-on</strong>: 이 유형의 add-on은 브라우저 애플리케이션에 더 많은 기능을 추가합니다. 이 유형의 add-on은 모든 데스크톱 설치에서도 사용할 수 있습니다.</p></li>
+<li><p><strong>Desktop Add-on</strong>: 이 추가 기능은 애플리케이션이 데스크톱 클라이언트에서 실행 중인 경우에만 표시됩니다.</p></li>
+</ul>
+</li>
+<li><p><strong>Next Execution</strong>: add-on의 다음 실행 예정 날짜 및 시간입니다. 현재 add-on이 정기 add-on으로 표시된 경우에만 표시됩니다. 자세한 내용은 <a class="reference internal" href="#periodic-add-ons"><span class="xref myst">Periodic Add-ons</span></a>을 참조하세요.</p></li>
+<li><p><strong>Status</strong>: 토글 스위치로 add-on을 활성화 또는 비활성화할 수 있습니다.</p></li>
+</ul>
+</div>
+<p><img alt="alt text" src="../_images/add-ons-detail-view.png" /></p>
+<p>헤더(header)에서 토글 스위치를 사용하여 add-on을 활성화 및 비활성화할 수 있습니다. 강조 표시된(highlighted) 배경(background)은 add-on이 활성화되어 사용자에게 표시됨을 나타냅니다. 토글 아이콘이 회색으로 표시되어 있으면 add-on이 현재 비활성화된 상태이며 애플리케이션에서 사용할 수 없습니다. <img alt="alt text" class="intxt-images" src="../_images/download-add-on.png" />를 클릭하면 add-on을 다운로드할 수 있고, <img alt="alt text" class="intxt-images" src="../_images/remove-icon.png" />를 클릭하면 add-on을 삭제할 수 있습니다.</p>
+<p>add-on에 대한 정보는 다음과 같습니다:</p>
+<div class="tip admonition">
+<p class="admonition-title">Add-on information</p>
+<ul class="simple">
+<li><p><strong>Description</strong>: add-on의 목적과 기능을 포함한 add-on에 대한 간략한 개요입니다. 특정 add-on의 기능이 무엇인지 잘 모르겠다면 여기에서 자세한 정보를 확인할 수 있습니다.</p></li>
+<li><p><strong>Modification Date</strong>: add-on을 마지막으로 수정하거나 업데이트한 날짜와 시간입니다.</p></li>
+<li><p><strong>Type</strong>: 브라우저 또는 데스크톱 add-on를 구분합니다.</p></li>
+<li><p><strong>Version</strong>: 현재 시스템에 설치된 add-on의 버전 번호입니다.</p></li>
+<li><p><strong>Next Execution</strong>: add-on의 다음 실행 예정 날짜 및 시간입니다. 현재 add-on이 정기(periodic) add-on으로 표시된 경우에만 표시됩니다. 자세한 내용은 <a class="reference internal" href="#periodic-add-ons"><span class="xref myst">Periodic Add-ons</span></a>을 참조하세요.</p></li>
+</ul>
+</div>
+<p><em>Properties</em> 패널 아래에는 두 개의 추가 패널이 있습니다:</p>
+<ul class="simple">
+<li><p><em>History</em>: 이 패널에서는 수정 날짜 및 시간, 수정한 사용자, 수정에 대한 간략한 설명을 포함하여 add-on에 대한 모든 변경 사항에 대한 자세한 개요를 제공합니다.</p></li>
+<li><p><em>Changelogs</em>: 변경 로그는 시스템 또는 소프트웨어에 대한 모든 변경, 업데이트 및 개선 사항을 문서화한 기록입니다. add-on과 관련하여 발생한 모든 변경사항에 대한 개요를 제공하기 위해 여기에 표시됩니다.</p></li>
+</ul>
+</section>
+<section id="adding-a-new-add-on">
+<h4>Adding a new add-on<a class="headerlink" href="#adding-a-new-add-on" title="Permalink to this heading"></a></h4>
+<p><a class="reference internal" href="#add-ons-overview"><span class="xref myst">add-ons overview</span></a>의 하단 오른쪽 모서리에 <img alt="" class="intxt-image" src="../_images/black-plus.png" />를 클릭하여 새 add-on을 추가 합니다.</p>
+<p><img alt="alt text" src="../_images/add-new-add-on-view.png" /></p>
+<ol class="arabic simple">
+<li><p><img alt="alt text" class="intxt-image" src="../_images/upload-icon.png" /> <strong>Upload new File</strong>를 클릭하여 .zip 파일을 업로드 합니다.</p></li>
+<li><p>추가적으로 다음의 속성을 정의할 수 있습니다.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Add-on properties</p>
+<ul class="simple">
+<li><p><strong>Restrictions</strong> - <em>optional</em> - add-on이 연결되고 액세스할 수 있는 애플리케이션 <a class="reference internal" href="#"><span class="xref myst">presets</span></a>을 여러 개 선택할 수 있습니다.</p></li>
+<li><p><strong>Contact Data</strong> - <em>mandatory</em> - <strong>Person</strong> 모델의 개체가 있는 드롭다운 메뉴 입니다.</p></li>
+</ul>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>add-on 파일을 업로드 하고 속성을 설정한 후에 <img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 add-on을 추가합니다.</p></li>
+<li><p><strong>X</strong>를 클릭하면 add-on 추가는 취소되고 다시 <a class="reference internal" href="#add-ons-overview"><span class="xref myst">add-ons overview</span></a>로 돌아갑니다.</p></li>
+</ol>
+<div class="caution admonition">
+<p class="admonition-title">Bad add-on file</p>
+<p>만약 유효한 .zip add-on 파일이 아니라면 애플리케이션은 업로드은 취소되며 새 add-on은 설치되지 않습니다. 이럴 경우 add-on 공급자에게 문의하고 올바른 add-on 파일이 업로드 되도록 하세요.</p>
+</div>
+</section>
+<section id="editing-add-ons">
+<h4>Editing add-ons<a class="headerlink" href="#editing-add-ons" title="Permalink to this heading"></a></h4>
+<p>이미 설치된 add-on을 편집하려면 add-on의 상세 보기에서 <strong>circle pen</strong>을 클릭합니다. add-on을 편집하는 것은 새 add-on을 추가하는 것과 거의 동일합니다. 그러면 새 add-on 파일을 업로드하고, 일정을 변경하고, 사전 설정된 제한을 설정하고, 담당자를 지정할 수 있는 편집 페이지로 이동합니다.</p>
+</section>
+<section id="periodic-add-ons">
+<h4>Periodic add-ons<a class="headerlink" href="#periodic-add-ons" title="Permalink to this heading"></a></h4>
+<p>업로드한 add-on이 주기적으로 실행되도록 하려면 <strong>circle pen</strong>을 클릭하면 추가 일정 섹션을 표시합니다. 목록에서 원하는 시간과 요일을 선택하여 간단한 주간 일정을 설정할 수 있습니다. 보다 복잡한 일정이 필요한 경우에는 <strong>Use crontab syntax</strong> 버튼을 사용하여 crontab 구문을 사용하여 사용자 지정 일정을 설정할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/schedule-for-periodic-execution-of-add-ons.png" /></p>
+<p>crontab 구문은 각 시간 옵션마다 분, 시간, 요일, 월, 요일 등 다섯 개의 입력 필드를 필요로 합니다.</p>
+<div class="caution admonition">
+<p class="admonition-title">Caution</p>
+<p>crontab 구문을 사용하여 사용자 지정 일정을 설정할 때는 각 필드의 값을 올바르게 입력하는 것이 중요하다는 점에 유의하세요. 잘못된 값을 입력하면 애드온이 원하는 시간에 실행되지 않거나 아예 실행되지 않을 수 있습니다.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Periodic settings</p>
+<ul class="simple">
+<li><p><strong>Minutes</strong>: [0-59] - 명령이 실행되어야 하는 시간의 분을 나타냅니다.</p></li>
+<li><p><strong>Hours</strong>: 시: [0-23] - 명령이 실행되어야 하는 하루 중 시간을 나타냅니다.</p></li>
+<li><p><strong>Day of the month</strong>: [1-31] - 명령이 실행되어야 하는 월의 요일을 나타냅니다.</p></li>
+<li><p><strong>Month</strong>: [1-12] 또는 월 이름(예: “Jan” 또는 “February”) - 명령이 실행되어야 하는 월을 나타냅니다.</p></li>
+<li><p><strong>Day of the week</strong>: [0-7] 또는 요일 이름(예: “Sun” 또는 “Monday”, 여기서 0과 7은 모두 일요일을 나타냄) - 명령이 실행되어야 하는 요일을 나타냅니다.</p></li>
+</ul>
+</div>
+<p>각 입력 필드에는 각각 으로 구분하여 여러 옵션을 포함할 수 있습니다. 예를 들어 분 필드에 0, 15, 30, 45를 입력하면 1시간의 1/4마다 작업이 수행됩니다.</p>
+<p>다음 실행 필드에는 입력에 따라 다음 세 번의 실행이 표시됩니다. 이 필드를 사용하여 일정이 예상과 일치하는지 확인할 수 있습니다.</p>
+<div class="caution admonition">
+<p class="admonition-title">Caution</p>
+<p>실행 일정을 너무 자주 설정하면 작업 대기열이 백업되는 문제가 발생하여 시스템 성능에 영향을 미치고 다른 작업을 실행하는 데 방해가 될 수 있습니다. 새 작업을 시작하기 전에 시스템이 작업을 완료할 충분한 시간을 확보할 수 있도록 부가 기능의 실행 시간보다 짧은 일정을 설정하지 않는 것이 중요합니다.</p>
+</div>
 </section>
 </section>
 <section id="user-management">
 <h3>User management<a class="headerlink" href="#user-management" title="Permalink to this heading"></a></h3>
+<p><strong>User management</strong> 메뉴에서는 사용자 계정, 그룹, 글로벌 역할, 프로젝트 역할을 만들 수 있습니다.</p>
+<ol class="arabic simple">
+<li><p>상단 오른쪽 모서리의 <img alt="" class="intxt-image" src="../_images/three-horizontal-icon.png" />를 클릭합니다.</p></li>
+<li><p><strong>Configuration</strong>을 선택합니다.</p></li>
+<li><p>왼쪽 메뉴에서 <strong>User management</strong>를 클릭하고 다음에서 원하는 항목을 선택합니다.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#"><span class="xref myst">Users</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Groups</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Access tokens</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Global roles</span></a></p></li>
+<li><p><a class="reference internal" href="#"><span class="xref myst">Project roles</span></a></p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<section id="users">
+<h4>Users<a class="headerlink" href="#users" title="Permalink to this heading"></a></h4>
+<p><strong>Users</strong> 보기에서는 시스템의 모든 사용자 계정에 대한 개요를 제공합니다. 화면 상단의 필터를 사용하여 특정 사용자를 검색할 수 있습니다.</p>
+<p><img alt="alt text" src="../_images/overview-of-all-users.png" /></p>
+<section id="create-or-edit-a-user-account">
+<h5>Create or edit a user account<a class="headerlink" href="#create-or-edit-a-user-account" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p><strong>Configuration</strong> &gt; <strong>User management</strong> &gt; <strong>Users</strong>로 이동합니다.</p></li>
+<li><p>기존 사용자 계정을 수정하거나 삭제하려면 개요에서 해당 사용자를 클릭합니다. 새 사용자 계정을 만들려면 오른쪽 상단 모서리에서 <strong>New</strong>를 클릭합니다.</p></li>
+<li><p>필요에 따라 설정을 구성합니다. 각 설정에 대한 설명은 아래에 나와 있습니다.</p></li>
+<li><p><img alt="" class="intxt-image" src="../_images/save-icon.png" />를 클릭하여 설정을 저장합니다.</p></li>
+</ol>
+<p><img alt="alt text" src="../_images/create-or-edit-a-user-account.png" /></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Setting</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="" class="intxt-image" src="../_images/remove-icon.png" /></p></td>
+<td><p>사용자를 삭제하려면 이 아이콘을 클릭합니다.
+<strong>Caution</strong>: 이렇게 하면 데이터베이스에서 사용자 개체가 영구적으로 제거됩니다. 일시적으로 로그인을 금지해야 하는 경우 <strong>General information</strong> 섹션까지 아래로 스크롤하여 <strong>Active</strong> 설정 옆의 확인 표시를 제거합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>User name</strong></p></td>
+<td><p>인증 페이지의 로그인 이름입니다. 사용자 이름은 다음 요구 사항을 충족해야 합니다:</p>
+<ul class="simple">
+<li><p>150자 이하.</p></li>
+<li><p>문자, 숫자 및 &#64; . + - _</p></li>
+</ul>
+<p>참고: 사용자 아이디가 변경되면 현재 자격 증명이 더 이상 유효하지 않으므로 사용자는 다시 로그인해야 합니다.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Internal</strong>
+<strong>External</strong></p></td>
+<td><p>사용자 이름 옆에는 사용자가 내부 사용자인지 외부 사용자인지를 나타내는 칩(chip)이 있습니다.</p>
+<ul class="simple">
+<li><p><strong>Internal</strong>: 사용자 이름, 이메일, 표시 이름 등의 정보를 수정할 수 있습니다.</p></li>
+<li><p><strong>External</strong>: 사용자와 해당 정보는 외부 ID 공급업체에서 가져온 것입니다. 따라서 사용자 이름, 이메일, 표시 이름 등의 정보는 편집할 수 없습니다.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Change pasword</strong></p></td>
+<td><p>사용자의 비밀번호를 변경하려면 이 버튼을 클릭합니다. 비밀번호는 다음 요건을 충족해야 합니다:</p>
+<ul class="simple">
+<li><p>다른 개인정보와 유사하지 않아야 합니다.</p></li>
+<li><p>일반적으로 사용하는 비밀번호가 아닐 수 있습니다.</p></li>
+<li><p>8자 이상이어야 합니다.</p></li>
+<li><p>숫자와 문자를 모두 포함해야 합니다.</p></li>
+</ul>
+<p>참고: 비밀번호가 변경되면 현재 자격 증명이 더 이상 유효하지 않으므로 사용자는 다시 로그인해야 합니다.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<section id="users-personal-information">
+<h6>Users: Personal information<a class="headerlink" href="#users-personal-information" title="Permalink to this heading"></a></h6>
+</section>
+</section>
+</section>
 <section id="permissions">
 <h4>Permissions<a class="headerlink" href="#permissions" title="Permalink to this heading"></a></h4>
 </section>
@@ -1361,7 +1736,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="scale-model.html" class="btn btn-neutral float-left" title="SCALE.Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="scale.sdm.html" class="btn btn-neutral float-right" title="SCALE.sdm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="scale-result.html" class="btn btn-neutral float-right" title="Result" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

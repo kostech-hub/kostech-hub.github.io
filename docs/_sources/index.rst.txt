@@ -49,4 +49,5 @@ Welcome to KOSTECH documentation!
 
    ./SCALE/scale-model
    ./SCALE/scale-project
+   ./SCALE/scale-result
    ./SCALE/scale.sdm

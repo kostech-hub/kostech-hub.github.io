@@ -592,7 +592,7 @@ Requirement의 상태를 확인하는 다음과 같은 방법들이 있습니다
 
 #### C: Jobs
 
-![alt text](images/jobs-icon.png){class="intxt-image"}를 클릭하여 **Jobs** 영역을 엽니다. 여기에서 애드온이나 사용자 입력에 의해 트리거되는 등 애플리케이션에서 실행 중인 작업 목록을 볼 수 있습니다. 작업 상태(보류 중, 실행 중, 성공, 실패)가 동적으로 표시됩니다. 여기에서 작업 로그 파일에 액세스하고 작업 아티팩트(artifacts)를 다운로드할 수 있습니다. [작업에 대한 자세한 정보를 확인하세요](#jobs)
+![alt text](images/jobs-icon.png){class="intxt-image"}를 클릭하여 **Jobs** 영역을 엽니다. 여기에서 add-on이나 사용자 입력에 의해 트리거되는 등 애플리케이션에서 실행 중인 작업 목록을 볼 수 있습니다. 작업 상태(보류 중, 실행 중, 성공, 실패)가 동적으로 표시됩니다. 여기에서 작업 로그 파일에 액세스하고 작업 아티팩트(artifacts)를 다운로드할 수 있습니다. [작업에 대한 자세한 정보를 확인하세요](#jobs)
 
 #### D: Help
 
@@ -737,7 +737,7 @@ requirement를 클릭한 다음 ![alt text](images/left-side-two-arrow.png){clas
 
 ![alt text](images/details-image.png)
 
-###### Threadholds
+###### Thresholds
 
 여기에는 requirements 결정에 대한 제한 또는 기준에 대한 자세한 정보가 나와 있습니다.
 현재 프로젝트 상태의 경우 임계값의 구성에 따라 평가(assessment)가 계산됩니다.
@@ -976,13 +976,13 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
 
 #### MDM requirements
 
-- [Overview]()
-- [View details about a requirement]()
-    - [Details]()
-    - [Thresholds]()
-    - [Context]()
-    - [Attachments]()
-    - [History]()
+- [Overview](#overview-1)
+- [View details about a requirement](#view-details-about-a-requirement)
+    - [Details](#details-1)
+    - [Thresholds](#thresholds-1)
+    - [Context](#context-1)
+    - [Attachments](#attachments-1)
+    - [History](#history-1)
 - [Add new requirements]()
     - [Assessment]()
     - [Context]()
@@ -1026,10 +1026,10 @@ Requirements은 기술 프로젝트 목표와 관련하여 테스트 결과를 �
 3. 상단 오른쪽 모서리의 ![](images/left-side-two-arrow.png)를 클릭합니다. 추가로 사이드 패널이 표시되며 다음 항목들이 포함됩니다.
 
     - [Detail](#details-1)
-    - [Thresholds]()
-    - [Context]()
-    - [Attachments]()
-    - [History]()
+    - [Thresholds](#thresholds-1)
+    - [Context](#context-1)
+    - [Attachments](#attachments-1)
+    - [History](#history-1)
 
 ![alt text](images/overview-with-expanded-side-panel.png)
 
@@ -1047,11 +1047,344 @@ requirement 임계값(thresholds)(주어진 한도 또는 기준)은 가중치 �
 
 requirement에 대한 테스트 속성 값의 동의 여부는 <span style="color:green">녹색</span>, <span style="color:yellow">노란색</span>, <span style="color:orange">주황색</span>, <span style="color:brown">갈색</span> 및 <span style="color:red">빨강색</span>으로 강조 표시된 범위로 가중치를 부여할 수 있습니다. 가중치가 없는 <span style="color:gray">회색</span> 평가도 있습니다.
 
+:::{admonition} Threshold ranks can be customized
+:class: tip
+고급 권한(advanced permmision)이 있는 사용자는 MDM 임계값(thresholds) 등급을 사용자 지정할 수 있습니다. 즉, 고급 권한이 있는 사용자는 다음을 결정할 수 있다는 것을 의미합니다.
 
+- 임계값에 어떤 색상과 이름을 사용할지
+- 얼마나 많은 임계값이 필요한지
+- 임계값의 순위를 매길 순서(가장 높은 것부터 가장 낮은 것까지)
+- 사용자는 **MDM** > **MDM threshold rank** 권한이 있고 사용자 계정이 **Staff**으로 표시된 경우에만 임계값(thresholds) 순위를 사용자 지정할 수 있습니다. 이러한 권한이 설정되어 있으면 사용자는 **Admin area**에서 임계값 순위를 사용자 지정할 수 있습니다. [권한에 대한 자세한 내용을 참조하세요.](./scale-result.md/#permissions)
+:::
+
+###### Context
+
+**Context Attributes**을 사용하여 사용자는 특정 지시어(directive), 충돌 실험 구성 또는 더미(dummy) 유형과 관련된 요구 사항의 기술적 적용 컨텍스트를 지정할 수 있습니다. 사용자는 MDM Attribute 값 목록 목록으로 컨텍스트를 정의할 수 있으며, 각 속성 키에 대해 여러 목록 값을 할당할 수 있습니다. 컨텍스트 그룹을 사용하여 **Context Groups**을 그룹화할 수 있습니다.
+
+**Context Attributes** 목록을 기반으로 테스트와 관련 테스트 결과를 자동으로 매칭하여 project requirements에 대한 테스트 결과를 안내에 따라 보고할 수 있습니다.
+
+###### Attachments
+
+각 requirement은 실험 지침(experimental guidelines), 기술 스케치(technical sketches) 또는 일반 문서 등 증빙 파일을 첨부하여 지정할 수 있습니다.
+
+###### History
+
+Requirement 변경은 기록 패널에서 사용자를 추적되고 추적할 수 있습니다. 누가 몇 시에 무엇을 변경했는지에 대한 요약이 시간순으로 정렬된 목록으로 사용자에게 표시됩니다.
+
+##### Add new requirements
+
+1. **Configuration** > **MDM** > **Requirements**로 이동합니다.
+2. ![](images/plus-only-icon.png){class="intxt-image"} **New**를 클릭합니다.
+3. 필요에 따라 설정을 구성합니다. 기본 설정과 **Assessment**, **Context** 및 **Attachments** 섹션에 대한 설명은 아래에 자세히 나와 있습니다.
+4. ![](images/save-icon.png){class="intxt-image"}를 클릭하고 설정을 저장합니다. requirement는 개요에 표시됩니다.
+
+![alt text](images/adding-a-new-requirement.png)
+
+:::{list-table}
+:widths: 15 100
+:header-rows: 1
+
+*   - Setting
+    - Explanation    
+*   - Name (required)
+    - requirement의 이름을 입력합니다.
+*   - Description
+    - requirement의 설명을 입력합니다.
+*   - MDM attribute (required)
+    - 테스트 결과 식별자(예: MDM 속성)를 입력합니다. 이 필드에는 자동 완성 기능이 있어 입력을 시작할 때 나머지 단어를 예측합니다. 참고: 검사 결과 식별자가 단위가 있는 숫자인 경우(예: chest deflection(mm)), 여기에도 단위가 표시됩니다.
+*   - Attribute key
+    - MDM 속성에 와일드카드(예: 자리 표시자(placeholder) ?)가 포함되어 있는 경우 이 필드를 사용하여 requirement가 적용되는 정확한 MDM 속성을 지정할 수 있습니다. 예: 더미(dummy)에 대한 속성을 만들고 와일드카드를 사용하여 해당 속성이 더미(dummy) 1~6에 적용되도록 했다고 가정해 보겠습니다. 이제 requirement가 더미(dummy) 2에만 적용되도록 하려면 속성 키(attribute key)를 사용하여 이를 지정하면 됩니다.
+*   - Display unit
+    - 이 필드는 검사 결과 식별자가 단위가 있는 숫자인 경우에만 표시됩니다(예: chest deflection(mm)).
+:::
+
+###### Accessment
+
+임계값을 추가하려면 ![](images/black-plus.png){class="intxt-image"}를 클릭합니다. 왼쪽에서 임계값(thresholds)의 색상을 선택합니다. 오른쪽에서 임계값(thresholds)의 상한과 하한을 정의합니다. 평가 임계값(assessment thresholds) 간에는 종속성이 없습니다. 범위 열에 +-inf 및 --inf를 입력하여 무한대를 상한 및 하한으로 설정할 수 있습니다. '보다 작음'(**<**) 및 '보다 같음'(![alt text](images/less-than-or-equal.png)) 기호를 클릭하여 이 두 모드 사이를 전환할 수 있습니다.
+
+![alt text](images/assessment.png)
+
+###### Context
+
+먼저 **Add Context group**을 클릭합니다. 컨텍스트 그룹(context group)은 유사한 컨텍스트 속성(context attributes)의 지정되지 않은 집합으로 생각할 수 있습니다. 이제 왼쪽에 속성(attribute)을 입력하고 오른쪽에 하나 또는 여러 개의 속성 값(attribute values)을 추가할 수 있습니다. 참고: 속성 목록에는 연결 속성만 포함되어 있습니다. 컨텍스트 그룹에 추가 속성을 추가하려면 ![](images/black-plus.png){class="intxt-image"}를 클릭합니다.
+
+![alt text](images/context.png)
+
+###### Attachments
+
+![](images/black-plus.png){class="intxt-image"}를 클릭하고 [](#attachments-1)를 선택합니다.
+
+![alt text](images/attachments.png)
+
+##### Options in the context menu
+
+개요(overview)에서 requirement를 마우스 오른쪽 버튼으로 클릭하여 상황에 맞는 메뉴에 액세스합니다. 상황에 맞는 메뉴에는 다음과 같은 옵션이 포함되어 있습니다.
+
+- **Edit**: 편집 화면을 엽니다. 이 화면에는 새 requirement를 추가할 때 사용할 수 있는 것과 동일한 옵션이 포함되어 있습니다.
+- **Copy**: 복사한 requirement를 복제하고 이름에 (Copy)가 추가된 편집 모드에서 엽니다.
+- **Toggle active**: 상태를 활성에서 비활성으로 또는 그 반대로 전환합니다.
+- **Delete**: requirement를 삭제합니다.
+
+![alt text](images/Using-the-context-menu.png)
+
+##### Edit multiple requriements at ones
+
+1. **Configuration** > **MDM** > **requirements**으로 이동합니다.
+2. 개요(overview)에서 여러 requirements를 선택한 다음(Ctrl. + 클릭) 마우스 오른쪽 버튼을 클릭합니다. 컨텍스트 메뉴가 열립니다. 컨텍스트 메뉴의 옵션은 선택한 모든 requirements와 관련이 있습니다.
+3. **Edit**를 클릭합니다. 새 창이 열립니다. 여기에서 선택한 모든 requirements의 이름, 설명, 테스트 결과 식별자 및 평가 임계값(assessment thresholds)을 동시에 편집할 수 있습니다.
+
+###### Edit the names
+
+1. 체크 박스 ![](images/check-box-icon.png){class="intxt-image"}를 클릭합니다.
+2. **Change to apply** 드롭다운 목록에서 옵션을 선택합니다.
+    - **Replace**: requirement 이름 내에서 특정 단어 하나를 변경합니다.
+    - **Replace all**: 전체 requirement 이름을 변경합니다.
+    - **Add to beginning**: requirement 이름의 시작 부분에 특정 텍스트를 추가합니다.
+    - **Add to end**: requirement 이름 끝에 특정 텍스트를 추가합니다.
+3. 텍스트 필드에 텍스트를 입력합니다.
+4. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다.
+
+![alt text](images/example-correct-a-typo-in-both-requirement-names.png)
+
+###### Edit the descriptions
+
+1. **Description** 필드 옆의 ![](images/check-box-icon.png){class="intxt-image"}를 체크합니다.
+2. **Description** 필드에 텍스트를 입력합니다.
+3. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다.
+
+![alt text](images/example-update-the-descriptions-of-both-requirements.png)
+
+###### Edit the test result identifiers
+
+1. **Test result identifier** 필드 옆의 체크박스 ![](images/check-box-icon.png){class="intxt-image"}를 선택합니다.
+2. 테스트 결과 식별자(test result identifier)를 입력합니다. 이 필드에는 자동 완성 기능이 있어 입력을 시작할 때 나머지 단어를 예측합니다.
+3. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다. 테스트 결과 식별자(test result identifier)가 변경됩니다.
+
+###### Edit the assessment thresholds
+
+1. **Apply Changes to all Assessments** 영역을 펼칩니다.
+2. 체크박스 ![](images/check-box-icon.png){class="intxt-image"}을 선택합니다.
+3. 필요에 따라 평가 임계값(assessment thresholds)을 수정합니다. 절차는 새 requirement에 대한 평가 임계값을 저장할 때와 동일합니다.
+4. ![](images/save-icon.png){class="intxt-image"}을 클릭하여 설정을 저장합니다.
 
 #### MDM test cases
 
+Requirement을 테스트 케이스로 그룹화할 수 있습니다. 테스트 케이스에는 하나 이상의 requirements가 있으며 단일 requirement의 컨텍스트와 유사한 컨텍스트를 정의합니다. 테스트 케이스 컨텍스트는 테스트 케이스가 특정 테스트에 적용 가능한지 여부를 지정합니다.
+
+##### Overview
+
+**Requirements** > **MDM** > **Test cases**로 이동하여 테스트 케이스들(Test cases)의 개요(overview)를 확인하세요. 개요의 데이터는 오름차순 또는 내림차순으로 필터링, 그룹화 및 정렬할 수 있습니다. 열(column)은 켜고 끌 수 있습니다. 이를 통해 현재 작업과 관련된 데이터만 표시할 수 있습니다.
+
+![alt text](images/overview-of-mdm-test-cases.png)
+
+##### Add new test cases
+
+1. **Configuration** > **MDM** > **Test cases**로 이동합니다.
+2. 오른쪽 상단 모서리에서 **New**를 클릭합니다. 새 창이 열립니다.
+3. 테스트 케이스(test case)의 이름을 입력합니다.
+4. Optional: 설명 및 코멘트(comment)을 입력하고 테스트 케이스(test case)에 대한 분야를 하나 이상 선택합니다.
+5. 테스트 케이스가 활성 상태인지 비활성 상태인지 지정합니다.
+6. **Requirements**: 테스트 케이스에 포함되어야 하는 모든 requirements를 확인합니다. 이 그리드의 requirements를 필터링, 그룹화 및 정렬하여 현재 작업과 관련된 데이터를 찾는 데 도움이 되도록 할 수 있습니다.
+7. **Context**: 먼저 컨텍스트(context) 그룹 추가를 클릭합니다. 컨텍스트(context) 그룹은 주제적으로 유사한 컨텍스트(context) 속성의 지정되지 않은 집합으로 생각할 수 있습니다. 이제 왼쪽에 속성을 입력하고 오른쪽에 하나 또는 여러 개의 속성 값을 추가할 수 있습니다. 참고: 속성 목록에는 연결 속성만 포함되어 있습니다. ![](images/black-plus.png){class="intxt-image"}를 클릭하여 컨텍스트(context) 그룹에 추가 속성을 추가합니다.
+8. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다. 테스트 케이스가 개요에 나타납니다.
+
+![alt text](images/adding-a-new-test-case.png)
+
+##### Options in the context menu
+
+개요(overview)에서 테스트 케이스(test case)를 마우스 오른쪽 버튼으로 클릭하여 컨텍스트 메뉴에 액세스합니다. 컨텍스트 메뉴에는 다음과 같은 옵션이 있습니다.
+
+- **Copy**: 복사한 테스트 케이스를 복제하고 테스트 이름에 (_copy_)를 추가하여 편집 모드에서 엽니다. 이 옵션은 외부(external) 및 내부(internal) 테스트 케이스 모두에 사용할 수 있습니다. 참고: 외부 테스트 케이스를 복사하는 경우 복제본은 내부 테스트 케이스가 됩니다.
+- **Edit**: 편집 화면을 엽니다. 이 옵션은 내부 테스트 케이스에만 사용할 수 있습니다.
+- **Remove**: 테스트 케이스를 삭제합니다. 이 옵션은 내부 테스트 케이스에만 사용할 수 있으며 프로젝트에서 사용되지 않는 테스트 케이스에 대해서만 사용할 수 있습니다.
+- **Toggle active**: 상태를 활성에서 비활성으로 또는 그 반대로 전환합니다. 이 옵션은 내부 테스트 케이스에만 사용할 수 있습니다.
+
+:::{admonition} Internal vs. external test cases
+:class: tip
+- **Internal**: 내부 테스트 케이스들은 수동으로 개요에 추가됩니다. 추가로 편집하거나 삭제 할 수 있습니다.
+- **External**: 외부 테스트 케이스들은 개요에서 가져올 수 있습니다. 읽기 전용이므로 편집하거나 삭제할 수 없습니다.
+:::
+
+### Add-ons
+
+- [Add-ons overview](#add-ons-overview)
+- [Adding a new add-on](#adding-a-new-add-on)
+- [Editing add-ons](#editing-add-ons)
+- [Periodic add-ons](#periodic-add-ons)
+
+---
+
+Add-ons은 기존 애플리케이션에 특정 기능 세트를 추가하기 위해 설치할 수 있는 소프트웨어 구성 요소입니다. 대표적인 예로는 웹 보고서, 타사 시스템에 대한 데이터 참조 또는 데이터 분석 애드온(Add-on)이 있습니다. 애드온은 타사에서 개발하여 애플리케이션 회사에서 독립적으로 제공할 수도 있습니다.
+
+SCALE에서 개발한 애드온에 대한 개요는 애드온(Add-ons)에서 확인할 수 있습니다.
+
+#### Add-ons overview
+
+Add-on을 선택하기 위해 다음과 같이 진행합니다.
+
+1. 상단 오른쪽 모서리의 ![](images/three-horizontal-icon.png){class="intxt-image"}를 클릭합니다. 
+2. 나타나는 메뉴에서 **Configuration**을 클릭합니다.
+3. configuration영역의 왼쪽 사이드 바에서 **Add-ons**를 클릭합니다. 사용 가능한 애드온들이 표시됩니다. 
+
+![alt text](images/add-ons-overview.png)
+
+한 줄을 클릭하면 추가 기능에 대한 자세한 상세 보기가 열리며, 기본 속성과 추가 정보를 확인할 수 있습니다. 
+
+:::{admonition} Add-on properties
+:class: tip
+- **Schedule**: linear (>) 및 periodically ( ![alt text](images/periodically.png){class="intxt-images"} ) 실행되는 추가 기능의 아이콘을 표시합니다.
+- **Name**: Add-on의 이름입니다.
+- **Version**: 현재 시스템에 설치된 add-on의 버전 번호입니다.
+- **Modified**: 마지막 수정 또는 업데이트 날짜
+- **Type**: Add-on을 실행할 수 있는 컨텍스트에 대한 정보(다음 옵션을 포함)입니다:
+    - **Browser Add-on**: 이 유형의 add-on은 브라우저 애플리케이션에 더 많은 기능을 추가합니다. 이 유형의 add-on은 모든 데스크톱 설치에서도 사용할 수 있습니다.
+    - **Desktop Add-on**: 이 추가 기능은 애플리케이션이 데스크톱 클라이언트에서 실행 중인 경우에만 표시됩니다.
+- **Next Execution**: add-on의 다음 실행 예정 날짜 및 시간입니다. 현재 add-on이 정기 add-on으로 표시된 경우에만 표시됩니다. 자세한 내용은 [Periodic Add-ons](#periodic-add-ons)을 참조하세요.
+- **Status**: 토글 스위치로 add-on을 활성화 또는 비활성화할 수 있습니다.
+:::
+
+![alt text](images/add-ons-detail-view.png)
+
+헤더(header)에서 토글 스위치를 사용하여 add-on을 활성화 및 비활성화할 수 있습니다. 강조 표시된(highlighted) 배경(background)은 add-on이 활성화되어 사용자에게 표시됨을 나타냅니다. 토글 아이콘이 회색으로 표시되어 있으면 add-on이 현재 비활성화된 상태이며 애플리케이션에서 사용할 수 없습니다. ![alt text](images/download-add-on.png){class="intxt-images"}를 클릭하면 add-on을 다운로드할 수 있고, ![alt text](images/remove-icon.png){class="intxt-images"}를 클릭하면 add-on을 삭제할 수 있습니다.
+
+add-on에 대한 정보는 다음과 같습니다:
+
+:::{admonition} Add-on information
+:class: tip
+- **Description**: add-on의 목적과 기능을 포함한 add-on에 대한 간략한 개요입니다. 특정 add-on의 기능이 무엇인지 잘 모르겠다면 여기에서 자세한 정보를 확인할 수 있습니다.
+- **Modification Date**: add-on을 마지막으로 수정하거나 업데이트한 날짜와 시간입니다.
+- **Type**: 브라우저 또는 데스크톱 add-on를 구분합니다.
+- **Version**: 현재 시스템에 설치된 add-on의 버전 번호입니다.
+- **Next Execution**: add-on의 다음 실행 예정 날짜 및 시간입니다. 현재 add-on이 정기(periodic) add-on으로 표시된 경우에만 표시됩니다. 자세한 내용은 [Periodic Add-ons](#periodic-add-ons)을 참조하세요.
+:::
+
+_Properties_ 패널 아래에는 두 개의 추가 패널이 있습니다:
+
+- _History_: 이 패널에서는 수정 날짜 및 시간, 수정한 사용자, 수정에 대한 간략한 설명을 포함하여 add-on에 대한 모든 변경 사항에 대한 자세한 개요를 제공합니다.
+- _Changelogs_: 변경 로그는 시스템 또는 소프트웨어에 대한 모든 변경, 업데이트 및 개선 사항을 문서화한 기록입니다. add-on과 관련하여 발생한 모든 변경사항에 대한 개요를 제공하기 위해 여기에 표시됩니다.
+
+#### Adding a new add-on
+
+[add-ons overview](#add-ons-overview)의 하단 오른쪽 모서리에 ![](images/black-plus.png){class="intxt-image"}를 클릭하여 새 add-on을 추가 합니다.
+
+![alt text](images/add-new-add-on-view.png)
+
+1. ![alt text](images/upload-icon.png){class="intxt-image"} **Upload new File**를 클릭하여 .zip 파일을 업로드 합니다.
+2. 추가적으로 다음의 속성을 정의할 수 있습니다. 
+
+:::{admonition} Add-on properties
+:class: tip
+- **Restrictions** - _optional_ - add-on이 연결되고 액세스할 수 있는 애플리케이션 [presets]()을 여러 개 선택할 수 있습니다.
+- **Contact Data** - _mandatory_ - **Person** 모델의 개체가 있는 드롭다운 메뉴 입니다.
+:::
+
+3. add-on 파일을 업로드 하고 속성을 설정한 후에 ![](images/save-icon.png){class="intxt-image"}를 클릭하여 add-on을 추가합니다.
+4. **X**를 클릭하면 add-on 추가는 취소되고 다시 [add-ons overview](#add-ons-overview)로 돌아갑니다.
+
+:::{admonition} Bad add-on file
+:class: caution
+만약 유효한 .zip add-on 파일이 아니라면 애플리케이션은 업로드은 취소되며 새 add-on은 설치되지 않습니다. 이럴 경우 add-on 공급자에게 문의하고 올바른 add-on 파일이 업로드 되도록 하세요.
+:::
+
+#### Editing add-ons
+
+이미 설치된 add-on을 편집하려면 add-on의 상세 보기에서 **circle pen**을 클릭합니다. add-on을 편집하는 것은 새 add-on을 추가하는 것과 거의 동일합니다. 그러면 새 add-on 파일을 업로드하고, 일정을 변경하고, 사전 설정된 제한을 설정하고, 담당자를 지정할 수 있는 편집 페이지로 이동합니다.
+
+#### Periodic add-ons
+
+업로드한 add-on이 주기적으로 실행되도록 하려면 **circle pen**을 클릭하면 추가 일정 섹션을 표시합니다. 목록에서 원하는 시간과 요일을 선택하여 간단한 주간 일정을 설정할 수 있습니다. 보다 복잡한 일정이 필요한 경우에는 **Use crontab syntax** 버튼을 사용하여 crontab 구문을 사용하여 사용자 지정 일정을 설정할 수 있습니다.
+
+![alt text](images/schedule-for-periodic-execution-of-add-ons.png)
+
+crontab 구문은 각 시간 옵션마다 분, 시간, 요일, 월, 요일 등 다섯 개의 입력 필드를 필요로 합니다.
+
+:::{admonition} Caution
+:class: caution
+crontab 구문을 사용하여 사용자 지정 일정을 설정할 때는 각 필드의 값을 올바르게 입력하는 것이 중요하다는 점에 유의하세요. 잘못된 값을 입력하면 애드온이 원하는 시간에 실행되지 않거나 아예 실행되지 않을 수 있습니다.
+:::
+
+:::{admonition} Periodic settings
+:class: tip
+- **Minutes**: [0-59] - 명령이 실행되어야 하는 시간의 분을 나타냅니다.
+- **Hours**: 시: [0-23] - 명령이 실행되어야 하는 하루 중 시간을 나타냅니다.
+- **Day of the month**: [1-31] - 명령이 실행되어야 하는 월의 요일을 나타냅니다.
+- **Month**: [1-12] 또는 월 이름(예: "Jan" 또는 "February") - 명령이 실행되어야 하는 월을 나타냅니다.
+- **Day of the week**: [0-7] 또는 요일 이름(예: "Sun" 또는 "Monday", 여기서 0과 7은 모두 일요일을 나타냄) - 명령이 실행되어야 하는 요일을 나타냅니다.
+:::
+
+각 입력 필드에는 각각 으로 구분하여 여러 옵션을 포함할 수 있습니다. 예를 들어 분 필드에 0, 15, 30, 45를 입력하면 1시간의 1/4마다 작업이 수행됩니다.
+
+다음 실행 필드에는 입력에 따라 다음 세 번의 실행이 표시됩니다. 이 필드를 사용하여 일정이 예상과 일치하는지 확인할 수 있습니다.
+
+:::{admonition} Caution
+:class: caution
+실행 일정을 너무 자주 설정하면 작업 대기열이 백업되는 문제가 발생하여 시스템 성능에 영향을 미치고 다른 작업을 실행하는 데 방해가 될 수 있습니다. 새 작업을 시작하기 전에 시스템이 작업을 완료할 충분한 시간을 확보할 수 있도록 부가 기능의 실행 시간보다 짧은 일정을 설정하지 않는 것이 중요합니다.
+:::
+
 ### User management
+
+**User management** 메뉴에서는 사용자 계정, 그룹, 글로벌 역할, 프로젝트 역할을 만들 수 있습니다.
+
+1. 상단 오른쪽 모서리의 ![](images/three-horizontal-icon.png){class="intxt-image"}를 클릭합니다.
+2. **Configuration**을 선택합니다.
+3. 왼쪽 메뉴에서 **User management**를 클릭하고 다음에서 원하는 항목을 선택합니다.
+    - [Users]()
+    - [Groups]()
+    - [Access tokens]()
+    - [Global roles]()
+    - [Project roles]()
+
+---
+
+#### Users
+
+**Users** 보기에서는 시스템의 모든 사용자 계정에 대한 개요를 제공합니다. 화면 상단의 필터를 사용하여 특정 사용자를 검색할 수 있습니다.
+
+![alt text](images/overview-of-all-users.png)
+
+##### Create or edit a user account
+
+1. **Configuration** > **User management** > **Users**로 이동합니다.
+2. 기존 사용자 계정을 수정하거나 삭제하려면 개요에서 해당 사용자를 클릭합니다. 새 사용자 계정을 만들려면 오른쪽 상단 모서리에서 **New**를 클릭합니다.
+3. 필요에 따라 설정을 구성합니다. 각 설정에 대한 설명은 아래에 나와 있습니다.
+4. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다.
+
+![alt text](images/create-or-edit-a-user-account.png)
+
+:::{list-table}
+:widths: 15 100
+:header-rows: 1
+
+*   - Setting
+    - Explanation    
+*   - ![](images/remove-icon.png){class="intxt-image"}
+    - 사용자를 삭제하려면 이 아이콘을 클릭합니다.
+    **Caution**: 이렇게 하면 데이터베이스에서 사용자 개체가 영구적으로 제거됩니다. 일시적으로 로그인을 금지해야 하는 경우 **General information** 섹션까지 아래로 스크롤하여 **Active** 설정 옆의 확인 표시를 제거합니다.
+*   - **User name**
+    - 인증 페이지의 로그인 이름입니다. 사용자 이름은 다음 요구 사항을 충족해야 합니다:
+        - 150자 이하.
+        - 문자, 숫자 및 @ . + - _ 
+        
+        참고: 사용자 아이디가 변경되면 현재 자격 증명이 더 이상 유효하지 않으므로 사용자는 다시 로그인해야 합니다.
+*   - **Internal**
+**External**
+    - 사용자 이름 옆에는 사용자가 내부 사용자인지 외부 사용자인지를 나타내는 칩(chip)이 있습니다.
+        - **Internal**: 사용자 이름, 이메일, 표시 이름 등의 정보를 수정할 수 있습니다.
+        - **External**: 사용자와 해당 정보는 외부 ID 공급업체에서 가져온 것입니다. 따라서 사용자 이름, 이메일, 표시 이름 등의 정보는 편집할 수 없습니다.
+*   - **Change pasword**
+    - 사용자의 비밀번호를 변경하려면 이 버튼을 클릭합니다. 비밀번호는 다음 요건을 충족해야 합니다:
+        - 다른 개인정보와 유사하지 않아야 합니다.
+        - 일반적으로 사용하는 비밀번호가 아닐 수 있습니다.
+        - 8자 이상이어야 합니다.
+        - 숫자와 문자를 모두 포함해야 합니다.
+        
+        참고: 비밀번호가 변경되면 현재 자격 증명이 더 이상 유효하지 않으므로 사용자는 다시 로그인해야 합니다.
+:::
+
+###### Users: Personal information
+
+
+
 #### Permissions
 #### Access tokens
 
