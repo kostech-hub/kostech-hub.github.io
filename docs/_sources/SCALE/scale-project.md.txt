@@ -1363,8 +1363,7 @@ crontab 구문을 사용하여 사용자 지정 일정을 설정할 때는 각 �
 *   - **User name**
     - 인증 페이지의 로그인 이름입니다. 사용자 이름은 다음 요구 사항을 충족해야 합니다:
         - 150자 이하.
-        - 문자, 숫자 및 @ . + - _ 
-        
+        - 문자, 숫자 및 @ . + - _         
         참고: 사용자 아이디가 변경되면 현재 자격 증명이 더 이상 유효하지 않으므로 사용자는 다시 로그인해야 합니다.
 *   - **Internal**
 **External**
@@ -1376,14 +1375,113 @@ crontab 구문을 사용하여 사용자 지정 일정을 설정할 때는 각 �
         - 다른 개인정보와 유사하지 않아야 합니다.
         - 일반적으로 사용하는 비밀번호가 아닐 수 있습니다.
         - 8자 이상이어야 합니다.
-        - 숫자와 문자를 모두 포함해야 합니다.
-        
+        - 숫자와 문자를 모두 포함해야 합니다.        
         참고: 비밀번호가 변경되면 현재 자격 증명이 더 이상 유효하지 않으므로 사용자는 다시 로그인해야 합니다.
 :::
 
 ###### Users: Personal information
 
+여기에서는 사용자의 이메일 주소와 표시되는 이름을 수정 할 수 있습니다. 
 
+![alt text](images/personal-information.png)
+
+:::{list-table}
+:widths: 15 100
+:header-rows: 1
+*   - Setting
+    - Explanation
+*   - **E-mail**
+    - 사용자의 이메일 주소
+*   - **Display name**(mandotory)
+    - SCALE.sdm 전체에 걸쳐 여러 영역에 표시되는 이름입니다. 예를 들어 표시되는 이름은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**의 requirements 그리드에 표시됩니다. 표시되는 이름은 사용자 이름이 모호한 경우에 특히 유용합니다. 예를 들어 사용자 이름이 johnny417이고 표시되는 이름이 John Doe라고 가정해 보겠습니다. 사용자는 johnny417로 로그인하지만 ![](images/project-icon.png){class="intxt-image"} **프로젝트**에서 requirement의 상태를 변경한 사용자로 John Doe가 표시됩니다.
+:::
+
+###### Users: General information
+
+여기에서는 애플리케이션 내에서 사용자의 권한과 역할을 추가로 정의할 수 있습니다.
+
+![alt text](images/general-information.png)
+
+:::{list-table}
+:widths: 15 100
+:header-rows: 1
+*   - Setting
+    - Explanation
+*   - **Active**
+    - 사용자 계정을 삭제하지 않고 비활성 상태로 표시할 수 있습니다:
+        - 이 옵션을 선택(![](images/check-box-icon.png){class="intxt-image"})하면 해당 사용자는 활성 상태로 처리됩니다.
+        - 이 옵션을 선택하지 않으면 해당 사용자는 비활성으로 처리됩니다. 즉, 사용자는 로그인할 수 없게 됩니다.
+*   - **Staff**
+    - 이 옵션을 선택(![](images/check-box-icon.png){class="intxt-image"})하면 사용자가 관리자 영역에 접근할 수 있습니다.
+*   - **Superuser**
+    - 이 옵션이 선택(![](images/check-box-icon.png){class="intxt-image"})하면 명시적으로 권한을 할당 할 필요 없이 사용자에게 모든 권한이 부여됩니다.
+*   - **Disciplines**
+    - 드롭다운 목록을 열고 사용자가 속한 모든 분야를 선택합니다. 이렇게 하면 사용자가 액세스할 수 있는 리소스가 제어됩니다.
+*   - **Layout**
+    - 드롭다운 목록을 열고 사용자를 위한 프런트엔드(frontend) 레이아웃을 선택합니다. 고정형(fixed)과 유동형(fluid)의 두 가지 옵션이 있습니다. 고정 레이아웃은 1280px의 창 너비에 맞게 구성됩니다.
+:::
+
+###### Users: Active personal access tokens
+
+여기에서 자신의 활성 액세스 토큰(active access tokens)을 확인할 수 있으며 필요한 경우 토큰을 삭제할 수 있습니다.
+
+![alt text](images/active-personal-access-tokens.png)
+
+###### Users: Permissions
+
+대부분의 사용자 권한은 일반적으로 사용자에게 할당된 [역할](#users-roles)을 통해 설정됩니다. 그러나 예외적인 경우에는 개별 사용자에게 추가 권한을 할당할 수 있습니다. 사용자 권한 집합은 사용자의 역할과 관련된 모든 권한과 해당 사용자에 대해 특별히 정의된 모든 권한의 조합으로 결정됩니다.
+
+![alt text](images/user-permissions.png)
+
+![alt text](images/permission-graph.png)
+
+###### Users: Roles
+
+여기에서 사용자에게 역할을 할당할 수 있습니다.
+
+참고: 역할은 **Configuration** > **User management** > **Global roles**에서 이미 만들어져 있어야 합니다. 글로벌 역할을 만드는 방법은 [여기](#global-roles)에서 확인할 수 있습니다.
+
+![alt text](images/user-roles.png)
+
+###### Users: Groups
+
+여기에서 사용자에게 그룹을 할당할 수 있습니다.
+
+참고: 그룹은 **Configuration** > **User management** > **Groups**에서 이미 만들어져 있어야 합니다. 그룹을 만드는 방법은 [여기](#groups)에서 확인할 수 있습니다.
+
+![alt text](images/user-groups.png)
+
+##### Groups
+
+**Groups** 보기에서는 시스템의 모든 그룹에 대한 개요를 제공합니다.
+
+![alt text](images/overview-of-all-groups.png)
+
+###### Create or edit a group
+
+1. **Configuration** > **User management** > **Groups**으로 이동합니다.
+2. 기존 그룹을 수정하거나 삭제하려면 개요에서 해당 그룹을 클릭합니다. 새 그룹을 만들려면 오른쪽 상단 모서리에 있는 **New**를 클릭합니다.
+3. 필요에 따라 설정을 구성합니다. 각 설정에 대한 설명은 아래에 나와 있습니다.
+4. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다.
+
+:::{list-table}
+:widths: 15 100
+:header-rows: 1
+*   - Setting
+    - Explanation
+*   - ![](images/remove-icon.png){class="intxt-image"}
+    - 그룹을 삭제하기 위해 이 아이콘을 클릭합니다.
+*   - **Name**(mandotory)
+    - 사용자 그룹의 이름입니다.
+*   - **Permissions**
+    - [Permissions](#users-permissions)는 사용자에게 할당되는 것과 동일한 방식으로 그룹에 할당됩니다.
+*   - **Roles**
+    - [Roles](#users-roles)은 사용자에게 할당되는 것과 동일한 방식으로 그룹에 할당됩니다.
+*   - **Users**
+    - 그룹 권한은 그룹 구성원에게 상속됩니다.
+:::
+
+##### Global roles
 
 #### Permissions
 #### Access tokens
