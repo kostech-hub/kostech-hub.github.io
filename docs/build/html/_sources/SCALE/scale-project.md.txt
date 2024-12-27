@@ -447,9 +447,9 @@ Views 목록에는 기본값(default)이라는 항목이 있습니다. 아직 �
 
 Requirement 상태는 예를 들어 다음과 같은 순서로 저장할 수 있습니다.
 
-- [View the status of a requirement]()
-- [Report a new status]()
-- [Monitor project status over time]()
+- [View the status of a requirement](#view-the-status-of-a-requirement)
+- [Report a new status](#report-a-new)
+- [Monitor project status over time](#monitor-project-status-over-time)
 
 ### Open an existing project
 
@@ -463,7 +463,7 @@ Requirement의 상태를 확인하는 다음과 같은 방법들이 있습니다
 
 - [View the status of one single requirement](#view-the-status-of-one-single-requirement)
 - [View the status of a requirement group](#view-the-status-of-requirement-groups)
-- [View aggregated statuses in the sidebar]()
+- [View aggregated statuses in the sidebar](#view-aggregated-statuses-in-the-sidebar)
 
 #### View the status of one single requirement
 
@@ -646,9 +646,9 @@ Requirement의 상태를 확인하는 다음과 같은 방법들이 있습니다
 
 프로젝트를 선택하면 개요(overview)가 자동으로 표시됩니다. 프로젝트 개요에는 다음 패널이 표시됩니다.
 
-- **A**: [Description]()
-- **B**: [Documents]()
-- **C**: [Milesontes]()
+- **A**: [Description](#a-description)
+- **B**: [Documents](#b-documents)
+- **C**: [Milesontes](#c-milestones)
 
 ![alt text](images/project-overview.png)
 
@@ -679,17 +679,17 @@ Requirement의 상태를 확인하는 다음과 같은 방법들이 있습니다
 
 **Requirements** 영역은 다음 요소들을 포함합니다.
 
-- [A: Milestones]()
-- [B: Requirements grid]()
-- [C: Add button]()
-- [D: Side panel]()
-    - [Status]()
-    - [Details]()
-    - [Thresholds]()
-    - [Context]()
-    - [History]()
-    - [Attachmnts]()
-- [Context menu]()
+- [A: Milestones](#a-milestones)
+- [B: Requirements grid](#b-requirements-grid)
+- [C: Add button](#c-add-button)
+- [D: Side panel](#d-side-panel)
+    - [Status](#status)
+    - [Details](#details)
+    - [Thresholds](#thresholds)
+    - [Context](#context)
+    - [History](#history)
+    - [Attachmnts](#attachments)
+- [Context menu](#context-menu)
 
 ![alt text](images/project-requirements.png)
 
@@ -727,7 +727,7 @@ requirement를 클릭한 다음 ![alt text](images/left-side-two-arrow.png){clas
 
 - 현재 값, 주석(comment) 그리고 업로드된 문서들
 - 사용자와 최근 상태에 대한 날짜 - 자동으로 문서화됨
-- [상태를 수동으로 보고(report)]()하기 위한 버튼
+- [상태를 수동으로 보고(report)](#manually-report-the-status)하기 위한 버튼
 
 ![alt text](images/status-image.png)
 
@@ -830,17 +830,17 @@ MDM은 마스터 데이터 관리(Master Data Management)의 약자입니다. �
 
 #### MDM attributes
 
-- [What are attributes?]()
-- [View attributes in the overview]()
-- [Add new attributes]()
-- [Attribute components]()
-    - [Add new attribute components]()
-    - [Apply components to attributes]()
-    - [Use attributes with components]()
-- [Attribute value lists]()
-    - [Add new attribute value lists]()
-    - [Apply value lists to attributes]()
-    - [Use attributes with value lists]()
+- [What are attributes?](#what-are-attributes)
+- [View attributes in the overview](#view-attributes-in-the-overview)
+- [Add new attributes](#add-new-attributes)
+- [Attribute components](#attribute-components)
+    - [Add new attribute components](#add-new-attribute-components)
+    - [Apply components to attributes](#apply-components-to-attributes)
+    - [Use attributes with components](#use-attributes-with-components)
+- [Attribute value lists](#attribute-value-lists)
+    - [Add new attribute value lists](#add-new-attribute-value-lists)
+    - [Apply value lists to attributes](#apply-value-lists-to-attributes)
+    - [Use attributes with value lists](#use-attributes-with-value-lists)
 
 ##### What are attributes?
 
@@ -983,16 +983,16 @@ Attributes은 ![](images/project-icon.png){class="intxt-image"} **프로젝트**
     - [Context](#context-1)
     - [Attachments](#attachments-1)
     - [History](#history-1)
-- [Add new requirements]()
-    - [Assessment]()
-    - [Context]()
-    - [Attachments]()
-- [Options in the context menu]()
-- [Edit multiple requirements at once]()
-    - [Edit the names]()
-    - [Edit the descriptions]()
-    - [Edit the test result identifiers]()
-    - [Edit the assessment thresholds]()
+- [Add new requirements](#add-new-requirements)
+    - [Assessment](#assessment)
+    - [Context](#context-1)
+    - [Attachments](#attachments-1)
+- [Options in the context menu](#options-in-the-context-menu)
+- [Edit multiple requirements at once](#edit-multiple-requriements-at-ones)
+    - [Edit the names](#edit-the-names-1)
+    - [Edit the descriptions](#edit-the-descriptions-1)
+    - [Edit the test result identifiers](#edit-the-test-result-identifiers)
+    - [Edit the assessment thresholds](#edit-the-assessment-thresholds-1)
 
 ---
 
@@ -1169,26 +1169,65 @@ Requirement 변경은 기록 패널에서 사용자를 추적되고 추적할 �
 
 #### MDM test cases
 
-Requirement을 테스트 케이스로 그룹화할 수 있습니다. 테스트 케이스에는 하나 이상의 requirements가 있으며 단일 requirement의 컨텍스트와 유사한 컨텍스트를 정의합니다. 테스트 케이스 컨텍스트는 테스트 케이스가 특정 테스트에 적용 가능한지 여부를 지정합니다.
+- [Overview](#overview-2)
+- [View details about a test case](#view-details-about-a-test-case)
+- [Add new test cases](#add-new-test-cases)
+- [Options in the context menu](#options-in-the-context-menu-1)
+
+---
+
+일반적으로 requirement은 혼자 오지 않습니다. 따라서 requirements를 테스트 케이스로 그룹화할 수 있습니다. 테스트 케이스(test case)에는 하나 이상의 requirements가 있으며 단일 requirement의 컨텍스트와 유사한 컨텍스트를 정의합니다. 테스트 케이스 컨텍스트는 테스트 케이스가 특정 테스트에 적용 가능한지 여부를 지정합니다.
+
+:::{admonition} MDM test cases vs. project test cases
+:class: tip
+- **MDM test cases:** ![](images/three-horizontal-icon.png) > **Configuration** > **MDM** > **Test cases**에 있는 테스트 케이스를 MDM test case라고 합니다. 템플릿 또는 SCALE.sdm 애플리케이션을 위한 글로벌 데이터베이스라고 생각할 수 있습니다.
+
+- **Project test cases:** 특정 프로젝트 내의 테스트 케이스를 프로젝트 테스트 케이스라고 합니다. 프로젝트 테스트 케이스는 MDM 테스트 케이스에서 파생됩니다. 이 과정에서 원래 테스트 케이스의 컨텍스트, 요구 사항 등이 프로젝트별 테스트 케이스에 복사되며 필요한 경우 추가로 변경할 수 있습니다. 프로젝트에는 동일한 MDM test case에서 파생된 여러 프로젝트 테스트 케이스가 있을 수 있습니다.
+:::
 
 ##### Overview
 
-**Requirements** > **MDM** > **Test cases**로 이동하여 테스트 케이스들(Test cases)의 개요(overview)를 확인하세요. 개요의 데이터는 오름차순 또는 내림차순으로 필터링, 그룹화 및 정렬할 수 있습니다. 열(column)은 켜고 끌 수 있습니다. 이를 통해 현재 작업과 관련된 데이터만 표시할 수 있습니다.
+![](images/three-horizontal-icon.png){class="intxt-image"} > **Configuration** > **MDM** > **Test cases**로 이동하여 테스트 사례의 개요를 확인하세요. 개요의 데이터는 오름차순 또는 내림차순으로 필터링, 그룹화 및 정렬할 수 있습니다. 열은 켜고 끌 수 있습니다. 이를 통해 현재 작업과 관련된 데이터만 표시할 수 있습니다.
 
 ![alt text](images/overview-of-mdm-test-cases.png)
 
+##### View details about a test case
+
+1. ![](images/three-horizontal-icon.png){class="intxt-image"} > **Configuration** > **MDM** > **Test cases**로 이동합니다.
+2. 개요에서 test case를 클릭합니다.
+3. 오른쪽 상단 모서리의 ![](images/double-left-arrow.png){class="intxt-image"}를 클릭합니다. 사이드 패널이 확장됩니다. 여기에는 테스트 케이스 및 해당 컨텍스트에 대한 세부 정보가 포함되어 있습니다.
+
 ##### Add new test cases
 
-1. **Configuration** > **MDM** > **Test cases**로 이동합니다.
-2. 오른쪽 상단 모서리에서 **New**를 클릭합니다. 새 창이 열립니다.
-3. 테스트 케이스(test case)의 이름을 입력합니다.
-4. Optional: 설명 및 코멘트(comment)을 입력하고 테스트 케이스(test case)에 대한 분야를 하나 이상 선택합니다.
-5. 테스트 케이스가 활성 상태인지 비활성 상태인지 지정합니다.
-6. **Requirements**: 테스트 케이스에 포함되어야 하는 모든 requirements를 확인합니다. 이 그리드의 requirements를 필터링, 그룹화 및 정렬하여 현재 작업과 관련된 데이터를 찾는 데 도움이 되도록 할 수 있습니다.
-7. **Context**: 먼저 컨텍스트(context) 그룹 추가를 클릭합니다. 컨텍스트(context) 그룹은 주제적으로 유사한 컨텍스트(context) 속성의 지정되지 않은 집합으로 생각할 수 있습니다. 이제 왼쪽에 속성을 입력하고 오른쪽에 하나 또는 여러 개의 속성 값을 추가할 수 있습니다. 참고: 속성 목록에는 연결 속성만 포함되어 있습니다. ![](images/black-plus.png){class="intxt-image"}를 클릭하여 컨텍스트(context) 그룹에 추가 속성을 추가합니다.
-8. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다. 테스트 케이스가 개요에 나타납니다.
+1. ![](images/three-horizontal-icon.png){class="intxt-image"} **Configuration** > **MDM** > **Test cases**로 이동합니다.
+2. 오른쪽 상단 모서리에서 ![](images/plus-only-icon.png) **New**를 클릭합니다. 새 창이 열립니다.
+3. 필요에 따라 설정을 구성합니다. 설정에 대한 설명은 아래 표에 나와 있습니다.
+4. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다. overview에 테스트 케이스(test case)가 나타납니다. 
 
 ![alt text](images/adding-a-new-test-case.png)
+
+:::{list-table}
+:widths: 15 100
+:header-rows: 1
+
+*   - Setting
+    - Explanation    
+*   - **Name** (required)
+    - test case의 이름을 입력합니다.
+*   - **Description**
+    - test case의 설명을 입력합니다.
+*   - **Comment**
+    - test case에 대한 코멘트를 입력합니다.
+*   - **Discipline**
+    - test case에 대한 하나 이상의 분야를 선택합니다.
+*   - **State** (required)
+    - test case가 활성 상태인지 비활성 상태인지 지정합니다.
+*   - **Requirements** (required)
+    - test case에 포함되어야 하는 모든 요구 사항(requirements)를 체크하세요 ![](images/check-box-icon.png){class="intxt-image"}. 이 그리드의 요구 사항을 필터링, 그룹화 및 정렬하여 현재 작업과 관련된 데이터를 찾을 수 있습니다.
+참고: 요구 사항을 그룹화한 경우 전체 그룹을 선택할 수 있습니다(위 이미지 참조). 그러면 해당 그룹의 모든 요구 사항이 선택됩니다. 전체 그룹을 선택하면 각 요구 사항을 개별적으로 확인할 필요가 없으므로 시간을 절약할 수 있습니다.
+*   - **Context**
+    - 먼저 **Add Context group**을 클릭합니다. 컨텍스트 그룹(context group)은 주제적으로 유사한 컨텍스트 속성의 지정되지 않은 집합으로 생각할 수 있습니다. 이제 왼쪽에 속성을 입력하고 오른쪽에 하나 또는 여러 개의 속성 값을 추가할 수 있습니다. 참고: 속성 목록에는 [연결 속성(association attributes)](#add-new-attributes)만 포함되어 있습니다. 컨텍스트 그룹에 추가 속성을 추가하려면 ![](images/black-plus.png){class="intxt-image"} 클릭합니다.
+:::
 
 ##### Options in the context menu
 
@@ -1199,11 +1238,671 @@ Requirement을 테스트 케이스로 그룹화할 수 있습니다. 테스트 �
 - **Remove**: 테스트 케이스를 삭제합니다. 이 옵션은 내부 테스트 케이스에만 사용할 수 있으며 프로젝트에서 사용되지 않는 테스트 케이스에 대해서만 사용할 수 있습니다.
 - **Toggle active**: 상태를 활성에서 비활성으로 또는 그 반대로 전환합니다. 이 옵션은 내부 테스트 케이스에만 사용할 수 있습니다.
 
+![alt text](images/using-the-context-menu-mdm-test-case.png)
+
 :::{admonition} Internal vs. external test cases
 :class: tip
 - **Internal**: 내부 테스트 케이스들은 수동으로 개요에 추가됩니다. 추가로 편집하거나 삭제 할 수 있습니다.
 - **External**: 외부 테스트 케이스들은 개요에서 가져올 수 있습니다. 읽기 전용이므로 편집하거나 삭제할 수 없습니다.
 :::
+
+### Presets
+
+Presets는 도메인별 모양과 도메인별 정보를 구성하는 방법입니다. 이는 ![](images/result-icon.png){class="intxt-image"} **Result**의 필수적인 부분입니다. Preset은 XML로 정의되며 소위 "preset bricks"라고 하는 추가 XML 하위 모듈을 참조할 수 있습니다.
+
+프리셋으로 구성된 주요 영역은 다음과 같습니다:
+
+- 기본 그리드의 열(속성, 서식, 데이터 변환)
+- 미리 정의된 필터(시나리오 트리)
+
+이 섹션은 여러 부분으로 나뉩니다.
+
+1. [Layout management](#layout-management)
+2. [Preset guideline](#preset-guideline)
+3. [Tag attributes]()
+4. [Conditions]()
+
+#### Layout management
+
+- [Component: Grid](#component-grid)
+- [Grid side bar](#grid-side-bar)
+    - [Tab: Columns](#tab-columns)
+    - [Tab: Tables](#tab-tables)
+    - [Tab: Views](#tab-views)
+        - [Save your configuration as a view](#save-your-configuration-as-a-view-1)
+        - [Switch between views](#switch-between-views)
+        - [Share views with other users](#share-views-with-other-users-1)
+        - [Additional options](#additional-options)
+- [Component: Scenario](#component-scenario)
+
+이 페이지에서는 사전 설정의 영향을 받는 ![](images/result-icon.png){class="intxt-image"}**Result**의 레이아웃 구성 요소에 대해 설명합니다.
+
+##### Component: Grid
+
+테스트의 표 형식 데이터 표현. 각 줄은 하나의 시험에 해당합니다. 시험의 속성은 그리드 열에 표시됩니다. 사전 설정 구성에 따라 일부 열 헤더는 하위 열을 더 집계할 수 있습니다. 열을 확장하려면 **>**를 클릭합니다. 열을 다시 축소하려면 **<**를 클릭합니다.
+
+![alt text](images/grid.png)
+
+##### Grid side bar
+
+일부 사전 설정에는 그리드에 편리하게 표시할 수 있는 것보다 많은 열이 있을 수 있습니다. 사이드 바(![alt text](images/side-bar-icon.png){class="intxt-image"})를 사용하여 표시할 열과 열이 표시되는 순서를 지정할 수 있습니다. 사이드 바는 아래에 설명된 세 개의 탭으로 구성되어 있습니다.
+
+![alt text](images/side-bar-of-the-grid.png)
+
+###### Tab: Columns
+
+여기에서 표시할 열과 표시 순서를 지정할 수 있습니다.
+
+1. 그리드의 맨 오른쪽의 ![](images/side-bar-icon.png){class="intxt-image"}를 클릭합니다. 사이드 바가 확장됩니다.
+2. 표시할 열(![](images/check-box-icon.png){class="intxt-image"})을 선택합니다.
+3. 선택 사항: 기호 ![alt text](images/six-dot-icon.png) 위로 마우스 커서를 이동합니다. 커서 모양이 (![](images/hand-icon.png){class="intxt-image"}) 모양으로 바뀝니다. 열을 드래그하여 그리드에서 열의 순서를 변경합니다.
+
+###### Tab: Tables
+
+여기에서 preset에 정의된 모든 테이블 목록을 볼 수 있습니다. [preset에 표를 추가하는 방법에 대한 자세한 내용을 참조하세요]().
+
+###### Tab: Views
+
+여기에서 이미 생성된 모든 보기 목록을 볼 수 있으며 새 뷰(view)를 저장할 수 있습니다. 이 기능은 그리드를 구성한 후 나중에 다시 액세스할 수 있도록 구성을 저장하려는 경우에 유용합니다. 예: 서로 다른 두 개의 뷰를 만들 수 있습니다. 각 뷰에는 특정 작업에 필요한 열만 포함됩니다. 작업을 수행할 때 적절한 뷰를 선택하기만 하면 됩니다.
+
+:::{admonition} What does the view define?
+:class: tip
+뷰(view)는 레이아웃의 다음 측면을 제어합니다:
+
+- 표시되는 열
+- 열이 표시되는 순서
+- 열을 그룹화할지 여부.
+- 필터 적용 여부.
+- 열 내용을 오름차순 또는 내림차순으로 표시할지 여부.
+
+참고: 뷰는 열의 크기나 크기를 제어하지 않습니다.
+:::
+
+###### Save your configuration as a view
+
+1. 그리드의 맨 오른쪽의 ![](images/side-bar-icon.png){class="intxt-image"}를 클릭합니다. 사이드 바가 확장됩니다.
+2. ![alt text](images/setting-icon.png) **Views**를 클릭합니다. 여기에 모든 기존 views 목록이 표시됩니다.
+3. ![](images/plus-only-icon.png) **New View**를 클릭합니다.
+4. View의 이름을 입력하고 **Save**를 클릭합니다. View가 목록에 추가됩니다.
+
+###### Switch between views
+
+1. 그리드의 맨 오른쪽의 ![](images/side-bar-icon.png){class="intxt-image"}를 클릭합니다. 사이드 바가 확장됩니다.
+2. ![](images/setting-icon.png) **Views**를 클릭합니다. 여기에 모든 기존 views 목록이 표시됩니다.
+3. View의 이름을 클릭합니다.
+
+###### Share views with other users
+
+다른 사용자와 view를 공유할 수 있습니다. 예를 들어 관리자는 여러 개의 서로 다른 view를 만들 수 있습니다. 각 view에는 특정 작업을 수행하는 데 도움이 되는 열과 필터가 포함되어 있습니다. 그런 다음 관리자는 이러한 view를 해당 작업을 담당하는 동료들과 공유할 수 있습니다.
+
+1. 그리드의 맨 오른쪽의 ![](images/side-bar-icon.png){class="intxt-image"} 클릭합니다. 사이드 바가 확장됩니다.
+2. ![](images/setting-icon.png){class="intxt-image"}**Views**를 클릭합니다. 여기에 모든 기존 view 목록이 표시됩니다.
+3. view에 대한 추가 옵션을 보려면 ![alt text](images/vertical-three-dot-icon.png){class="intxt-image"} 클릭합니다.
+4. ![alt text](images/share-icon.png){class="intxt-image"} **Share**를 클릭합니다. 팝업 창이 열립니다.
+5. 드롭다운 목록에서 분야를 선택합니다.
+6. ![](images/white-check-icon.png){class="intxt-image"} **Confirm**을 클릭합니다. view가 해당 분야의 모든 사용자와 공유됩니다.
+
+:::{admonition} How do I know which disciplines a user belongs to?
+:class: tip
+![](images/three-horizontal-icon.png) > **Configuration** > **User management** > **Users**로 이동하여 사용자 계정을 엽니다. **General information** 섹션에서 **Disciplines** 드롭다운 목록을 클릭합니다. 여기에서 사용자가 속한 분야를 확인할 수 있습니다.
+:::
+
+###### Additional options
+
+기존 view를 수정한 후 ![](images/vertical-three-dot.png){class="intxt-image"}를 클릭하여 다음 옵션에 액세스합니다:
+
+- ![](images/save-icon.png){class="intxt-image"} **Save**
+- ![](images/save-icon.png){class="intxt-image"} **Save as new**
+- ![](images/pencil-icon.png){class="intxt-image"} **Rename**
+- ![](images/remove-icon.png){class="intxt-image"} **Delete**
+- ![](images/home-icon.png){class="intxt-image"} **Set global Default:** 아직 사용자 지정 view를 구성하지 않은 경우 기본 view가 사용됩니다. 글로벌 관리자(global admin)만 기본 view를 만들거나 수정할 수 있습니다. 일반 사용자는 이 view를 편집할 수 없습니다.
+- ![](images/share-icon.png){class="intxt-image"} **Share:** 다른 사용자와 view를 공유합니다. [추가 정보](#share-views-with-other-users-1).
+
+변경 사항을 취소하고 view를 원래 구성으로 되돌리려면 ![alt text](images/discard-icon.png){class="intxt-image"} 클릭합니다.
+
+##### Component: Scenario
+
+시나리오(Scenarios)는 그리드에 표시되는 테스트의 범위를 좁힐 수 있는 방법입니다. 예를 들어 특정 충돌 시나리오와 관련된 테스트(예: 차량 속도, 지시 또는 장애물 겹침(barrier overlap))만 표시할 수 있습니다.
+
+- 표시되는 시나리오는 preset에 정의된 시나리오에 따라 다릅니다. [preset에 시나리오를 추가하는 방법에 대한 자세한 내용을 참조하세요]().
+- [시나리오를 사용하여 그리드에 테스트를 표시하는 방법에 대한 자세한 정보]().
+
+![alt text](images/scenarios.png)
+
+#### Preset guideline
+
+- [Preset components]()
+- [Preset bricks]()
+- [Creating a new preset brick]()
+- [Adding a preset brick to a preset]()
+- [Adding attributes to a preset]()
+- [Adding nested attributes]()
+- [Adding tables to a preset]()
+- [Adding scenarios to a preset]()
+    - [Adding conditions to scenario nodes]()
+- [Adding column functions]()
+
+---
+
+이 가이드라인에서는 기본 **Preset** 구성 요소에 대한 개요를 제공하고 XML을 기반으로 사전 설정 구성 파일에 이러한 구성 요소를 포함하는 방법을 설명합니다. 이후 섹션에서는 엄격한 구현 패턴에 따라 프리셋 파일의 다양한 구성 요소에 대해 설명합니다.
+
+XML 구조는 <로 시작하고 >로 끝나는 마크업 구조인 **tags**를 기반으로 합니다. 결과 요소는 시작점과 끝점으로 정의되며, 시작 태그와 끝 태그 또는 빈 요소 태그의 조합으로 정의할 수 있습니다.
+
+Presets는 ![](images/three-horizontal-icon.png){class="intxt-image"} > **Configuration** > **Result** > **Presets**에서 추가할 수 있으며, 이 워크플로(workflow)는 [preset brick]()을 만드는 것과 유사합니다. 사용자는 준비된 XML 파일을 업로드하거나 인라인 XML 편집기를 사용할 수 있습니다. 프리셋을 저장하면 구문 검사가 트리거됩니다.
+
+*start-tab*와 *end-tag*의 **Example** 
+
+```xml
+<tagName tagAttributes="tagAttributeValue" >
+    tagValue
+</tagName>
+```
+
+*empty-element tab*의 **Example**
+
+```xml
+<tagName tagAttributes="tagAttributeValue" />
+```
+
+필요한 모든 구성은 하나의 **Preset** 파일에 정의하거나 소위 [preset bricks]()으로 정의되는 별도의 부분으로 하위 구조화할 수 있습니다.
+
+##### Preset components
+
+**Preset**을 조합하려면 구성 파일에 다음 태그 목록이 포함되어야 합니다. 이러한 태그 중 일부는 변경 가능한 특정 속성을 가지고 있으며 [여기]()에서 자세히 설명합니다.
+
+:::{admonition} Required tags
+:class: tip
+- **preset**: preset의 래퍼 태그(wrapper tag), 다른 모든 태그는 이 요소 내에 있어야 합니다.
+- **presetname**: presets을 선택할 때 표시되는 preset의 이름입니다.
+- **presetversion**: preset의 버전
+- **views**: 목록에 정의된 사용 가능한 다른 보기
+- **list**: 목록은 특정 그리드 열 설정을 정의하며 presets의 기본 상위 태그입니다.
+- **columns**: 모든 열의 래퍼 태그(wrapper tag)
+- **column**: 그리드에 표시할 개별 열입니다.
+- **scenario**: [시나리오 트리(scenario tree)]()를 정의합니다.
+:::
+
+Preset에 필요한 최소 XML의 **Example**:
+
+```xml
+<Preset>
+    <presetname>TEST NAME</presetname>
+    <presetversion>TEST VERSION</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+                <node name="Default"></node>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+Preset에 적용된 최소 필수 태그와 관련된 그리드 view입니다:
+
+![alt text](images/grid-view.png)
+
+##### Preset bricks
+
+프리셋 브릭(Preset bricks)은 presets을 모듈화할 수 있는 도구입니다. 프리셋 브릭을 정의하는 것은 presets와 매우 유사하지만, 여러 presets 내에서 재사용 가능한 데이터의 하위 집합으로 사용할 수 있습니다.
+
+프리셋 브릭 목록은 ![](images/three-horizontal-icon.png){class="intxt-image"} > **Configuration** > **Result** > **Preset Bricks**에서 액세스할 수 있습니다.
+
+![alt text](images/preset-bricks.png)
+
+##### Creating a new preset brick
+
+프리셋 브릭(Preset bricks) 페이지에서 **New** 버튼을 클릭하면 새 프리셋 브릭을 만들 수 있는 화면으로 이동합니다.
+
+![alt text](images/new-preset-brick.png)
+
+프리셋 브릭(Preset bricks)에는 연락처와 파일 이름이 필요하며, 이는 파일 업로드 시 자동으로 설정되거나 사용자가 직접 설정해야 합니다. 파일 이름은 프리셋 브릭의 식별자와 동일합니다.
+
+##### Adding a preset brick to a preset
+
+다음 요소를 사용하면 프리셋 브릭(preset brick)이 **Preset**에 포함되며, 포함 요소의 위치는 프리셋 브릭과 프리셋에 지정된 열의 후속 위치를 정의합니다.
+
+프리셋 브릭 NameOfPresetBrick.preset_brick을 프리셋 파일에 포함시키는 요소의 예시입니다.
+
+```xml
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="NameOfPresetBrick.preset_brick" xpointer="xpointer(//brickid/*)"/>
+```
+
+##### Adding attributes to a preset
+
+빈 열 태그(empty column tag) 안에 위의 기본 예제를 사용합니다. 그리드에 열이 될 테스트 속성을 다음과 같이 추가할 수 있습니다:
+
+1. 속성 태그(attribute tag)를 만듭니다.
+2. 속성 태그 안에 아이소코드 태그(isocode tag)를 만듭니다.
+3. 표시하려는 속성 아이소코드를 아이소코드 태그에 추가합니다.
+
+속성을 그리드 열로 추가한 XML 예시입니다.
+
+```xml
+<Preset>
+    <presetname>TEST NAME</presetname>
+    <presetversion>TEST VERSION</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column>
+                    <attribute>
+                        <isocode>meta.test.start_date</isocode>
+                    </attribute>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+![alt text](images/resulting-grid-view-with-added-test-attribute.png)
+
+시작 날짜가 대문자로 표시되지 않은 것을 확인한 사용자는 열 태그 내의 **lable tag** 속성을 활용하여 열에 대한 사용자 지정 레이블을 설정할 수 있습니다. 사전 설정된 XML이 변경되는 ![alt text](images/start-date-text.png)로 변경해 보겠습니다:
+
+```xml
+<Preset>
+    <presetname>TEST NAME</presetname>
+    <presetversion>TEST VERSION</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column label="Start Date">
+                    <attribute>
+                        <isocode>meta.test.start_date</isocode>
+                    </attribute>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+![alt text](images/resulting-grid-view.png)
+
+##### Adding nested attributes
+
+빈 열 태그(empty column tag) 안에 위의 기본 예제를 사용하여 그리드의 열에 중첩된 속성을 추가할 수 있습니다:
+
+1. 열 태그를 만들고 section 태그 속성을 true로 설정합니다.
+2. 중첩된 열의 레이블 속성을 설정합니다.
+3. 열 태그 내에서 위의 개별 열 추가 단계에 따라 원하는 만큼 중첩된 필드를 추가할 수 있습니다.
+4. 중첩된 각 열 태그에 태그 속성 section = true가 포함되어 있는지 확인합니다.
+
+중첩 열이 있는 프리셋 XML의 예시입니다.
+
+```xml
+<Preset>
+    <presetname>Documentation Example</presetname>
+    <presetversion>0.0.0</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column label="Start Date">
+                    <attribute>
+                        <isocode>meta.test.start_date</isocode>
+                    </attribute>
+                </column>
+                <column section="true" label="B-Pillar">
+                    <column section="true" decimals="2" label="Lower left">
+                        <attribute>
+                            <isocode>1.0.LE.R.O.VEHICLE_OLC_BPILLAR_LOWER_LEFT_VALUE_ELECTRICAL</isocode>
+                        </attribute>
+                    </column>
+                    <column section="true" decimals="2" label="Lower right">
+                        <attribute>
+                            <isocode>1.0.RI.R.O.VEHICLE_OLC_BPILLAR_LOWER_RIGHT_VALUE_ELECTRICAL</isocode>
+                        </attribute>
+                    </column>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+그리드는 중첩된 열을 집계된 보기(aggregated view)로 표시합니다. 열 머리글(column header)은 > 를 클릭하여 확장하고 < 를 사용하여 다시 축소할 수 있습니다.
+
+![alt text](images/expanded-preset-grid.png)
+
+:::{admonition} Note
+:class: tip
+중첩된 필드는 추가로 중첩된 필드를 포함할 수 있으며 완전히 사용자 지정할 수 있습니다.
+:::
+
+##### Adding tables to a preset
+
+Table은 프리셋 내에서 독립적인 그리드 구성을 정의할 수 있어 프리셋을 더욱 유연하게 만드는 데 사용됩니다. 예를 들어 하나의 프리셋 내에서 다양한 분야에 적용할 수 있습니다. 표는 그리드 사이드 패널에서 선택할 수 있습니다.
+
+view 요소에 list 태그를 추가한 예시입니다.
+
+```xml
+<Preset>
+    <presetname>TEST NAME</presetname>
+    <presetversion>TEST VERSION</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column>
+                </column>
+            </columns>
+        </list>
+        <list name="Table 2">
+            <columns>
+                <column>
+                </column>
+            </columns>
+        </list>
+        <list name="Table 3">
+            <columns>
+                <column>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+##### Adding scenarios to a preset
+
+시나리오 트리(scenario tree)에서 구조화할 수 있는 시나리오에 테스트를 할당할 수 있습니다. 따라서 사전 설정에서 시나리오를 적용하는 것은 사용자별 테스트 필터와 동일합니다. 시나리오의 정의 및 할당 조건은 테스트 속성을 기반으로 합니다.
+
+시나리오는 사전 설정과 달리 루트 및 노드라는 두 가지 주요 태그로 구성됩니다. 시나리오 트리는 루트에 의해 캡슐화된 다음 가지가 있는 트리와 유사하게 노드로 구성됩니다. 하지만 시나리오는 조건 태그 속성을 사용하여 시나리오에 테스트를 표시할 특정 조건을 지정합니다.
+
+프리셋에 노드를 추가하려면 빈 프리셋 템플릿으로 시작하세요.
+
+1. scenario 요소와 root 요소 아래에 node 태그를 추가합니다.
+2. 노드 요소에 name = {{EXAMPLE_NAME}} 태그 속성을 포함합니다.
+
+프리셋에 있는 시나리오 정의의 예입니다.
+
+```xml
+<Preset>
+<presetname>Documentation Example</presetname>
+    <presetversion>0.0.0</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+                <node name="Base Node">
+                </node>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+이제 시나리오 탭에 기본 노드가 표시됩니다. 시나리오 노드를 선택하거나 선택 취소하고 그리드에 표시할 테스트를 결정할 수 있습니다.
+
+:::{admonition} Note
+:class: tip
+조건이 없는 노드를 포함하면 모든 테스트가 로드되고 표시됩니다.
+:::
+
+##### Adding conditions to scenario nodes
+
+노드에 조건을 추가하려면 부울 논리 연산자를 사용해야 합니다. 조건은 테스트 속성 아이소코드(isocodes)를 기반으로 하며 해당 값에 따라 필터링하는 데 사용됩니다.
+
+테스트 속성으로 기존 DIRECTIVE 아이소코드가 있고 테스트에 ECE R137, ECE R135 또는 ECE R127과 같은 DIRECTIVE 속성이 필요한 시나리오 노드 ECE의 예시입니다.
+
+```xml
+<Preset>
+<presetname>Documentation Example</presetname>
+    <presetversion>0.0.0</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+                <node name="ECE" condition="DIRECTIVE in ['ECE R137','ECE 
+                R135', 'ECER127']">
+                </node>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+['ECE R137','ECE R135','ECER127']은 규정 목록입니다. in 키워드는 목록 내에서 테스트 속성 DIRECTIVE가 있는지 확인합니다. 시나리오 노드 ECE가 선택되었다면 DIRECTIVE 값이 FMVSS 208이면 그리드에 표시되지 않습니다. DIRECTIVE 값이 ECE R137이면 그리드에 표시됩니다.
+
+자세한 내용은 [Conditions]()을 참조하세요.
+
+:::{admonition} Note
+:class: tip
+노드 태그는 매우 유연하고 중첩이 가능하므로 복잡한 시나리오를 모든 데이터 세트에 맞출 수 있습니다.
+:::
+
+##### Adding column functions
+
+열 기능은 presets를 위한 고급 기능입니다. 열에 적용할 수 있는 스크립트를 작성할 수 있습니다.
+
+열 함수(Column function)가 포함된 XML의 예입니다.
+
+```xml
+<Preset>
+    <presetname>Documentation Example</presetname>
+    <presetversion>0.0.0</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column label="Start Date">
+                    <attribute>
+                        <isocode>meta.test.start_date</isocode>
+                    </attribute>
+                </column>
+                <column decimals="2" label="Lower left">
+                    <attribute>
+                        <isocode>1.0.LE.R.O.VEHICLE_OLC_BPILLAR_LOWER_LEFT_VALUE_ELECTRICAL</isocode>
+                    </attribute>
+                </column>
+                <column decimals="2" label="Lower right">
+                    <attribute>
+                        <isocode>1.0.RI.R.O.VEHICLE_OLC_BPILLAR_LOWER_RIGHT_VALUE_ELECTRICAL</isocode>
+                    </attribute>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+                <node name="Base Node"></node>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+열 함수를 포함하려면 몇 가지 단계가 있습니다:
+
+1. 함수를 적용하려는 열에 function_name 태그 속성이 있는 value_aggregation_config 태그를 추가합니다.
+
+2. 마지막 목록 태그 아래에 추가합니다:
+
+```xml
+<column_functions>
+    <column_function name="default_name">
+            <code>
+            </code>
+    </column_function>
+</column_functions>
+```
+
+column_functions 태그에 column_functions 태그를 더 추가하여 필요한 만큼 함수를 정의할 수 있습니다.
+
+3. 위의 코드 태그에서 스크립트 기능을 추가할 수 있습니다.
+
+이 예에서는 sum 열 함수를 만들었습니다. 위의 단계에 따라 예제 프리셋을 사용하면 기본 열의 중첩된 필드에 있는 값의 합계를 표시하는 sum 열 함수가 만들어집니다.
+
+1단계 이후의 XML 예시
+
+```xml
+<Preset>
+    <presetname>Documentation Example</presetname>
+    <presetversion>0.0.0</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column label="Start Date" >
+                    <attribute>
+                        <isocode>meta.test.start_date</isocode>
+                    </attribute>
+                </column>
+                <column decimals="2" label="Demo Function">
+                    <value_aggregation_config function_name="sum"/>
+                    <column decimals="2" label="Test One">
+                        <attribute>
+                            <isocode>0.0.00.D.O.GENERAL_INFORMATION_TEST_TEMPERATURE</isocode>
+                        </attribute>
+                    </column>
+                    <column decimals="2" label="Test Two">
+                        <attribute>
+                            <isocode>0.0.00.D.O.GENERAL_INFORMATION_TEST_TEMPERATURE</isocode>
+                        </attribute>
+                    </column>
+                </column>
+            </columns>
+        </list>
+        <scenario name="Default">
+            <root>
+                <node name="Base Node"></node>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+2단계 이후의 XML 예시
+
+```xml
+<Preset>
+    <presetname>Documentation Example</presetname>
+    <presetversion>0.0.0</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column label="Start Date" >
+                    <attribute>
+                        <isocode>meta.test.start_date</isocode>
+                    </attribute>
+                </column>
+                <column decimals="2" label="Demo Function">
+                    <value_aggregation_config function_name="sum"/>
+                    <column decimals="2" label="Test One">
+                        <attribute>
+                            <isocode>0.0.00.D.O.GENERAL_INFORMATION_TEST_TEMPERATURE</isocode>
+                        </attribute>
+                    </column>
+                    <column decimals="2" label="Test Two">
+                        <attribute>
+                            <isocode>0.0.00.D.O.GENERAL_INFORMATION_TEST_TEMPERATURE</isocode>
+                        </attribute>
+                    </column>
+                </column>
+            </columns>
+        </list>
+        <column_functions>
+            <column_function name="sum">
+                <code>
+                </code>
+            </column_function>
+        </column_functions>
+        <scenario name="Default">
+            <root>
+                <node name="Base Node"></node>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+3단계 이후의 XML 예시
+
+```xml
+<Preset>
+    <presetname>Documentation Example</presetname>
+    <presetversion>0.0.0</presetversion>
+    <views default_listview="Default">
+        <list name="Default">
+            <columns>
+                <column label="Start Date" >
+                    <attribute>
+                        <isocode>meta.test.start_date</isocode>
+                    </attribute>
+                </column>
+                <column decimals="2" label="Demo Function">
+                    <value_aggregation_config function_name="sum"/>
+                    <column decimals="2" label="Test One">
+                        <attribute>
+                            <isocode>0.0.00.D.O.GENERAL_INFORMATION_TEST_TEMPERATURE</isocode>
+                        </attribute>
+                    </column>
+                    <column decimals="2" label="Test Two">
+                        <attribute>
+                            <isocode>0.0.00.D.O.GENERAL_INFORMATION_TEST_TEMPERATURE</isocode>
+                        </attribute>
+                    </column>
+                </column>
+            </columns>
+        </list>
+        <column_functions>
+            <column_function name="sum">
+                <code>scv_float = []
+for v in scv:
+    try:
+        scv_float.append(float(v))
+    except ValueError:
+        pass
+
+res = sum(scv_float) if scv_float else ""
+                </code>
+            </column_function>
+        </column_functions>
+        <scenario name="Default">
+            <root>
+                <node name="Base Node"></node>
+            </root>
+        </scenario>
+    </views>
+</Preset>
+```
+
+그리드에는 데모 함수 열의 테스트 1 및 테스트 2 열의 합계가 표시됩니다.
+
+![alt text](images/demo-function-column.png)
+
+root 열을 펼치면 열 값이 사용자에게 표시됩니다.
+
+![alt text](expanded-demo-function-column.png)
 
 ### Add-ons
 
@@ -1328,11 +2027,11 @@ crontab 구문을 사용하여 사용자 지정 일정을 설정할 때는 각 �
 1. 상단 오른쪽 모서리의 ![](images/three-horizontal-icon.png){class="intxt-image"}를 클릭합니다.
 2. **Configuration**을 선택합니다.
 3. 왼쪽 메뉴에서 **User management**를 클릭하고 다음에서 원하는 항목을 선택합니다.
-    - [Users]()
-    - [Groups]()
-    - [Access tokens]()
-    - [Global roles]()
-    - [Project roles]()
+    - [Users](#users)
+    - [Groups](#groups)
+    - [Access tokens](#access-tokens)
+    - [Global roles](#global-roles)
+    - [Project roles](#project-rol)
 
 ---
 
@@ -1464,6 +2163,8 @@ crontab 구문을 사용하여 사용자 지정 일정을 설정할 때는 각 �
 3. 필요에 따라 설정을 구성합니다. 각 설정에 대한 설명은 아래에 나와 있습니다.
 4. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다.
 
+![alt text](images/create-or-edit-a-group.png)
+
 :::{list-table}
 :widths: 15 100
 :header-rows: 1
@@ -1481,10 +2182,82 @@ crontab 구문을 사용하여 사용자 지정 일정을 설정할 때는 각 �
     - 그룹 권한은 그룹 구성원에게 상속됩니다.
 :::
 
-##### Global roles
+#### Access tokens
+
+**Access tokens** 보기에서는 시스템의 모든 액세스 토큰에 대한 개요를 제공합니다. 액세스 토큰에 대한 자세한 정보와 개인용 액세스 토큰을 만드는 방법은 [여기]()에서 확인할 수 있습니다.
+
+#### Global roles
+
+글로벌 역할(global roles)은 ![](images/project-icon.png){class="intxt-image"}**Project**와 ![](images/result-icon.png){class="intxt-image"}**Result** 모두에서 사용되는 프로젝트 독립적인 권한 집합입니다. [여기]()에서 글로벌 역할을 보고 관리할 수 있습니다.
+
+##### View a global role
+
+글로벌 역할(global roles)에 대해 어떤 권한이 설정되어 있는지 확인할 수 있습니다. 권한은 사이드 패널의 읽기 전용 권한 트리에 표시됩니다.
+
+1. ![](images/three-horizontal-icon.png){class="intxt-image"} > **Configuration** > **User management** > **Global roles**로 이동합니다.
+2. 개요에서 역할을 클릭한 다음 ![](images/double-left-arrow.png){class="intxt-image"} 클릭하여 사이드 패널을 펼칩니다.
+3. 선택 사항: 검색 및 필터 옵션을 사용하여 권한 목록을 찾아봅니다.
+
+![alt text](images/side-panel-for-role-permissions.png)
+
+:::{admonition} Side panel is visible depending on permissions
+:class: tip
+사이드 패널(side panel)은 보기 권한이 있는 사용자 및 역할 변경 권한이 있는 사용자가 액세스할 수 있습니다. 그러나 사이드 패널의 권한 트리는 항상 읽기 전용으로 표시됩니다. 즉, 편집 권한이 있는 사용자라도 사이드 패널에서 권한을 편집할 수 없습니다. 편집하려면 편집 페이지(edit page)로 이동해야 합니다.
+:::
+
+##### Create or edit a golbal role
+
+1. ![](images/three-horizontal-icon.png){class="intxt-image"} > **Configuration** > **User management** > **Global roles**로 이동합니다.
+2. 기존 글로벌 역할(global roles)을 수정하려면 개요에서 ![alt text](images/pencil-in-box.png){class="intxt-image"} 아이콘을 클릭합니다. 기존 글로벌 역할을 삭제하려면 개요에서 ![](images/remove-icon.png){class="intxt-image"} 아이콘을 클릭합니다. 새 글로벌 역할을 만들려면 오른쪽 상단 모서리에 있는 **New**를 클릭합니다.
+3. 필요에 따라 설정을 구성합니다. 각 설정에 대한 설명은 아래에 나와 있습니다.
+4. ![](images/save-icon.png){class="intxt-image"}를 클릭하여 설정을 저장합니다.
+
+![alt text](images/create-or-edit-a-globa-role.png)
+
+:::{list-table}
+:widths: 15 100
+:header-rows: 1
+
+*   - Setting
+    - Explanation    
+*   - **Role name** (mandatory)
+    - 글로벌 역할(global roles)의 이름
+    
+*   - **Is default**
+    - 이 옵션을 선택(![](images/check-box-icon.png){class="intxt-image"})하면 새로 만든 모든 사용자에게 이 역할이 적용됩니다.        
+*   - **Permissions**
+    - [권한](#users-permissions)은 사용자에게 할당되는 것과 동일한 방식으로 글로벌 역할에 할당됩니다.
+:::
+
+#### Project roles
+
+글로벌 역할(global roles)과 달리 프로젝트 역할(project roles)은 프로젝트 내에서 [프로젝트 구성원](#project-members)에게 할당되는 역할이며 프로젝트별 요구 사항에 따라 정의할 수 있습니다. 여기에서 프로젝트 역할을 보고 관리할 수 있습니다.
+
+![alt text](images/overview-of-all-project-roles.png)
+
+##### Create or edit a project role
+
+1. ![](images/three-horizontal-icon.png){class="intxt-image"} > **Configuration** > **User management** > **Project roles**로 이동합니다.
+2. 기존 프로젝트 역할(project roles)을 편집하려면 개요에서 ![](images/pencil-in-box.png){class="intxt-image"} 아이콘을 클릭합니다. 기존 프로젝트 역할을 삭제하려면 개요에서 ![](images/remove-icon.png){class="intxt-image"} 아이콘을 클릭합니다. 새 프로젝트 역할을 만들려면 오른쪽 상단 모서리에 있는 **New**를 클릭합니다.
+3. 필요에 따라 설정을 구성합니다. 각 설정에 대한 설명은 아래에 나와 있습니다.
+4. ![](images/save-icon.png) 를 클릭하여 설정을 저장합니다.
+
+![alt text](images/create-or-edit-a-project-role.png)
+
+:::{list-table}
+:widths: 15 100
+:header-rows: 1
+
+*   - Setting
+    - Explanation    
+*   - **Role name** (mandatory)
+    - 프로젝트 역할(project roles)의 이름
+*   - **Permissions**
+    - [권한](#users-permissions)은 사용자에게 할당되는 것과 동일한 방식으로 프로젝트 역할에 할당됩니다.
+:::
 
 #### Permissions
-#### Access tokens
+
 
 ### Announcements
 ### Jobs

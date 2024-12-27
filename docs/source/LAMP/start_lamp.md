@@ -90,7 +90,7 @@ lamp_server_log.txt와 lamp_server_app_log.txt 파일은 C:/Users/{현자 사용
 
 :::{admonition} Network port of license server
 :class: note
-LAMP 라이선스 서버는 기본적으로 27015 포트를 사용합니다. Client PC에서 라이선스 활성화가 되지 않는다면 \
+LAMP 라이선스 서버는 기본적으로 3030 포트를 사용합니다. Client PC에서 라이선스 활성화가 되지 않는다면 \
 방화벽 설정을 확인하시기 바랍니다. 현재 포트 번호를 변경하여 사용하는 것은 지원되지 않습니다.(향후 추가 예정)
 :::
 

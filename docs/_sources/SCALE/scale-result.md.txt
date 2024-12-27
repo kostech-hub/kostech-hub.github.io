@@ -894,3 +894,107 @@ Templates를 사용하면 테스트를 더 빠르게 만들 수 있습니다. �
 - **Display legend:** 스위치를 클릭하여 범례 표시 여부를 전환합니다.
 
 ![alt text](images/legend-editor-module.png)
+
+## User interface
+
+![](images/result-icon.png){class="intxt-image"}**Result**의 기본 대시보드는 다음 요소로 구성되며, 사용자가 최적의 애플리케이션 레이아웃을 얻기 위해 재배치할 수 있습니다.
+
+1. [Tool bar](#tool-bar) - fixed bar on top
+2. [Test grid](#test-grid)
+3. [Projects and collections](#projects-and-collections)
+4. [Scenarios](#scenarios-1)
+5. [Test details tabs](#test-details-tabs)
+    - [Attributes](#attributes)
+    - [Photos and videos](#photos-and-videos)
+    - [Documents](#documents)
+    - [Channels](#channels-1)
+    - [Measure data](#measure-data)
+    - [Events](#events)
+    - [Report tab](#report-tab)
+
+![alt text](images/result-overview.png)
+
+각 창에는 고유한 기능이 있으며 개별적으로 열고 닫을 수 있습니다. 닫힌 창은 ![](images/result-icon.png){class="intxt-image"}**Result** > **Workspace**를 클릭한 다음 창 이름을 클릭하여 다시 열 수 있습니다.
+
+### Tool bar
+
+사용자 인터페이스 상단에는 위치가 고정되어 있고 일반적인 애플리케이션 기능 및 메뉴가 포함된 도구 모음이 있습니다.
+
+- [A: Result](#a-result)
+- [B: Preset](#b-preset)
+- [C: Notifications](#c-notifications)
+- [D: Jobs](#d-jobs)
+- [E: Help](#e-help)
+- [F: Burger menu](#f-burger-menu)
+
+![alt text](images/result-toolbar.png)
+
+#### A: Result
+
+여기에서 다음 옵션에 접근할 수 있습니다:
+
+- ![alt text](images/workspace-icon.png){class="intxt-image"} **Workspace**: 여기에서 작업 공간에 창을 추가할 수 있습니다. [레이아웃 수정에 대한 자세한 정보를 확인하세요]().
+- ![alt text](images/add-on-icon.png){class="intxt-image"} **Add-ons**: 여기에서 설치된 모든 부가 기능에 액세스할 수 있습니다.
+- ![alt text](images/project-icon.png){class="intxt-image"} **Project**: 여기에서 결과에서 프로젝트로 이동할 수 있습니다.
+
+#### B: Preset
+
+여기에 현재 사용 중인 preset의 이름이 표시됩니다.
+
+- 목록에서 다른 프리셋(preset)을 선택하려면 프리셋의 이름을 클릭합니다.
+- 마우스 커서를 프리셋 위로 이동하면 프리셋의 버전 번호와 담당자가 표시된 툴팁을 볼 수 있습니다.
+
+#### C: Notifications
+
+![alt text](images/bell-icon.png){class="intxt-image"}를 클릭하여 **Notifications** 영역을 엽니다. 여기에서 공지사항 및 작업 알림 목록을 볼 수 있습니다. [알림에 대한 자세한 정보를 확인하세요]().
+
+#### D: Jobs
+
+![alt text](images/jobs-icon.png){class="intxt-image"}를 클릭하여 **Jobs** 영역을 엽니다. 여기에서 자신의 작업 목록을 볼 수 있습니다. 작업 상태(pending, running, succeeded, failed)가 동적으로 표시됩니다. 여기에서 작업 로그 파일에 액세스하고 작업 아티팩트를 다운로드할 수 있습니다. [작업에 대한 자세한 정보]()
+
+#### E: Help
+
+![alt text](images/question-icon.png){class="intxt-image"} 클릭하여 SCALE.sdm 사용 설명서를 엽니다.
+
+#### F: Burger menu
+
+![alg text](images/three-horizontal-icon.png){class="intxt-images"}를 클릭하여 다음 옵션에 액세스합니다:
+
+- ![alt text](images/my-profile-icon.png){class="intxt-image"}**My profile**: 개인 설정을 엽니다. 여기에서 비밀번호를 변경하고 액세스 토큰을 관리할 수 있습니다.
+- ![alt text](images/configuration-icon.png){class="intxt-image"}**Configuration**: 구성 영역이 열립니다. 키 사용자 또는 관리자와 같이 해당 권한이 있는 사용자는 여기에서 처음에 SCALE.sdm을 구성할 수 있습니다. 예를 들어, 마스터 데이터를 저장하고, 애드온을 설치하고, 사용자 계정을 관리할 수 있습니다.
+- ![alt text](images/admin-area-icon.png){class="intxt-image"}관리자 영역: 이 영역은 직원으로 표시된 사용자만 볼 수 있습니다.
+- ![alt text](images/about-icon.png){class="intxt-image"}**About**: 애플리케이션에 대한 정보를 엽니다. 여기에서 현재 설치된 버전을 확인할 수 있습니다. 애플리케이션과 관련된 오픈 소스 소프트웨어 및 라이선스에 대한 정보도 볼 수 있습니다.
+- ![alt text](images/logout-icon.png){class="intxt-image"}**Logout**: 애플리케이션에서 로그아웃합니다.
+
+### Test grid
+
+테스트 그리드(test grid)에서는 다음 요소들을 포함합니다.
+
+- [A: Top bar]()
+- [B: Column headers]()
+- [C: Grid]()
+- [Context menu]()
+
+---
+
+![alt text](images/overview-of-grid-elements.png)
+
+### Projects and collections
+
+### Scenarios
+
+### Test details tabs
+
+#### Attributes
+
+#### Photos and videos
+
+#### Documents
+
+#### Channels
+
+#### Measure data
+
+#### Events
+
+### Report tab
