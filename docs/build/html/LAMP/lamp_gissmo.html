@@ -18,6 +18,8 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/design-tabs.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a543a3c44.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -184,11 +186,21 @@
 <li><p>Direction : 시편이 인장되는 방향을 설정합니다.</p></li>
 <li><p>F. Factor : Force Factor를 입력하는 항목으로 Biaxial 시편 모델에만 입력된 값이 사용됩니다.</p></li>
 <li><p>Ref. Size : 시편 모델에서 변위를 계산하는 요소의 사이즈를 입력합니다.</p></li>
+<li><p>Triaxiality : 각 시편의 응력 상태를 대표하는 삼축응력상태 값을 입력합니다.</p></li>
 <li><p>DMGEXP(Exponent for nonlinear damage accumulation) : GISSMO 재료 모델의 DMGEXP 파라미터의 설계 범위를 입력합니다.</p></li>
 <li><p>FADEXP(Exponent for damage-related stress fadeout) : GISSMO 재료 모델의 FADEXP 파라미터의 설계 범위를 입력합니다.</p></li>
 <li><p>Fracture : 해당 시편의 파단에 대한 equivalent plastic strain을 결정하기 위한 파라미터의 설계 범위를 입력합니다.</p></li>
 <li><p>Instability : 해당 시편의 Critical equivalent plastic strain을 결정하기 위한 파라미터의 설계 범위를 입력합니다.</p></li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Triaxiality는 삼축응력상태라고 하며, 해당 파라미터는 무차원 단위의 응력상태를 나타내는 값으로 요소 별로 인장, 전단, 압축 등의 응력상태를 알 수 있습니다. 각 응력 상태에 대한 대표적인 값들은 다음과 같습니다.</p>
+<ul class="simple">
+<li><p>순수 전단 : 0</p></li>
+<li><p>순수 인장(uniaxial tension) : 0.33</p></li>
+<li><p>순수 평면 인장(plane strain) : <span class="math notranslate nohighlight">\(\apprx\)</span>0.577</p></li>
+</ul>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Specimen 항목의 ComboBox에 추가된 시편 모델들을 변경할 수 있습니다. 변경 시 선택된 시편 모델의 입력 정보로 변경됩니다. <br />
@@ -272,7 +284,7 @@ Stage 번호(1.1, 1.2 …)를 선택하게 되면 해당 Stage에 대한 Target 
 </section>
 <section id="step-3">
 <h2>Step 3<a class="headerlink" href="#step-3" title="Permalink to this heading"></a></h2>
-<p>Step 3에서는 Step 2에서 진행된 해석 결과에서 최적의 결과를 선택하고 각 결과에 대한 Triaxiality를 계산합니다.</p>
+<p>Step 3에서는 Step 2에서 진행된 해석 결과에서 최적의 결과를 선택하고 Triaxiality Curve를 생성할 수 있습니다.</p>
 <p><img alt="" src="../_images/gissmo3.png" /></p>
 <section id="specimen-model">
 <h3>Specimen Model<a class="headerlink" href="#specimen-model" title="Permalink to this heading"></a></h3>
@@ -285,29 +297,16 @@ Stage 번호(1.1, 1.2 …)를 선택하게 되면 해당 Stage에 대한 Target 
 </section>
 <section id="selection-optimal-case">
 <h3>Selection Optimal Case<a class="headerlink" href="#selection-optimal-case" title="Permalink to this heading"></a></h3>
-<p>Step 2에서 최적화 시뮬레이션에서 생성된 결과들에서 사용자는 시험 target curve를 잘 표현하는 최적의 결과를 선택해야 합니다. 먼저 사용자는 LS-OPT에서 사용되는 viewer 프로그램을 통해 결과를 비교하고 최종적으로 하나의 결과를 선택합니다. 이를 위해 상단 Specimen Model 목록에서 확인하고자 하는 하나의 모델을 선택하고 제일 하단에 위치한 버튼 중에서 Open Viewer 버튼을 클릭합니다.</p>
-<div class="admonition-ls-opt-viewer admonition">
-<p class="admonition-title">LS-OPT Viewer</p>
-<!-- ![](images/gissmo/gissmo1.gif) -->
-<p>위 영상에서 확인할 수 있는 내용에 대해서 아래와 같이 설명합니다.</p>
-<ul class="simple">
-<li><p>FORCE_DISPLACEMENT_CURVE : 최적화 시뮬레이션을 통해서 계산된 결과의 Force-Displacement 결과 Curve를 표시합니다.</p></li>
-<li><p>UT_target_curve : Step 1에서 시편 모델의 시험 target curve를 표시합니다.</p></li>
-</ul>
-<p>(하단 Iteration에서)</p>
-<ul class="simple">
-<li><p>all : 모든 결과 case의 결과를 표시합니다. 이 경우 선택한 FORCE_DISPLACEMENT_CURVE 결과가 표시됩니다.</p></li>
-<li><p>n : 하나의 Iteration의 결과를 표시합니다. 위 영상의 경우 총 11번의 Iteration이 수행되었으며 n을 통해 하나의 Iteration에서 생성된 simulation point 수만큼의 FORCE_DISPLACEMENT_CURVE를 표시합니다.</p></li>
-</ul>
-<p>표시되는 그래프에서 하나의 라인을 클릭하면 해당 결과에 대한 파라미터와 Case 넘버가 표시됩니다. 따라서 사용자는 target curve의 파단 시점을 잘 표현하는 하나의 결과를 선택하고 Case를 넘버를 확인합니다.</p>
-</div>
+<p>Step 2에서 최적화 시뮬레이션에서 생성된 결과들에서 사용자는 시험 Target Curve를 잘 표현하는 최적의 결과를 선택해야 합니다.
+Step 3의 입력 창에서 Select Result 버튼을 클릭하면 아래와 같은 창이 표시됩니다. Step 2에서 <strong>Select as Optimized Stage</strong>로 최적의 Stage를 선택하였다면 Result 항목에 선택한 Stage로 표시되며 그렇지 않다면 마지막 Stage의 번호가 표시됩니다. Triaxiality는 Step 1에서 입력했던 Triaxiality 값이 표시되며, 나머지 항목들은 최적화 시뮬레이션으로 도출된 선택된 Stage의 파라미터 값들이 표시됩니다. 해당 창에서 최종적으로 Curve 생성에 필요한 정보들을 가져오기 위해 Load 항목에 있는 버튼을 각각 눌러 각 시편의 최적 Stage를 확정해야 합니다. 최적 Stage를 확정했다면 마지막으로 Apply 버튼을 눌러 작업 내용을 적용합니다.</p>
+<p><img alt="alt text" src="../_images/select_result_in_step2.png" /></p>
 <div class="tip admonition">
 <p class="admonition-title">Numbering of Results</p>
 <p>최적화 시뮬레이션은 최적값을 찾기 위해 몇번의 반복 계산을 합니다. 반복 계산은 각 Iteration마다 사용자가 Step2에서 설정한 Num. of Simulation Points의 수만큼 결과를 생성합니다. 즉 최적값을 찾는데 5번의 Iteration이 수행되었고 Num. of Simulation Points의 값이 8이라면 총 40개의 결과를 생성합니다. 각 결과 Case의 넘버링은 1.1~1.8, 2.1~2.8 … 5.1~5.8과 같이 설정되며 각 넘버링으로 된 폴더에 결과가 저장됩니다. 넘버링의 앞 숫자는 Iteration 값을 뒤의 숫자는 Simulation Point를 의미합니다.</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Selecting Optimal Result Tip</p>
-<p>대부분의 경우 LS-OPT는 최적의 결과를 제일 마지막 넘버링 값으로 저장합니다. 하지만 가끔 마지막 넘버링의 결과보다 이전 넘버링의 결과에서 더 잘 맞는 결과가 있을 수 있습니다. 그렇기 때문에 무조건적으로 마지막 넘버링의 결과를 선택하기 보다는 LS-OPT Viewer에서 결과를 확인 후에 선택하는 것이 좋습니다.</p>
+<p>대부분의 경우 LS-OPT는 최적의 결과를 제일 마지막 넘버링 값으로 저장합니다. 하지만 가끔 마지막 넘버링의 결과보다 이전 넘버링의 결과에서 더 잘 맞는 결과가 있을 수 있습니다. 그렇기 때문에 무조건적으로 마지막 넘버링의 결과를 선택하기 보다는 LS-OPT Viewer 혹은 Step2에서 결과를 비교 후에 선택하는 것이 좋습니다.</p>
 </div>
 </section>
 <section id="calculation-triaxiality-value">

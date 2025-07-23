@@ -33,7 +33,8 @@ myst_enable_extensions = [
     "fieldlist",
     "attrs_block",
     "substitution",
-    "dollarmath"
+    "dollarmath",
+    "amsmath"
 ]
 
 supported_image_types = ['image/svg+xml', 'image/png', 'image/gif', 'image/jpeg']
