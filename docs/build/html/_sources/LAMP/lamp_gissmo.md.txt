@@ -44,7 +44,7 @@ Step 1에서는 준비된 시편 모델들을 추가하고 설계 파라미터�
 
     :::{caution}
     시편 모델에는 해석 과정중에 변위가 계산될 수 있도록 *DATABASE_HISTORY_NODE_ID 카드를 이용해 변위 계산을 위한 두 개의 노드 ID를 설정해야 합니다. LAMP GISSMO는 아래 사진과 같은 *DATABASE_HISTORY_NODE_ID 카드에서 시편 인장에 의한 변위를 계산하기 위해 첫 번째와 두 번째에 해당하는 34, 82 가져오게 되고, 인장에 의한 Force를 가져오기 위해 세 번째 노드인 1020을 가져오게 됩니다. 이는 **파라미터 최적화 시뮬레이션에서 Response 식에 사용되기 때문에 반드시 정의**되어야 합니다.
-    ![](image/gissmo/history_node_id.png)
+    ![](images/gissmo/history_node_id.png)
     :::
 
     :::{tip}
@@ -110,6 +110,15 @@ Step 2에서의 진행 상태를 표시합니다. 우측의 사각형 마크는 
 - <span style="color:red">빨강</span> : 빨강색으로 해당 시편 모델의 최적화 시뮬레이션이 수행되지 않은 상태를 의미합니다.
 - <span style="color:orange">주황</span> : 주황색은 해당 시편 모델의 최적화 시뮬레이션이 수행중인 상태를 의미합니다.
 - <span style="color:green">초록</span> : 초록색은 해당 시편 모델의 최적화 시뮬레이션이 성공적으로 종료되었음을 의미합니다. 
+
+Status에서는 각 행의 Expander를 이용해서 최적화 시뮬레이션의 각 Iteration과 Stage에 대한 진행 상태를 확인할 수 있습니다.
+Stage 번호(1.1, 1.2 ...)를 선택하게 되면 해당 Stage에 대한 Target Curve와 시뮬레이션에 의한 Force-Displacement Curve를 확인 할 수 있습니다.
+
+![alt text](images/gissmo/check_history_result.gif)
+
+:::{tip}
+최적화 시뮬레이션에서 도출된 결과에서 최적의 결과를 선택해야 합니다. 이는 Step3에서도 진행 할 수 있지만 Step2에서 직접 비교 그래프를 확인하면서 최적의 Stage를 선택 할 수 있습니다. 그래프로 확인 후 최적의 결과라고 생각되는 Stage 번호에서 마우스 우 클릭을 하면 Context Menu가 표시되며 **Select as Optimized Stage**라는 메뉴가 표시됩니다. 이를 클릭하면 해당 Stage를 해당 시편의 최적 시뮬레이션 결과로 선택하게 됩니다. 
+:::
 
 ### LSOPT Project Generation
 Step1에서 추가된 시편 모델들의 GISSMO 파라미터들의 최적화 시뮬레이션을 수행하는데 있어 각 시편을 개별적으로 시뮬레이션을 수행 하거나(Individual) 모든 시편을 통합하여 시뮬레이션(Integration) 할 수 있습니다. 통합 해석(Integration)의 경우에는 Base specimen 모델을 선택해야 합니다. Base specimen을 선택함으로써 GISSMO 파라미터인 DMGEXP와 FADEXP는 Base specimen의 입력값으로 변경되어 시뮬레이션이 수행됩니다. 
