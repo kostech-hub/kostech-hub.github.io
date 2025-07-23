@@ -43,7 +43,8 @@ Step 1에서는 준비된 시편 모델들을 추가하고 설계 파라미터�
     - Keyword 파일에서 *DATABASE_HISTORY_NODE_ID 카드를 찾고 입력된 두 개의 노드 정보로 부터 Gauge length를 계산해 G. Length 항목에 입력합니다. 
 
     :::{caution}
-    시편 모델에는 해석 과정중에 변위가 계산될 수 있도록 *DATABASE_HISTORY_NODE_ID 카드를 이용해 변위 계산을 위한 두 개의 노드 ID를 설정해야 합니다.
+    시편 모델에는 해석 과정중에 변위가 계산될 수 있도록 *DATABASE_HISTORY_NODE_ID 카드를 이용해 변위 계산을 위한 두 개의 노드 ID를 설정해야 합니다. LAMP GISSMO는 아래 사진과 같은 *DATABASE_HISTORY_NODE_ID 카드에서 시편 인장에 의한 변위를 계산하기 위해 첫 번째와 두 번째에 해당하는 34, 82 가져오게 되고, 인장에 의한 Force를 가져오기 위해 세 번째 노드인 1020을 가져오게 됩니다. 이는 **파라미터 최적화 시뮬레이션에서 Response 식에 사용되기 때문에 반드시 정의**되어야 합니다.
+    ![](image/gissmo/history_node_id.png)
     :::
 
     :::{tip}
