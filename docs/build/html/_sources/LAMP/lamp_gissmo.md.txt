@@ -186,10 +186,8 @@ Step 3의 입력 창에서 Select Result 버튼을 클릭하면 아래와 같은
 대부분의 경우 LS-OPT는 최적의 결과를 제일 마지막 넘버링 값으로 저장합니다. 하지만 가끔 마지막 넘버링의 결과보다 이전 넘버링의 결과에서 더 잘 맞는 결과가 있을 수 있습니다. 그렇기 때문에 무조건적으로 마지막 넘버링의 결과를 선택하기 보다는 LS-OPT Viewer 혹은 Step2에서 결과를 비교 후에 선택하는 것이 좋습니다.
 :::
 
-### Calculation Triaxiality Value
+<!-- ### Calculation Triaxiality Value
 LS-OPT Viewer에서 각 시편 모델의 최적 결과를 선택하였다면 각 시편 모델의 Triaxiality를 계산해야 합니다. LAMP GISSMO에서 Triaxiality를 쉽게 계산할 수 있습니다. 하단의 Select Result를 클릭합니다.
-
-<!-- ![](images/gissmo/select_optimal_result.gif) -->
 
 - Project : 현재 사용중인 시편 모델의 이름을 표시합니다.
 - Result : 최적화 시뮬레이션으로 생성된 결과의 넘버링 목록이 표시되며 LS-OPT Viewer에서 선택한 각 시편 모델의 최적 결과 Case 넘버를 선택합니다.
@@ -202,7 +200,7 @@ LS-OPT Viewer에서 각 시편 모델의 최적 결과를 선택하였다면 각
 :::{admonition} Calculation of triaxiality
 :class: Tip
 Triaxiality는 평균(Average)과 적분(Integration) 방법으로 계산할 수 있습니다. 평균은 0이 아닌 값들을 평균하여 계산하며 적분 방법은 Effective Plastic Strain - Triaxiality Curve의 면적에 최대 Effective Plastic Strain을 나눈 값으로 계산합니다. 
-:::
+::: -->
 
 ### Triaxiality Curve Data
 최적화 시뮬레이션이 완료된 시편 모델들에 대해서 최적 결과를 선택하고 Triaxiality를 계산 한 후에 생성되거나 생성 할 수 있는 Curve 데이터들을 확인하거나 조작할 수 있습니다.
@@ -251,7 +249,7 @@ Step 4에서는 메쉬 정규화(Mesh Regularization)을 수행합니다. 메쉬
 
 :::{admonition} Mesh Regularization
 :class: Tip
-재료의 파단은 메쉬 사이즈에 따라서 UTS 이후 결과에 차이가 있고 비선형 거동의 경우 메쉬 사이즈에 큰 영향을 받습니다. 실제 일정한 메쉬 사이즈에서 도출된 GISSMO 데이터를 일정하지 않은 해석 모델에 적용할 경우 부정확한 결과를 보일 수 있습니다. 따라서 메쉬 사이즈에 따른 Scaling Factor Curve를 생성하여 GISSMO에 적용합니다. 일반적으로 Reference 모델의 메쉬 사이즈는 0.5mm로 하며 메쉬 정규화를 위한 시편 모델은 0.4mm, 0.8mm, 1.5mm로 구성합니다. 0.5mm 일 때의 Scaling Factor를 1로 하여 LS-OPT 최적화 시뮬레이션으로 0.4mm, 0.8mm, 1.5mm일 때의 Scaling Factor 계산합니다. 결과적으로 총 4개의 Scaling Factor를 사용하여 Curve Fitting으로 Curve를 생성하고 GISSMO 물성 카드에 적용합니다. 
+재료의 파단은 메쉬 사이즈에 따라서 UTS 이후 결과에 차이가 있고 비선형 거동의 경우 메쉬 사이즈에 큰 영향을 받습니다. 실제 일정한 메쉬 사이즈에서 도출된 GISSMO 데이터를 일정하지 않은 해석 모델에 적용할 경우 부정확한 결과를 보일 수 있습니다. 따라서 메쉬 사이즈에 따른 Scaling Factor Curve를 생성하여 GISSMO에 적용합니다. 일반적으로 Reference 시편 모델을 포함해서 4개의 시편 모델을 대상으로 메쉬 정규화를 진행합니다.
 :::
 
 ### Selection of Reference Model
