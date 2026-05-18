@@ -47,7 +47,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
+              <p class="caption" role="heading"><span class="caption-text">COSIMULATION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../FMI/dyna-fmi.html">Docker와 FMI를 이용한 LS-Dyna Cosimulation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">OASYS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OASYS/js_api.html">JS-API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="start_lamp.html">시작하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gen_material.html">재료 물성 카드 생성</a></li>
@@ -86,6 +94,18 @@
 <li class="toctree-l1"><a class="reference internal" href="comments.html">용어 설명</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sample.html">Samples of LAMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendix.html">Appendix</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">D3VIEW</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../d3View/d3view_install.html">D3VIEW 시작하기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SCALE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../SCALE/scale-server-installation.html">Server Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SCALE/scale-model.html">SCALE.Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SCALE/scale-project.html">SCALE.project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SCALE/scale-result.html">Result</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SCALE/scale.sdm.html">SCALE.sdm</a></li>
 </ul>
 
         </div>
@@ -185,7 +205,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>시편 모델의 Triaxiality 값은 LS-Dyna 해석에서 나오는 History Variable #9에서 확인 할 수 있습니다. 아래 사진은 단축인장 모델에 대한 History Variable #9번의 결과로 Triaxiality 대표 값을 잘 나타내는것을 확인 할 수 있습니다.
-<img alt="" src="../_images/history9graph.png" /></p>
+<img alt="alt text" src="../_images/history9graph.png" /></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -197,7 +217,7 @@ Specimen 항목의 우측 휴지통 아이콘을 통해 추가된 시편 모델�
 <h2>Step 2<a class="headerlink" href="#step-2" title="Permalink to this heading"></a></h2>
 <p>Step 2에서는 Step 1에서 입력된 시편 모델과 파라미터 정보를 기반으로 LS-OPT를 사용하여 최적화 시뮬레이션을 수행합니다. <br />
 최적화 시뮬레이션은 LS-OPT 뿐만 아니라 LS-Dyan Solver를 사용하기 때문에 각각의 정보를 입력합니다.</p>
-<p><img alt="" src="../_images/gissmo2.png" /></p>
+<p><img alt="alt text" src="../_images/gissmo2.png" /></p>
 <section id="solver-option">
 <h3>Solver option<a class="headerlink" href="#solver-option" title="Permalink to this heading"></a></h3>
 <p>LS-Dyna Solver에 대한 정보를 입력합니다. smp, mpp Solver 둘 다 사용가능하며 mpp solver의 경우 MPI 경로가 필요합니다.</p>
@@ -271,7 +291,7 @@ Stage 번호(1.1, 1.2 …)를 선택하게 되면 해당 Stage에 대한 Target 
 <section id="step-3">
 <h2>Step 3<a class="headerlink" href="#step-3" title="Permalink to this heading"></a></h2>
 <p>Step 3에서는 Step 2에서 진행된 해석 결과에서 최적의 결과를 선택하고 Triaxiality Curve를 생성할 수 있습니다.</p>
-<p><img alt="" src="../_images/gissmo3.png" /></p>
+<p><img alt="alt text" src="../_images/gissmo3.png" /></p>
 <section id="specimen-model">
 <h3>Specimen Model<a class="headerlink" href="#specimen-model" title="Permalink to this heading"></a></h3>
 <p>각 시편의 현재 상태를 표시합니다. 최적화 시뮬레이션이 완료된 시편 모델에 대해서 최적 결과 선택 및 Triaxiality를 계산할 수 있습니다.</p>
@@ -317,8 +337,8 @@ Triaxiality는 평균(Average)과 적분(Integration) 방법으로 계산할 수
 <li><p>Triaxiality vs Plastic Strain Data File : Triaxiality vs Plastic Strain Data가 기록된 csv파일 이름을 표시하고 우측 아이콘을 통해 그래프로 확인 할 수 있습니다.</p></li>
 <li><p>Triaxiality vs Fracture Data File : Triaxiality vs Fracture Data가 기록된 csv파일 이름을 표시하고 Data를 이용해 interpolation으로 Curve를 생성할 수 있습니다.</p>
 <ul>
-<li><p><a class="intxt-image reference internal" href="../_images/ShowFailurePoint.png"><img alt="" class="intxt-image" src="../_images/ShowFailurePoint.png" style="width: 24px;" /></a> : Triaxility vs Fracture 데이터 포인터를 표시합니다.</p></li>
-<li><p><a class="intxt-image reference internal" href="../_images/ShowFailurePanel.png"><img alt="" class="intxt-image" src="../_images/ShowFailurePanel.png" style="width: 24px;" /></a> : Triaxility vs Fracture 데이터 포인터를 기반으로 Curve를 생성 할 수 있는 도구를 표시합니다.</p></li>
+<li><p><a class="intxt-image reference internal" href="../_images/ShowFailurePoint.png"><img alt="alt text" class="intxt-image" src="../_images/ShowFailurePoint.png" style="width: 24px;" /></a> : Triaxility vs Fracture 데이터 포인터를 표시합니다.</p></li>
+<li><p><a class="intxt-image reference internal" href="../_images/ShowFailurePanel.png"><img alt="alt text" class="intxt-image" src="../_images/ShowFailurePanel.png" style="width: 24px;" /></a> : Triaxility vs Fracture 데이터 포인터를 기반으로 Curve를 생성 할 수 있는 도구를 표시합니다.</p></li>
 </ul>
 </li>
 </ul>
@@ -326,7 +346,7 @@ Triaxiality는 평균(Average)과 적분(Integration) 방법으로 계산할 수
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 H-F Failure</label><div class="sd-tab-content docutils">
-<p><img alt="" src="../_images/gissmo4.png" /></p>
+<p><img alt="alt text" src="../_images/gissmo4.png" /></p>
 <p>H-F Failure 탭에서는 Hosford-Coulomb Failure Model을 이용하여 Triaxiality Curve를 생성할 수 있습니다. <br />
 해당 기능은 Curve를 데이터의 점 데이터에 알맞도록 자동으로 생성해주지 않습니다. <br />
 사용자가 NF, A, B, C 총 4개의 파라미터를 변경하면서 점 데이터를 잘 묘사하는 Curve를 찾아야 합니다.</p>
@@ -335,7 +355,7 @@ H-F Failure</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 Interpolation</label><div class="sd-tab-content docutils">
-<p><img alt="" src="../_images/gissmo5.png" /></p>
+<p><img alt="alt text" src="../_images/gissmo5.png" /></p>
 <p>Interpolation 탭에서는 선형 및 다항식등의 방법으로 점 데이터 사이를 Interpolation하여 Curve를 생성할 수 있습니다.
 LAMP GISSMO에서 지원되는 Interpolation 방법은 다음과 같습니다. <br />
 Interpolation을 하기 위한 Min, Max Point 값과 생성할 Curve 데이터의 step 크기를 입력하고 Method를 선택 후 Apply 버튼을 눌러 Curve를 생성합니다.</p>
@@ -416,17 +436,19 @@ Interpolation을 하기 위한 Min, Max Point 값과 생성할 Curve 데이터�
 <ul class="simple">
 <li><p>Mesh Regularization Factor Data : 최적화 시뮬레이션으로 결정된 각 시편 모델의 Scaling Factor 데이터가 저장된 csv 파일을 표시합니다.</p>
 <ul>
-<li><p><a class="intxt-image reference internal" href="../_images/ShowMRFactorPoint.png"><img alt="" class="intxt-image" src="../_images/ShowMRFactorPoint.png" style="width: 24px;" /></a> : csv 데이터 파일에 저장된 포인트 정보를 그래프로 표시합니다.</p></li>
-<li><p><a class="intxt-image reference internal" href="../_images/ShowMRFactorCurve.png"><img alt="" class="intxt-image" src="../_images/ShowMRFactorCurve.png" style="width: 24px;" /></a> : Scaling Factor 포인트 정보를 기반으로 Curve Fitting을 할 수 있는 도구를 표시하고 Curve Fitting을 하여 Curve를 결정합니다.</p>
+<li><p><a class="intxt-image reference internal" href="../_images/ShowMRFactorPoint.png"><img alt="alt text" class="intxt-image" src="../_images/ShowMRFactorPoint.png" style="width: 24px;" /></a> : csv 데이터 파일에 저장된 포인트 정보를 그래프로 표시합니다.</p></li>
+<li><p><a class="intxt-image reference internal" href="../_images/ShowMRFactorCurve.png"><img alt="alt text" class="intxt-image" src="../_images/ShowMRFactorCurve.png" style="width: 24px;" /></a> : Scaling Factor 포인트 정보를 기반으로 Curve Fitting을 할 수 있는 도구를 표시하고 Curve Fitting을 하여 Curve를 결정합니다.</p>
 <ul>
 <li><p>Data 항목에서 생성할 Curve 가로축의 Min, Max 값과 Step 사이즈를 설정합니다.</p></li>
 <li><p>Curve Fitting은 두 개의 지수함수 모델을 사용할 수 있습니다. 각각의 버튼을 클릭 시 Curve Fitting이 바로 적용되며 A, B 그리고 C 값이 표시됩니다. 사용자는 임의로 A, B, C 값을 변경하여 Curve를 수정할 수 있습니다.</p></li>
-<li><p>Curve를 결정한 이후에는 Apply 버튼을 클릭하여 생성된 Curve 데이터를 csv 파일로 저장합니다.
-<img alt="" src="../_images/gissmo8.png" /></p></li>
+<li><p>Curve를 결정한 이후에는 Apply 버튼을 클릭하여 생성된 Curve 데이터를 csv 파일로 저장합니다.</p></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<p><img alt="alt text" src="../_images/gissmo8.png" /></p>
+<ul class="simple">
 <li><p>Mesh Regularization Factor Curve File : Curve Fitting을 통해 생성된 Curve 데이터가 저장된 파일을 표시합니다.</p></li>
 </ul>
 </section>
@@ -434,7 +456,7 @@ Interpolation을 하기 위한 Min, Max Point 값과 생성할 Curve 데이터�
 <section id="step-5">
 <h2>Step 5<a class="headerlink" href="#step-5" title="Permalink to this heading"></a></h2>
 <p>Step 5에서는 Ste 1 ~ 4를 진행하면서 얻은 결과들을 이용해서 LS-Dyna에서 사용가능한 GISSMO 물성 카드가 포함된 키워드 파일을 생성합니다.</p>
-<p><img alt="" src="../_images/gissmo9.png" /></p>
+<p><img alt="alt text" src="../_images/gissmo9.png" /></p>
 <ul class="simple">
 <li><p>Step State : 이전 Step들의 상태를 표시합니다.</p>
 <ul>
@@ -451,7 +473,7 @@ Interpolation을 하기 위한 Min, Max Point 값과 생성할 Curve 데이터�
 <p>ECRIT의 ID는 GISSMO 카드에 마이너스 값으로 변경되어 입력됩니다. 마이너스의 의미는 ECRIT의 데이터로 Curve를 사용하겠다는 의미입니다. <code class="docutils literal notranslate"><span class="pre">사용자가</span> <span class="pre">입력하는</span> <span class="pre">UI의</span> <span class="pre">ECRIT</span> <span class="pre">ID</span> <span class="pre">입력란에는</span> <span class="pre">마이너스가</span> <span class="pre">아닌</span> <span class="pre">플러스</span> <span class="pre">값으로</span> <span class="pre">입력해야</span> <span class="pre">합니다.</span></code></p>
 </div>
 <p>생성되는 결과물은 아래와 같습니다.</p>
-<p><img alt="" src="../_images/gissmo10.png" /></p>
+<p><img alt="alt text" src="../_images/gissmo10.png" /></p>
 </section>
 </section>
 

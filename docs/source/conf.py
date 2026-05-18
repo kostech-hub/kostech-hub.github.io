@@ -92,10 +92,10 @@ latex_elements = {
 
 % 영문 폰트 설정
 \setmainfont[Mapping=tex-text]{NanumGothic}
-\setsansfont[Mapping=tex-text]{나눔명조}
+\setsansfont[Mapping=tex-text]{NanumGothic}
 
 % 한글 폰트 설정
 \setmainhangulfont[Mapping=tex-text]{NanumGothic}
-\setsanshangulfont[Mapping=tex-text]{나눔명조}
+\setsanshangulfont[Mapping=tex-text]{NanumGothic}
 ''',
 }

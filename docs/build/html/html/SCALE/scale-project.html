@@ -21,7 +21,9 @@
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a543a3c44.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Result" href="scale-result.html" />
+    <link rel="prev" title="SCALE.Model" href="scale-model.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,7 +45,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
+              <p class="caption" role="heading"><span class="caption-text">COSIMULATION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../FMI/dyna-fmi.html">Docker와 FMI를 이용한 LS-Dyna Cosimulation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">OASYS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OASYS/js_api.html">JS-API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/start_lamp.html">시작하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/gen_material.html">재료 물성 카드 생성</a></li>
@@ -53,6 +63,136 @@
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/comments.html">용어 설명</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/sample.html">Samples of LAMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/appendix.html">Appendix</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">D3VIEW</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../d3View/d3view_install.html">D3VIEW 시작하기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SCALE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="scale-server-installation.html">Server Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scale-model.html">SCALE.Model</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SCALE.project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-concepts">Basic concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#systems-engineering-in-the-automotive-industry">Systems Engineering in the Automotive Industry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-cases">Test cases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assessment">Assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#initial-configuration">Initial configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-mdm-attributes">Create MDM attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-mdm-requirements-based-on-these-attributes">Create MDM requirements based on these attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#group-the-requirements-into-mdm-test-cases">Group the requirements into MDM test cases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-other-user-accounts-and-grant-permissions">Create other user accounts and grant permissions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-a-project">Set up a project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-new-project">Create a new project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-an-existing-project">Open an existing project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#star-favorite-projects">Star favorite projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-a-project-s-name-or-description">Edit a project’s name or description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-project-documents">Manage project documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-project-attributes">Add project attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#milestones">Milestones</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-project-milestones">Add project milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-milestones-in-the-overview">View milestones in the overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-requirements-and-test-cases-to-the-project">Add requirements and test cases to the project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-project-members">Add project members</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tailor-requirements-to-be-project-specific">Tailor requirements to be project-specific</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Open an existing project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-a-requirement-s-details">View a requirement’s details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-a-test-case-to-be-project-specific">Edit a test case to be project-specific</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-the-requirements-to-be-project-specific">Edit the requirements to be project-specific</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#edit-one-requirement-to-be-project-specific">Edit one requirement to be project-specific</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eidt-multiple-requirements-at-ones">Eidt multiple requirements at ones</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-the-requirements-grid">Configure the requirements grid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-concept">Basic concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toggle-and-rearrange-the-columns">Toggle and rearrange the columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#group-requirements-by-column-headers">Group requirements by column headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-column-filters">Apply column filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-the-sorting-order">Change the sorting order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sort-multiple-columns">Sort multiple columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-your-configuration-as-a-view">Save your configuration as a view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#share-views-with-other-users">Share views with other users</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#report-the-current-requirement-status">Report the current requirement status</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Open an existing project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-the-status-of-a-requirement">View the status of a requirement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#view-the-status-of-one-single-requirement">View the status of one single requirement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-the-status-of-requirement-groups">View the status of requirement groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-aggregated-statuses-in-the-sidebar">View aggregated statuses in the sidebar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#manually-report-the-status">Manually report the status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-a-status-from-private-to-public">Change a status from private to public</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monitor-project-status-over-time">Monitor project status over time</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interface">User interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tool-bar">Tool bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-project">A: Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b-notifications">B: Notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-jobs">C: Jobs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-help">D: Help</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#e-burger-menu">E: Burger menu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project-selection">Project selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project-view">Project view</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#settings">Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-members">Project members</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#master-data-management-mdm">Master data management (MDM)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mdm-attributes">MDM attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdm-requirements">MDM requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdm-test-cases">MDM test cases</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#presets">Presets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#layout-management">Layout management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preset-guideline">Preset guideline</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-ons">Add-ons</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-ons-overview">Add-ons overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-new-add-on">Adding a new add-on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-add-ons">Editing add-ons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#periodic-add-ons">Periodic add-ons</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#user-management">User management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#users">Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#access-tokens">Access tokens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-roles">Global roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-roles">Project roles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions">Permissions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#announcements">Announcements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jobs">Jobs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scale-result.html">Result</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scale.sdm.html">SCALE.sdm</a></li>
 </ul>
 
         </div>
@@ -2484,7 +2624,10 @@ res<span class="w"> </span>=<span class="w"> </span>sum(scv_float)<span class="w
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scale-model.html" class="btn btn-neutral float-left" title="SCALE.Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scale-result.html" class="btn btn-neutral float-right" title="Result" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

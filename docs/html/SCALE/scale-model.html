@@ -21,7 +21,9 @@
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a543a3c44.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SCALE.project" href="scale-project.html" />
+    <link rel="prev" title="Server Installation" href="scale-server-installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,7 +45,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
+              <p class="caption" role="heading"><span class="caption-text">COSIMULATION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../FMI/dyna-fmi.html">Docker와 FMI를 이용한 LS-Dyna Cosimulation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">OASYS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OASYS/js_api.html">JS-API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/start_lamp.html">시작하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/gen_material.html">재료 물성 카드 생성</a></li>
@@ -53,6 +63,147 @@
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/comments.html">용어 설명</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/sample.html">Samples of LAMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/appendix.html">Appendix</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">D3VIEW</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../d3View/d3view_install.html">D3VIEW 시작하기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SCALE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="scale-server-installation.html">Server Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SCALE.Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-concepts">Basic concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-teamwork-and-synchronization">Workflow, teamwork and synchronization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synchronization">Synchronization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#offline-online">Offline / online</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#version-management">Version management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lock-modify-unlock">Lock - modify - unlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-modify-merge">Copy - modify - merge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#live-mode">Live mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-principles-of-the-modular-approach">Basic principles of the modular approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integration-of-external-cae-tools">Integration of external CAE tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cooperation-with-external-partners">Cooperation with external partners</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authorization-management">Authorization management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#role-concept">Role concept</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview-of-roles-and-permissions">Overview of roles and permissions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#download-a-pool">Download a pool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#find-your-way-around">Find your way around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#close-and-re-open-windows">Close and re-open windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rearrange-the-windows">Rearrange the windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#customize-the-grid">Customize the grid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#toggle-columns-on-and-off">Toggle columns on and off</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rearrange-the-columns">Rearrange the columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sort-the-column-content">Sort the column content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sort-multiple-columns">Sort multiple columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-column-filters">Apply column filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#group-data-by-column-headers">Group data by column headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pin-columns">Pin columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adjust-the-column-width">Adjust the column width</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-of-options-in-the-column-header-context-menu">List of options in the column header context menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-table">Parameter table</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-parameter-table">Add parameter table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-parameter-table">Edit parameter table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-paste-delete-rename">Copy, paste, delete, rename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-attachments-tags-markers">Add attachments, tags, markers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#derive-new-set-public-export-import">Derive new, set public, export, import</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#handling-of-parameters">Handling of parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-remove-and-rename-new-parameters">Add, remove and rename new parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-duplicate-and-remove-data-sets">Add, duplicate and remove data sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toggle-table-view">Toggle table view</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#calculate-and-reference-parameters">Calculate and reference parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reference-parameters">Reference parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mathematical-operators-of-the-basic-arithmetic-operations">Mathematical operators of the basic arithmetic operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-mathematical-operators-and-functions">Other mathematical operators and functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operators-for-editing-strings">Operators for editing strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operators-for-processing-multiple-parameter-values">Operators for processing multiple parameter values</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#replace-parameters-in-components">Replace parameters in components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#replace-model-parameters">Replace Model parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#predefined-parameters">Predefined parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-conflicts">Parameter conflicts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#define-parameters-depending-on-user-and-location">Define parameters depending on user and location</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#runs">Runs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#difference-between-a-run-and-a-run-configuration">Difference between a run and a run configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#context-menu-of-a-run-configuration">Context menu of a run configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-run-configuration">Create run configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#duplicate-run-configuration">Duplicate run configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#export-run-configuration">Export run configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove-a-run-configuration">Remove a run configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-a-run-configuration-with-external-applications">Edit a run configuration with external applications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-and-paste">Copy and paste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-attachements-tags-and-markers">Add attachements, tags and markers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lock-run-configuration">Lock run configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-history">Show history</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#show-changes">Show changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-a-run-configuration">Edit a run configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#edit-attributes-in-the-grid">Edit attributes in the grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-attributes-in-the-properties-view">Edit attributes in the Properties view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-properties-of-a-run-configuration">Edit properties of a run configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#assembly">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multi-run-configuration-mrc">Multi run configuration (MRC)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-multi-run-configuration">Create a multi run configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#auxiliary-attributes">Auxiliary attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#copying-objects">Copying objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#components">Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#copying-components-to-another-pool-version-in-the-same-pool">Copying components to another pool version in the same pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copying-components-to-a-different-pool">Copying components to a different pool</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#run-configuration">Run configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Parameter table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pool-version">Pool Version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interface">User interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tab-bars">Tab bars</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operation-concept">Operation concept</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Close and re-open windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Rearrange the windows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#browser">Browser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Pool version</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scale-project.html">SCALE.project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scale-result.html">Result</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scale.sdm.html">SCALE.sdm</a></li>
 </ul>
 
         </div>
@@ -966,7 +1117,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scale-server-installation.html" class="btn btn-neutral float-left" title="Server Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scale-project.html" class="btn btn-neutral float-right" title="SCALE.project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

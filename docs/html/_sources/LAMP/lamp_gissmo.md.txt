@@ -84,7 +84,7 @@ Triaxiality는 삼축응력상태라고 하며, 해당 파라미터는 무차원
 
 :::{tip}
 시편 모델의 Triaxiality 값은 LS-Dyna 해석에서 나오는 History Variable #9에서 확인 할 수 있습니다. 아래 사진은 단축인장 모델에 대한 History Variable #9번의 결과로 Triaxiality 대표 값을 잘 나타내는것을 확인 할 수 있습니다.
-![](images/gissmo/history9graph.png)
+![alt text](images/gissmo/history9graph.png)
 :::
 
 :::{tip}
@@ -97,9 +97,10 @@ Specimen 항목의 우측 휴지통 아이콘을 통해 추가된 시편 모델�
 Step 2에서는 Step 1에서 입력된 시편 모델과 파라미터 정보를 기반으로 LS-OPT를 사용하여 최적화 시뮬레이션을 수행합니다. \
 최적화 시뮬레이션은 LS-OPT 뿐만 아니라 LS-Dyan Solver를 사용하기 때문에 각각의 정보를 입력합니다. 
 
-![](images/gissmo/gissmo2.png)
+![alt text](images/gissmo/gissmo2.png)
 
 ### Solver option
+
 LS-Dyna Solver에 대한 정보를 입력합니다. smp, mpp Solver 둘 다 사용가능하며 mpp solver의 경우 MPI 경로가 필요합니다.
 
 - On server : Linux 계열의 클러스터 장비에서 최적화 시뮬레이션을 하고자 할 경우에 선택합니다.
@@ -107,10 +108,11 @@ LS-Dyna Solver에 대한 정보를 입력합니다. smp, mpp Solver 둘 다 사�
 - MPI Path : mpp solver를 사용하는 경우에 우측 ... 아이콘을 통해 MPI 경로를 선택합니다.
 - Solver : LS-Dyna solver를 선택합니다. 우측 ... 아이콘을 통해 solver가 위치한 디렉토리를 선택하면 디렉토리내의 모든 solver가 추가됩니다. 
 - LSOPT : LS-OPT 실행 파일이 존재하는 디렉토리를 우측 ... 아이콘을 통해 선택합니다.
-- Memory1 & Memory2 : LS-Dyna solver의 메모리 옵션 값을 입력합니다. 
-- NCPU : LS-Dyna solver에 사용할 계산 CPU 코어의 수를 입력합니다. 
+- Memory1 & Memory2 : LS-Dyna solver의 메모리 옵션 값을 입력합니다.
+- NCPU : LS-Dyna solver에 사용할 계산 CPU 코어의 수를 입력합니다.
 
 ### LSOPT Option
+
 LS-OPT 최적화 시뮬레이션 옵션 값을 입력합니다.
 
 - Num. of Simulation Points : 각각의 Iteration에서 수행할 시뮬레이션 횟수를 입력합니다.
@@ -120,6 +122,7 @@ LS-OPT 최적화 시뮬레이션 옵션 값을 입력합니다.
     :::
 
 ### Status
+
 Step 2에서의 진행 상태를 표시합니다. 우측의 사각형 마크는 빨강, 주황, 초록색으로 상태가 변경됩니다. \
 좌측의 체크박스는 시편 모델의 최적화 시뮬레이션 수행 유무를 구분하는 항목으로 최적화 시뮬레이션 실행 시 체크된 시편 모델에 대해서만 최적화 시뮬레이션이 진행됩니다.
 
@@ -137,6 +140,7 @@ Stage 번호(1.1, 1.2 ...)를 선택하게 되면 해당 Stage에 대한 Target 
 :::
 
 ### LSOPT Project Generation
+
 Step1에서 추가된 시편 모델들의 GISSMO 파라미터들의 최적화 시뮬레이션을 수행하는데 있어 각 시편을 개별적으로 시뮬레이션을 수행 하거나(Individual) 모든 시편을 통합하여 시뮬레이션(Integration) 할 수 있습니다. 통합 해석(Integration)의 경우에는 Base specimen 모델을 선택해야 합니다. Base specimen을 선택함으로써 GISSMO 파라미터인 DMGEXP와 FADEXP는 Base specimen의 입력값으로 변경되어 시뮬레이션이 수행됩니다. 
 
 :::{tip}
@@ -148,22 +152,27 @@ Base specimen의 선택에 제한은 없지만 일반적으로 인장 모델(Uni
 :::
 
 ### Card type
+
 LS-Dyna에서 지원되는 GISSMO 재료 카드는 2가지가 있습니다. MAT_ADD_DAMAGE_GISSMO 카드는 LS-Dyan R12 버전을 포함한 상위 버전에서 지원되는 카드입니다. R12 버전 이상의 LS-Dyna solver를 사용하는 경우에는 MAT_ADD_DAMAGE_GISSMO 카드 사용을 권장 드립니다.
 
 ### Scheduler
+
 Solver option에서 On server를 선택하였다면 스케쥴러 기능을 활용할 수 있습니다. 현재 스케쥴러 기능은 SGE 스케쥴러만 테스트 되었습니다. \
 `현재 일반화되지 않은 기능이기에 자세한 설명은 생략합니다. 해당 기능에 대한 설명은 따로 문의 주시기 바랍니다.`
 
 ### Run & Stop
+
 Solver Option과 LSOPT Option을 환경에 맞게 입력 및 선택한 후에 Run 버튼으로 최적화 시뮬레이션을 실행 할 수 있습니다. \
 진행중인 시뮬레이션을 중단하고자 할 경우에는 Stop 버튼으로 시뮬레이션을 중단합니다. 
 
 ## Step 3
+
 Step 3에서는 Step 2에서 진행된 해석 결과에서 최적의 결과를 선택하고 Triaxiality Curve를 생성할 수 있습니다.
 
-![](images/gissmo/gissmo3.png)
+![alt text](images/gissmo/gissmo3.png)
 
 ### Specimen Model
+
 각 시편의 현재 상태를 표시합니다. 최적화 시뮬레이션이 완료된 시편 모델에 대해서 최적 결과 선택 및 Triaxiality를 계산할 수 있습니다.
 
 - <span style="color:red">빨강</span> : 빨강색으로 Step3에서 진행된 내용이 없을 경우에 표시됩니다.
@@ -171,6 +180,7 @@ Step 3에서는 Step 2에서 진행된 해석 결과에서 최적의 결과를 �
 - <span style="color:green">초록</span> : 초록색은 시편 모델의 최적 결과가 선택되었고 Triaxiality가 계산된 상태를 의미 합니다.
 
 ### Selection Optimal Case
+
 Step 2에서 최적화 시뮬레이션에서 생성된 결과들에서 사용자는 시험 Target Curve를 잘 표현하는 최적의 결과를 선택해야 합니다. 
 Step 3의 입력 창에서 Select Result 버튼을 클릭하면 아래와 같은 창이 표시됩니다. Step 2에서 **Select as Optimized Stage**로 최적의 Stage를 선택하였다면 Result 항목에 선택한 Stage로 표시되며 그렇지 않다면 마지막 Stage의 번호가 표시됩니다. Triaxiality는 Step 1에서 입력했던 Triaxiality 값이 표시되며, 나머지 항목들은 최적화 시뮬레이션으로 도출된 선택된 Stage의 파라미터 값들이 표시됩니다. 해당 창에서 최종적으로 Curve 생성에 필요한 정보들을 가져오기 위해 Load 항목에 있는 버튼을 각각 눌러 각 시편의 최적 Stage를 확정해야 합니다. 최적 Stage를 확정했다면 마지막으로 Apply 버튼을 눌러 작업 내용을 적용합니다.
 
@@ -203,18 +213,19 @@ Triaxiality는 평균(Average)과 적분(Integration) 방법으로 계산할 수
 ::: -->
 
 ### Triaxiality Curve Data
+
 최적화 시뮬레이션이 완료된 시편 모델들에 대해서 최적 결과를 선택하고 Triaxiality를 계산 한 후에 생성되거나 생성 할 수 있는 Curve 데이터들을 확인하거나 조작할 수 있습니다.
 
 - Triaxiality vs Plastic Strain Data File : Triaxiality vs Plastic Strain Data가 기록된 csv파일 이름을 표시하고 우측 아이콘을 통해 그래프로 확인 할 수 있습니다.
 - Triaxiality vs Fracture Data File : Triaxiality vs Fracture Data가 기록된 csv파일 이름을 표시하고 Data를 이용해 interpolation으로 Curve를 생성할 수 있습니다.
-    - ![](images/ShowFailurePoint.png){w=24px class="intxt-image"} : Triaxility vs Fracture 데이터 포인터를 표시합니다.
-    - ![](images/ShowFailurePanel.png){w=24px class="intxt-image"} : Triaxility vs Fracture 데이터 포인터를 기반으로 Curve를 생성 할 수 있는 도구를 표시합니다.
+  - ![alt text](images/ShowFailurePoint.png){w=24px class="intxt-image"} : Triaxility vs Fracture 데이터 포인터를 표시합니다.
+  - ![alt text](images/ShowFailurePanel.png){w=24px class="intxt-image"} : Triaxility vs Fracture 데이터 포인터를 기반으로 Curve를 생성 할 수 있는 도구를 표시합니다.
 
 ::::{tab-set}
 
 :::{tab-item} H-F Failure
 
-![](images/gissmo/gissmo4.png)
+![alt text](images/gissmo/gissmo4.png)
 
 H-F Failure 탭에서는 Hosford-Coulomb Failure Model을 이용하여 Triaxiality Curve를 생성할 수 있습니다. \
 해당 기능은 Curve를 데이터의 점 데이터에 알맞도록 자동으로 생성해주지 않습니다. \
@@ -226,7 +237,7 @@ H-F Failure 탭에서는 Hosford-Coulomb Failure Model을 이용하여 Triaxiali
 
 :::{tab-item} Interpolation
 
-![](images/gissmo/gissmo5.png)
+![alt text](images/gissmo/gissmo5.png)
 
 Interpolation 탭에서는 선형 및 다항식등의 방법으로 점 데이터 사이를 Interpolation하여 Curve를 생성할 수 있습니다.
 LAMP GISSMO에서 지원되는 Interpolation 방법은 다음과 같습니다. \
@@ -243,6 +254,7 @@ Interpolation을 하기 위한 Min, Max Point 값과 생성할 Curve 데이터�
 ::::
 
 ## Step 4
+
 Step 4에서는 메쉬 정규화(Mesh Regularization)을 수행합니다. 메쉬 정규화에는 Step 1에서 사용했던 시편 모델중에서 하나를 Reference로 선택해야 합니다. 선택된 시편모델에 대해서 실제 인장으로 변형되고 변위가 계산되는 요소의 사이즈를 달리하는 최소 3개의 시편 모델이 요구 됩니다.
 
 ![](images/gissmo/gissmo7.png)
@@ -253,10 +265,12 @@ Step 4에서는 메쉬 정규화(Mesh Regularization)을 수행합니다. 메쉬
 :::
 
 ### Selection of Reference Model
+
 - Reference Speciment : 하나의 Reference 모델을 선택합니다. 일반적으로 단순한 Uniaxial 모델을 사용합니다.
 - Reference Mesh Size : Reference 모델의 메쉬 사이즈를 입력합니다.
 
 ### Add Specimen Model
+
 사전에 준비된 시편 모델들을 Add 버튼을 클릭하여 추가합니다. Step 4에서 추가된 모델들은 두 개의 상태로 진행 상황을 개략적으로 확인할 수 있습니다.
 
 :좌측 상태 박스:
@@ -270,6 +284,7 @@ Step 4에서는 메쉬 정규화(Mesh Regularization)을 수행합니다. 메쉬
 - <span style="color:green">초록</span> : 최적 결과가 선택되었으며, Scaling Factor 데이터를 이용한 Curve Fitting이 가능한 상태를 나타냅니다.
 
 ### Input Data & Simulation
+
 Step 4에서 메쉬 정규화를 위해 추가한 모델의 정보를 입력합니다. 입력은 시편 모델 리스트에서 하나의 모델을 선택 후에 입력합니다. 
 
 - Mesh Size : 선택한 시편모델의 메쉬 사이즈를 입력합니다. 추가한 시편 모두에 대해서 입력해줍니다.
@@ -282,37 +297,41 @@ Step 4에서 메쉬 정규화를 위해 추가한 모델의 정보를 입력합�
 :::
 
 ### Result of Mesh Regularization
+
 최적화 시뮬레이션이 정상적으로 종료되었다면 결과를 로드 하고 Step 3에서 진행했던 것과 같이 최적 결과를 선택합니다.
 
 - Load Results : 메쉬 정규화를 위해 추가했던 시편 모델의 시뮬레이션 결과를 로드합니다. 정상적으로 결과가 로드되면 Stage Results란에 각 시편 모델의 결과 Stage 넘버 목록이 표시됩니다. 
 - Stage Results : ```선택한 시편 모델```의 결과 Stage 넘버 목록이 표시됩니다. 제일 마지막 Stage 넘버를 선택합니다.
-- Select Results : 결과를 로드하고 각 시편 모델의 Stage 넘버를 선택하였다면 Select Results 버튼으로 선택된 결과를 결정합니다. 결과를 결정하기 되면 Mesh Regularization Factor Data 파일이 생성됩니다. 
+- Select Results : 결과를 로드하고 각 시편 모델의 Stage 넘버를 선택하였다면 Select Results 버튼으로 선택된 결과를 결정합니다. 결과를 결정하기 되면 Mesh Regularization Factor Data 파일이 생성됩니다.
 
 ### Generate Mesh Regularization Factor Curve
+
 LS-Dyna GISSMO 물성에 메쉬 사이즈의 Scaling Factor를 적용하기 위해서 결정된 데이터로 Curve Fitting을 하여 Curve를 생성합니다. 
 
 - Mesh Regularization Factor Data : 최적화 시뮬레이션으로 결정된 각 시편 모델의 Scaling Factor 데이터가 저장된 csv 파일을 표시합니다. 
 
-    - ![](images/gissmo/ShowMRFactorPoint.png){w=24px class="intxt-image"} : csv 데이터 파일에 저장된 포인트 정보를 그래프로 표시합니다.
-    - ![](images/gissmo/ShowMRFactorCurve.png){w=24px class="intxt-image"} : Scaling Factor 포인트 정보를 기반으로 Curve Fitting을 할 수 있는 도구를 표시하고 Curve Fitting을 하여 Curve를 결정합니다. 
+  - ![alt text](images/gissmo/ShowMRFactorPoint.png){w=24px class="intxt-image"} : csv 데이터 파일에 저장된 포인트 정보를 그래프로 표시합니다.
+  - ![alt text](images/gissmo/ShowMRFactorCurve.png){w=24px class="intxt-image"} : Scaling Factor 포인트 정보를 기반으로 Curve Fitting을 할 수 있는 도구를 표시하고 Curve Fitting을 하여 Curve를 결정합니다. 
 
-        - Data 항목에서 생성할 Curve 가로축의 Min, Max 값과 Step 사이즈를 설정합니다.
-        - Curve Fitting은 두 개의 지수함수 모델을 사용할 수 있습니다. 각각의 버튼을 클릭 시 Curve Fitting이 바로 적용되며 A, B 그리고 C 값이 표시됩니다. 사용자는 임의로 A, B, C 값을 변경하여 Curve를 수정할 수 있습니다.
-        - Curve를 결정한 이후에는 Apply 버튼을 클릭하여 생성된 Curve 데이터를 csv 파일로 저장합니다.
-        ![](images/gissmo/gissmo8.png)
+    - Data 항목에서 생성할 Curve 가로축의 Min, Max 값과 Step 사이즈를 설정합니다.
+    - Curve Fitting은 두 개의 지수함수 모델을 사용할 수 있습니다. 각각의 버튼을 클릭 시 Curve Fitting이 바로 적용되며 A, B 그리고 C 값이 표시됩니다. 사용자는 임의로 A, B, C 값을 변경하여 Curve를 수정할 수 있습니다.
+    - Curve를 결정한 이후에는 Apply 버튼을 클릭하여 생성된 Curve 데이터를 csv 파일로 저장합니다.
+
+![alt text](images/gissmo/gissmo8.png)
 
 
 - Mesh Regularization Factor Curve File : Curve Fitting을 통해 생성된 Curve 데이터가 저장된 파일을 표시합니다.
 
 ## Step 5
+
 Step 5에서는 Ste 1 ~ 4를 진행하면서 얻은 결과들을 이용해서 LS-Dyna에서 사용가능한 GISSMO 물성 카드가 포함된 키워드 파일을 생성합니다.
 
-![](images/gissmo/gissmo9.png)
+![alt text](images/gissmo/gissmo9.png)
 
 - Step State : 이전 Step들의 상태를 표시합니다.
-    - <span style="color:red">빨강</span> : 진행된 내용이 없음을 나타냅니다.
-    - <span style="color:orange">주황</span> : Step 1~4에서 누락된 입력 및 내용이 있음을 나타냅니다.
-    - <span style="color:green">초록</span> : Step 1~4가 문제 없이 정상적으로 완료되었음을 나타냅니다.
+  - <span style="color:red">빨강</span> : 진행된 내용이 없음을 나타냅니다.
+  - <span style="color:orange">주황</span> : Step 1~4에서 누락된 입력 및 내용이 있음을 나타냅니다.
+  - <span style="color:green">초록</span> : Step 1~4가 문제 없이 정상적으로 완료되었음을 나타냅니다.
 
 - Base Model : GISSMO 카드의 DMGEXP 와 FADEXP의 값을 가져올 모델을 선택합니다. 
 - LDSDG, ECRIT, LCREGD ID : GISSMO 카드에 입력되는 이 세 파라미터의 데이터는 Curve 데이터로 생성되는 결과물인 키워드 파일에 Step 3~4에서 결정한 3개의 Curve 데이터가 각각 DEFINE_CURVE 카드에 정의됩니다. 이 세 입력란에 입력하는 ID는 각각의 DEFINE_CURVE의 ID입니다. 
@@ -323,5 +342,4 @@ ECRIT의 ID는 GISSMO 카드에 마이너스 값으로 변경되어 입력됩니
 
 생성되는 결과물은 아래와 같습니다.
 
-![](images/gissmo/gissmo10.png)
-
+![alt text](images/gissmo/gissmo10.png)

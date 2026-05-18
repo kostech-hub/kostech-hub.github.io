@@ -8,24 +8,6 @@ Welcome to KOSTECH documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: COSIMULATION
-
-   ./FMI/dyna-fmi
-
-.. toctree::
-   :maxdepth: 2
-   :caption: LS-Dyna
-
-   encryption
-
-.. toctree::
-   :maxdepth: 2
-   :caption: OASYS
-
-   ./OASYS/js_api
-
-.. toctree::
-   :maxdepth: 2
    :caption: LAMP
 
    ./LAMP/start_lamp
@@ -36,18 +18,3 @@ Welcome to KOSTECH documentation!
    ./LAMP/comments
    ./LAMP/sample
    ./LAMP/appendix
-
-.. toctree::
-   :maxdepth: 2
-   :caption: D3VIEW
-
-   ./d3View/d3view_install
-
-.. toctree::
-   :maxdepth: 2
-   :caption: SCALE
-
-   ./SCALE/scale-model
-   ./SCALE/scale-project
-   ./SCALE/scale-result
-   ./SCALE/scale.sdm

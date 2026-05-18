@@ -21,7 +21,9 @@
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a543a3c44.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SCALE.sdm" href="scale.sdm.html" />
+    <link rel="prev" title="SCALE.project" href="scale-project.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,7 +45,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
+              <p class="caption" role="heading"><span class="caption-text">COSIMULATION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../FMI/dyna-fmi.html">Docker와 FMI를 이용한 LS-Dyna Cosimulation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">OASYS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OASYS/js_api.html">JS-API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">LAMP</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/start_lamp.html">시작하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/gen_material.html">재료 물성 카드 생성</a></li>
@@ -53,6 +63,158 @@
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/comments.html">용어 설명</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/sample.html">Samples of LAMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../LAMP/appendix.html">Appendix</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">D3VIEW</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../d3View/d3view_install.html">D3VIEW 시작하기</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SCALE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="scale-server-installation.html">Server Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scale-model.html">SCALE.Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scale-project.html">SCALE.project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Result</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to">How to</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initially-configuring-result">Initially configuring Result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-result">Working with Result</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#modify-the-layout">Modify the layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-a-preset">Select a preset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#close-and-re-open-windows">Close and re-open windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#drag-and-drop-windows">Drag and drop windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#display-tests-in-the-grid">Display tests in the grid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-concept">Basic concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projects">Projects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-a-project">Select a project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove-a-project">Remove a project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#collections">Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-a-collection">Select a collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove-a-collection">Remove a collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-collection">Create a new collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-a-test-to-a-collection">Add a test to a collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove-a-test-from-a-collection">Remove a test from a collection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scenarios">Scenarios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#group-and-filter-tests">Group and filter tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Basic concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#group-tests-by-column-headers">Group tests by column headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-column-filters">Apply column filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-the-sorting-order">Change the sorting order</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sort-multiple-columns">Sort multiple columns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#create-tests">Create tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-the-create-new-test-view">Open the “Create new test” view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-basic-information-about-the-test">Save basic information about the test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-metadata-template">Add metadata template</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-tests">Edit tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-editing">Start editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-editing">Stop editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edited-attributes">Edited attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-changes-and-conflict-notifications">Saving changes and conflict notifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#export-and-import-tests">Export and import tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#export-tests">Export tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-tests">Import tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#set-as-project-status">Set as project status</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Basic concept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#difference-to-manual-reporting">Difference to manual reporting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Set as project status</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-open-the-context-menu">Step 1: Open the context menu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-match-tests-with-test-cases">Step 2: Match tests with test cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alternative-assign-tests-manually">Alternative: Assign tests manually</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step3-modify-the-values-as-needed">Step3: Modify the values as needed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-save-the-data">Step 4: Save the data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#view-reference-test-in-project-requirements">View reference test in project requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debugging">Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#apply-calculation-rule">Apply calculation rule</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Basic concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#define-calculation-rules">Define calculation rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-calculation-rules">Apply calculation rules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Step 1: Open the context menu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-start-the-calculation">Step 2: Start the calculation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Debugging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#practical-example-calculation-rule-doesn-t-match">Practical example: Calculation rule doesn’t match</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#practical-example-calculation-rule-isn-t-even-listed">Practical example: Calculation rule isn’t even listed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting">Plotting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#key-features">Key features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-the-plotting-function">Open the plotting function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interaction">Interaction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#zoom">Zoom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clickable-components">Clickable components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toolbar">Toolbar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sidebar">Sidebar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#channels">Channels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculate">Calculate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-configuration">General configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plot-configuration">Plot configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#display-limits">Display limits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curve-style">Curve style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-axis">Edit axis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-plot-title">Edit plot title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-legend">Edit legend</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interface">User interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tool-bar">Tool bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-result">A: Result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b-preset">B: Preset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-notifications">C: Notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-jobs">D: Jobs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#e-help">E: Help</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#f-burger-menu">F: Burger menu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-grid">Test grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projects-and-collections">Projects and collections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Scenarios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-details-tabs">Test details tabs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#photos-and-videos">Photos and videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#documents">Documents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Channels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#measure-data">Measure data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#report-tab">Report tab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scale.sdm.html">SCALE.sdm</a></li>
 </ul>
 
         </div>
@@ -1186,7 +1348,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scale-project.html" class="btn btn-neutral float-left" title="SCALE.project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scale.sdm.html" class="btn btn-neutral float-right" title="SCALE.sdm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

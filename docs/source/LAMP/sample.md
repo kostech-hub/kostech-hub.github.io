@@ -61,6 +61,7 @@ Step 2에서는 Step 1에서 추가된 시편모델에 대해서 LSOPT 최적화
 - 해석이 성공적으로 종료되면 Status의 UT 항목의 우측 사각형이 초록색으로 변경됩니다.
 
 ### Step 3
+
 Step 3에서 종료된 최적화 시뮬레이션 결과로 부터 하나의 최적 값을 선택하고 Triaxiality 및 Curve를 생성하는 단계입니다.
 우선 UT 시편모델을 먼저 시뮬레이션을 수행했기 때문에 UT 모델의 DMGEXP와 FADEXP 값에 대한 최적 값을 선택해야 합니다.
 Step 3에서 하단의 Open Viewer를 클릭하여 LS-OPT Viewer를 실행합니다. 표시되는 LS-OPT Viwer 창에서 [Selection Optimal Case](./lamp_gissmo#selection-optimal-case)를 참고하여 DMGEXP와 FADEXP 값을 결정합니다. 아래 나열된 순서를 따라서 NORCH_1, NORCH_5 시편 모델에 대해서 최적화 시뮬레이션을 진행합니다.
@@ -74,7 +75,9 @@ Step 3에서 하단의 Open Viewer를 클릭하여 LS-OPT Viewer를 실행합니
 - NORCH_1, NORCH_5 모델도 마찬가지로 시뮬레이션이 정상적으로 정료되고 사각형이 초록색으로 변경되었다면 Step 3으로 이동합니다.
 
 #### Triaxiality 계산 및 Curve 생성
+
 UT, NORCH_1, NORCH_5 시편 모델 모두 최적화 시뮬레이션이 마무로되었다면 각 시편 모델에 대해서 최적값이라고 판단되는 case 넘버를 선택해야 합니다. 다시 한번 [Selection Optimal Case](./lamp_gissmo#selection-optimal-case)를 참고하여 각 시편에 대해 최적해라고 판단되는 case 넘버를 선택합니다. case 넘버를 선택하였다면 [Calculation Triaxiality Value](./lamp_gissmo#calculation-triaxiality-value)를 참고하여 Triaxiality를 계산합니다. 여기서는 3개의 시편 모델을 사용했기 때문에 3개의 항목만 Select Optimal Result 창에 표시될 것입니다. 이 후 [Triaxiality Curve Data](./lamp_gissmo#triaxility-curve-data) 항목을 참고하여 curve를 생성하는 내용이 있지만 여기서는 자세하게 다루지 않으며 향후에 curve를 생성하실 때 [Triaxiality Curve Data](./lamp_gissmo#triaxility-curve-data) 항목을 참고하시기 바랍니다.
 
 ### Step 4 - Step 5
+
 Step 4는 sample 파일에 포함된 Mesh_Regularization 폴더의 Reg04, Reg08, Reg15 폴더에 있는 UT 모델의 0.4, 0.8, 1.5 메쉬 크기를 가지는 모델을 이용하여 [Step 4](./lamp_gissmo#step-4), [Step 5](./lamp_gissmo#step-5) 항목을 참고하셔서 진행하시면 됩니다. 
