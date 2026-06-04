@@ -19,7 +19,7 @@ LAMP는 기본적으로 Chart UI가 중앙에 위치하고 있습니다. Chart U
 ![](images/Chart0.png)
 
 :::{list-table} Chart 속성 설명
-:widths 10 100
+:widths: 10 100
 :header-rows: 1
 
 *   - 속성
@@ -37,7 +37,7 @@ LAMP는 기본적으로 Chart UI가 중앙에 위치하고 있습니다. Chart U
 :::
 
 :::{list-table} Series 속성 설명
-:widths 10 100
+:widths: 10 100
 :header-rows: 1
 
 *   - 속성
