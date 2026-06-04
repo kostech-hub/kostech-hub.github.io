@@ -28,7 +28,7 @@ LAMP(LS-Dyna Advanced Material Platform)는 한국시뮬레이션기술에서 �
 ## 2. Installation
 LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 해제 합니다. 압축 해제 후 LAMP.exe 파일을 실행하면 아래와 같은 설치 화면이 표시됩니다. 
 
-[LAMP 최신버전 다운로드](http://134.185.96.106/LAMP/LAMP_INSTALLER.zip)
+[LAMP 최신버전 다운로드](http://134.185.96.106/LAMP/KOSTECH_Installer.zip)
 
 설치 프로그램 실행 시 나타나는 LAMP 설치 화면에서 LAMP 아이콘으로 설치합니다.
 
