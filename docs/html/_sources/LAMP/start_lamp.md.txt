@@ -26,9 +26,11 @@ LAMP(LS-Dyna Advanced Material Platform)는 한국시뮬레이션기술에서 �
 - LS-Dyna에서 사용 가능한 GISSMO 물성 카드 생성
 
 ## 2. Installation
-LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 해제 합니다. 압축 해제 후 LAMP Installer.exe 파일을 실행하면 아래와 같은 설치 화면이 표시됩니다. 
+LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 해제 합니다. 압축 해제 후 LAMP.exe 파일을 실행하면 아래와 같은 설치 화면이 표시됩니다. 
 
-[LAMP 최신버전 다운로드](http://134.185.96.106/LAMP/LAMP.exe)
+[LAMP 최신버전 다운로드](http://134.185.96.106/LAMP/LAMP_INSTALLER.zip)
+
+설치 프로그램 실행 시 나타나는 LAMP 설치 화면에서 LAMP 아이콘으로 설치합니다.
 
 :::{tip}
 데이터베이스를 따로 서버 PC에 구성하지 않고 로컬 환경에서 사용하시려면 로컬(사용자) PC에 LAMP와 LAMP Server를 모두 설치 합니다.
@@ -38,8 +40,10 @@ LAMP 설치를 위해 아래 링크에서 다운로드 받은 후에 압축을 �
 
 ### 2.1 경로 변경 
 설치 경로는 Install directory 우측 아이콘을 ![](images/LAMP1.png){class="intxt-image"} 클릭 하여 변경 할 수 있습니다.
+
 ### 2.2 LAMP Server
 LAMP에서 제공하고 데이터베이스 및 네트워크 라이선스를 관리 할 수 있는 프로그램입니다. 데이터베이스 기능을 사용하기 위해서 반드시 설치 하여야 합니다.
+
 ### 2.3 LAMP
 한국시뮬레이션기술에서 LS-Dyna 고객들에게 제공되는 프로그램으로 LS-Dyna 재료 물성 카드의 보다 쉽고 편리한 생성 및 관리 등의 기능을 제공합니다.
 
@@ -97,21 +101,37 @@ LAMP 라이선스 서버는 기본적으로 3030 포트를 사용합니다. Clie
 :::
 
 ## 4. 데이터베이스 설정
-LAMP에서 제공하는 데이터베이스는 MariaDB에서 테스트 되었으며, 사용을 위해 서버 PC에 MariaDB를 설치 해야 합니다. 
+
+LAMP에서 제공하는 데이터베이스는 MySQL 기반의 MariaDB에서 테스트 되었습니다. 데이터베이스를 사용하기 위해서는 MySQL 혹은 MariaDB를 설치 하셔야 합니다. 만약 데이터베이스가 설치되어 있지 않으시면 MariaDB 설치 및 사용을 권장 드립니다. MariaDB 설치를 진행하시려면 [](#41-mariadb-설치)를 참고하시기 바랍니다.
+
+![](images/LAMPS_Database.png)
+
+:::{admonition} 데이터베이스 인식 유무 확인
+:class: note
+MySQL 계열의 데이터베이스가 이미 설치되어 있다면 LAMP Server에서 ```DATABASE``` 탭 화면 상단에 **Executable file path of MYSQL (mysql.exe)**에 실행 경로가 표시됩니다. 데이터베이스가 설치되어 있지만 환경변수 PATH에 경로가 추가되어 있지 않다면 인식 되지 않을 수 있습니다. 이 때는 상단 입력란을 **더블 클릭** 하신 후 mysql.exe 파일을 선택 하시기 바랍니다.
+:::
+
 ### 4.1 MariaDB 설치
+
 설치를 위해 아래 경로에서 다운로드 받고 설치 합니다. MariaDB 설치 과정에서 root 사용자에 대한 비번을 입력 하고 'Enable access from remote machines for 'root' user에 체크 합니다.
 
 <https://dlm.mariadb.com/1913768/mariadb/mariadb-10.5.13/winx64-packages/mariadb-10.5.13-winx64.msi>
 
 ![](images/LAMP7.png)
 
-### 4.2 현대제철 물성 추가
+### 4.2 데이터베이스 연결
+
+LAMP Server에서 제공되는 현대제철, POSCO 물성을 추가 하기 위해서는 데이터베이스 연결이 필요합니다. LAMP Server의 ```DATABASE``` 탭에서 데이터베이스가 인식된 상태에서 ```Connection``` 버튼을 클릭합니다. 나타나는 ```Database Connection``` 입력 창에서 User, Password, Port 입력 정보를 확인 및 수정한 후 ```Connect``` 버튼으로 연결합니다.
+연결이 정상적으로 완료 되었다면 좌측 ```Connection Status```가 **Connected**로 표시됩니다.
+
+![](images/LAMPS_DatabaseConnection.png)
+
+### 4.3 현대제철 물성 추가
+
 LAMP는 현대제철의 Steel 계열의 물성을 제공합니다. 현대제철 물성을 사용하기 위해서는 제공되는 현대제철 물성을 데이터베이스에 추가하여야 합니다.
 
 - LAMP Server 실행 후 DATABASE 탭을 클릭합니다.
-- Connection을 선택하고 표시되는 Database Connection 창에서 정보를 입력하고 Connect 버튼을 클릭합니다.
-- Connection Status에 Connected 텍스트로 표시되는 것을 확인합니다.
-- Import 버튼을 클릭 후 LAMP Server 설치 경로의 data 폴더에 있는 hyundaisteel_db.sql 파일을 선택합니다.
+- [데이터베이스 연결](#42-데이터베이스-연결)된 상태에서 Import 버튼을 클릭하고 LAMP Server 설치 경로의 data 폴더에 있는 hyundaisteel_db.sql 파일을 선택합니다.
 - hyundaisteel_db 데이터베이스 항목이 추가 되었는지 확인합니다.
 - Menu 열의 . . . 버튼을 클릭 후 Load 버튼을 클릭합니다.
 - Status 열의 텍스트가 Unloaded에서 Loaded로 변경되었는지 확인합니다.
@@ -122,7 +142,16 @@ LAMP Server의 기본 설치 경로는 C:\KOSTECH\LAMPS 입니다. \
 LAMP에서 현대제철 물성을 출력하는 방법은 [현대제철 물성 출력](./database.md#1-mariadb-설치-및-현대제철-물성)의 내용을 확인하세요.
 :::
 
-![](images/LAMP6.png)
+### 4.4 POSCO 물성 추가
+
+LAMP는 POSCO의 고속인장 시험 데이터 물성을 제공합니다. POSCO 물성을 LAMP에서 사용하기 위해서는 제공되는 POSCO 물성 파일을 데이터베이스에 추가하여야 합니다.
+
+- LAMP Server 실행 후 DATABASE 탭을 클릭합니다.
+- [데이터베이스 연결](#42-데이터베이스-연결)된 상태에서 Import 버튼을 클릭하고 LAMP Server 설치 경로의 data 폴더에 있는 hyundaisteel_db.sql 파일을 선택합니다.
+- Import 버튼을 클릭 후 LAMP Server 설치 경로의 data 폴더에 있는 posco_db.sql 파일을 선택합니다.
+- posco_db 데이터베이스 항목이 추가 되었는지 확인합니다.
+- Menu 열의 . . . 버튼을 클릭 후 Load 버튼을 클릭합니다.
+- Status 열의 텍스트가 Unloaded에서 Loaded로 변경되었는지 확인합니다.
 
 ## 5. LAMP 메인 User Interface
 
