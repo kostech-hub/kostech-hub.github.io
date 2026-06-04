@@ -42,13 +42,3 @@ Welcome to KOSTECH documentation!
    :caption: D3VIEW
 
    ./d3View/d3view_install
-
-.. toctree::
-   :maxdepth: 2
-   :caption: SCALE
-
-   ./SCALE/scale-server-installation
-   ./SCALE/scale-model
-   ./SCALE/scale-project
-   ./SCALE/scale-result
-   ./SCALE/scale.sdm
